@@ -9,7 +9,7 @@
             "C": "以人为本",
             "D": "全面协调可持续发展"
         },
-        "correct_answer": "",
+        "correct_answer": "A",
         "error_count": 0,
         "correct_count": 0
     },
@@ -84,6 +84,20 @@
         "correct_count": 0
     },
     {
+        "question_number": "7",
+        "question_type": "单选题",
+        "question_text": "()是人和社会持续发展的根本基础",
+        "options": {
+            "A": "科技创新",
+            "B": "良好的生态环境",
+            "C": "强有力的军事实力",
+            "D": "稳定的政治环境"
+        },
+        "correct_answer": "B",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
         "question_number": "8",
         "question_type": "单选题",
         "question_text": "( )，就是社会各方面的利益关系得到妥善协调， 人民内部矛盾和其他社会矛盾得到正确处理，社 会公平和正义得到切实维护和实现。",
@@ -112,7 +126,7 @@
         "correct_count": 0
     },
     {
-        "question_number": "0",
+        "question_number": "10",
         "question_type": "单选题",
         "question_text": "()是经济社会可持续发展的重要条件，也是一个 民族生存和发展的根本基础。",
         "options": {
@@ -126,7 +140,7 @@
         "correct_count": 0
     },
     {
-        "question_number": "1",
+        "question_number": "11",
         "question_type": "单选题",
         "question_text": "科学发展观强调，( )实质上就是要建设以资源环 境承载力为基础、以自然规律为准则、以可持续 发展为目标的资源节约型、环境友好型社会。",
         "options": {
@@ -135,12 +149,12 @@
             "C": "建设文化强国",
             "D": "建设和谐社会"
         },
-        "correct_answer": "",
+        "correct_answer": "B",
         "error_count": 0,
         "correct_count": 0
     },
     {
-        "question_number": "2",
+        "question_number": "12",
         "question_type": "单选题",
         "question_text": "()是科学发展观的第一要义。",
         "options": {
@@ -149,12 +163,12 @@
             "C": "全面协调可持续",
             "D": "推动经济社会发展"
         },
-        "correct_answer": "",
+        "correct_answer": "D",
         "error_count": 0,
         "correct_count": 0
     },
     {
-        "question_number": "5",
+        "question_number": "13",
         "question_type": "单选题",
         "question_text": "()是一个国家工业化、现代化的重要标志。",
         "options": {
@@ -163,12 +177,12 @@
             "C": "城乡发展一体化",
             "D": "人民生活水平"
         },
-        "correct_answer": "",
+        "correct_answer": "BB",
         "error_count": 0,
         "correct_count": 0
     },
     {
-        "question_number": "4",
+        "question_number": "14",
         "question_type": "单选题",
         "question_text": "构建社会主义和谐社会要以( )为重点。",
         "options": {
@@ -177,12 +191,12 @@
             "C": "解决中国经济增长和社会发展的可持续问题",
             "D": "解决执政能力建设的关键问题"
         },
-        "correct_answer": "",
+        "correct_answer": "A",
         "error_count": 0,
         "correct_count": 0
     },
     {
-        "question_number": "5",
+        "question_number": "15",
         "question_type": "单选题",
         "question_text": "下面关于社会主义协商民主描述不正确的是( )。",
         "options": {
@@ -191,12 +205,12 @@
             "C": "充分体现了社会主义民主的真实性、广泛性、",
             "D": "社会主义协商民主是是对马克思主义民主理论"
         },
-        "correct_answer": "",
+        "correct_answer": "A",
         "error_count": 0,
         "correct_count": 0
     },
     {
-        "question_number": "6",
+        "question_number": "16",
         "question_type": "单选题",
         "question_text": "科学发展观的根本方法是( )。",
         "options": {
@@ -205,12 +219,26 @@
             "C": "以人为本",
             "D": "统筹兼顾"
         },
+        "correct_answer": "D",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "17",
+        "question_type": "单选题",
+        "question_text": "(),就是社会主义民主得到充分发扬，依法治国基本方略得到切实落实，各方面积极因素 得到广泛调动。",
+        "options": {
+            "A": "人与自然和谐相处",
+            "B": "社会安定",
+            "C": "民主法治",
+            "D": "改革开放"
+        },
         "correct_answer": "C",
         "error_count": 0,
         "correct_count": 0
     },
     {
-        "question_number": "8",
+        "question_number": "18",
         "question_type": "单选题",
         "question_text": "()，就是能够使一切有利于社会进步的创造愿望 得到尊重，创造活动得到支持，创造才能得到发 挥，创造成果得到肯定。",
         "options": {
@@ -224,7 +252,7 @@
         "correct_count": 0
     },
     {
-        "question_number": "9",
+        "question_number": "19",
         "question_type": "单选题",
         "question_text": "关于科学发展观的叙述正确的是( )。",
         "options": {
@@ -233,12 +261,12 @@
             "C": "科学皮展观的基本要求是促进社会和谐",
             "D": "科学发展观的第一要义是以人为本"
         },
-        "correct_answer": "",
+        "correct_answer": "A",
         "error_count": 0,
         "correct_count": 0
     },
     {
-        "question_number": "0",
+        "question_number": "20",
         "question_type": "单选题",
         "question_text": "科学发展观的基本要求是( )。",
         "options": {
@@ -247,12 +275,12 @@
             "C": "全面协调可持续",
             "D": "统筹兼顾"
         },
-        "correct_answer": "",
+        "correct_answer": "C",
         "error_count": 0,
         "correct_count": 0
     },
     {
-        "question_number": "1",
+        "question_number": "21",
         "question_type": "单选题",
         "question_text": "( )必须坚定走生产发展、生活富裕、生态良好的 文明发展道路。",
         "options": {
@@ -266,7 +294,7 @@
         "correct_count": 0
     },
     {
-        "question_number": "2",
+        "question_number": "22",
         "question_type": "单选题",
         "question_text": "进入21世纪，党中央根据经济发展的实际情况， 进一步提出了继续推进西部大开发、振兴东北老 工业基地、促进中部崛起、鼓励东部地区率先发 展的战略布局。这是为了( )",
         "options": {
@@ -280,10 +308,11 @@
         "correct_count": 0
     },
     {
-        "question_number": "3",
+        "question_number": "23",
         "question_type": "单选题",
         "question_text": "( )是兴国之魂，决定着中国特色社会主义发展方 向。 A，三个代表\"重要思想",
         "options": {
+            "A":"“三个代表”重要思想",
             "B": "科学发展观",
             "C": "社会主义核心价值体系",
             "D": "党的领导"
@@ -293,7 +322,7 @@
         "correct_count": 0
     },
     {
-        "question_number": "4",
+        "question_number": "24",
         "question_type": "单选题",
         "question_text": "胡锦涛指出: 我们要始终牢记，发展社会主义民 主政治是党始终不渝的奋斗目标，必须更高地举 起( )的旗帜。-",
         "options": {
@@ -307,7 +336,7 @@
         "correct_count": 0
     },
     {
-        "question_number": "5",
+        "question_number": "25",
         "question_type": "单选题",
         "question_text": "胡锦涛指出: ( )是马克思主义政党的本质属性，是 马克思主义政党的生命所系、力量所在。",
         "options": {
@@ -321,20 +350,35 @@
         "correct_count": 0
     },
     {
-        "question_number": "6",
+        "question_number": "26",
         "question_type": "单选题",
         "question_text": "党的十七大在强调要坚持( )的同时，进一步强调 要统筹中央和地方关系，统筹个人利益和集体利 益、局部利益和整体利益、当前利益与长远利 益，统筹国内国际两个大局。",
         "options": {
             "A": "科学发展观",
             "B": "五个统筹",
-            "C": "西部大开放战略"
+            "C": "西部大开放战略",
+            "D": "“三步走”战略"
         },
         "correct_answer": "B",
         "error_count": 0,
         "correct_count": 0
     },
     {
-        "question_number": "8",
+        "question_number": "27",
+        "question_type": "单选题",
+        "question_text": "随着经济全面深入发展，国内经济与国际经济的依存和互动日益明显，我国经济政策对外部环境的影响越来越大，反过来，外部环境对国内发展的作用也在加大。对外经济关系既有深化合作的有力条件，又面临摩擦增加的挑战。因此，必须进一步树立国际视野，善于进行双向思维，把中国发展与世界发展联系起来，以我为主，内外兼顾，实现互利共赢，发展壮大自己这段话主要体现了科学发展观中（）的要求。",
+        "options": {
+            "A": "统筹经济社会发展",
+            "B": "统筹城乡发展",
+            "C": "统筹区域发展",
+            "D": "统筹国内发展与对外开放"
+        },
+        "correct_answer": "D",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "28",
         "question_type": "单选题",
         "question_text": "科学发展观创造性地回答了( )问题。",
         "options": {
@@ -343,12 +387,12 @@
             "C": "什么是中国特色社会主义，人怎样建设中国特色",
             "D": "什么是社会主义，人怎样建设社会主义"
         },
-        "correct_answer": "",
+        "correct_answer": "B",
         "error_count": 0,
         "correct_count": 0
     },
     {
-        "question_number": "9",
+        "question_number": "29",
         "question_type": "单选题",
         "question_text": "科学发展观的核心是以人为本。坚持以人为本， 就是要以( )为目标。",
         "options": {
@@ -362,7 +406,7 @@
         "correct_count": 0
     },
     {
-        "question_number": "0",
+        "question_number": "30",
         "question_type": "单选题",
         "question_text": "科学发展观指出，马克思主义政党自身建设的根 本任务和永恒课题是( )。",
         "options": {
@@ -376,7 +420,7 @@
         "correct_count": 0
     },
     {
-        "question_number": "1",
+        "question_number": "31",
         "question_type": "单选题",
         "question_text": "推动经济持续健康发展，必须坚持以科学发展为 主题，以( )为主线。",
         "options": {
@@ -390,7 +434,7 @@
         "correct_count": 0
     },
     {
-        "question_number": "2",
+        "question_number": "32",
         "question_type": "单选题",
         "question_text": "科学发展观强调，( )是党执政后的一项根本建 设。",
         "options": {
@@ -404,20 +448,21 @@
         "correct_count": 0
     },
     {
-        "question_number": "3",
+        "question_number": "33",
         "question_type": "单选题",
         "question_text": "()是我国社会主义文化的引领和主导。",
         "options": {
             "A": "党的领导",
             "B": "科学发展观",
-            "C": "社会主义核心价值体系"
+            "C": "社会主义核心价值体系",
+            "D": "“三个代表”重要思想"
         },
         "correct_answer": "C",
         "error_count": 0,
         "correct_count": 0
     },
     {
-        "question_number": "4",
+        "question_number": "34",
         "question_type": "单选题",
         "question_text": "坚持( )，必须认真考虑和对待各方面的发展需 要，正确反映和兼顾各阶层各群体的利益要求。",
         "options": {
@@ -431,7 +476,7 @@
         "correct_count": 0
     },
     {
-        "question_number": "5",
+        "question_number": "35",
         "question_type": "单选题",
         "question_text": "坚持发展是硬道理的本质要求就是坚持( )。",
         "options": {
@@ -440,14 +485,28 @@
             "C": "以人为本",
             "D": "开拓进取"
         },
-        "correct_answer": "",
+        "correct_answer": "B",
         "error_count": 0,
         "correct_count": 0
     },
     {
-        "question_number": "6",
+        "question_number": "36",
         "question_type": "单选题",
-        "question_text": "科学发展观强调，社会主义民主政治的本质和核 心是( )。",
+        "question_text": "科学发展观强调，社会主义民主政治的本质和核心是（）。",
+        "options": {
+            "A": "党的领导",
+            "B": "依法治国",
+            "C": "社会和谐",
+            "D": "人民当家作主"
+        },
+        "correct_answer": "D",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "37",
+        "question_type": "单选题",
+        "question_text": "（）是科技发展的灵魂，是一个民族发展的不竭动力，是支撑国家崛起的筋骨。",
         "options": {
             "A": "自主创新",
             "B": "人才",
@@ -459,7 +518,7 @@
         "correct_count": 0
     },
     {
-        "question_number": "8",
+        "question_number": "38",
         "question_type": "单选题",
         "question_text": "科学发展观，核心立场是( )。",
         "options": {
@@ -473,7 +532,7 @@
         "correct_count": 0
     },
     {
-        "question_number": "9",
+        "question_number": "39",
         "question_type": "单选题",
         "question_text": "中共十七大通过的党章把 和谐与富强、民主、 文明 一起作为社会主义现代化建设的目标写入社 会主义初级阶段的基本路线。其原因在于社会和 kk 轧 谐是( )。",
         "options": {
@@ -482,12 +541,12 @@
             "C": "解决收入分配差距的重要途径",
             "D": "中国传统文化的价值取向"
         },
-        "correct_answer": "",
+        "correct_answer": "B",
         "error_count": 0,
         "correct_count": 0
     },
     {
-        "question_number": "0",
+        "question_number": "40",
         "question_type": "单选题",
         "question_text": "( )，是关系人民福社、关乎民族未来的长远大 计。",
         "options": {
@@ -501,7 +560,7 @@
         "correct_count": 0
     },
     {
-        "question_number": "1",
+        "question_number": "41",
         "question_type": "多选题",
         "question_text": "大力实施科教兴国战略，把科技和教育摆在优先 发展的战略地位，要坚持( )的方针。",
         "options": {
@@ -515,7 +574,7 @@
         "correct_count": 0
     },
     {
-        "question_number": "2",
+        "question_number": "42",
         "question_type": "多选题",
         "question_text": "科学发展观的基本要求是全面协调可持续发展， 其中的\"可持续 是指发展要有( )，不仪当前发 展，而且要保证长远友展。",
         "options": {
@@ -524,12 +583,12 @@
             "C": "连续性",
             "D": "整体性"
         },
-        "correct_answer": "",
+        "correct_answer": "AC",
         "error_count": 0,
         "correct_count": 0
     },
     {
-        "question_number": "3",
+        "question_number": "43",
         "question_type": "多选题",
         "question_text": "坚持统筹兼顾，要牢牢把握统筹兼顾的科学思想 方法，努力提高( )能力，不断增强统筹兼顾的本 领，更好地推动科学上友展。",
         "options": {
@@ -538,12 +597,12 @@
             "C": "斗争局",
             "D": "创新思维"
         },
-        "correct_answer": "",
+        "correct_answer": "ABD",
         "error_count": 0,
         "correct_count": 0
     },
     {
-        "question_number": "4",
+        "question_number": "44",
         "question_type": "多选题",
         "question_text": "要围绕构建中国特色社会主义社会管理体系，需 要加快形成( )的基本公共服务体系",
         "options": {
@@ -557,7 +616,7 @@
         "correct_count": 0
     },
     {
-        "question_number": "5",
+        "question_number": "45",
         "question_type": "多选题",
         "question_text": "我们党领导人民进行改革开放和现代化建设的根 本目的是( )。",
         "options": {
@@ -571,7 +630,7 @@
         "correct_count": 0
     },
     {
-        "question_number": "6",
+        "question_number": "46",
         "question_type": "多选题",
         "question_text": "胡锦涛指出: 新形势下，党面临的( )等四大考验是 长期的、复杂的、严峻的，精神懈怠危险、能力 不足危险、脱离群众危险、消极腐败危险更加尖 锐地摆在全党面前。”",
         "options": {
@@ -585,7 +644,21 @@
         "correct_count": 0
     },
     {
-        "question_number": "8",
+        "question_number": "47",
+        "question_type": "多选题",
+        "question_text": "在当代中国，坚持发展是硬道理的本质要求就是坚持科学发展，（）。",
+        "options": {
+            "A": "坚持科学发展，必须培养高素质创新型人才",
+            "B": "坚持科学发展，必须推动科学技术的跨越式发展",
+            "C": "坚持科学发展，必须加快转变经济发展方式",
+            "D": "坚持科学发展，必须善于抓住和用好机遇"
+        },
+        "correct_answer": "ABCD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "48",
         "question_type": "多选题",
         "question_text": "社会主义核心价值体系的基本内容是( )",
         "options": {
@@ -594,12 +667,12 @@
             "C": "中国特色社会主义共同理想",
             "D": "社会主义荣辱观"
         },
-        "correct_answer": "",
+        "correct_answer": "ACD",
         "error_count": 0,
         "correct_count": 0
     },
     {
-        "question_number": "9",
+        "question_number": "49",
         "question_type": "多选题",
         "question_text": "胡锦涛强调，全面提高党的建设科学化水平，建 设()的马克思主义执政党。",
         "options": {
@@ -613,7 +686,7 @@
         "correct_count": 0
     },
     {
-        "question_number": "0",
+        "question_number": "50",
         "question_type": "多选题",
         "question_text": "加快完善城乡发展一体化体制机制 ，形成( )的新 型工农、城乡关系。",
         "options": {
@@ -627,7 +700,7 @@
         "correct_count": 0
     },
     {
-        "question_number": "1",
+        "question_number": "51",
         "question_type": "多选题",
         "question_text": "胡锦涛指出: 每一个共产党员都要把人民放在心 中最高位置，( )，把政治智慧的增长 、执政本领 的增强深深扎根于人民的创造性实践之中。",
         "options": {
@@ -636,12 +709,12 @@
             "C": "服务人民",
             "D": "拜人民为师"
         },
-        "correct_answer": "",
+        "correct_answer": "ABD",
         "error_count": 0,
         "correct_count": 0
     },
     {
-        "question_number": "2",
+        "question_number": "52",
         "question_type": "多选题",
         "question_text": "党的十六届三中全会提出要做好这几个方面的统 筹( )。",
         "options": {
@@ -655,7 +728,7 @@
         "correct_count": 0
     },
     {
-        "question_number": "3",
+        "question_number": "53",
         "question_type": "多选题",
         "question_text": "社会主义和谐社会是经济建设、政治建设、文化 建设、社会建设、生态文明建设协调发展的社 会，是( )整体和谐的社会。",
         "options": {
@@ -664,12 +737,12 @@
             "C": "人与动物",
             "D": "人与人"
         },
-        "correct_answer": "",
+        "correct_answer": "ABD",
         "error_count": 0,
         "correct_count": 0
     },
     {
-        "question_number": "4",
+        "question_number": "54",
         "question_type": "多选题",
         "question_text": "以人为本的.人 ，是指人民群众，就是以( )等劳 动者为主体，包括社会各阶层人民在内的中国最 广大人民。",
         "options": {
@@ -678,12 +751,12 @@
             "C": "教师",
             "D": "工人"
         },
-        "correct_answer": "",
+        "correct_answer": "ABD",
         "error_count": 0,
         "correct_count": 0
     },
     {
-        "question_number": "5",
+        "question_number": "45",
         "question_type": "多选题",
         "question_text": "胡锦涛指出，我国社会主义民主的两种重要的形 式是( )。",
         "options": {
@@ -697,7 +770,7 @@
         "correct_count": 0
     },
     {
-        "question_number": "6",
+        "question_number": "46",
         "question_type": "多选题",
         "question_text": "坚持中国特色社会主义政治发展道路，最根本的 是坚持( )有机统一。",
         "options": {
@@ -711,7 +784,21 @@
         "correct_count": 0
     },
     {
-        "question_number": "8",
+        "question_number": "47",
+        "question_type": "多选题",
+        "question_text": "科学发展观强调，要努力认识和把握执政规律，坚持（），不断研究新情况，解决新问题，创造新机制，增长新本领。",
+        "options": {
+            "A": "科学执政",
+            "B": "创新执政",
+            "C": "民主执政",
+            "D": "依法执政"
+        },
+        "correct_answer": "ACD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "48",
         "question_type": "多选题",
         "question_text": "胡锦涛强调，要坚持在经济社会发展的基础上促 进人的全面发展，( )。",
         "options": {
@@ -725,7 +812,7 @@
         "correct_count": 0
     },
     {
-        "question_number": "9",
+        "question_number": "49",
         "question_type": "多选题",
         "question_text": "科学发展观强调，要树立高度的文化自觉和文化 自信，加快建设( )的社会主义文化强国。",
         "options": {
@@ -734,12 +821,12 @@
             "C": "与建设富强民主文明和谐的社会主义现代化国",
             "D": "与中国特色社会主义事业总体布局相适应"
         },
-        "correct_answer": "",
+        "correct_answer": "BCD",
         "error_count": 0,
         "correct_count": 0
     },
     {
-        "question_number": "0",
+        "question_number": "50",
         "question_type": "多选题",
         "question_text": "积极稳妥推进城镇化的意义有哪些( )。",
         "options": {
@@ -753,7 +840,7 @@
         "correct_count": 0
     },
     {
-        "question_number": "1",
+        "question_number": "51",
         "question_type": "多选题",
         "question_text": "坚持可持续发展，要坚定走( )的文明发展道路。",
         "options": {
@@ -767,7 +854,7 @@
         "correct_count": 0
     },
     {
-        "question_number": "2",
+        "question_number": "52",
         "question_type": "多选题",
         "question_text": "科学发展观强调，建设生态文明，要坚持节约资 源和保护环境的基本国策,坚持( )的方针。",
         "options": {
@@ -781,7 +868,7 @@
         "correct_count": 0
     },
     {
-        "question_number": "5",
+        "question_number": "53",
         "question_type": "多选题",
         "question_text": "全面协调可持续\"是指要坚持( )。",
         "options": {
@@ -795,7 +882,7 @@
         "correct_count": 0
     },
     {
-        "question_number": "4",
+        "question_number": "54",
         "question_type": "多选题",
         "question_text": "党的十六届三中全会提出要统筹( )，协调好改革 进程中的各种利益关系。",
         "options": {
@@ -809,7 +896,7 @@
         "correct_count": 0
     },
     {
-        "question_number": "5",
+        "question_number": "55",
         "question_type": "多选题",
         "question_text": "胡锦涛指出，( )是我们党执政以后的一项根本任 务。",
         "options": {
@@ -823,13 +910,13 @@
         "correct_count": 0
     },
     {
-        "question_number": "6",
+        "question_number": "56",
         "question_type": "多选题",
         "question_text": "要坚定不移地实施人才强国战略，坚持()，加快 确立人才优先发展战略布局。",
         "options": {
-            "A": "苯重创造",
-            "B": "苯重知识",
-            "C": "苯重人才",
+            "A": "尊重创造",
+            "B": "尊重知识",
+            "C": "尊重人才",
             "D": "尊重劳动"
         },
         "correct_answer": "ABCD",
@@ -837,7 +924,21 @@
         "correct_count": 0
     },
     {
-        "question_number": "8",
+        "question_number": "57",
+        "question_type": "多选题",
+        "question_text": "科学发展观的历史地位体现在（）。",
+        "options": {
+            "A": "政治、社会、文化建设的基本方针",
+            "B": "全面建设小康社会、加快推进社会主义现代化的根本指针",
+            "C": "中国特色社会主义理论体系在新世纪新阶段的接续发展",
+            "D": "经济建设的基本思想"
+        },
+        "correct_answer": "BC",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "58",
         "question_type": "多选题",
         "question_text": "坚持统筹兼顾，要正确把握经济社会发展中平衡 先羽 克 233 念 GE) 考试详情 08/80 ”EGG 与不平衡的辨证关系，坚持( )。",
         "options": {
@@ -851,7 +952,7 @@
         "correct_count": 0
     },
     {
-        "question_number": "9",
+        "question_number": "59",
         "question_type": "多选题",
         "question_text": "新形势下全面提高党的建设科学化水平的总要求 是:要增强紧迫感和责任感，牢牢把握加强党的( ) 建设。",
         "options": {
@@ -865,7 +966,7 @@
         "correct_count": 0
     },
     {
-        "question_number": "0",
+        "question_number": "60",
         "question_type": "多选题",
         "question_text": "坚持以人为本，要认识到人民群众是发展的主 体，要把改革发展取得的各方面成果体现在充分 保障人民享有的( )等各方面权益上。",
         "options": {
@@ -874,12 +975,12 @@
             "C": "生态",
             "D": "社会"
         },
-        "correct_answer": "",
+        "correct_answer": "ABCD",
         "error_count": 0,
         "correct_count": 0
     },
     {
-        "question_number": "1",
+        "question_number": "61",
         "question_type": "多选题",
         "question_text": "社会主义协商民主是中国共产党和中国人民在社 会主义民主形式方面的伟大创造，是对马克思主 义民主理论的丰富和发展，充分体现了社会主义 民主的( )。",
         "options": {
@@ -893,7 +994,7 @@
         "correct_count": 0
     },
     {
-        "question_number": "2",
+        "question_number": "62",
         "question_type": "多选题",
         "question_text": "坚持统筹兼顾，必须认真考虑和对待各方面的发 展需要，正确反映和兼顾各阶层各群体的利益要 求，( )。",
         "options": {
@@ -902,12 +1003,12 @@
             "C": "正确处理国内国际两个大局的关系",
             "D": "正确处理中央和地方的关系，善于发挥两个积"
         },
-        "correct_answer": "",
+        "correct_answer": "ABCD",
         "error_count": 0,
         "correct_count": 0
     },
     {
-        "question_number": "3",
+        "question_number": "63",
         "question_type": "多选题",
         "question_text": "科学发展观坚持全面发展和协调上发展体现了( )。",
         "options": {
@@ -921,7 +1022,7 @@
         "correct_count": 0
     },
     {
-        "question_number": "4",
+        "question_number": "64",
         "question_type": "多选题",
         "question_text": "科学发展观认为，生态文明理念包括( )。",
         "options": {
@@ -935,18 +1036,18 @@
         "correct_count": 0
     },
     {
-        "question_number": "5",
+        "question_number": "65",
         "question_type": "多选题",
         "question_text": "科学发展观强调，要加大生态环境的保护力度， 加强生态文明宣传教育，增强全民的( )，努力走 向社会主义生态文明新时代。",
         "options": {
             "A": "环保意识"
         },
-        "correct_answer": "",
+        "correct_answer": "ABC",
         "error_count": 0,
         "correct_count": 0
     },
     {
-        "question_number": "6",
+        "question_number": "66",
         "question_type": "多选题",
         "question_text": "推动形成人与自然和谐发展现代化建设新格局， 需要做到( )。",
         "options": {
@@ -960,7 +1061,7 @@
         "correct_count": 0
     },
     {
-        "question_number": "7",
+        "question_number": "67",
         "question_type": "多选题",
         "question_text": "下列属于构建社会主义和谐社会的总要求内容的 是( )",
         "options": {
@@ -974,7 +1075,7 @@
         "correct_count": 0
     },
     {
-        "question_number": "8",
+        "question_number": "68",
         "question_type": "多选题",
         "question_text": "坚持以人为本的根本含义主要有( )。",
         "options": {
@@ -988,7 +1089,7 @@
         "correct_count": 0
     },
     {
-        "question_number": "9",
+        "question_number": "69",
         "question_type": "多选题",
         "question_text": "科学发展观要求全面协调可持续发展，其中的 协 调 是指发展要有( )，各个方面、各个环节的发展 要相互适应、相互促进。",
         "options": {
@@ -997,12 +1098,12 @@
             "C": "整体性",
             "D": "均衡性"
         },
-        "correct_answer": "",
+        "correct_answer": "AD",
         "error_count": 0,
         "correct_count": 0
     },
     {
-        "question_number": "0",
+        "question_number": "70",
         "question_type": "多选题",
         "question_text": "十七大报告指出，科学发展观与( )既一脉相承又 与时俱进的科学理论。",
         "options": {

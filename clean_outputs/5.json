@@ -23,7 +23,7 @@
             "C": "社会主义",
             "D": "大跃进"
         },
-        "correct_answer": "",
+        "correct_answer": "B",
         "error_count": 0,
         "correct_count": 0
     },
@@ -51,7 +51,7 @@
             "C": "农村实行家庭联产承包责任制",
             "D": "计划经济为主，市场经济为辅"
         },
-        "correct_answer": "",
+        "correct_answer": "C",
         "error_count": 0,
         "correct_count": 0
     },
@@ -65,7 +65,7 @@
             "C": "2001年",
             "D": "2000年"
         },
-        "correct_answer": "",
+        "correct_answer": "B",
         "error_count": 0,
         "correct_count": 0
     },
@@ -84,6 +84,20 @@
         "correct_count": 0
     },
     {
+        "question_number": "7",
+        "question_type": "单选题",
+        "question_text": "2002年11月，党的（）将“三个代表”重要思想同马克思列宁主义、毛泽东思想和邓小平理论一道确立为党必须长期坚持的指导思想，并写入党章，实现了我们党指导思想的又一次与时俱进。",
+        "options": {
+            "A": "十六大",
+            "B": "十八大",
+            "C": "十七大",
+            "D": "十五大"
+        },
+        "correct_answer": "A",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
         "question_number": "8",
         "question_type": "单选题",
         "question_text": "以胡锦涛同志为主要代表的中国共产 党人，创造性地回答了( )这一重大问题。",
@@ -93,7 +107,7 @@
             "C": "建设什么样的党，怎样建设党",
             "D": "什么是马克思主义，怎样必展马克思主义"
         },
-        "correct_answer": "",
+        "correct_answer": "B",
         "error_count": 0,
         "correct_count": 0
     },
@@ -107,12 +121,12 @@
             "C": "党的十六届三中全会",
             "D": "党的十六届四中全会"
         },
-        "correct_answer": "",
+        "correct_answer": "C",
         "error_count": 0,
         "correct_count": 0
     },
     {
-        "question_number": "0",
+        "question_number": "10",
         "question_type": "单选题",
         "question_text": "1978年12月召开的党的十一届三中全 会，重新确立了( )的思想路线，彻底否定了 以阶 级斗争为纲 的错误理论和实践。",
         "options": {
@@ -121,12 +135,12 @@
             "C": "实事求是",
             "D": "解放思想"
         },
-        "correct_answer": "",
+        "correct_answer": "C",
         "error_count": 0,
         "correct_count": 0
     },
     {
-        "question_number": "1",
+        "question_number": "11",
         "question_type": "单选题",
         "question_text": "党的( )把科学发展观写入党章，科学 发展观进一步走向成熟。",
         "options": {
@@ -135,12 +149,12 @@
             "C": "十七大",
             "D": "十六大"
         },
-        "correct_answer": "",
+        "correct_answer": "C",
         "error_count": 0,
         "correct_count": 0
     },
     {
-        "question_number": "2",
+        "question_number": "12",
         "question_type": "单选题",
         "question_text": "党的十一届三中全会以后，以( )同志 为主要代表的中国共声让人 领导全党和全国人 民果断地纠正了这些错误，深刻地分析了错误 现的原因，同时又坚决地维护和继承了过去在理 论上和实践上所取得的一切积极成果。",
         "options": {
@@ -154,7 +168,7 @@
         "correct_count": 0
     },
     {
-        "question_number": "5",
+        "question_number": "13",
         "question_type": "单选题",
         "question_text": "2018年，( )通过的完法修正案，郑重 地把习近平新时代中国特色社会主义思想载入宪 法，实现了国家指导思想的与时俱进。",
         "options": {
@@ -163,12 +177,12 @@
             "C": "十四届全国人大一次会议",
             "D": "十三届全国人大二次会议"
         },
-        "correct_answer": "",
+        "correct_answer": "B",
         "error_count": 0,
         "correct_count": 0
     },
     {
-        "question_number": "4",
+        "question_number": "14",
         "question_type": "单选题",
         "question_text": "首次对“三个代表\"进行了比较全面的 阐述是:()",
         "options": {
@@ -182,7 +196,7 @@
         "correct_count": 0
     },
     {
-        "question_number": "5",
+        "question_number": "15",
         "question_type": "单选题",
         "question_text": "1997年召开的党的( )正式提出 邓小 平理论 这一概念，深刻前述了邓小平理论的历史 地位和指导意义，进一步论述了邓小平对这一理 论的创立作出的独创性贡献。",
         "options": {
@@ -196,7 +210,7 @@
         "correct_count": 0
     },
     {
-        "question_number": "6",
+        "question_number": "16",
         "question_type": "单选题",
         "question_text": "党的十四大指出，我们党所以能够取 得这样的胜利，根本原因是在十四年的伟大实践 中，坚持把( )同中国具体实际相结合，逐步形成 和发展了建设有中国特色社会主义的理论。",
         "options": {
@@ -210,7 +224,21 @@
         "correct_count": 0
     },
     {
-        "question_number": "8",
+        "question_number": "17",
+        "question_type": "单选题",
+        "question_text": "1987年召开的党的十三大，第一次比较系统地论述了我国社会主义初级阶段理论，明确概括和全面阐发了党的（）的基本路线。",
+        "options": {
+            "A": "“一个中心、两个基本点”",
+            "B": "社会主义全面发展",
+            "C": "“四项基本原则",
+            "D": "“三步走”"
+        },
+        "correct_answer": "A",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "18",
         "question_type": "单选题",
         "question_text": "科技进步日新月异，以( )为核心的高 新技术的发展，极大地改变了人们的生产、生活 方式和国际经济、政治关系。",
         "options": {
@@ -224,7 +252,7 @@
         "correct_count": 0
     },
     {
-        "question_number": "9",
+        "question_number": "19",
         "question_type": "单选题",
         "question_text": "1982年邓小平在党的十二大开幕词中 明确提出:走自己的道路，( )。",
         "options": {
@@ -233,12 +261,12 @@
             "C": "实现马克思主义中国化时代化",
             "D": "建设有中国特色的社会主义"
         },
-        "correct_answer": "",
+        "correct_answer": "D",
         "error_count": 0,
         "correct_count": 0
     },
     {
-        "question_number": "1",
+        "question_number": "20",
         "question_type": "多选题",
         "question_text": "我国在社会主义建设初期走了不少碍 路、犯了不少错误，其深层原因是:( )",
         "options": {
@@ -252,7 +280,7 @@
         "correct_count": 0
     },
     {
-        "question_number": "2",
+        "question_number": "21",
         "question_type": "多选题",
         "question_text": "2004年3月，胡锦涛在中央人口资源 环境座谈会上发表重要讲话，深刻前明了科学上 展观提出的背景、意义，明确界定了( )的深刻内 涵和基本要求，并对如何树立和落实科学发展观 提出了明确的要求，标志着科学发展观的形成。",
         "options": {
@@ -266,7 +294,7 @@
         "correct_count": 0
     },
     {
-        "question_number": "3",
+        "question_number": "22",
         "question_type": "多选题",
         "question_text": "党的十八大以来，中国特色社会主义 进入新时代，这是我国发展新的历史方位。这个 中国特色社会主义新时代是指( )。",
         "options": {
@@ -280,7 +308,7 @@
         "correct_count": 0
     },
     {
-        "question_number": "4",
+        "question_number": "23",
         "question_type": "多选题",
         "question_text": "新世纪新阶段，经济社会发展呈现一 系列新的阶段性特征，主要表现有( )。",
         "options": {
@@ -294,19 +322,21 @@
         "correct_count": 0
     },
     {
-        "question_number": "5",
+        "question_number": "24",
         "question_type": "多选题",
         "question_text": "中国特色社会主义理论体系是中国共 产党长期探索的伟大理论创造，同( )一脉相承又 与时俱进，是马克思主义中国化时代化的重大理 论成果。",
         "options": {
             "A": "邓小平理论",
-            "B": "毛泽东思想"
+            "B": "毛泽东思想",
+            "C": "马克思列宁主义",
+            "D": "空想社会主义",
         },
         "correct_answer": "BC",
         "error_count": 0,
         "correct_count": 0
     },
     {
-        "question_number": "6",
+        "question_number": "25",
         "question_type": "多选题",
         "question_text": "2002年5月，江泽民在中共中央党校 省部级干部进修班毕业典礼上深刻阐述了 三个代 表 重要思想的内在联系，提出 贯彻 三个代表 重 要思想，( )。",
         "options": {
@@ -320,7 +350,21 @@
         "correct_count": 0
     },
     {
-        "question_number": "8",
+        "question_number": "26",
+        "question_type": "多选题",
+        "question_text": "胡锦涛在纪念中国共产党十一届三中全会召开30周年大会中系统阐述了中国在改革开放实践中积累的宝贵经验，概括而言就是“十个结合”，以下哪些属于“十个结合”的宝贵经验的是（)。",
+        "options": {
+            "A": "把坚持社会主义基本制度同发展市场经济结合起来",
+            "B": "把发展社会生产力同提高全民族文明素质结合起来",
+            "C": "把坚持马克思主义基本原理同推进马克思主义中国化结合起来",
+            "D": "把坚持独立自主同参与经济全球化结合起来"
+        },
+        "correct_answer": "ABCD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "27",
         "question_type": "多选题",
         "question_text": "习近平新时代中国特色社会主义思想 是( )。",
         "options": {
@@ -329,12 +373,12 @@
             "C": "21世纪马克思主义",
             "D": "永远的马克思主义"
         },
-        "correct_answer": "AC",
+        "correct_answer": "ACD",
         "error_count": 0,
         "correct_count": 0
     },
     {
-        "question_number": "9",
+        "question_number": "28",
         "question_type": "多选题",
         "question_text": "习近平新时代中国特色社会主义思想 科学回答了( )等重大时代课题。",
         "options": {
@@ -348,7 +392,7 @@
         "correct_count": 0
     },
     {
-        "question_number": "0",
+        "question_number": "29",
         "question_type": "多选题",
         "question_text": "党的十八大以来，( )正以前所未有的 方式展开，世界百年未有之大变局加速演进。",
         "options": {
@@ -362,7 +406,7 @@
         "correct_count": 0
     },
     {
-        "question_number": "1",
+        "question_number": "30",
         "question_type": "多选题",
         "question_text": "以习近平同志为核心的党中央以伟大 的历史主动精神、巨大的政治勇气、强烈的责任 担当，统筹国内国际两个大局，统揽( )，创立习 近平新时代中国特色社会主义思想，明确坚持和 发展中国特色社会主义的基本方略，提出一系列 治国理政新理念新思想新战略，实现了马克思主 义中国化时代化新的飞跃。",
         "options": {
@@ -371,12 +415,12 @@
             "C": "伟大斗争",
             "D": "伟大梦想"
         },
-        "correct_answer": "",
+        "correct_answer": "ABCD",
         "error_count": 0,
         "correct_count": 0
     },
     {
-        "question_number": "2",
+        "question_number": "31",
         "question_type": "多选题",
         "question_text": "中国特色社会主义进入新时代，意味 着中国特色社会主义( )不断发展，拓展了发展中 国家走向现代化的途径，给世界上那些既希望加 快发展又希望保持自身独立性的国家和民族提供 了全新选择，为解决人类问题贡献了中国智慧和 中国方案。",
         "options": {
@@ -390,7 +434,7 @@
         "correct_count": 0
     },
     {
-        "question_number": "3",
+        "question_number": "32",
         "question_type": "多选题",
         "question_text": "1989-2002年，国际局势的深刻变动 对引领中国改革发展的中国共产党形成前所未有 的压力和考验，所面临的国际局势有哪些( )。",
         "options": {
@@ -404,13 +448,13 @@
         "correct_count": 0
     },
     {
-        "question_number": "4",
+        "question_number": "33",
         "question_type": "多选题",
         "question_text": "新世纪新阶段，我国进入( )，经济社 会发展呈现一系列新的阶段性特征。",
         "options": {
             "A": "改革攻坚期",
             "B": "矛盾凸显期",
-            "C": "发展关键其",
+            "C": "发展关键期",
             "D": "开放活跃期"
         },
         "correct_answer": "ABC",
@@ -418,16 +462,21 @@
         "correct_count": 0
     },
     {
-        "question_number": "5",
+        "question_number": "34",
         "question_type": "多选题",
         "question_text": "习近平新时代中国特色社会主义思想 内涵十分丰富，党的十九大、十九届六中全会提 出的( )概括了习近平新时代中国特色社会主义思 想的主要内容。 A，十三个方面成就 B，两步走 战略安排 C，十四个坚持- D，十个明确”",
-        "options": {},
+        "options": {
+            "A": "十三个方面成就",
+            "B": "两步走战略安排",
+            "C": "十四个坚持",
+            "D": "十个明确"
+        },
         "correct_answer": "ACD",
         "error_count": 0,
         "correct_count": 0
     },
     {
-        "question_number": "6",
+        "question_number": "35",
         "question_type": "多选题",
         "question_text": "以习近平同志为核心的党中央统筹把 最) 坚持把马克思主义基本原理同中国具体实 际相结合、同中华优秀传统文化相结合。",
         "options": {
@@ -441,7 +490,21 @@
         "correct_count": 0
     },
     {
-        "question_number": "8",
+        "question_number": "36",
+        "question_type": "多选题",
+        "question_text": "2001年7月1日，江泽民在庆祝中国共产党成立八十周年大会上的讲话中全面闸述了“三个代表”重要思想的科学内涵和基本内容，“三个代表”重要思想具体内容为，中国共产党始终代表。",
+        "options": {
+            "A": "中国先进生产力的发展要求",
+            "B": "中国最广大人民的根本利益",
+            "C": "中国工人阶级的共同意志",
+            "D": "中国先进文化的前进方向"
+        },
+        "correct_answer": "ABD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "37",
         "question_type": "多选题",
         "question_text": "以胡锦涛同志为主要代表的中国共产 党人领导人民紧紧抓住和用好我国发展的重要战 略机遇期 ，在全面建设小康社会实践中推进( )。",
         "options": {
@@ -455,7 +518,7 @@
         "correct_count": 0
     },
     {
-        "question_number": "9",
+        "question_number": "38",
         "question_type": "多选题",
         "question_text": "中国共产党百年奋斗的历史经验包括 ()等。",
         "options": {
@@ -469,14 +532,14 @@
         "correct_count": 0
     },
     {
-        "question_number": "0",
+        "question_number": "39",
         "question_type": "多选题",
         "question_text": "中国特色社会主义进入新时代，意 味着( )。",
         "options": {
             "A": "中国特色社会主义道路、理论、制度、文化不",
             "B": "中华民族迎来了从站起来、富起来到强起来的",
             "C": "科学社会主义在21世纪的中国焕发出强大生机",
-            "D": "建党?90周年的伟大胜利"
+            "D": "建党90周年的伟大胜利"
         },
         "correct_answer": "ABC",
         "error_count": 0,

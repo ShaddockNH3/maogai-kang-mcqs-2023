@@ -51,7 +51,7 @@
             "C": "中国和美国的关系问题",
             "D": "中国和日本的关系问题"
         },
-        "correct_answer": "",
+        "correct_answer": "A",
         "error_count": 0,
         "correct_count": 0
     },
@@ -93,7 +93,7 @@
             "C": "什么是社会主义、怎样建设社会主义",
             "D": "如何坚持中国特色社会主义道路"
         },
-        "correct_answer": "",
+        "correct_answer": "C",
         "error_count": 0,
         "correct_count": 0
     },
@@ -107,7 +107,7 @@
             "C": "解决人民的温饱问题",
             "D": "比较富裕"
         },
-        "correct_answer": "",
+        "correct_answer": "C",
         "error_count": 0,
         "correct_count": 0
     },
@@ -120,12 +120,12 @@
             "B": "一国两制",
             "C": "社会主义市场经济理论"
         },
-        "correct_answer": "E",
+        "correct_answer": "C",
         "error_count": 0,
         "correct_count": 0
     },
     {
-        "question_number": "0",
+        "question_number": "10",
         "question_type": "单选题",
         "question_text": "社会主义市场经济理论认为，计划 经济和市场经济属于( )。",
         "options": {
@@ -139,7 +139,7 @@
         "correct_count": 0
     },
     {
-        "question_number": "1",
+        "question_number": "11",
         "question_type": "单选题",
         "question_text": "社会主义社会发展生产力的目的不 是为少数人谋利益，而是要使全体社会成员过上 富裕幸福的生活，是要实现( )。",
         "options": {
@@ -148,12 +148,12 @@
             "C": "共同富裕",
             "D": "可持续发展"
         },
-        "correct_answer": "",
+        "correct_answer": "C",
         "error_count": 0,
         "correct_count": 0
     },
     {
-        "question_number": "2",
+        "question_number": "12",
         "question_type": "单选题",
         "question_text": "邓小平敏锐地把握了国际形势的重 变化，对时代主题的转换作出了科学判断。他 明确指出:现在世界上真正大的问题，带全球性 的战略问题，一个是__问题,一个是经济问题或 者说是__问题。 \"下列选项正确的是( )",
         "options": {
@@ -167,7 +167,7 @@
         "correct_count": 0
     },
     {
-        "question_number": "3",
+        "question_number": "13",
         "question_type": "单选题",
         "question_text": "邓小平强调，我们要建设的社会主 义国家，不但要有高度的物质文明，而且要有高 度的( )。",
         "options": {
@@ -181,7 +181,7 @@
         "correct_count": 0
     },
     {
-        "question_number": "4",
+        "question_number": "14",
         "question_type": "单选题",
         "question_text": "建设\" 富强、民主、文明的社会主义 现代化国家\"，这是基本路线规定的党在社会主义 初级阶段的( )。",
         "options": {
@@ -195,7 +195,7 @@
         "correct_count": 0
     },
     {
-        "question_number": "5",
+        "question_number": "15",
         "question_type": "单选题",
         "question_text": "搞清楚* 什么是社会主义，怎样建设 社会主义\"，关键是要( )。",
         "options": {
@@ -209,7 +209,7 @@
         "correct_count": 0
     },
     {
-        "question_number": "6",
+        "question_number": "16",
         "question_type": "单选题",
         "question_text": "( )基于对中国国情的准确把握，揭示 了当代中国的历史方位，为建设中国特色社会主 义提供了总依据。",
         "options": {
@@ -223,7 +223,7 @@
         "correct_count": 0
     },
     {
-        "question_number": "7",
+        "question_number": "17",
         "question_type": "单选题",
         "question_text": "党在社会主义初级阶段的基本路线 的“一个中心\"是( )。",
         "options": {
@@ -232,28 +232,30 @@
             "C": "以经济建设为中心",
             "D": "以对外开放为中心"
         },
-        "correct_answer": "",
+        "correct_answer": "C",
         "error_count": 0,
         "correct_count": 0
     },
     {
-        "question_number": "8",
+        "question_number": "18",
         "question_type": "单选题",
         "question_text": "本 )，邓小平理论被确立为党的 指导思想并写",
         "options": {
             "A": "十二大",
             "B": "十三大",
-            "C": "十五大"
+            "C": "十五大",
+            "D": "十四大"
         },
-        "correct_answer": "",
+        "correct_answer": "C",
         "error_count": 0,
         "correct_count": 0
     },
     {
-        "question_number": "9",
+        "question_number": "19",
         "question_type": "单选题",
         "question_text": "检验一切工作是非得失的根本标准 是()。 A，“三个有利于”",
         "options": {
+            "A": "“三个有利于”",
             "B": "生产力",
             "C": "实践",
             "D": "马克思主义"
@@ -263,7 +265,7 @@
         "correct_count": 0
     },
     {
-        "question_number": "0",
+        "question_number": "20",
         "question_type": "单选题",
         "question_text": "1984年10月，党的十二届三中全会 把( )作为基本国策。",
         "options": {
@@ -272,12 +274,12 @@
             "C": "“863计划”",
             "D": "新发展格局"
         },
-        "correct_answer": "",
+        "correct_answer": "B",
         "error_count": 0,
         "correct_count": 0
     },
     {
-        "question_number": "1",
+        "question_number": "21",
         "question_type": "单选题",
         "question_text": "依据邓小平理论，改革是从根本上 改变束缚生产力发展的( )，促进生产力的发展， 解决社会主义社会发展动力问题。",
         "options": {
@@ -291,7 +293,7 @@
         "correct_count": 0
     },
     {
-        "question_number": "2",
+        "question_number": "22",
         "question_type": "单选题",
         "question_text": "邓小平指出”解放思想，就是使思想 和实际相符合 使主观和客观相符合，就是()。”",
         "options": {
@@ -305,7 +307,7 @@
         "correct_count": 0
     },
     {
-        "question_number": "3",
+        "question_number": "23",
         "question_type": "单选题",
         "question_text": "( )是我们党的优良传统，也是实现社 会主义初级阶段奋斗目标的根本立足点。",
         "options": {
@@ -314,12 +316,12 @@
             "C": "自力更生，艰苦创业",
             "D": "艰苦创业，奋勇前进"
         },
-        "correct_answer": "",
+        "correct_answer": "C",
         "error_count": 0,
         "correct_count": 0
     },
     {
-        "question_number": "4",
+        "question_number": "24",
         "question_type": "单选题",
         "question_text": "邓小平指出，社会主义民主是( )的统 O",
         "options": {
@@ -333,7 +335,7 @@
         "correct_count": 0
     },
     {
-        "question_number": "5",
+        "question_number": "25",
         "question_type": "单选题",
         "question_text": "中国特色社会主义理论体系的开篇 之作是( )。 A，“三个代表?重要思想",
         "options": {
@@ -341,12 +343,12 @@
             "C": "邓小平理论",
             "D": "毛泽东思想"
         },
-        "correct_answer": "",
+        "correct_answer": "C",
         "error_count": 0,
         "correct_count": 0
     },
     {
-        "question_number": "6",
+        "question_number": "26",
         "question_type": "单选题",
         "question_text": "邓小平理论的精丹是( )。",
         "options": {
@@ -360,7 +362,7 @@
         "correct_count": 0
     },
     {
-        "question_number": "7",
+        "question_number": "27",
         "question_type": "单选题",
         "question_text": "邓小平理论形成的社会实践基础是( )",
         "options": {
@@ -374,7 +376,7 @@
         "correct_count": 0
     },
     {
-        "question_number": "8",
+        "question_number": "28",
         "question_type": "单选题",
         "question_text": "邓小平明确指出: 改革是中国的第二 次革命。 \"所谓第二次革命，是与中国共产党领导 的第一次革命相对而言的。社会主义改革的性质 是( )。",
         "options": {
@@ -382,12 +384,12 @@
             "B": "社会主义原有体制的修补",
             "D": "社会主义经济运行方式的改变"
         },
-        "correct_answer": "",
+        "correct_answer": "C",
         "error_count": 0,
         "correct_count": 0
     },
     {
-        "question_number": "9",
+        "question_number": "29",
         "question_type": "单选题",
         "question_text": "关于地区的“先富\"和”*共富”，邓小 平提出( )思想，即沿海先发展起来，从而带动内 地更好地发展，这是一个事关大局的问题。 A“两手抓”",
         "options": {
@@ -399,19 +401,21 @@
         "correct_count": 0
     },
     {
-        "question_number": "0",
+        "question_number": "30",
         "question_type": "单选题",
-        "question_text": "王大玫等四位科学家提出要跟踪世 界先进水平、发展中国高技术的建议，经过邓小 平批示，国务院批准的相关文件被称为( )。",
+        "question_text": "王大珩等四位科学家提出要跟踪世 界先进水平、发展中国高技术的建议，经过邓小 平批示，国务院批准的相关文件被称为( )。",
         "options": {
             "A": "“985工程”",
-            "B": "“211工程”"
+            "B": "“211工程”",
+            "C": "“双一流计划”",
+            "D": "“863计划”"
         },
         "correct_answer": "D",
         "error_count": 0,
         "correct_count": 0
     },
     {
-        "question_number": "1",
+        "question_number": "31",
         "question_type": "单选题",
         "question_text": "邓小平提出: 在整个改革开放过程中 都要反对腐败。对干部和共产党员来说，( )要作 为大事来抓。”",
         "options": {
@@ -420,12 +424,12 @@
             "C": "廉政建设",
             "D": "四个现代化"
         },
-        "correct_answer": "",
+        "correct_answer": "C",
         "error_count": 0,
         "correct_count": 0
     },
     {
-        "question_number": "2",
+        "question_number": "32",
         "question_type": "单选题",
         "question_text": "1978年12月召开的党的( )，重新确 立了解放思想、实事求是的思想路线，确定把全 党工作的着重点转移到社会主义现代化建设上 来。",
         "options": {
@@ -434,12 +438,12 @@
             "C": "十一届二中全会",
             "D": "十一届四中全会"
         },
-        "correct_answer": "",
+        "correct_answer": "B",
         "error_count": 0,
         "correct_count": 0
     },
     {
-        "question_number": "3",
+        "question_number": "33",
         "question_type": "单选题",
         "question_text": "关于科学技术的极端重要性，邓小 平有一著名论断，这就是( )。",
         "options": {
@@ -453,7 +457,7 @@
         "correct_count": 0
     },
     {
-        "question_number": "4",
+        "question_number": "34",
         "question_type": "单选题",
         "question_text": "建立国际新秩序，需要坚持正确的 方向和原则，( )是最经得住考验的。",
         "options": {
@@ -462,12 +466,12 @@
             "C": "和平共处五项原则",
             "D": "制裁措施"
         },
-        "correct_answer": "",
+        "correct_answer": "C",
         "error_count": 0,
         "correct_count": 0
     },
     {
-        "question_number": "5",
+        "question_number": "35",
         "question_type": "单选题",
         "question_text": "依据社会主义根本任务的理论，20 世纪八十年代党和国家的工作重点是( )。",
         "options": {
@@ -481,7 +485,7 @@
         "correct_count": 0
     },
     {
-        "question_number": "6",
+        "question_number": "36",
         "question_type": "单选题",
         "question_text": "社会主义历史经验证明，必须坚持( )，借鉴和吸收人类文明成果建设社会主义，不能 天起门来搞建设。",
         "options": {
@@ -495,7 +499,7 @@
         "correct_count": 0
     },
     {
-        "question_number": "7",
+        "question_number": "37",
         "question_type": "单选题",
         "question_text": "邓小平理论经过了( )，已被证明是科 学的理论。",
         "options": {
@@ -509,7 +513,7 @@
         "correct_count": 0
     },
     {
-        "question_number": "8",
+        "question_number": "38",
         "question_type": "单选题",
         "question_text": "在改革中，我们必须坚持的两条根 本原则，一是以社会主义公有制经济为主体，一 是( )。",
         "options": {
@@ -522,7 +526,7 @@
         "correct_count": 0
     },
     {
-        "question_number": "9",
+        "question_number": "39",
         "question_type": "单选题",
         "question_text": "党在社会主义初级阶段的基本路线 的“两个基本点\"是( )。",
         "options": {
@@ -531,12 +535,12 @@
             "C": "坚持四项基本原则，坚持改革开放",
             "D": "一手抓物质文明，一手抓精神文明"
         },
-        "correct_answer": "",
+        "correct_answer": "C",
         "error_count": 0,
         "correct_count": 0
     },
     {
-        "question_number": "0",
+        "question_number": "40",
         "question_type": "单选题",
         "question_text": "提出\"科学技术是第一生产力\"这个 新论断的是( )。",
         "options": {
@@ -550,7 +554,7 @@
         "correct_count": 0
     },
     {
-        "question_number": "1",
+        "question_number": "41",
         "question_type": "单选题",
         "question_text": "( )是邓小平对世界时代主题的判断。",
         "options": {
@@ -564,7 +568,7 @@
         "correct_count": 0
     },
     {
-        "question_number": "2",
+        "question_number": "42",
         "question_type": "单选题",
         "question_text": "\"和平统一、一国两制”的核心是( )。",
         "options": {
@@ -578,7 +582,7 @@
         "correct_count": 0
     },
     {
-        "question_number": "3",
+        "question_number": "43",
         "question_type": "单选题",
         "question_text": "社会主义的根本任务是( )。",
         "options": {
@@ -592,7 +596,7 @@
         "correct_count": 0
     },
     {
-        "question_number": "4",
+        "question_number": "44",
         "question_type": "单选题",
         "question_text": "邓小平理论和马克思列宁主义、毛 泽东思想之间的关系是( )。",
         "options": {
@@ -606,7 +610,7 @@
         "correct_count": 0
     },
     {
-        "question_number": "1",
+        "question_number": "45",
         "question_type": "多选题",
         "question_text": "邓小平理论指出，在社会主义的依靠 力量问题上，最广泛的统一战线包括( ) -一、",
         "options": {
@@ -620,7 +624,7 @@
         "correct_count": 0
     },
     {
-        "question_number": "2",
+        "question_number": "46",
         "question_type": "多选题",
         "question_text": "社会主义初级阶段的论断包括两层含 义( )。",
         "options": {
@@ -634,7 +638,7 @@
         "correct_count": 0
     },
     {
-        "question_number": "3",
+        "question_number": "47",
         "question_type": "多选题",
         "question_text": "邓小平的一系列“两手抓 \"思想包括( )。",
         "options": {
@@ -648,7 +652,7 @@
         "correct_count": 0
     },
     {
-        "question_number": "4",
+        "question_number": "48",
         "question_type": "多选题",
         "question_text": "社会主义本质突出强调\"解放生产力， 发展生产力”，以下说法正确的是( )。",
         "options": {
@@ -662,7 +666,7 @@
         "correct_count": 0
     },
     {
-        "question_number": "5",
+        "question_number": "49",
         "question_type": "多选题",
         "question_text": "改革的实质和目标，是( )",
         "options": {
@@ -676,7 +680,7 @@
         "correct_count": 0
     },
     {
-        "question_number": "6",
+        "question_number": "50",
         "question_type": "多选题",
         "question_text": "社会主义制度建立以后，也有一个如 何认清国情、正确判断我国社会所处历史方位的 问题。社会主义初级阶段理论( )。",
         "options": {
@@ -690,7 +694,7 @@
         "correct_count": 0
     },
     {
-        "question_number": "7",
+        "question_number": "51",
         "question_type": "多选题",
         "question_text": "党的建设理论是邓小平理论的重要组 成部分，加强党的建设，应当( )",
         "options": {
@@ -704,7 +708,7 @@
         "correct_count": 0
     },
     {
-        "question_number": "8",
+        "question_number": "52",
         "question_type": "多选题",
         "question_text": "执政党的党风是关系党生死存亡的重 大问题，一定要坚持党的宗旨，继承党的优良传 统，发扬( )。",
         "options": {
@@ -718,7 +722,7 @@
         "correct_count": 0
     },
     {
-        "question_number": "9",
+        "question_number": "53",
         "question_type": "多选题",
         "question_text": "社会主义根本任务的理论是邓小平理 论主要内容之一，对其说法正确的是( )。",
         "options": {
@@ -732,7 +736,7 @@
         "correct_count": 0
     },
     {
-        "question_number": "0",
+        "question_number": "54",
         "question_type": "多选题",
         "question_text": "一个中心、两个基本点 \"包括( )。",
         "options": {
@@ -741,12 +745,12 @@
             "C": "以经济建设为中心",
             "D": "坚持改革开放"
         },
-        "correct_answer": "A",
+        "correct_answer": "ACD",
         "error_count": 0,
         "correct_count": 0
     },
     {
-        "question_number": "1",
+        "question_number": "55",
         "question_type": "多选题",
         "question_text": "党的思想路线的重新确立，解决了 一系列重大理论和实践问题，其意义包括( )",
         "options": {
@@ -760,7 +764,7 @@
         "correct_count": 0
     },
     {
-        "question_number": "2",
+        "question_number": "56",
         "question_type": "多选题",
         "question_text": "邓小平关于社会主义本质的概括， 理解正确的是( )。",
         "options": {
@@ -773,7 +777,7 @@
         "correct_count": 0
     },
     {
-        "question_number": "3",
+        "question_number": "57",
         "question_type": "多选题",
         "question_text": "党的基本路线在改革开放实践中不 断充实和完善。下列说法正确的是( )。",
         "options": {
@@ -787,34 +791,35 @@
         "correct_count": 0
     },
     {
-        "question_number": "4",
+        "question_number": "58",
         "question_type": "多选题",
         "question_text": "1987年4月，邓小平第一次提出了分 “三步走\"基本实现现代化的战略。同年10月，中 共十三大把邓小平“三步走”的发展战略构想确定 下来，这就是( )。",
         "options": {
-            "A": "到2020年左右，建党100周年时，全面建成小",
-            "B": "到1990年，实现国民生产总值比1980年翻一",
-            "C": "到20世纪末，使国民生产总值再翻一番，人民",
-            "D": "到21世纪中叶，人均国民生产总值达到中等发"
+            "A": "到2020年左右，建党100周年时，全面建成小康社会",
+            "B": "到1990年，实现国民生产总值比1980年翻一番，解决人民的温饱问题",
+            "C": "到20世纪末，使国民生产总值再翻一番，人民生活达到小康水平",
+            "D": "到21世纪中叶，人均国民生产总值达到中等发达国家水平，基本实现现代化"
         },
-        "correct_answer": "",
+        "correct_answer": "BCD",
         "error_count": 0,
         "correct_count": 0
     },
     {
-        "question_number": "5",
+        "question_number": "59",
         "question_type": "多选题",
         "question_text": "十三大报告提出了党在社会主义初 级阶段的基本路线。党的基本路线提出建设\"富 强、民主、文明的社会主义现代化国家”。以下说 法正确的是( )。",
         "options": {
             "A": "“民主\"主要是政治领域的目标和要求",
             "B": "“富强\"主要是经济领域的目标和要求",
-            "C": "这是基本路线规定的党在社会主义初级阶段的"
+            "C": "这是基本路线规定的党在社会主义初级阶段的奋斗目标、领导力量和依靠力量、基本途径和根本保证以及实现这一目标的基本方针。",
+            "D": "“文明”主要是思想文化领域的目标和要求"
         },
         "correct_answer": "ABCD",
         "error_count": 0,
         "correct_count": 0
     },
     {
-        "question_number": "6",
+        "question_number": "60",
         "question_type": "多选题",
         "question_text": "党的十三大确立了党的基本路线， 其中的国家建设目标是( )。",
         "options": {
@@ -828,26 +833,27 @@
         "correct_count": 0
     },
     {
-        "question_number": "7",
+        "question_number": "61",
         "question_type": "多选题",
         "question_text": "邓小平作的《解放思想，实事求 是，团结一致向前看》的重要讲话标志着党重新",
         "options": {
             "A": "政治路线",
             "B": "文化路线",
-            "C": "组织路线"
+            "C": "组织路线",
+            "D": "思想路线"
         },
         "correct_answer": "ACD",
         "error_count": 0,
         "correct_count": 0
     },
     {
-        "question_number": "8",
+        "question_number": "62",
         "question_type": "多选题",
         "question_text": "在邓小平社会主义精神文明建设思 想中，一手抓物质文明，一手抓精神文明, “两手 抓，两手都要硬\"，强调( )。",
         "options": {
             "A": "精神文明重在建设",
-            "B": "物质文明建设和精神文明建设相辅相成、相互",
-            "C": "我们要建设的社会主义国家，不但要有高度的",
+            "B": "物质文明建设和精神文明建设相辅相成、相互促进",
+            "C": "我们要建设的社会主义国家，不但要有高度的物质文明，而且要有高度的精神文明",
             "D": "物质文明重在建设"
         },
         "correct_answer": "ABC",
@@ -855,7 +861,7 @@
         "correct_count": 0
     },
     {
-        "question_number": "9",
+        "question_number": "63",
         "question_type": "多选题",
         "question_text": "邓小平指出，现在世界上真正大的 带 问题，带全球性的战略问题是( )。",
         "options": {
@@ -869,16 +875,21 @@
         "correct_count": 0
     },
     {
-        "question_number": "0",
+        "question_number": "64",
         "question_type": "多选题",
-        "question_text": "关于\"一个中心，两个基本点 \"所回 答的问题，以下说法正确的是( )。 A“坚持四项基本原则”，回答了解放和发展生产 力的政治保证问题 B“坚持改革开放”，回答了党的发展动力和外部 条件问题 C…“一个中心，两个基本点\"是一个整体，集中体 现了我国社会主义现代化建设的战略布局 D“以经济建设为中心 ”回答了社会主义的根本任 务问题",
-        "options": {},
+        "question_text": "关于\"一个中心，两个基本点 \"所回 答的问题，以下说法正确的是( )。",
+        "options": {
+             "A":"“坚持四项基本原则”，回答了解放和发展生产 力的政治保证问题",
+             "B":" “坚持改革开放”，回答了党的发展动力和外部 条件问题 ",
+             "C":"“一个中心，两个基本点\"是一个整体，集中体 现了我国社会主义现代化建设的战略布局",
+             "D":" “以经济建设为中心 ”回答了社会主义的根本任 务问题"
+        },
         "correct_answer": "ABCD",
         "error_count": 0,
         "correct_count": 0
     },
     {
-        "question_number": "1",
+        "question_number": "65",
         "question_type": "多选题",
         "question_text": "关于改革开放理论，以下说法正确 的是( )。",
         "options": {
@@ -892,12 +903,13 @@
         "correct_count": 0
     },
     {
-        "question_number": "2",
+        "question_number": "66",
         "question_type": "多选题",
         "question_text": "邓小平理论第一次比较系统地初步 回答了建设中国特色社会主义的一系列基本问 题，包括( )。",
         "options": {
             "A": "社会主义初级阶段理论",
             "B": "社会主义根本任务的理论",
+            "C": "“三步走”战略",
             "D": "党的基本路线"
         },
         "correct_answer": "ABCD",
@@ -905,7 +917,7 @@
         "correct_count": 0
     },
     {
-        "question_number": "3",
+        "question_number": "67",
         "question_type": "多选题",
         "question_text": "我们坚持以和平共处五项原则作为 新的国际政治、经济秩序的准则，在( )的基础 上，同所有国家发展友好合作关系。",
         "options": {
@@ -919,7 +931,7 @@
         "correct_count": 0
     },
     {
-        "question_number": "4",
+        "question_number": "68",
         "question_type": "多选题",
         "question_text": "邓小平开创性地提出了一系列具有 浓厚中国特色的新概念新范畴，包括( )",
         "options": {
@@ -933,7 +945,7 @@
         "correct_count": 0
     },
     {
-        "question_number": "5",
+        "question_number": "69",
         "question_type": "多选题",
         "question_text": "邓小平理论是马克思列宁主义基本 原理与当代中国实际和时代特征相结合的产物。 以下关于邓小平理论的历史地位说法正确的是( )",
         "options": {
@@ -947,7 +959,7 @@
         "correct_count": 0
     },
     {
-        "question_number": "6",
+        "question_number": "70",
         "question_type": "多选题",
         "question_text": "完善党内监督制度，把( )结合起来， 逐步形成强有力的监督体系。",
         "options": {
@@ -961,7 +973,7 @@
         "correct_count": 0
     },
     {
-        "question_number": "7",
+        "question_number": "71",
         "question_type": "多选题",
         "question_text": "邓小平指出，所谓精神文明，是指( )",
         "options": {
@@ -975,7 +987,7 @@
         "correct_count": 0
     },
     {
-        "question_number": "8",
+        "question_number": "72",
         "question_type": "多选题",
         "question_text": "在1992年南方谈话中，邓小平指 出，社会主义的本质是( )",
         "options": {
@@ -988,20 +1000,21 @@
         "correct_count": 0
     },
     {
-        "question_number": "9",
+        "question_number": "73",
         "question_type": "多选题",
         "question_text": "为了顺利实现“三步走”发展战略， 邓小平提出( )",
         "options": {
             "A": "改革开放的思想",
             "B": "以重点带动全局的思想",
-            "D": "允许和鼓励一部分地区、一部分人先富起来逐"
+            "C": "“台阶式”发展的撕向",
+            "D": "允许和鼓励一部分地区、一部分人先富起来逐步实现共同富裕的思想"
         },
         "correct_answer": "BCD",
         "error_count": 0,
         "correct_count": 0
     },
     {
-        "question_number": "0",
+        "question_number": "74",
         "question_type": "多选题",
         "question_text": "一国两制是从中国实际出发，解决人 )，实现祖国和平统一的伟大构想。",
         "options": {
@@ -1015,7 +1028,7 @@
         "correct_count": 0
     },
     {
-        "question_number": "1",
+        "question_number": "75",
         "question_type": "多选题",
         "question_text": "改革是一项轩新的事业，是一个大 实验。判断改革和各方面是非得失，归根到底， 主要看( )。",
         "options": {
@@ -1029,10 +1042,13 @@
         "correct_count": 0
     },
     {
-        "question_number": "2",
+        "question_number": "76",
         "question_type": "多选题",
-        "question_text": "“一国两制\"的科学内涵包括( )。 姜 轴 . 尽最大努力争取和平统一",
+        "question_text": "“一国两制\"的科学内涵包括( )。",
         "options": {
+            "A": "尽最大努力争取和平统一",
+            "B": "两制并存",
+            "C": "高度自治",
             "D": "坚持一个中国"
         },
         "correct_answer": "ABCD",
@@ -1040,11 +1056,13 @@
         "correct_count": 0
     },
     {
-        "question_number": "3",
+        "question_number": "77",
         "question_type": "多选题",
-        "question_text": "党的十五大进一步阐述了社会主义 初级阶段的基本特征。以下说法正确的是( ) 和A.是由自然经济半自然经济占很大比重，逐步转 变为经济市场化程度较高的历史阶段。",
+        "question_text": "党的十五大进一步阐述了社会主义 初级阶段的基本特征。以下说法正确的是( ) ",
         "options": {
-            "B": "是逐步摆脱不发达状态，基本实现社会主义现",
+            "A": "是由自然经济半自然经济占很大比重，逐步转变为经济市场化程度较高的历史阶段。",
+            "B": "是逐步摆脱不发达状态，基本实现社会主义现代化的历史阶段。",
+            "C": "是由农业人口占很大比重、主要依靠手工劳动的农业国，逐步转变为非农业人口占多数、包含现代农业和现代服务业的工业化国家的历史阶段。",
             "D": "是由文言半文盲人口占很大比重、科技教育落"
         },
         "correct_answer": "ABCD",
@@ -1052,21 +1070,21 @@
         "correct_count": 0
     },
     {
-        "question_number": "4",
+        "question_number": "78",
         "question_type": "多选题",
         "question_text": "社会主义市场经济理论的要点有( )。",
         "options": {
-            "A": "社会主义社会市场经济更强调宏观调控的作",
-            "B": "市场经济作为资源配置的一种方式本身不具有",
-            "C": "计划和市场都是经济手段，对经济活动的调节",
-            "D": "计划经济和市场经济不是划分社会制度的标"
+            "A": "社会主义社会市场经济更强调宏观调控的作用",
+            "B": "市场经济作为资源配置的一种方式本身不具有制度属性，可以和不同的社会制度结合，从而表现出不同的性质。",
+            "C": "计划和市场都是经济手段，对经济活动的调节各有优劣，社会主义实行市场经济要把两者优势结合起来",
+            "D": "计划经济和市场经济不是划分社会制度的标志，计划经济不等于社会主义，市场经济也不等于资本主义"
         },
-        "correct_answer": "",
+        "correct_answer": "BCD",
         "error_count": 0,
         "correct_count": 0
     },
     {
-        "question_number": "5",
+        "question_number": "79",
         "question_type": "多选题",
         "question_text": "党的十三大阐明了社会主义初级阶 段的( )。",
         "options": {
@@ -1080,7 +1098,7 @@
         "correct_count": 0
     },
     {
-        "question_number": "6",
+        "question_number": "80",
         "question_type": "多选题",
         "question_text": "邓小平强调，党的各级干部，首先 是领导干部，要重视马克思主义的理论学习，从 而加强我们工作中的( )。",
         "options": {
@@ -1094,7 +1112,7 @@
         "correct_count": 0
     },
     {
-        "question_number": "7",
+        "question_number": "81",
         "question_type": "多选题",
         "question_text": "党的十一届三中全会以后，邓小平 指出中国的现实国情是( )",
         "options": {
@@ -1108,11 +1126,11 @@
         "correct_count": 0
     },
     {
-        "question_number": "8",
+        "question_number": "82",
         "question_type": "多选题",
         "question_text": "邓小平理论是改革开放和社会主义 现代化建设的科学指南。有具体体现在( )。",
         "options": {
-            "A": "邓小平理论是邓小平留给我们的最重要的思想",
+            "A": "邓小平理论是邓小平留给我们的最重要的思想遗产",
             "B": "邓小平是改革开放的总设计师",
             "C": "邓小平理论指导了改革开放的伟大实践",
             "D": "邓小平理论使改革开放后的中国发生翻天履地"
@@ -1122,7 +1140,7 @@
         "correct_count": 0
     },
     {
-        "question_number": "9",
+        "question_number": "83",
         "question_type": "多选题",
         "question_text": "邓小平指出，要坚持( )的四项原则来 处理同各国共产党和其他政党的关系。",
         "options": {
@@ -1136,7 +1154,7 @@
         "correct_count": 0
     },
     {
-        "question_number": "0",
+        "question_number": "84",
         "question_type": "多选题",
         "question_text": "要坚持和健全民主集中制、加强和 改进党的基层组织建设，按照( )的方针培养和选 拔德才兼备的领导干部。",
         "options": {
@@ -1150,29 +1168,30 @@
         "correct_count": 0
     },
     {
-        "question_number": "1",
+        "question_number": "85",
         "question_type": "多选题",
         "question_text": "\"三步走”的发展战略具有重要的历 史意义，这表现为( )。",
         "options": {
             "A": "为基本实现现代化明确了发展方向",
             "B": "展现了美好的前景",
             "C": "成为全国人民团结奋斗的行动纲领",
-            "D": "把我国社会主义现代化建设的目标具体化为切"
+            "D": "把我国社会主义现代化建设的目标具体化为切实可行的步骤"
         },
         "correct_answer": "ABCD",
         "error_count": 0,
         "correct_count": 0
     },
     {
-        "question_number": "2",
+        "question_number": "86",
         "question_type": "多选题",
         "question_text": "在改革开放和现代化建设进程中， 邓小平在关键时刻作出的每一项重大决策，都体 现了( )的思想路线。 ，A. 解放思想",
         "options": {
+            "A": "解放思想",
             "B": "理论联系实际",
             "C": "实事求是",
             "D": "在实践中检验真理和发展真理"
         },
-        "correct_answer": "A",
+        "correct_answer": "AC",
         "error_count": 0,
         "correct_count": 0
     }
