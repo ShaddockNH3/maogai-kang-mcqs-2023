@@ -12,27 +12,40 @@
             background-color: #f0f2f5;
             margin: 0; 
             padding: 0; 
+            display: flex; /* Added for centering the app container */
+            justify-content: center; /* Added for centering the app container */
+            align-items: flex-start; /* Align to top */
+            min-height: 100vh; /* Ensure body takes full viewport height */
         }
         .app-container {
             max-width: 700px; 
             width: 100%; 
-            margin: 0 auto; 
+            /* margin: 0 auto; Removed to rely on body flex for centering */
             padding: 10px; 
             background-color: white;
-            min-height: 100vh; 
+            min-height: 100vh; /* Ensure app container can take full height if needed */
             box-sizing: border-box;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1); /* Optional: add some shadow */
         }
         .btn {
-            display: block;
-            width: 100%;
-            padding: 10px 15px; 
-            margin-bottom: 10px; 
-            border-radius: 8px;
-            font-weight: 600;
+            display: inline-block;
+            padding: 8px 12px;
+            margin-left: 8px;
+            border-radius: 6px;
+            font-weight: 500;
             transition: background-color 0.2s;
             cursor: pointer;
             text-align: center;
             border: 1px solid transparent;
+            font-size: 0.875rem; /* text-sm */
+            line-height: 1.25rem;
+        }
+        .btn-full-width {
+            display: block;
+            width: 100%;
+            margin-left: 0;
+            margin-bottom: 10px;
+            padding: 10px 15px;
         }
         .btn-primary { background-color: #4299e1; color: white; }
         .btn-primary:hover { background-color: #2b6cb0; }
@@ -42,37 +55,25 @@
         .btn-warning:hover { background-color: #dd6b20; }
         .btn-danger { background-color: #e53e3e; color: white; }
         .btn-danger:hover { background-color: #c53030; }
+        .btn-info { background-color: #63b3ed; color: white; } /* New style for info/logout */
+        .btn-info:hover { background-color: #4299e1; }
         .btn-outline { background-color: white; color: #4a5568; border-color: #cbd5e1; }
         .btn-outline:hover { background-color: #f7fafc; }
+        .btn:disabled {
+            background-color: #d1d5db;
+            color: #6b7280;
+            cursor: not-allowed;
+            border-color: #d1d5db;
+        }
 
-        .question-card { 
-            border: 1px solid #e2e8f0; 
-            border-radius: 8px; 
-            padding: 12px; 
-            margin-bottom: 15px; 
-            background-color: #ffffff;
-        }
-        .option-label { 
-            display: block; 
-            padding: 10px 12px; 
-            margin-bottom: 8px; 
-            border: 1px solid #cbd5e1; 
-            border-radius: 8px; 
-            cursor: pointer; 
-            transition: background-color 0.2s, border-color 0.2s; 
-        }
+        .question-card { border: 1px solid #e2e8f0; border-radius: 8px; padding: 12px; margin-bottom: 15px; background-color: #ffffff;}
+        .option-label { display: block; padding: 10px 12px; margin-bottom: 8px; border: 1px solid #cbd5e1; border-radius: 8px; cursor: pointer; transition: background-color 0.2s, border-color 0.2s; }
         .option-label:hover { background-color: #f7fafc; }
         .option-label.selected { background-color: #ebf8ff; border-color: #4299e1; }
         .option-label.correct { background-color: #c6f6d5; border-color: #38a169; }
         .option-label.incorrect { background-color: #fed7d7; border-color: #e53e3e; }
         
-        .feedback-message { 
-            padding: 10px; 
-            border-radius: 8px; 
-            margin-top: 10px; 
-            font-weight: 500; 
-            min-height: 40px; 
-        }
+        .feedback-message { padding: 10px; border-radius: 8px; margin-top: 10px; font-weight: 500; min-height: 40px; }
         .feedback-correct { background-color: #c6f6d5; color: #2f855a; }
         .feedback-incorrect { background-color: #fed7d7; color: #c53030; }
 
@@ -80,38 +81,49 @@
         .spinner { border: 4px solid rgba(0, 0, 0, 0.1); width: 36px; height: 36px; border-radius: 50%; border-left-color: #4299e1; animation: spin 1s ease infinite; }
         @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
 
-        select, input[type="text"] {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
+        select, input[type="text"], input[type="number"], input[type="password"] {
+            padding: 8px 12px; /* Consistent padding */
+            margin-bottom: 10px;
             border: 1px solid #cbd5e1;
             border-radius: 6px;
             box-sizing: border-box;
+            width: 100%; /* Make inputs full width by default */
+        }
+        input.jump-input { 
+            width: 70px; 
+            margin-left: 8px;
+            margin-right: 4px;
+            text-align: center;
         }
         .chapter-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); gap: 8px; margin-bottom: 15px;}
         .chapter-btn { padding: 8px; border: 1px solid #cbd5e1; border-radius: 6px; text-align: center; cursor: pointer; font-size: 0.875rem; }
         .chapter-btn.active { background-color: #4299e1; color: white; border-color: #4299e1;}
 
-        .nav-bar { margin-bottom: 15px; padding-bottom: 8px; border-bottom: 1px solid #e2e8f0;}
-        .main-title {
-            font-size: 1.875rem; 
-            font-weight: bold;
-            text-align: center;
-            margin-bottom: 1.5rem; 
-            color: #4a5568; 
-        }
-        .question-info-bar { 
+        .nav-bar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; padding-bottom: 8px; border-bottom: 1px solid #e2e8f0;}
+        .nav-bar .btn-group { display: flex; align-items: center;}
+        .nav-bar .btn-group .btn { width: auto; }
+        .nav-bar .btn-group input.jump-input { height: 37px; }
+
+        .main-title { font-size: 1.875rem; font-weight: bold; text-align: center; margin-bottom: 1.5rem; color: #4a5568; }
+        .question-info-bar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; font-size: 0.875rem; }
+        .question-text-area { font-size: 1.125rem; color: #2d3748; margin-bottom: 1rem; line-height: 1.6; }
+        
+        /* Styles for UserID input view */
+        .userid-input-container {
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
             align-items: center;
-            margin-bottom: 0.75rem; 
-            font-size: 0.875rem; 
+            justify-content: center;
+            min-height: calc(100vh - 20px); /* Adjust based on app-container padding */
+            padding: 20px;
         }
-        .question-text-area {
-            font-size: 1.125rem; 
-            color: #2d3748; 
-            margin-bottom: 1rem; 
-            line-height: 1.6; 
+        .userid-input-box {
+            background-color: white;
+            padding: 2rem; /* More padding */
+            border-radius: 0.5rem; /* 8px */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-xl */
+            width: 100%;
+            max-width: 400px; /* md */
         }
     </style>
 </head>
@@ -121,135 +133,155 @@
             <div class="spinner"></div>
         </div>
 
-        <div v-if="errorMessage" class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mb-4" role="alert">
+        <div v-if="errorMessage && !isLoading" class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mb-4" role="alert">
             <strong class="font-bold">喵呜！出错了：</strong>
             <span class="block sm:inline">{{ errorMessage }}</span>
             <button @click="errorMessage = ''" class="absolute top-0 bottom-0 right-0 px-4 py-3">
                 <svg class="fill-current h-6 w-6 text-red-500" role="button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><title>关闭</title><path d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z"/></svg>
             </button>
         </div>
-
-        <div v-if="currentView !== 'mainMenu'" class="nav-bar">
-            <button @click="goBackToMenu" class="btn btn-outline w-auto px-4 py-2 text-sm">返回主菜单</button>
-        </div>
         
-        <h1 v-if="!isInQuestionView" class="main-title">
-            {{ currentView === 'mainMenu' ? '喵喵学习小助手' : viewTitle }}
-        </h1>
-
-        <div v-if="currentView === 'mainMenu'">
-            <p class="text-center text-gray-600 mb-6">主人，今天想做些什么呢？</p>
-            <button @click="selectMode('quickReview')" class="btn btn-primary">1. 速刷模式</button>
-            <button @click="selectMode('quizMode')" class="btn btn-secondary">2. 答题模式</button>
-            <button @click="selectMode('incorrectReview')" class="btn btn-warning">3. 错题回顾</button>
-            <button @click="navigateTo('controlMode')" class="btn btn-danger">4. 控制模式</button>
+        <!-- UserID Input View -->
+        <div v-if="!userId && !isLoading" class="userid-input-container">
+            <div class="userid-input-box">
+                <h1 class="text-2xl font-bold text-center text-gray-700 mb-2">喵喵学习小助手</h1>
+                <p class="text-center text-gray-500 mb-6">请输入您的用户ID登录或创建新账户：</p>
+                <input type="text" v-model="inputUserId" @keyup.enter="submitUserId" placeholder="用户ID (例如：catLover123)" class="w-full px-4 py-2 border border-gray-300 rounded-md mb-4 focus:ring-blue-500 focus:border-blue-500">
+                <button @click="submitUserId" class="btn btn-primary btn-full-width">确定</button>
+                <p v-if="userIdError" class="text-red-500 text-sm mt-2 text-center">{{ userIdError }}</p>
+            </div>
         </div>
 
-        <div v-if="currentView === 'chapterOrderSelection'">
-             <h2 class="text-xl font-semibold mb-4 text-gray-700">模式设置：{{ modeDisplayName }}</h2>
-            <div class="mb-6">
-                <label class="block text-gray-700 text-sm font-bold mb-2">选择章节：</label>
-                <div class="chapter-grid">
-                    <button v-for="chapter in availableChapters" :key="chapter.value"
-                            @click="toggleChapterSelection(chapter.value)"
-                            :class="{'active': selectedChapters.includes(chapter.value)}"
-                            class="chapter-btn">
-                        {{ chapter.text }}
-                    </button>
-                </div>
-                 <p class="text-xs text-gray-500 mt-1">提示：选择“全部章节”会自动选中所有章节。再次点击已选章节可取消。</p>
-            </div>
-            <div class="mb-6" v-if="activeMode !== 'incorrectReview'">
-                <label class="block text-gray-700 text-sm font-bold mb-2">题目顺序：</label>
-                <div class="flex">
-                    <label class="mr-4 inline-flex items-center">
-                        <input type="radio" class="form-radio" v-model="selectedOrder" value="sequential">
-                        <span class="ml-2">正序</span>
-                    </label>
-                    <label class="inline-flex items-center">
-                        <input type="radio" class="form-radio" v-model="selectedOrder" value="random">
-                        <span class="ml-2">随机</span>
-                    </label>
+        <!-- Main Application View (conditional on userId) -->
+        <div v-if="userId && !isLoading">
+            <div v-if="currentView !== 'mainMenu'" class="nav-bar">
+                <button @click="goBackToMenu" class="btn btn-outline">返回主菜单</button>
+                <div class="btn-group" v-if="isInQuestionView && allModeQuestions.length > 0 && quizModeState === 'inProgress'">
+                    <button @click="toggleJumpInput" class="btn btn-outline">跳转</button>
+                    <input v-if="showJumpInput" type="number" v-model.number="jumpToQuestionNumberInput" 
+                           min="1" :max="totalQuestions" class="jump-input" placeholder="题号" @keyup.enter="jumpToQuestion">
+                    <button v-if="showJumpInput" @click="jumpToQuestion" class="btn btn-primary">Go</button>
+                    <button @click="previousQuestion" :disabled="currentQuestionIndex === 0" class="btn btn-outline">上一题</button>
                 </div>
             </div>
-            <button @click="startSelectedMode" class="btn btn-primary" 
-                    :disabled="activeMode !== 'incorrectReview' && selectedChapters.length === 0">
-                开始 {{ modeDisplayName }}
-            </button>
-        </div>
+            
+            <h1 v-if="!isInQuestionView || currentView === 'mainMenu'" class="main-title">
+                {{ currentView === 'mainMenu' ? '喵喵学习小助手' : viewTitle }}
+                 <span v-if="currentView === 'mainMenu' && userId" class="block text-xs text-gray-500 font-normal mt-1">当前用户: {{ userId }}</span>
+            </h1>
 
-        <div v-if="currentQuestion && isInQuestionView">
-            <div class="question-card">
-                <div class="question-info-bar">
-                    <span class="font-semibold text-blue-600">{{ currentQuestion.question_type }}</span>
-                    <span class="text-gray-500">
-                        第 {{ currentQuestion.display_number }} / {{ totalQuestions }} 题
-                        <span v-if="currentQuestion.original_question_number">
-                            (原: {{ currentQuestion.original_question_number }} @ {{ currentQuestion.original_chapter }})
-                        </span>
-                    </span>
+
+            <div v-if="currentView === 'mainMenu'">
+                <p class="text-center text-gray-600 mb-6">主人，今天想做些什么呢？</p>
+                <button @click="selectMode('quickReview')" class="btn btn-primary btn-full-width">1. 速刷模式</button>
+                <button @click="selectMode('quizMode')" class="btn btn-secondary btn-full-width">2. 答题模式</button>
+                <button @click="selectMode('incorrectReview')" class="btn btn-warning btn-full-width">3. 错题回顾</button>
+                <button @click="navigateTo('controlMode')" class="btn btn-danger btn-full-width">4. 控制模式</button>
+            </div>
+
+            <div v-if="currentView === 'chapterOrderSelection'">
+                <h2 class="text-xl font-semibold mb-4 text-gray-700">模式设置：{{ modeDisplayName }}</h2>
+                <div class="mb-6">
+                    <label class="block text-gray-700 text-sm font-bold mb-2">选择章节：</label>
+                    <div class="chapter-grid">
+                        <button v-for="chapter in availableChapters" :key="chapter.value"
+                                @click="toggleChapterSelection(chapter.value)"
+                                :class="{'active': selectedChapters.includes(chapter.value)}"
+                                class="chapter-btn">
+                            {{ chapter.text }}
+                        </button>
+                    </div>
+                    <p class="text-xs text-gray-500 mt-1">提示：选择“全部章节”会自动选中所有章节。再次点击已选章节可取消。</p>
                 </div>
-                <p class="question-text-area" v-html="formatQuestionText(currentQuestion.question_text)"></p>
-                <div v-if="currentQuestion.options" :key="currentQuestion.quiz_question_id + '-' + currentQuestion.question_type">
-                    <div v-for="(optionText, optionKey) in sortedOptions" :key="optionKey">
-                        <label :class="getOptionLabelClass(optionKey)" class="option-label">
-                            <input 
-                                :type="currentQuestion.question_type === '单选题' ? 'radio' : 'checkbox'"
-                                :name="'question_option_' + currentQuestion.quiz_question_id"
-                                :value="optionKey"
-                                v-model="selectedAnswers"
-                                :disabled="quizModeState === 'showAnswer' || currentView === 'quickReview'"
-                                class="mr-3 align-middle"
-                            >
-                            <span class="align-middle">{{ optionKey }}. {{ optionText }}</span>
+                <div class="mb-6" v-if="activeMode !== 'incorrectReview'">
+                    <label class="block text-gray-700 text-sm font-bold mb-2">题目顺序：</label>
+                    <div class="flex">
+                        <label class="mr-4 inline-flex items-center">
+                            <input type="radio" class="form-radio mr-1" v-model="selectedOrder" value="sequential">
+                            <span class="ml-2">正序</span>
+                        </label>
+                        <label class="inline-flex items-center">
+                            <input type="radio" class="form-radio mr-1" v-model="selectedOrder" value="random">
+                            <span class="ml-2">随机</span>
                         </label>
                     </div>
                 </div>
-                <!-- Correct answer is now shown in feedbackMessage for quizMode and incorrectReview -->
-                <div v-if="currentView === 'quickReview' && currentQuestion.correct_answer" 
-                     class="mt-3 p-2 bg-green-50 border border-green-200 rounded text-sm">
-                    <p class="font-semibold text-green-700">正确答案： {{ currentQuestion.correct_answer }}</p>
+                <button @click="startSelectedMode" class="btn btn-primary btn-full-width" 
+                        :disabled="activeMode !== 'incorrectReview' && selectedChapters.length === 0">
+                    开始 {{ modeDisplayName }}
+                </button>
+            </div>
+
+            <div v-if="currentQuestion && isInQuestionView">
+                <div class="question-card">
+                    <div class="question-info-bar">
+                        <span class="font-semibold text-blue-600">{{ currentQuestion.question_type }}</span>
+                        <span class="text-gray-500">
+                            第 {{ currentQuestion.display_number }} / {{ totalQuestions }} 题
+                            <span v-if="currentQuestion.original_question_number">
+                                (原: {{ currentQuestion.original_question_number }} @ {{ currentQuestion.original_chapter }})
+                            </span>
+                        </span>
+                    </div>
+                    <p class="question-text-area" v-html="formatQuestionText(currentQuestion.question_text)"></p>
+                    <div v-if="currentQuestion.options" :key="currentQuestion.quiz_question_id + '-' + currentQuestion.question_type">
+                        <div v-for="(optionText, optionKey) in sortedOptions" :key="optionKey">
+                            <label :class="getOptionLabelClass(optionKey)" class="option-label">
+                                <input 
+                                    :type="currentQuestion.question_type === '单选题' ? 'radio' : 'checkbox'"
+                                    :name="'question_option_' + currentQuestion.quiz_question_id"
+                                    :value="optionKey"
+                                    v-model="selectedAnswers"
+                                    :disabled="quizModeState === 'showAnswer' || currentView === 'quickReview'"
+                                    class="mr-3 align-middle"
+                                >
+                                <span class="align-middle">{{ optionKey }}. {{ optionText }}</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div v-if="currentView === 'quickReview' && currentQuestion.correct_answer" 
+                         class="mt-3 p-2 bg-green-50 border border-green-200 rounded text-sm">
+                        <p class="font-semibold text-green-700">正确答案： {{ currentQuestion.correct_answer }}</p>
+                    </div>
+                </div>
+                <div v-if="(currentView === 'quizMode' || currentView === 'incorrectReview') && feedbackMessage && quizModeState === 'showAnswer'" 
+                     :class="isCurrentAnswerCorrect ? 'feedback-correct' : 'feedback-incorrect'"
+                     class="feedback-message mb-3"
+                     v-html="feedbackMessage">
+                </div>
+                <div class="mt-3">
+                    <button v-if="(currentView === 'quizMode' || currentView === 'incorrectReview') && quizModeState === 'inProgress'" 
+                            @click="submitAnswerForMode" class="btn btn-primary btn-full-width">
+                        提交答案
+                    </button>
+                    <button v-if="showNextButton" 
+                            @click="fetchNextQuestion" class="btn btn-secondary btn-full-width">
+                        下一题
+                    </button>
+                    <button v-if="isQuizCompleted && isInQuestionView" 
+                            @click="navigateTo('resultsView')" class="btn btn-primary btn-full-width">
+                        查看本次总结
+                    </button>
                 </div>
             </div>
-            <div v-if="(currentView === 'quizMode' || currentView === 'incorrectReview') && feedbackMessage && quizModeState === 'showAnswer'" 
-                 :class="isCurrentAnswerCorrect ? 'feedback-correct' : 'feedback-incorrect'"
-                 class="feedback-message mb-3"
-                 v-html="feedbackMessage">
-            </div>
-            <div class="mt-3">
-                <button v-if="(currentView === 'quizMode' || currentView === 'incorrectReview') && quizModeState === 'inProgress'" 
-                        @click="submitAnswerForMode" class="btn btn-primary">
-                    提交答案
-                </button>
-                <button v-if="((currentView === 'quickReview' || currentView === 'incorrectReview') && !isQuizCompleted && quizModeState === 'showAnswer') || (currentView === 'quizMode' && quizModeState === 'showAnswer' && !isQuizCompleted)" 
-                        @click="fetchNextQuestion" class="btn btn-secondary">
-                    下一题
-                </button>
-                 <button v-if="currentView === 'quickReview' && !isQuizCompleted" 
-                        @click="fetchNextQuestion" class="btn btn-secondary">
-                    下一题
-                </button>
-                <button v-if="isQuizCompleted && isInQuestionView" 
-                        @click="navigateTo('resultsView')" class="btn btn-primary">
-                    查看本次总结
-                </button>
-            </div>
-        </div>
 
-        <div v-if="currentView === 'resultsView'">
-             <h2 class="text-xl font-semibold text-center text-green-600 mb-4">🎉 本轮{{ modeDisplayName }}完成！ 🎉</h2>
-            <p class="text-center text-gray-700 mb-2">总共 {{ totalQuestions }} 道题。</p>
-            <div v-if="activeMode === 'quizMode'">
-                <p class="text-center text-gray-700 mb-2">回答了 {{ quizResults.total_answered }} 道题。</p>
-                <p class="text-center text-gray-700 mb-2">答对了 {{ quizResults.total_correct }} 道题。</p>
-                <p class="text-center text-gray-700 mb-4">答错了 {{ quizResults.total_answered - quizResults.total_correct }} 道题。</p>
+            <div v-if="currentView === 'resultsView'">
+                <h2 class="text-xl font-semibold text-center text-green-600 mb-4">🎉 本轮{{ modeDisplayName }}完成！ 🎉</h2>
+                <p class="text-center text-gray-700 mb-2">总共 {{ totalQuestions }} 道题。</p>
+                <div v-if="activeMode === 'quizMode'">
+                    <p class="text-center text-gray-700 mb-2">回答了 {{ quizResults.total_answered }} 道题。</p>
+                    <p class="text-center text-gray-700 mb-2">答对了 {{ quizResults.total_correct }} 道题。</p>
+                    <p class="text-center text-gray-700 mb-4">答错了 {{ quizResults.total_answered - quizResults.total_correct }} 道题。</p>
+                </div>
+                <button @click="goBackToMenu" class="btn btn-primary btn-full-width mt-6">返回主菜单</button>
             </div>
-             <button @click="goBackToMenu" class="btn btn-primary w-full mt-6">返回主菜单</button>
-        </div>
 
-        <div v-if="currentView === 'controlMode'">
-            <p class="text-gray-700 mb-4">在这里，您可以清除您在本设备上的所有答题记录（包括错题和统计数据）。此操作不可恢复！</p>
-            <button @click="confirmClearUserData" class="btn btn-danger">清理我的数据</button>
+            <div v-if="currentView === 'controlMode'">
+                <p class="text-gray-700 mb-1">当前用户ID: <strong>{{ userId }}</strong></p>
+                <p class="text-gray-700 mb-4">在这里，您可以管理您的用户数据和会话。</p>
+                <button @click="confirmClearUserData" class="btn btn-danger btn-full-width">清理当前用户数据</button>
+                <button @click="logoutCurrentUser" class="btn btn-info btn-full-width mt-2">退出登录 (切换用户)</button>
+            </div>
         </div>
     </div>
 
@@ -259,59 +291,114 @@
         createApp({
             setup() {
                 const isLoading = ref(false);
-                const errorMessage = ref('');
+                const errorMessage = ref(''); 
+                const userIdError = ref(''); 
                 const currentView = ref('mainMenu'); 
                 const viewTitle = ref('喵喵学习小助手');
-                const userId = ref(localStorage.getItem('quizAppUserId') || null);
+                
+                const userId = ref(localStorage.getItem('quizAppUserId') || '');
+                const inputUserId = ref(''); 
+
                 const API_BASE_URL = ''; 
                 const availableChapters = ref([...Array.from({ length: 9 }, (_, i) => ({ value: i.toString(), text: `章节 ${i}` })), { value: 'all', text: '全部章节' }]);
                 const selectedChapters = ref([]); 
                 const selectedOrder = ref('sequential'); 
                 const activeMode = ref(''); 
                 const modeDisplayName = ref('');
-                const currentQuestion = ref(null); // Will now contain correct_answer from the start for quiz/incorrect modes
+                
+                const allModeQuestions = ref([]); 
+                const currentQuestion = ref(null); 
+                const currentQuestionIndex = ref(-1); 
                 const totalQuestions = ref(0);
                 const isQuizCompleted = ref(false);
+
                 const selectedAnswers = ref([]); 
                 const quizModeState = ref('inProgress'); 
                 const feedbackMessage = ref('');
                 const isCurrentAnswerCorrect = ref(false);
                 const quizResults = ref({ total_answered: 0, total_correct: 0 });
                 
-                const _nextQuestionBuffer = ref(null); 
+                const showJumpInput = ref(false);
+                const jumpToQuestionNumberInput = ref(null);
 
                 const isInQuestionView = computed(() => {
                     return ['quickReview', 'quizMode', 'incorrectReview'].includes(currentView.value);
                 });
 
-                const initializeUser = async () => {
-                    if (userId.value) { return; }
+                const showNextButton = computed(() => {
+                    if (!isInQuestionView.value || isQuizCompleted.value) return false;
+                    if (currentView.value === 'quickReview' && currentQuestionIndex.value < totalQuestions.value - 1 ) return true;
+                    if ((currentView.value === 'quizMode' || currentView.value === 'incorrectReview') && quizModeState.value === 'showAnswer') return true;
+                    return false;
+                });
+
+                const initializeUserSession = async (idToInit) => {
+                    if (!idToInit) {
+                        userId.value = ''; 
+                        return; 
+                    }
                     isLoading.value = true;
                     errorMessage.value = ''; 
+                    userIdError.value = ''; 
                     try {
-                        const response = await fetch(`${API_BASE_URL}/api/session/init`, { method: 'POST' });
+                        const response = await fetch(`${API_BASE_URL}/api/session/init`, {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({ user_id: idToInit })
+                        });
                         if (!response.ok) {
-                            let errorDetailMessage = `HTTP 错误状态: ${response.status} ${response.statusText}. `;
-                            try { const errorBodyText = await response.text(); errorDetailMessage += `服务器响应: "${errorBodyText || '(无响应体)'}"`; } catch (e) { errorDetailMessage += "无法读取服务器错误响应体。"; }
-                            throw new Error(`无法初始化用户会话。${errorDetailMessage}`);
+                            let errorDetailMessage = `HTTP 错误: ${response.status} ${response.statusText}. `;
+                            try { const errorBodyText = await response.text(); errorDetailMessage += `服务器详情: "${errorBodyText || '(无响应体)'}"`; } catch (e) { errorDetailMessage += "无法读取服务器错误响应。"; }
+                            throw new Error(`用户会话初始化失败。${errorDetailMessage}`);
                         }
                         const data = await response.json();
                         if (data.user_id) {
                             userId.value = data.user_id;
                             localStorage.setItem('quizAppUserId', userId.value);
+                            inputUserId.value = ''; 
+                            console.log(data.is_new_user ? `新用户 '${userId.value}' 会话已创建。` : `用户 '${userId.value}' 会话已建立。`);
                         } else {
                             throw new Error("服务器响应中未找到 user_id。");
                         }
                     } catch (err) {
-                        errorMessage.value = err.message || "初始化用户会话时发生未知网络错误。";
+                        if (!userId.value && inputUserId.value) { 
+                           userIdError.value = err.message || "初始化用户会话时发生未知网络错误。请检查您的用户ID或网络连接。";
+                        } else { 
+                           errorMessage.value = err.message || "初始化用户会话时发生未知网络错误。";
+                        }
+                        userId.value = ''; 
+                        localStorage.removeItem('quizAppUserId'); 
                     } finally {
                         isLoading.value = false;
                     }
                 };
+                
+                const submitUserId = async () => {
+                    userIdError.value = ''; 
+                    if (!inputUserId.value.trim()) {
+                        userIdError.value = "用户ID不能为空，请输入一个有效的ID。";
+                        return;
+                    }
+                    if (inputUserId.value.trim().length < 3 || inputUserId.value.trim().length > 50) {
+                        userIdError.value = "用户ID长度应在3到50个字符之间。";
+                        return;
+                    }
+                    if (!/^[a-zA-Z0-9_-]+$/.test(inputUserId.value.trim())) {
+                        userIdError.value = "用户ID只能包含字母、数字、下划线(_)和连字符(-)。";
+                        return;
+                    }
+                    await initializeUserSession(inputUserId.value.trim());
+                };
 
-                onMounted(initializeUser);
+                onMounted(() => {
+                    const storedUserId = localStorage.getItem('quizAppUserId');
+                    if (storedUserId) {
+                        userId.value = storedUserId; 
+                        initializeUserSession(storedUserId); 
+                    }
+                });
 
-                watch(currentView, (newView, oldView) => { 
+                watch(currentView, (newView) => { 
                     switch(newView) {
                         case 'mainMenu': viewTitle.value = '喵喵学习小助手'; break;
                         case 'chapterOrderSelection': viewTitle.value = `模式设置 - ${modeDisplayName.value}`; break;
@@ -322,10 +409,12 @@
                         case 'controlMode': viewTitle.value = '控制模式'; break;
                         default: viewTitle.value = '喵喵学习小助手';
                     }
-                    if (newView !== 'mainMenu' && !userId.value) { 
-                        initializeUser();
+                    if (errorMessage.value && (userId.value || newView !== 'mainMenu')) {
+                         errorMessage.value = '';
                     }
-                    errorMessage.value = ''; 
+                    if (!isInQuestionView.value) { 
+                        showJumpInput.value = false;
+                    }
                 });
                 
                 const navigateTo = (view) => {
@@ -333,25 +422,32 @@
                 };
 
                 const goBackToMenu = () => {
-                    resetModeState();
-                    navigateTo('mainMenu');
+                    resetModeState(); 
+                    if (userId.value) { 
+                        navigateTo('mainMenu');
+                    } else { 
+                        inputUserId.value = ''; 
+                        userIdError.value = ''; 
+                    }
                 };
 
                 const resetModeState = () => {
+                    allModeQuestions.value = [];
                     currentQuestion.value = null;
+                    currentQuestionIndex.value = -1;
                     totalQuestions.value = 0;
                     isQuizCompleted.value = false;
                     selectedAnswers.value = [];
                     feedbackMessage.value = '';
                     quizModeState.value = 'inProgress';
                     quizResults.value = { total_answered: 0, total_correct: 0 };
-                    _nextQuestionBuffer.value = null; 
+                    showJumpInput.value = false;
+                    jumpToQuestionNumberInput.value = null;
                 };
                 
                 const selectMode = (mode) => { 
                     if (!userId.value) {
-                        errorMessage.value = "用户ID尚未初始化，请稍后或刷新页面重试。";
-                        initializeUser(); 
+                        errorMessage.value = "用户ID丢失，请重新输入用户ID或刷新页面。";
                         return;
                     }
                     activeMode.value = mode; 
@@ -362,8 +458,8 @@
                     else if (mode === 'quizMode') modeDisplayName.value = '答题模式';
                     else if (mode === 'incorrectReview') modeDisplayName.value = '错题回顾';
                     
-                    if (mode === 'incorrectReview') { 
-                        startIncorrectReview();
+                     if (mode === 'incorrectReview') { 
+                        startIncorrectReview(); 
                     } else {
                         navigateTo('chapterOrderSelection');
                     }
@@ -385,38 +481,35 @@
                         }
                         const allIndividualChapters = availableChapters.value.filter(c => c.value !== 'all');
                         const allIndividualSelected = allIndividualChapters.every(c => selectedChapters.value.includes(c.value));
-                        if (allIndividualSelected && !selectedChapters.value.includes('all')) {
+                        
+                        const allIndex = selectedChapters.value.indexOf('all');
+                        if (allIndividualSelected && allIndex === -1) {
                             selectedChapters.value.push('all');
-                        } else if (!allIndividualSelected && selectedChapters.value.includes('all')) {
-                            const allIndex = selectedChapters.value.indexOf('all');
-                            if (allIndex > -1) selectedChapters.value.splice(allIndex, 1);
+                        } else if (!allIndividualSelected && allIndex > -1) {
+                            selectedChapters.value.splice(allIndex, 1);
                         }
                     }
                 };
-
+                
                 const startSelectedMode = async () => { 
                     if (!userId.value) {
-                        errorMessage.value = "用户未初始化，请刷新页面或检查网络连接。";
-                        await initializeUser(); 
-                        if (!userId.value) return; 
+                        errorMessage.value = "用户未初始化，请返回并输入用户ID。";
+                        return; 
                     }
                     if (activeMode.value !== 'incorrectReview' && selectedChapters.value.length === 0) {
                         errorMessage.value = "请至少选择一个章节。";
                         return;
                     }
                     isLoading.value = true;
+                    errorMessage.value = ''; 
                     resetModeState(); 
 
                     let url = '';
                     let requestBody = { user_id: userId.value };
 
-                    if (activeMode.value === 'quickReview') {
-                        url = `${API_BASE_URL}/api/review/start`;
-                        requestBody.chapter_choice = selectedChapters.value.includes('all') ? ['all'] : selectedChapters.value.filter(c => c !== 'all');
-                        requestBody.order_choice = selectedOrder.value;
-                    } else if (activeMode.value === 'quizMode') {
-                        url = `${API_BASE_URL}/api/quiz/start`;
-                        requestBody.chapter_choice = selectedChapters.value.includes('all') ? ['all'] : selectedChapters.value.filter(c => c !== 'all');
+                    if (activeMode.value === 'quickReview' || activeMode.value === 'quizMode') {
+                        url = activeMode.value === 'quickReview' ? `${API_BASE_URL}/api/review/start` : `${API_BASE_URL}/api/quiz/start`;
+                        requestBody.chapter_choice = selectedChapters.value.includes('all') ? ['all'] : selectedChapters.value.filter(c => c !== 'all' && c !== undefined && c !== null);
                         requestBody.order_choice = selectedOrder.value;
                     } else {
                         errorMessage.value = "未知的模式: " + activeMode.value;
@@ -435,22 +528,20 @@
                             throw new Error(`开始${modeDisplayName.value}失败: ${response.statusText} (${response.status}) - ${errBody || '(无响应体)'}`);
                         }
                         const data = await response.json();
-                        if (data && data.question) { 
-                            currentQuestion.value = data.question; // Backend now sends correct_answer here
-                            totalQuestions.value = data.total_questions;
-                            isQuizCompleted.value = (totalQuestions.value === 0 || (totalQuestions.value === 1 && (activeMode.value === 'quickReview')));
-                            if (totalQuestions.value === 0) {
+                        if (data && data.questions && Array.isArray(data.questions)) { 
+                            allModeQuestions.value = data.questions; 
+                            totalQuestions.value = data.questions.length;
+                            if (totalQuestions.value > 0) {
+                                currentQuestionIndex.value = 0;
+                                setCurrentQuestionFromIndex(); 
+                                isQuizCompleted.value = false; 
+                                navigateTo(activeMode.value); 
+                            } else {
                                 errorMessage.value = data.message || "所选范围没有题目。";
                                 navigateTo('chapterOrderSelection'); 
-                            } else {
-                                navigateTo(activeMode.value); 
-                                if (activeMode.value === 'quizMode' || activeMode.value === 'incorrectReview') {
-                                    selectedAnswers.value = currentQuestion.value.question_type === '单选题' ? null : [];
-                                    quizModeState.value = 'inProgress';
-                                }
                             }
                         } else {
-                             errorMessage.value = data.message || "没有获取到题目或响应格式不正确。";
+                             errorMessage.value = data.message || "没有获取到题目或响应格式不正确 (期望 'questions' 数组)。";
                              navigateTo('chapterOrderSelection');
                         }
                     } catch (err) {
@@ -459,141 +550,153 @@
                         isLoading.value = false;
                     }
                 };
+
+                const setCurrentQuestionFromIndex = () => {
+                    if (currentQuestionIndex.value >= 0 && currentQuestionIndex.value < allModeQuestions.value.length) {
+                        currentQuestion.value = allModeQuestions.value[currentQuestionIndex.value];
+                        if(currentQuestion.value) currentQuestion.value.display_number = currentQuestionIndex.value + 1;
+                        
+                        resetQuizStateForNewQuestion(); 
+                        quizModeState.value = 'inProgress'; 
+                        isQuizCompleted.value = false;
+                    } else if (currentQuestionIndex.value >= allModeQuestions.value.length && allModeQuestions.value.length > 0) {
+                        isQuizCompleted.value = true;
+                        currentQuestion.value = null; 
+                    } else { 
+                        isQuizCompleted.value = true;
+                        currentQuestion.value = null;
+                    }
+                };
+
+                const previousQuestion = () => {
+                    if (currentQuestionIndex.value > 0) {
+                        quizModeState.value = 'inProgress'; 
+                        currentQuestionIndex.value--;
+                        setCurrentQuestionFromIndex();
+                    }
+                };
+
+                const toggleJumpInput = () => {
+                    showJumpInput.value = !showJumpInput.value;
+                    if (!showJumpInput.value) jumpToQuestionNumberInput.value = null;
+                };
+
+                const jumpToQuestion = () => {
+                    const targetNum = parseInt(jumpToQuestionNumberInput.value, 10);
+                    if (targetNum && targetNum >= 1 && targetNum <= totalQuestions.value) {
+                        quizModeState.value = 'inProgress'; 
+                        currentQuestionIndex.value = targetNum - 1; 
+                        setCurrentQuestionFromIndex();
+                        showJumpInput.value = false; 
+                        jumpToQuestionNumberInput.value = null;
+                    } else {
+                        alert(`请输入有效的题号 (1-${totalQuestions.value})`);
+                    }
+                };
                 
-                const fetchNextQuestion = async () => {
-                    if (activeMode.value === 'quizMode' || activeMode.value === 'incorrectReview') {
-                        if (isQuizCompleted.value) {
-                            navigateTo('resultsView');
-                        } else if (_nextQuestionBuffer.value) { 
-                           currentQuestion.value = _nextQuestionBuffer.value; // Already contains correct_answer
-                           _nextQuestionBuffer.value = null; 
-                           quizModeState.value = 'inProgress';
-                           resetQuizStateForNewQuestion();
-                        } else {
-                            errorMessage.value = `在 ${modeDisplayName.value} 中，没有缓存的下一题。`;
-                            isQuizCompleted.value = true; 
-                            navigateTo('resultsView');
-                        }
+                const fetchNextQuestion = async () => { 
+                    if (isQuizCompleted.value) {
+                        navigateTo('resultsView');
                         return;
                     }
-
-                    // Logic for quickReview (always fetches from backend, already includes answer)
-                    if (!userId.value || isQuizCompleted.value) return;
-                    isLoading.value = true;
-                    const url = `${API_BASE_URL}/api/review/next`; 
-                    try {
-                        const response = await fetch(url, {
-                            method: 'POST',
-                            headers: { 'Content-Type': 'application/json' },
-                            body: JSON.stringify({ user_id: userId.value })
-                        });
-                        if (!response.ok) {
-                            const errBody = await response.text();
-                            throw new Error(`获取下一题失败: ${response.statusText} (${response.status}) - ${errBody || '(无响应体)'}`);
+                    if (currentQuestionIndex.value < totalQuestions.value - 1) {
+                        currentQuestionIndex.value++;
+                        setCurrentQuestionFromIndex();
+                    } else { 
+                        isQuizCompleted.value = true;
+                        if (quizModeState.value === 'showAnswer' || currentView.value === 'quickReview') { 
+                           navigateTo('resultsView');
                         }
-                        const data = await response.json();
-                        if (data.quiz_completed) {
-                            isQuizCompleted.value = true;
-                            currentQuestion.value = null; 
-                            navigateTo('resultsView');
-                        } else if (data.question) {
-                            currentQuestion.value = data.question; // Already includes answer
-                            selectedAnswers.value = []; 
-                        } else { 
-                            isQuizCompleted.value = true; 
-                            navigateTo('resultsView');
-                        }
-                    } catch (err) { 
-                        errorMessage.value = err.message;
-                    } 
-                    finally { isLoading.value = false; }
+                    }
                 };
 
                 const submitAnswerForMode = async () => {
-                    // Frontend validation
                     let userAnswerString = '';
                     if (currentQuestion.value?.question_type === '多选题') {
                         userAnswerString = Array.isArray(selectedAnswers.value) ? [...selectedAnswers.value].sort().join('') : '';
-                    } else {
-                        userAnswerString = selectedAnswers.value || ''; 
-                    }
+                    } else { userAnswerString = selectedAnswers.value || ''; }
 
                     if ((currentQuestion.value?.question_type === '单选题' && !userAnswerString) ||
                         (currentQuestion.value?.question_type === '多选题' && userAnswerString.length === 0)) {
-                        errorMessage.value = '请选择答案后再提交！';
-                        return;
+                        errorMessage.value = '请选择答案后再提交！'; return;
                     }
+                    errorMessage.value = ''; 
 
+                    // --- Instant Feedback Logic ---
                     const correctAnswerProcessed = (currentQuestion.value && typeof currentQuestion.value.correct_answer === 'string') 
-                                                ? currentQuestion.value.correct_answer.split('').sort().join('')
-                                                : '';
+                                                ? currentQuestion.value.correct_answer.split('').sort().join('') : '';
                     isCurrentAnswerCorrect.value = userAnswerString === correctAnswerProcessed;
                     feedbackMessage.value = isCurrentAnswerCorrect.value ? '回答正确！👍' : `回答错误！正确答案是：<strong>${currentQuestion.value.correct_answer}</strong>`;
                     quizModeState.value = 'showAnswer'; 
 
-                    // Now, send to backend for recording
-                    isLoading.value = true;
-                    errorMessage.value = '';
-                    _nextQuestionBuffer.value = null; 
-                    
-                    let url = '';
                     if (activeMode.value === 'quizMode') {
-                        url = `${API_BASE_URL}/api/quiz/submit_answer`;
-                    } else if (activeMode.value === 'incorrectReview') {
-                        url = `${API_BASE_URL}/api/incorrect_questions/review/submit_answer`;
-                    } else {
-                        isLoading.value = false;
-                        return; // Should not happen
+                        quizResults.value.total_answered++;
+                        if(isCurrentAnswerCorrect.value) quizResults.value.total_correct++;
                     }
 
+                    if (currentQuestionIndex.value >= totalQuestions.value - 1) {
+                        isQuizCompleted.value = true;
+                    } else {
+                        isQuizCompleted.value = false; 
+                    }
+                    // --- End of Instant Feedback Logic ---
+                    
+                    // isLoading.value = true; // We can remove this or keep it minimal if server call is very fast
+                    // errorMessage.value = ''; // Already cleared
+                    let url = '';
+                    if (activeMode.value === 'quizMode') url = `${API_BASE_URL}/api/quiz/submit_answer`;
+                    else if (activeMode.value === 'incorrectReview') url = `${API_BASE_URL}/api/incorrect_questions/review/submit_answer`;
+                    else { 
+                        // isLoading.value = false; // if we were using it
+                        return; 
+                    }
+
+                    // Send to server in the background
                     try {
                         const requestBody = {
                             user_id: userId.value,
                             quiz_question_id: currentQuestion.value.quiz_question_id,
                             user_answer: userAnswerString,
-                            was_correct: isCurrentAnswerCorrect.value // Send frontend's validation result
+                            was_correct: isCurrentAnswerCorrect.value 
                         };
-                        const response = await fetch(url, {
-                            method: 'POST',
-                            headers: { 'Content-Type': 'application/json' },
-                            body: JSON.stringify(requestBody)
+                        // No 'await' here if we want it to be truly fire-and-forget for the UI
+                        fetch(url, { 
+                            method: 'POST', 
+                            headers: { 'Content-Type': 'application/json' }, 
+                            body: JSON.stringify(requestBody) 
+                        })
+                        .then(async response => { // Optional: handle server response if needed, but UI is already updated
+                            if (!response.ok) { 
+                                const errBody = await response.text();
+                                console.error(`服务器记录答案失败 (后台): ${response.statusText} (${response.status}) - ${errBody || '(无响应体)'}`);
+                                // Optionally show a non-blocking error to the user if server sync fails
+                                // For example: errorMessage.value = "答案已在本地显示，但同步到服务器失败。请检查网络连接。"
+                                // But for now, we keep it silent to not overwrite instant feedback.
+                            } else {
+                                console.log("答案已成功同步到服务器 (后台)。");
+                                // const data = await response.json(); // Process if needed
+                            }
+                        })
+                        .catch(err => {
+                            console.error(`提交答案到服务器时发生网络错误 (后台): ${err.message}`);
+                            // Optionally show a non-blocking error
                         });
-                        if (!response.ok) {
-                            const errBody = await response.text();
-                            throw new Error(`提交答案记录失败: ${response.statusText} (${response.status}) - ${errBody || '(无响应体)'}`);
-                        }
-                        const data = await response.json(); // Backend now returns next_question (with answer) and quiz_completed
-
-                        quizResults.value.total_answered = data.total_questions_answered; // Update if backend provides this
                         
-                        if (data.quiz_completed) {
-                            isQuizCompleted.value = true;
-                        } else if (data.next_question) {
-                            _nextQuestionBuffer.value = data.next_question; // Buffer next question (already has answer)
-                            isQuizCompleted.value = false; 
-                        } else { 
-                            isQuizCompleted.value = true; 
-                            errorMessage.value = "服务器未返回下一题，答题可能已意外结束。";
-                        }
-                    } catch (err) {
-                        errorMessage.value = err.message;
-                    } finally {
-                        isLoading.value = false;
-                    }
+                    } catch (err) { 
+                        // This catch might not be hit for network errors in a non-awaited fetch.
+                        // The .catch() on the fetch promise is more relevant for background sync.
+                        console.error(`准备提交答案到服务器时出错 (后台): ${err.message}`);
+                    } 
+                    // finally { isLoading.value = false; } // if we were using it
                 };
-                
-                // submitQuizAnswer and submitIncorrectReviewAnswer are now merged into submitAnswerForMode
-                // So, these individual functions are no longer directly called by buttons.
-                // We keep them as stubs or remove if submitAnswerForMode covers all logic.
-                // For this refactor, submitAnswerForMode is the single entry point.
-
+                                
                 const startIncorrectReview = async () => { 
-                    if (!userId.value) { errorMessage.value = "用户未初始化，请刷新页面。"; await initializeUser(); if (!userId.value) return; }
+                    if (!userId.value) { errorMessage.value = "用户未初始化，请返回并输入用户ID。"; return; }
                     isLoading.value = true;
+                    errorMessage.value = '';
                     resetModeState(); 
                     activeMode.value = 'incorrectReview'; 
-                    viewTitle.value = '错题回顾'; 
-                    quizModeState.value = 'inProgress';
+                    modeDisplayName.value = '错题回顾';
 
                     try {
                         const response = await fetch(`${API_BASE_URL}/api/incorrect_questions/review/start`, {
@@ -601,21 +704,22 @@
                             headers: { 'Content-Type': 'application/json' },
                             body: JSON.stringify({ user_id: userId.value })
                         });
-                        if (!response.ok) {
+                        if (!response.ok) { 
                             const errBody = await response.text();
                             throw new Error(`开始错题回顾失败: ${response.statusText} (${response.status}) - ${errBody || '(无响应体)'}`);
-                        }
+                         }
                         const data = await response.json();
-                        if (data.question) {
-                            currentQuestion.value = data.question; // Question now includes correct_answer
-                            totalQuestions.value = data.total_questions;
-                            isQuizCompleted.value = (totalQuestions.value === 0);
-                            if (totalQuestions.value === 0) {
-                                errorMessage.value = data.message || "错题簿是空的！";
-                                navigateTo('mainMenu');
-                            } else {
-                                selectedAnswers.value = currentQuestion.value.question_type === '单选题' ? null : [];
+                        if (data && data.questions && Array.isArray(data.questions)) { 
+                            allModeQuestions.value = data.questions; 
+                            totalQuestions.value = data.questions.length;
+                            if (totalQuestions.value > 0) {
+                                currentQuestionIndex.value = 0;
+                                setCurrentQuestionFromIndex();
+                                isQuizCompleted.value = false;
                                 navigateTo('incorrectReview'); 
+                            } else {
+                                errorMessage.value = data.message || "错题簿是空的！太棒了！";
+                                navigateTo('mainMenu');
                             }
                         } else { 
                             errorMessage.value = data.message || "错题簿是空的或无法加载。";
@@ -626,14 +730,17 @@
                     } 
                     finally { isLoading.value = false; }
                 };
+
                 const confirmClearUserData = () => {
-                    if (confirm("喵呜！警告：此操作将重置您所有的对错统计并删除错题簿，数据无法恢复！\n确定要清理吗？")) {
+                    if (confirm(`喵呜！警告：此操作将重置用户 '${userId.value}' 的所有对错统计并删除错题簿，数据无法恢复！\n确定要清理吗？`)) {
                         clearUserData();
                     }
                 };
+
                 const clearUserData = async () => { 
-                    if (!userId.value) { errorMessage.value = "用户未初始化，无法清理数据。"; await initializeUser(); if (!userId.value) return; }
+                    if (!userId.value) { errorMessage.value = "用户未初始化，无法清理数据。"; return; }
                     isLoading.value = true;
+                    errorMessage.value = '';
                     try {
                         const response = await fetch(`${API_BASE_URL}/api/user/data/clear`, {
                             method: 'POST',
@@ -646,33 +753,46 @@
                         }
                         const data = await response.json();
                         alert(data.message || "用户数据已清理。");
-                        goBackToMenu(); 
+                        logoutCurrentUser(false); 
                     } catch (err) { 
                         errorMessage.value = err.message;
                     } 
                     finally { isLoading.value = false; }
                 };
+
+                const logoutCurrentUser = (confirmLogout = true) => {
+                    if (confirmLogout && !confirm("确定要退出当前用户并返回登录界面吗？")) {
+                        return;
+                    }
+                    localStorage.removeItem('quizAppUserId');
+                    userId.value = '';
+                    inputUserId.value = '';
+                    userIdError.value = '';
+                    errorMessage.value = ''; 
+                    resetModeState(); 
+                    currentView.value = 'mainMenu'; 
+                };
+
+
                 const sortedOptions = computed(() => {
                     if (currentQuestion.value && typeof currentQuestion.value.options === 'object' && currentQuestion.value.options !== null) {
                         try {
                             return Object.entries(currentQuestion.value.options)
                                 .sort(([keyA], [keyB]) => keyA.localeCompare(keyB))
                                 .reduce((obj, [key, value]) => { obj[key] = value; return obj; }, {});
-                        } catch (e) {
-                            console.error("Error in sortedOptions Object.entries or reduce:", e, "Options were:", currentQuestion.value.options);
-                            return {};
-                        }
+                        } catch (e) { console.error("Error sorting options:", e); return {}; }
                     }
                     return {};
                 });
+
                 const formatQuestionText = (text) => text ? text.replace(/\n/g, '<br>') : '';
+
                 const getOptionLabelClass = (optionKey) => {
                     const classes = [];
                     const userAnswersArray = Array.isArray(selectedAnswers.value) 
                                             ? selectedAnswers.value 
                                             : (selectedAnswers.value !== null && selectedAnswers.value !== undefined ? [String(selectedAnswers.value)] : []);
                                             
-                    // Correct answer is now always available in currentQuestion.value for quizMode and incorrectReview
                     const correctAnswerString = (currentQuestion.value && typeof currentQuestion.value.correct_answer === 'string') 
                                             ? currentQuestion.value.correct_answer
                                             : '';
@@ -694,6 +814,7 @@
                     }
                     return classes.join(' ');
                 };
+
                 const resetQuizStateForNewQuestion = () => {
                     if (currentQuestion.value) { 
                         selectedAnswers.value = currentQuestion.value.question_type === '单选题' ? null : [];
@@ -701,22 +822,24 @@
                         selectedAnswers.value = null; 
                     }
                     feedbackMessage.value = '';
-                    isCurrentAnswerCorrect.value = false; // This will be re-evaluated by frontend
+                    isCurrentAnswerCorrect.value = false; 
                 };
 
                 return {
-                    isLoading, errorMessage, currentView, viewTitle, userId,
+                    isLoading, errorMessage, userIdError, currentView, viewTitle, userId, inputUserId,
                     availableChapters, selectedChapters, selectedOrder,
                     activeMode, modeDisplayName,
-                    currentQuestion, totalQuestions, isQuizCompleted,
+                    allModeQuestions, currentQuestion, totalQuestions, isQuizCompleted, currentQuestionIndex,
                     selectedAnswers, quizModeState, feedbackMessage, isCurrentAnswerCorrect, quizResults,
-                    _nextQuestionBuffer, 
-                    isInQuestionView, 
+                    isInQuestionView, showNextButton,
+                    showJumpInput, jumpToQuestionNumberInput,
                     navigateTo, goBackToMenu, selectMode, toggleChapterSelection, startSelectedMode,
-                    fetchNextQuestion, /* submitQuizAnswer, submitIncorrectReviewAnswer, */ submitAnswerForMode, 
+                    fetchNextQuestion, submitAnswerForMode, 
                     startIncorrectReview,
-                    confirmClearUserData, 
-                    sortedOptions, formatQuestionText, getOptionLabelClass
+                    confirmClearUserData, clearUserData, logoutCurrentUser, 
+                    sortedOptions, formatQuestionText, getOptionLabelClass,
+                    previousQuestion, toggleJumpInput, jumpToQuestion,
+                    submitUserId 
                 };
             }
         }).mount('#app');
