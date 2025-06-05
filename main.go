@@ -45,10 +45,10 @@ type Question struct {
 }
 
 type QuestionOutput struct {
-	QuizQuestionID         string            `json:"quiz_question_id"`
-	DisplayNumber          int               `json:"display_number"`
-	OriginalChapter        string            `json:"original_chapter"`
-	OriginalQuestionNumber string            `json:"original_question_number"`
+	QuizQuestionID         string            `json:"quiz_question_id"`           // 在当前测验/回顾中的唯一ID
+	DisplayNumber          int               `json:"display_number"`             // 在当前列表中的显示序号 (1-based)
+	OriginalChapter        string            `json:"original_chapter"`           // 原始章节键
+	OriginalQuestionNumber string            `json:"original_question_number"` // 原始题号
 	QuestionType           string            `json:"question_type"`
 	QuestionText           string            `json:"question_text"`
 	Options                map[string]string `json:"options"`
@@ -75,17 +75,22 @@ type UserQuestionStat struct {
 }
 
 type UserSession struct {
-	UserID               string
-	CurrentQuestions     []QuestionOutput        // 当前模式下用于显示的题目列表 (包含答案)
-	OriginalIncorrect    []UserIncorrectQuestion // 在错题回顾模式下，这个可能不再直接使用，因为CurrentQuestions会包含答案
-	CurrentQuestionIndex int
-	CurrentMode          string 
+	UserID    string
+	// CurrentQuestions is no longer needed in session if frontend fetches all upfront for prev/jump
+	// However, for /api/review/next (if kept for quick review), it might still be used.
+	// For simplicity of this refactor, we'll assume /start endpoints return all questions,
+	// and /next for quick review might become redundant or serve a different purpose.
+	// Let's keep CurrentQuestions for now for /api/review/next if it's still used.
+	CurrentQuestions     []QuestionOutput
+	OriginalIncorrect    []UserIncorrectQuestion // Still needed to get full incorrect Q data
+	CurrentQuestionIndex int                     // Index for session-managed CurrentQuestions (e.g. for /api/review/next)
+	CurrentMode          string
 	mu                   sync.Mutex
 }
 
 var (
 	allQuestionsByChapter map[string][]Question
-	questionMapByID       map[string]Question
+	questionMapByID       map[string]Question // Used to get original Question struct by ID
 	userSessions          map[string]*UserSession
 	sessionsMu            sync.RWMutex
 )
@@ -121,6 +126,7 @@ func loadAllQuestionsGlobal() {
 		for idx := range questionsInChapter {
 			questionsInChapter[idx].OriginalChapterKey = chapterKey
 			questionsInChapter[idx].OriginalIndex = idx
+			// Store by a unique ID: chapterKey + original index
 			questionID := fmt.Sprintf("%s_%d", chapterKey, idx)
 			questionMapByID[questionID] = questionsInChapter[idx]
 		}
@@ -136,34 +142,25 @@ func saveUserJSONData(userID, fileName string, data interface{}) error { if err 
 func getOrCreateUserSession(userID string) *UserSession { sessionsMu.RLock(); session, exists := userSessions[userID]; sessionsMu.RUnlock(); if exists { return session }; sessionsMu.Lock(); defer sessionsMu.Unlock(); session, exists = userSessions[userID]; if exists { return session }; newSession := &UserSession{ UserID: userID }; userSessions[userID] = newSession; return newSession }
 func _getQuestionsForProcessing(chapterChoices []string, orderChoice string) []Question { var questionsToProcess []Question; var targetChapterKeys []string; isSelectAll := false; for _, choice := range chapterChoices { if strings.ToLower(choice) == "all" || choice == "9" { isSelectAll = true; break } }; if isSelectAll { for i := 0; i <= maxChapterIndex; i++ { targetChapterKeys = append(targetChapterKeys, strconv.Itoa(i)) }; sort.SliceStable(targetChapterKeys, func(i, j int) bool { numI, _ := strconv.Atoi(targetChapterKeys[i]); numJ, _ := strconv.Atoi(targetChapterKeys[j]); return numI < numJ }) } else { for _, choice := range chapterChoices { if _, err := strconv.Atoi(choice); err == nil { if _, ok := allQuestionsByChapter[choice]; ok { targetChapterKeys = append(targetChapterKeys, choice) } } } }; for _, chapKey := range targetChapterKeys { chapterQuestions, ok := allQuestionsByChapter[chapKey]; if ok { questionsToProcess = append(questionsToProcess, chapterQuestions...) } }; if len(questionsToProcess) == 0 { return []Question{} }; if orderChoice == "random" || orderChoice == "1" { rand.Shuffle(len(questionsToProcess), func(i, j int) { questionsToProcess[i], questionsToProcess[j] = questionsToProcess[j], questionsToProcess[i] }) }; return questionsToProcess }
 
-// convertQuestionsToOutput now always includes the answer by default.
-// The 'includeAnswer' parameter is kept for potential future use but defaults to true.
-func convertQuestionsToOutput(questions []Question, sessionIndexOffset int, forceIncludeAnswer ...bool) []QuestionOutput {
-	includeAnswer := true // Default to true
-	if len(forceIncludeAnswer) > 0 {
-		includeAnswer = forceIncludeAnswer[0] // Allow overriding (though not used in current refactor)
-	}
-
+// convertQuestionsToOutput always includes the answer.
+func convertQuestionsToOutput(questions []Question, sessionIndexOffset int) []QuestionOutput {
 	output := make([]QuestionOutput, len(questions))
 	for i, q := range questions {
-		outQ := QuestionOutput{
+		output[i] = QuestionOutput{
 			QuizQuestionID:         fmt.Sprintf("quiz_%s_%d", q.OriginalChapterKey, q.OriginalIndex),
-			DisplayNumber:          sessionIndexOffset + i + 1,
+			DisplayNumber:          sessionIndexOffset + i + 1, // DisplayNumber should be based on the final list sent to frontend
 			OriginalChapter:        q.OriginalChapterKey,
 			OriginalQuestionNumber: q.QuestionNumber,
 			QuestionType:           q.QuestionType,
 			QuestionText:           q.QuestionText,
 			Options:                q.Options,
+			CorrectAnswer:          q.CorrectAnswer, 
 		}
-		if includeAnswer { // This will always be true now based on new requirement
-			outQ.CorrectAnswer = q.CorrectAnswer
-		}
-		output[i] = outQ
 	}
 	return output
 }
 
-// convertUserIncorrectToOutput now always includes the answer.
+// convertUserIncorrectToOutput always includes the answer.
 func convertUserIncorrectToOutput(incorrectQs []UserIncorrectQuestion, sessionIndexOffset int) []QuestionOutput {
 	output := make([]QuestionOutput, len(incorrectQs))
 	for i, iq := range incorrectQs {
@@ -175,7 +172,7 @@ func convertUserIncorrectToOutput(incorrectQs []UserIncorrectQuestion, sessionIn
 			QuestionType:           iq.QuestionType,
 			QuestionText:           iq.QuestionText,
 			Options:                iq.Options,
-			CorrectAnswer:          iq.CorrectAnswer, // Always include answer for incorrect review
+			CorrectAnswer:          iq.CorrectAnswer, 
 		}
 	}
 	return output
@@ -184,9 +181,40 @@ func convertUserIncorrectToOutput(incorrectQs []UserIncorrectQuestion, sessionIn
 func InitSessionHandler(ctx context.Context, c *app.RequestContext) { userID := uuid.NewString(); _ = getOrCreateUserSession(userID); log.Printf("新用户会话初始化: %s", userID); c.JSON(consts.StatusOK, utils.H{"user_id": userID, "message": "会话已初始化"}) }
 type StartModeRequest struct { UserID string `json:"user_id" vd:"required"`; ChapterChoice []string `json:"chapter_choice" vd:"required"`; OrderChoice string `json:"order_choice" vd:"required"` }
 
-func QuickReviewStartHandler(ctx context.Context, c *app.RequestContext) { var req StartModeRequest; if err := c.BindAndValidate(&req); err != nil { c.JSON(consts.StatusBadRequest, utils.H{"error": "无效请求: " + err.Error()}); return }; session := getOrCreateUserSession(req.UserID); session.mu.Lock(); defer session.mu.Unlock(); selectedQuestions := _getQuestionsForProcessing(req.ChapterChoice, req.OrderChoice); if len(selectedQuestions) == 0 { c.JSON(consts.StatusOK, utils.H{"message": "所选范围没有题目。", "total_questions": 0, "question": nil}); return }; session.CurrentQuestions = convertQuestionsToOutput(selectedQuestions, 0, true); session.CurrentQuestionIndex = 0; session.CurrentMode = "review"; log.Printf("用户 %s 开始速刷模式，章节: %v, 顺序: %s, 共 %d 题", req.UserID, req.ChapterChoice, req.OrderChoice, len(session.CurrentQuestions)); c.JSON(consts.StatusOK, utils.H{ "message": "速刷模式开始", "total_questions": len(session.CurrentQuestions), "question": session.CurrentQuestions[0] }) }
+// QuickReviewStartHandler now returns all questions with answers.
+func QuickReviewStartHandler(ctx context.Context, c *app.RequestContext) {
+	var req StartModeRequest
+	if err := c.BindAndValidate(&req); err != nil {
+		c.JSON(consts.StatusBadRequest, utils.H{"error": "无效请求: " + err.Error()})
+		return
+	}
+	session := getOrCreateUserSession(req.UserID) // Session might not be strictly needed if all data sent to client
+	session.mu.Lock() // Lock if session state is modified, though less state is kept here now
+	defer session.mu.Unlock()
+
+	selectedQuestions := _getQuestionsForProcessing(req.ChapterChoice, req.OrderChoice)
+	if len(selectedQuestions) == 0 {
+		c.JSON(consts.StatusOK, utils.H{"message": "所选范围没有题目。", "total_questions": 0, "questions": []QuestionOutput{}})
+		return
+	}
+	
+	outputQuestions := convertQuestionsToOutput(selectedQuestions, 0) // Pass 0 as offset for a fresh list
+	session.CurrentMode = "review" // Set mode for potential future use or logging
+	session.CurrentQuestions = outputQuestions // Store in session IF /api/review/next is still used. Otherwise, not needed.
+	session.CurrentQuestionIndex = 0
+
+	log.Printf("用户 %s 开始速刷模式，章节: %v, 顺序: %s, 返回 %d 题", req.UserID, req.ChapterChoice, req.OrderChoice, len(outputQuestions))
+	c.JSON(consts.StatusOK, utils.H{
+		"message":         "速刷模式开始",
+		"total_questions": len(outputQuestions),
+		"questions":       outputQuestions, // Send all questions
+	})
+}
+
 type GetNextQuestionRequest struct { UserID string `json:"user_id" vd:"required"` }
 
+// GetNextQuestionHandler is for Quick Review IF frontend still uses it after getting all questions.
+// Ideally, frontend iterates its local list. This can be a fallback or removed.
 func GetNextQuestionHandler(ctx context.Context, c *app.RequestContext) {
 	var req GetNextQuestionRequest
 	if err := c.BindAndValidate(&req); err != nil {
@@ -197,26 +225,26 @@ func GetNextQuestionHandler(ctx context.Context, c *app.RequestContext) {
 	session.mu.Lock()
 	defer session.mu.Unlock()
 
-	// This handler is now ONLY for "review" (Quick Review) mode.
 	if session.CurrentMode != "review" {
-		c.JSON(consts.StatusBadRequest, utils.H{"error": "当前不处于速刷模式"})
+		c.JSON(consts.StatusBadRequest, utils.H{"error": "当前不处于速刷模式 (或会话模式不匹配)"})
 		return
 	}
 	
-	session.CurrentQuestionIndex++
+	session.CurrentQuestionIndex++ // This index refers to session.CurrentQuestions
 	if session.CurrentQuestionIndex >= len(session.CurrentQuestions) {
 		c.JSON(consts.StatusOK, utils.H{"message": "速刷完成!", "quiz_completed": true, "question": nil})
 		return
 	}
 	
-	nextQuestionOutput := session.CurrentQuestions[session.CurrentQuestionIndex] // Already includes answer
-	log.Printf("用户 %s 在速刷模式下获取下一题, 序号 %d", req.UserID, nextQuestionOutput.DisplayNumber)
+	nextQuestionOutput := session.CurrentQuestions[session.CurrentQuestionIndex]
+	log.Printf("用户 %s 在速刷模式下通过API获取下一题, 序号 %d", req.UserID, nextQuestionOutput.DisplayNumber)
 	c.JSON(consts.StatusOK, utils.H{
 		"question":       nextQuestionOutput,
 		"quiz_completed": false,
 	})
 }
 
+// QuizStartHandler now returns all questions with answers.
 func QuizStartHandler(ctx context.Context, c *app.RequestContext) {
 	var req StartModeRequest
 	if err := c.BindAndValidate(&req); err != nil {
@@ -228,17 +256,19 @@ func QuizStartHandler(ctx context.Context, c *app.RequestContext) {
 	defer session.mu.Unlock()
 	selectedQuestions := _getQuestionsForProcessing(req.ChapterChoice, req.OrderChoice)
 	if len(selectedQuestions) == 0 {
-		c.JSON(consts.StatusOK, utils.H{"message": "所选范围没有题目。", "total_questions": 0, "question": nil})
+		c.JSON(consts.StatusOK, utils.H{"message": "所选范围没有题目。", "total_questions": 0, "questions": []QuestionOutput{}})
 		return
 	}
-	session.CurrentQuestions = convertQuestionsToOutput(selectedQuestions, 0, true) // Always include answer
-	session.CurrentQuestionIndex = 0
-	session.CurrentMode = "quiz"
-	log.Printf("用户 %s 开始答题模式，章节: %v, 顺序: %s, 共 %d 题", req.UserID, req.ChapterChoice, req.OrderChoice, len(session.CurrentQuestions))
+	outputQuestions := convertQuestionsToOutput(selectedQuestions, 0) // Pass 0 as offset
+	session.CurrentMode = "quiz" // Set mode for submit handler context
+	// Storing all questions in session might be redundant if frontend handles navigation
+	// session.CurrentQuestions = outputQuestions 
+	// session.CurrentQuestionIndex = 0
+	log.Printf("用户 %s 开始答题模式，章节: %v, 顺序: %s, 返回 %d 题", req.UserID, req.ChapterChoice, req.OrderChoice, len(outputQuestions))
 	c.JSON(consts.StatusOK, utils.H{
 		"message":         "答题模式开始",
-		"total_questions": len(session.CurrentQuestions),
-		"question":        session.CurrentQuestions[0],
+		"total_questions": len(outputQuestions),
+		"questions":       outputQuestions, // Send all questions
 	})
 }
 
@@ -249,48 +279,30 @@ type SubmitAnswerRequest struct {
 	WasCorrect       bool   `json:"was_correct"` // Frontend sends if it was correct
 }
 
+// SubmitAnswerHandler now only records stats and incorrect questions.
 func SubmitAnswerHandler(ctx context.Context, c *app.RequestContext) {
 	var req SubmitAnswerRequest
 	if err := c.BindAndValidate(&req); err != nil {
 		c.JSON(consts.StatusBadRequest, utils.H{"error": "无效请求: " + err.Error()})
 		return
 	}
-	session := getOrCreateUserSession(req.UserID)
-	session.mu.Lock()
-	if session.CurrentMode != "quiz" {
-		session.mu.Unlock()
-		c.JSON(consts.StatusBadRequest, utils.H{"error": "当前不处于答题模式"})
-		return
-	}
-	if session.CurrentQuestionIndex >= len(session.CurrentQuestions) {
-		session.mu.Unlock()
-		c.JSON(consts.StatusOK, utils.H{"message": "答题已完成!", "quiz_completed": true})
-		return
-	}
-	currentOutputQuestion := session.CurrentQuestions[session.CurrentQuestionIndex]
-	if currentOutputQuestion.QuizQuestionID != req.QuizQuestionID {
-		session.mu.Unlock()
-		c.JSON(consts.StatusBadRequest, utils.H{"error": "提交的题目ID与当前题目不符"})
-		return
-	}
+	// session := getOrCreateUserSession(req.UserID) // Session might not be needed for this specific action if no state is read/written
+	
+	// Find original question for logging and saving incorrect questions
 	parts := strings.Split(strings.TrimPrefix(req.QuizQuestionID, "quiz_"), "_")
 	if len(parts) != 2 {
-		session.mu.Unlock()
-		c.JSON(consts.StatusInternalServerError, utils.H{"error": "内部服务器错误，无法解析题目ID"})
+		c.JSON(consts.StatusInternalServerError, utils.H{"error": "内部服务器错误，无法解析题目ID (quiz)"})
 		return
 	}
 	originalQuestionIDKey := parts[0] + "_" + parts[1]
 	originalQuestion, ok := questionMapByID[originalQuestionIDKey]
 	if !ok {
-		session.mu.Unlock()
-		c.JSON(consts.StatusInternalServerError, utils.H{"error": "内部服务器错误，找不到原始题目"})
+		c.JSON(consts.StatusInternalServerError, utils.H{"error": "内部服务器错误，找不到原始题目 (quiz)"})
 		return
 	}
 	
-	// Frontend now determines correctness, backend just logs and updates stats
 	userStats := make(map[string]UserQuestionStat)
 	if err := loadUserJSONData(req.UserID, questionStatsFile, &userStats); err != nil {
-		session.mu.Unlock()
 		c.JSON(consts.StatusInternalServerError, utils.H{"error": "加载用户统计数据失败"})
 		return
 	}
@@ -305,13 +317,10 @@ func SubmitAnswerHandler(ctx context.Context, c *app.RequestContext) {
 
 	if req.WasCorrect {
 		statEntry.CorrectCount++
-		log.Printf("用户 %s 答对题目 %s (原始ID %s) - 前端判断", req.UserID, currentOutputQuestion.DisplayNumber, originalQuestion.QuestionNumber)
 	} else {
 		statEntry.ErrorCount++
-		log.Printf("用户 %s 答错题目 %s (原始ID %s)，用户答案: %s, 正确答案: %s - 前端判断", req.UserID, currentOutputQuestion.DisplayNumber, originalQuestion.QuestionNumber, req.UserAnswer, originalQuestion.CorrectAnswer)
 		userIncorrect := []UserIncorrectQuestion{}
 		if err := loadUserJSONData(req.UserID, incorrectQuestionsFile, &userIncorrect); err != nil {
-			session.mu.Unlock()
 			c.JSON(consts.StatusInternalServerError, utils.H{"error": "加载用户错题本失败"})
 			return
 		}
@@ -333,7 +342,6 @@ func SubmitAnswerHandler(ctx context.Context, c *app.RequestContext) {
 				Timestamp:       time.Now(),
 			})
 			if err := saveUserJSONData(req.UserID, incorrectQuestionsFile, userIncorrect); err != nil {
-				session.mu.Unlock()
 				c.JSON(consts.StatusInternalServerError, utils.H{"error": "保存用户错题本失败"})
 				return
 			}
@@ -342,27 +350,22 @@ func SubmitAnswerHandler(ctx context.Context, c *app.RequestContext) {
 	statEntry.LastAnswered = time.Now()
 	userStats[statKey] = statEntry
 	if err := saveUserJSONData(req.UserID, questionStatsFile, userStats); err != nil {
-		session.mu.Unlock()
 		c.JSON(consts.StatusInternalServerError, utils.H{"error": "保存用户统计数据失败"})
 		return
 	}
 
-	session.CurrentQuestionIndex++
-	quizCompleted := session.CurrentQuestionIndex >= len(session.CurrentQuestions)
-	var nextQ *QuestionOutput = nil
-	if !quizCompleted {
-		q := session.CurrentQuestions[session.CurrentQuestionIndex] // This already has the answer
-		nextQ = &q
-	}
-	session.mu.Unlock()
+	// Backend no longer determines completion or next question for this endpoint
+	// It just acknowledges the recording.
+	log.Printf("用户 %s 答题模式提交: QID %s, 用户答案 %s, 是否正确 (前端判断): %t. 记录已保存.", req.UserID, req.QuizQuestionID, req.UserAnswer, req.WasCorrect)
 	c.JSON(consts.StatusOK, utils.H{
-		"next_question":            nextQ,
-		"quiz_completed":           quizCompleted,
-		"total_questions_answered": session.CurrentQuestionIndex,
-		"message":                  "答案已记录 (前端校验)",
+		"message": "答案已记录 (前端校验)",
+		// No "next_question" or "quiz_completed" as frontend manages this with full list
+		// "total_questions_answered" can be sent if useful for frontend's quizResults,
+		// but frontend can also track this with its currentQuestionIndex.
 	})
 }
 
+// IncorrectQuestionsReviewStartHandler now returns all incorrect questions with answers.
 func IncorrectQuestionsReviewStartHandler(ctx context.Context, c *app.RequestContext) {
 	var req GetNextQuestionRequest
 	if err := c.BindAndValidate(&req); err != nil {
@@ -379,66 +382,42 @@ func IncorrectQuestionsReviewStartHandler(ctx context.Context, c *app.RequestCon
 		return
 	}
 	if len(userIncorrectRaw) == 0 {
-		c.JSON(consts.StatusOK, utils.H{"message": "错题簿是空的哦！", "total_questions": 0, "question": nil})
+		c.JSON(consts.StatusOK, utils.H{"message": "错题簿是空的哦！", "total_questions": 0, "questions": []QuestionOutput{}})
 		return
 	}
 	rand.Shuffle(len(userIncorrectRaw), func(i, j int) {
 		userIncorrectRaw[i], userIncorrectRaw[j] = userIncorrectRaw[j], userIncorrectRaw[i]
 	})
 	
-	session.CurrentQuestions = convertUserIncorrectToOutput(userIncorrectRaw, 0) // Always include answer
-	session.CurrentQuestionIndex = 0
+	outputQuestions := convertUserIncorrectToOutput(userIncorrectRaw, 0) // Always include answer
 	session.CurrentMode = "incorrect_review"
-	log.Printf("用户 %s 开始错题回顾模式, 共 %d 题", req.UserID, len(session.CurrentQuestions))
+	// Storing in session is less critical if frontend gets all questions
+	// session.CurrentQuestions = outputQuestions 
+	// session.CurrentQuestionIndex = 0
+	log.Printf("用户 %s 开始错题回顾模式, 返回 %d 题", req.UserID, len(outputQuestions))
 	c.JSON(consts.StatusOK, utils.H{
 		"message":         "错题回顾模式开始",
-		"total_questions": len(session.CurrentQuestions),
-		"question":        session.CurrentQuestions[0], 
+		"total_questions": len(outputQuestions),
+		"questions":       outputQuestions, // Send all incorrect questions with answers
 	})
 }
 
-// SubmitIncorrectReviewAnswerHandler now only records, frontend validates
+// SubmitIncorrectReviewAnswerHandler now only logs, frontend validates and has the answers.
 func SubmitIncorrectReviewAnswerHandler(ctx context.Context, c *app.RequestContext) {
 	var req SubmitAnswerRequest
 	if err := c.BindAndValidate(&req); err != nil {
 		c.JSON(consts.StatusBadRequest, utils.H{"error": "无效请求: " + err.Error()})
 		return
 	}
-	session := getOrCreateUserSession(req.UserID)
-	session.mu.Lock()
-	defer session.mu.Unlock()
-
-	if session.CurrentMode != "incorrect_review" {
-		c.JSON(consts.StatusBadRequest, utils.H{"error": "当前不处于错题回顾模式"})
-		return
-	}
-	if session.CurrentQuestionIndex >= len(session.CurrentQuestions) {
-		c.JSON(consts.StatusOK, utils.H{"message": "错题回顾已完成!", "quiz_completed": true, "question": nil})
-		return
-	}
-
-	currentOutputQuestion := session.CurrentQuestions[session.CurrentQuestionIndex] // This already has the answer
-	if currentOutputQuestion.QuizQuestionID != req.QuizQuestionID {
-		c.JSON(consts.StatusBadRequest, utils.H{"error": "提交的错题ID与当前题目不符"})
-		return
-	}
+	// No session state modification needed here beyond logging,
+	// as frontend has all questions and answers.
 	
-	// Log the attempt. Frontend already validated.
-	log.Printf("用户 %s 在错题回顾中尝试了题目 %s (ID %s), 用户答案: %s, 前端判断正确性: %t",
-		req.UserID, currentOutputQuestion.DisplayNumber, currentOutputQuestion.OriginalQuestionNumber, req.UserAnswer, req.WasCorrect)
+	log.Printf("用户 %s 错题回顾提交: QID %s, 用户答案 %s, 是否正确 (前端判断): %t. (仅记录日志)",
+		req.UserID, req.QuizQuestionID, req.UserAnswer, req.WasCorrect)
 	
-	session.CurrentQuestionIndex++
-	quizCompleted := session.CurrentQuestionIndex >= len(session.CurrentQuestions)
-	var nextQ *QuestionOutput = nil
-	if !quizCompleted {
-		nextQ = &session.CurrentQuestions[session.CurrentQuestionIndex] // This already includes answer
-	}
-
 	c.JSON(consts.StatusOK, utils.H{
-		"next_question":            nextQ,
-		"quiz_completed":           quizCompleted,
-		"total_questions_answered": session.CurrentQuestionIndex,
-		"message":                  "错题回顾答案已记录 (前端校验)",
+		"message": "错题回顾答案已记录(仅日志, 前端校验)",
+		// No "next_question" or "quiz_completed" needed from backend
 	})
 }
 
@@ -479,7 +458,7 @@ func main() {
 		reviewGroup := apiGroup.Group("/review") 
 		{
 			reviewGroup.POST("/start", QuickReviewStartHandler)
-			reviewGroup.POST("/next", GetNextQuestionHandler) 
+			reviewGroup.POST("/next", GetNextQuestionHandler) // This might become obsolete if frontend handles all Qs
 		}
 		quizGroup := apiGroup.Group("/quiz") 
 		{
@@ -499,4 +478,3 @@ func main() {
 	log.Println("喵喵学习小助手 Go 后端已启动，监听于 http://0.0.0.0:8888")
 	h.Spin()
 }
-
