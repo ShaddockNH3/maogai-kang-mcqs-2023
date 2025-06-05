@@ -2,10 +2,7 @@ module quiz
 
 go 1.24.1
 
-require (
-	github.com/cloudwego/hertz v0.10.0
-	github.com/google/uuid v1.6.0
-)
+require github.com/cloudwego/hertz v0.10.0
 
 require (
 	github.com/bytedance/gopkg v0.1.1 // indirect
