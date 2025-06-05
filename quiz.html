@@ -24,21 +24,21 @@
         }
         .btn {
             display: inline-block; /* Allow buttons to be side-by-side */
-            padding: 8px 12px; 
-            margin-left: 8px; 
-            border-radius: 6px; 
-            font-weight: 500; 
+            padding: 8px 12px; /* Adjusted padding for smaller buttons */
+            margin-left: 8px; /* Spacing between inline buttons */
+            border-radius: 6px; /* Consistent rounding */
+            font-weight: 500; /* Adjusted font-weight */
             transition: background-color 0.2s;
             cursor: pointer;
             text-align: center;
             border: 1px solid transparent;
-            font-size: 0.875rem; 
+            font-size: 0.875rem; /* text-sm */
             line-height: 1.25rem;
         }
         .btn-full-width { /* Class for buttons that should span full width */
             display: block;
             width: 100%;
-            margin-left: 0; 
+            margin-left: 0; /* Reset margin for full-width */
             margin-bottom: 10px;
              padding: 10px 15px; /* Restore padding for full-width buttons */
         }
@@ -53,8 +53,8 @@
         .btn-outline { background-color: white; color: #4a5568; border-color: #cbd5e1; }
         .btn-outline:hover { background-color: #f7fafc; }
         .btn:disabled {
-            background-color: #d1d5db; 
-            color: #6b7280; 
+            background-color: #d1d5db; /* gray-300 */
+            color: #6b7280; /* gray-500 */
             cursor: not-allowed;
             border-color: #d1d5db;
         }
@@ -310,9 +310,9 @@
                 const activeMode = ref(''); 
                 const modeDisplayName = ref('');
                 
-                const allModeQuestions = ref([]); // Holds all questions for the current mode
+                const allModeQuestions = ref([]); 
                 const currentQuestion = ref(null); 
-                const currentQuestionIndex = ref(-1); // 0-based index for allModeQuestions
+                const currentQuestionIndex = ref(-1); 
                 const totalQuestions = ref(0);
                 const isQuizCompleted = ref(false);
 
@@ -331,9 +331,7 @@
 
                 const showNextButton = computed(() => {
                     if (!isInQuestionView.value || isQuizCompleted.value) return false;
-                    // For quickReview, always show "Next" if not completed
                     if (currentView.value === 'quickReview' && currentQuestionIndex.value < totalQuestions.value -1 ) return true;
-                    // For quizMode and incorrectReview, show "Next" if answer has been shown and not the last question
                     if ((currentView.value === 'quizMode' || currentView.value === 'incorrectReview') && quizModeState.value === 'showAnswer') return true;
                     return false;
                 });
@@ -424,9 +422,9 @@
                     
                     // For incorrectReview, we now also go to startSelectedMode,
                     // as it will call startIncorrectReview internally.
-                    navigateTo('chapterOrderSelection');
-                     if (mode === 'incorrectReview') { // If incorrect review, directly start it after setting mode
-                        startIncorrectReview(); // This now handles its own data fetching
+                    // navigateTo('chapterOrderSelection'); // Incorrect review does not use chapter selection
+                     if (mode === 'incorrectReview') { 
+                        startIncorrectReview(); 
                     } else {
                         navigateTo('chapterOrderSelection');
                     }
@@ -482,13 +480,8 @@
                         url = `${API_BASE_URL}/api/quiz/start`;
                         requestBody.chapter_choice = selectedChapters.value.includes('all') ? ['all'] : selectedChapters.value.filter(c => c !== 'all');
                         requestBody.order_choice = selectedOrder.value;
-                    } else if (activeMode.value === 'incorrectReview') {
-                        // This is handled by startIncorrectReview, which is called by selectMode
-                        // If somehow reached here, just log and return.
-                        console.warn("startSelectedMode called for incorrectReview, should be handled by startIncorrectReview directly.");
-                        isLoading.value = false;
-                        return;
-                    }
+                    } 
+                    // incorrectReview is handled by its own start function
                      else {
                         errorMessage.value = "未知的模式: " + activeMode.value;
                         isLoading.value = false;
@@ -536,15 +529,13 @@
                         // Update display number based on the new index
                         if(currentQuestion.value) currentQuestion.value.display_number = currentQuestionIndex.value + 1;
                         
-                        resetQuizStateForNewQuestion(); // Reset answers and feedback
-                        quizModeState.value = 'inProgress'; // Set to inProgress for the new question
+                        resetQuizStateForNewQuestion(); 
+                        quizModeState.value = 'inProgress'; 
                         isQuizCompleted.value = false;
                     } else if (currentQuestionIndex.value >= allModeQuestions.value.length && allModeQuestions.value.length > 0) {
                         isQuizCompleted.value = true;
-                        currentQuestion.value = null; // No more questions
-                        // navigateTo('resultsView'); // Navigate to results when all questions are done
+                        currentQuestion.value = null; 
                     } else {
-                        // This case means no questions or index is out of bounds unexpectedly
                         isQuizCompleted.value = true;
                         currentQuestion.value = null;
                     }
@@ -552,7 +543,7 @@
 
                 const previousQuestion = () => {
                     if (currentQuestionIndex.value > 0) {
-                        quizModeState.value = 'inProgress'; // Ensure answr submission is enabled for previous q
+                        quizModeState.value = 'inProgress'; 
                         currentQuestionIndex.value--;
                         setCurrentQuestionFromIndex();
                     }
@@ -566,7 +557,7 @@
                 const jumpToQuestion = () => {
                     const targetNum = parseInt(jumpToQuestionNumberInput.value, 10);
                     if (targetNum && targetNum >= 1 && targetNum <= totalQuestions.value) {
-                        quizModeState.value = 'inProgress'; // Ensure answr submission is enabled
+                        quizModeState.value = 'inProgress'; 
                         currentQuestionIndex.value = targetNum - 1; 
                         setCurrentQuestionFromIndex();
                         showJumpInput.value = false; 
@@ -576,7 +567,7 @@
                     }
                 };
                 
-                const fetchNextQuestion = async () => { // For "Next" button click
+                const fetchNextQuestion = async () => { 
                     if (isQuizCompleted.value) {
                         navigateTo('resultsView');
                         return;
@@ -584,9 +575,11 @@
                     if (currentQuestionIndex.value < totalQuestions.value - 1) {
                         currentQuestionIndex.value++;
                         setCurrentQuestionFromIndex();
-                    } else { // Should be the last question's feedback being shown
+                    } else { 
                         isQuizCompleted.value = true;
-                        navigateTo('resultsView');
+                        if (quizModeState.value === 'showAnswer' || currentView.value === 'quickReview') { 
+                           navigateTo('resultsView');
+                        }
                     }
                 };
 
@@ -621,7 +614,10 @@
                             was_correct: isCurrentAnswerCorrect.value 
                         };
                         const response = await fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(requestBody) });
-                        if (!response.ok) { /* ... error handling ... */ }
+                        if (!response.ok) { 
+                            const errBody = await response.text();
+                            throw new Error(`提交答案记录失败: ${response.statusText} (${response.status}) - ${errBody || '(无响应体)'}`);
+                        }
                         const data = await response.json(); 
                         
                         if (currentQuestionIndex.value >= totalQuestions.value - 1) {
@@ -631,18 +627,23 @@
                         }
                         if (data.total_questions_answered && activeMode.value === 'quizMode') {
                              quizResults.value.total_answered = data.total_questions_answered;
+                             if (isCurrentAnswerCorrect.value) { 
+                                if (quizResults.value.total_correct === undefined) quizResults.value.total_correct = 0;
+                                quizResults.value.total_correct++;
+                             }
                         }
+
                     } catch (err) { errorMessage.value = err.message; } 
                     finally { isLoading.value = false; }
                 };
                                 
                 const startIncorrectReview = async () => { 
-                    if (!userId.value) { /* ... */ }
+                    if (!userId.value) { errorMessage.value = "用户未初始化，请刷新页面。"; await initializeUser(); if (!userId.value) return; }
                     isLoading.value = true;
                     resetModeState(); 
                     activeMode.value = 'incorrectReview'; 
                     viewTitle.value = '错题回顾'; 
-                    quizModeState.value = 'inProgress';
+                    // quizModeState is reset in resetModeState to 'inProgress'
 
                     try {
                         const response = await fetch(`${API_BASE_URL}/api/incorrect_questions/review/start`, {
@@ -650,11 +651,14 @@
                             headers: { 'Content-Type': 'application/json' },
                             body: JSON.stringify({ user_id: userId.value })
                         });
-                        if (!response.ok) { /* ... */ }
+                        if (!response.ok) { 
+                            const errBody = await response.text();
+                            throw new Error(`开始错题回顾失败: ${response.statusText} (${response.status}) - ${errBody || '(无响应体)'}`);
+                         }
                         const data = await response.json();
                         // Backend now sends array of questions in 'questions' field
                         if (data && data.questions && Array.isArray(data.questions)) { 
-                            allModeQuestions.value = data.questions; // Store all incorrect questions
+                            allModeQuestions.value = data.questions; 
                             totalQuestions.value = data.questions.length;
                             if (totalQuestions.value > 0) {
                                 currentQuestionIndex.value = 0;
@@ -669,7 +673,9 @@
                             errorMessage.value = data.message || "错题簿是空的或无法加载。";
                             navigateTo('mainMenu');
                         }
-                    } catch (err) { /* ... */ } 
+                    } catch (err) { 
+                        errorMessage.value = err.message;
+                    } 
                     finally { isLoading.value = false; }
                 };
                 const confirmClearUserData = () => {
@@ -678,7 +684,7 @@
                     }
                 };
                 const clearUserData = async () => { 
-                    if (!userId.value) { /* ... */ }
+                    if (!userId.value) { errorMessage.value = "用户未初始化，无法清理数据。"; await initializeUser(); if (!userId.value) return; }
                     isLoading.value = true;
                     try {
                         const response = await fetch(`${API_BASE_URL}/api/user/data/clear`, {
@@ -686,11 +692,16 @@
                             headers: { 'Content-Type': 'application/json' },
                             body: JSON.stringify({ user_id: userId.value })
                         });
-                        if (!response.ok) { /* ... */ }
+                        if (!response.ok) {
+                             const errBody = await response.text();
+                             throw new Error(`清理用户数据失败: ${response.statusText} (${response.status}) - ${errBody || '(无响应体)'}`);
+                        }
                         const data = await response.json();
                         alert(data.message || "用户数据已清理。");
                         goBackToMenu(); 
-                    } catch (err) { /* ... */ } 
+                    } catch (err) { 
+                        errorMessage.value = err.message;
+                    } 
                     finally { isLoading.value = false; }
                 };
                 const sortedOptions = computed(() => {
@@ -709,6 +720,7 @@
                     const userAnswersArray = Array.isArray(selectedAnswers.value) 
                                             ? selectedAnswers.value 
                                             : (selectedAnswers.value !== null && selectedAnswers.value !== undefined ? [String(selectedAnswers.value)] : []);
+                                            
                     const correctAnswerString = (currentQuestion.value && typeof currentQuestion.value.correct_answer === 'string') 
                                             ? currentQuestion.value.correct_answer
                                             : '';
