@@ -156,12 +156,21 @@
         <div v-if="userId && !isLoading">
             <div v-if="currentView !== 'mainMenu'" class="nav-bar">
                 <button @click="goBackToMenu" class="btn btn-outline">返回主菜单</button>
-                <div class="btn-group" v-if="isInQuestionView && allModeQuestions.length > 0 && quizModeState === 'inProgress'">
-                    <button @click="toggleJumpInput" class="btn btn-outline">跳转</button>
-                    <input v-if="showJumpInput" type="number" v-model.number="jumpToQuestionNumberInput" 
-                           min="1" :max="totalQuestions" class="jump-input" placeholder="题号" @keyup.enter="jumpToQuestion">
-                    <button v-if="showJumpInput" @click="jumpToQuestion" class="btn btn-primary">Go</button>
-                    <button @click="previousQuestion" :disabled="currentQuestionIndex === 0" class="btn btn-outline">上一题</button>
+                
+                <div class="btn-group">
+                    <!-- Jump and Previous buttons (shown during quiz progress) -->
+                    <template v-if="isInQuestionView && allModeQuestions.length > 0 && quizModeState === 'inProgress'">
+                        <button @click="toggleJumpInput" class="btn btn-outline">跳转</button>
+                        <input v-if="showJumpInput" type="number" v-model.number="jumpToQuestionNumberInput" 
+                               min="1" :max="totalQuestions" class="jump-input" placeholder="题号" @keyup.enter="jumpToQuestion">
+                        <button v-if="showJumpInput" @click="jumpToQuestion" class="btn btn-primary">Go</button>
+                        <button @click="previousQuestion" :disabled="currentQuestionIndex === 0" class="btn btn-outline">上一题</button>
+                    </template>
+                    
+                    <!-- Delete button (shown after answer in incorrect review mode) -->
+                    <template v-if="currentView === 'incorrectReview' && quizModeState === 'showAnswer'">
+                        <button @click="deleteCurrentIncorrectQuestion" class="btn btn-danger">删除此题</button>
+                    </template>
                 </div>
             </div>
             
@@ -217,7 +226,8 @@
                     <div class="question-info-bar">
                         <span class="font-semibold text-blue-600">{{ currentQuestion.question_type }}</span>
                         <span class="text-gray-500">
-                            第 {{ currentQuestion.display_number }} / {{ totalQuestions }} 题
+                            <!-- FIXED: Use currentQuestionIndex + 1 for dynamic display -->
+                            第 {{ currentQuestionIndex + 1 }} / {{ totalQuestions }} 题
                             <span v-if="currentQuestion.original_question_number">
                                 (原: {{ currentQuestion.original_question_number }} @ {{ currentQuestion.original_chapter }})
                             </span>
@@ -267,8 +277,8 @@
 
             <div v-if="currentView === 'resultsView'">
                 <h2 class="text-xl font-semibold text-center text-green-600 mb-4">🎉 本轮{{ modeDisplayName }}完成！ 🎉</h2>
-                <p class="text-center text-gray-700 mb-2">总共 {{ totalQuestions }} 道题。</p>
-                <div v-if="activeMode === 'quizMode'">
+                <p class="text-center text-gray-700 mb-2">总共 {{ originalTotalQuestions }} 道题。</p>
+                <div v-if="activeMode === 'quizMode' || activeMode === 'incorrectReview'">
                     <p class="text-center text-gray-700 mb-2">回答了 {{ quizResults.total_answered }} 道题。</p>
                     <p class="text-center text-gray-700 mb-2">答对了 {{ quizResults.total_correct }} 道题。</p>
                     <p class="text-center text-gray-700 mb-4">答错了 {{ quizResults.total_answered - quizResults.total_correct }} 道题。</p>
@@ -310,6 +320,7 @@
                 const currentQuestion = ref(null); 
                 const currentQuestionIndex = ref(-1); 
                 const totalQuestions = ref(0);
+                const originalTotalQuestions = ref(0); // Store initial count for results summary
                 const isQuizCompleted = ref(false);
 
                 const selectedAnswers = ref([]); 
@@ -327,7 +338,9 @@
 
                 const showNextButton = computed(() => {
                     if (!isInQuestionView.value || isQuizCompleted.value) return false;
-                    if (currentView.value === 'quickReview' && currentQuestionIndex.value < totalQuestions.value - 1 ) return true;
+                    // In review mode, show next button always if not the last question
+                    if (currentView.value === 'quickReview' && currentQuestionIndex.value < totalQuestions.value - 1) return true;
+                    // In quiz/incorrect modes, only show after submitting an answer
                     if ((currentView.value === 'quizMode' || currentView.value === 'incorrectReview') && quizModeState.value === 'showAnswer') return true;
                     return false;
                 });
@@ -436,6 +449,7 @@
                     currentQuestion.value = null;
                     currentQuestionIndex.value = -1;
                     totalQuestions.value = 0;
+                    originalTotalQuestions.value = 0;
                     isQuizCompleted.value = false;
                     selectedAnswers.value = [];
                     feedbackMessage.value = '';
@@ -531,6 +545,7 @@
                         if (data && data.questions && Array.isArray(data.questions)) { 
                             allModeQuestions.value = data.questions; 
                             totalQuestions.value = data.questions.length;
+                            originalTotalQuestions.value = data.questions.length;
                             if (totalQuestions.value > 0) {
                                 currentQuestionIndex.value = 0;
                                 setCurrentQuestionFromIndex(); 
@@ -554,7 +569,7 @@
                 const setCurrentQuestionFromIndex = () => {
                     if (currentQuestionIndex.value >= 0 && currentQuestionIndex.value < allModeQuestions.value.length) {
                         currentQuestion.value = allModeQuestions.value[currentQuestionIndex.value];
-                        if(currentQuestion.value) currentQuestion.value.display_number = currentQuestionIndex.value + 1;
+                        // FIXED: Removed the incorrect display_number assignment. Display is now handled by the template.
                         
                         resetQuizStateForNewQuestion(); 
                         quizModeState.value = 'inProgress'; 
@@ -565,6 +580,7 @@
                     } else { 
                         isQuizCompleted.value = true;
                         currentQuestion.value = null;
+                        navigateTo('resultsView');
                     }
                 };
 
@@ -573,6 +589,11 @@
                         quizModeState.value = 'inProgress'; 
                         currentQuestionIndex.value--;
                         setCurrentQuestionFromIndex();
+                        // Adjust quiz results if going back
+                        if (activeMode.value === 'quizMode' || activeMode.value === 'incorrectReview') {
+                           // This logic could be complex, for now we will not decrement total_answered to keep it simple.
+                           // User can re-answer but it will not affect the stats for previous questions.
+                        }
                     }
                 };
 
@@ -583,7 +604,7 @@
 
                 const jumpToQuestion = () => {
                     const targetNum = parseInt(jumpToQuestionNumberInput.value, 10);
-                    if (targetNum && targetNum >= 1 && targetNum <= totalQuestions.value) {
+                    if (targetNum && targetNum >= 1 && targetNum <= totalQuestions.value) { 
                         quizModeState.value = 'inProgress'; 
                         currentQuestionIndex.value = targetNum - 1; 
                         setCurrentQuestionFromIndex();
@@ -595,18 +616,14 @@
                 };
                 
                 const fetchNextQuestion = async () => { 
-                    if (isQuizCompleted.value) {
+                    if (isQuizCompleted.value || currentQuestionIndex.value >= totalQuestions.value -1) {
+                        isQuizCompleted.value = true;
                         navigateTo('resultsView');
                         return;
                     }
                     if (currentQuestionIndex.value < totalQuestions.value - 1) {
                         currentQuestionIndex.value++;
                         setCurrentQuestionFromIndex();
-                    } else { 
-                        isQuizCompleted.value = true;
-                        if (quizModeState.value === 'showAnswer' || currentView.value === 'quickReview') { 
-                           navigateTo('resultsView');
-                        }
                     }
                 };
 
@@ -629,7 +646,7 @@
                     feedbackMessage.value = isCurrentAnswerCorrect.value ? '回答正确！👍' : `回答错误！正确答案是：<strong>${currentQuestion.value.correct_answer}</strong>`;
                     quizModeState.value = 'showAnswer'; 
 
-                    if (activeMode.value === 'quizMode') {
+                    if (activeMode.value === 'quizMode' || activeMode.value === 'incorrectReview') {
                         quizResults.value.total_answered++;
                         if(isCurrentAnswerCorrect.value) quizResults.value.total_correct++;
                     }
@@ -641,17 +658,14 @@
                     }
                     // --- End of Instant Feedback Logic ---
                     
-                    // isLoading.value = true; // We can remove this or keep it minimal if server call is very fast
-                    // errorMessage.value = ''; // Already cleared
                     let url = '';
                     if (activeMode.value === 'quizMode') url = `${API_BASE_URL}/api/quiz/submit_answer`;
                     else if (activeMode.value === 'incorrectReview') url = `${API_BASE_URL}/api/incorrect_questions/review/submit_answer`;
                     else { 
-                        // isLoading.value = false; // if we were using it
                         return; 
                     }
 
-                    // Send to server in the background
+                    // Send to server in the background (fire-and-forget)
                     try {
                         const requestBody = {
                             user_id: userId.value,
@@ -659,35 +673,25 @@
                             user_answer: userAnswerString,
                             was_correct: isCurrentAnswerCorrect.value 
                         };
-                        // No 'await' here if we want it to be truly fire-and-forget for the UI
                         fetch(url, { 
                             method: 'POST', 
                             headers: { 'Content-Type': 'application/json' }, 
                             body: JSON.stringify(requestBody) 
                         })
-                        .then(async response => { // Optional: handle server response if needed, but UI is already updated
+                        .then(response => { 
                             if (!response.ok) { 
-                                const errBody = await response.text();
-                                console.error(`服务器记录答案失败 (后台): ${response.statusText} (${response.status}) - ${errBody || '(无响应体)'}`);
-                                // Optionally show a non-blocking error to the user if server sync fails
-                                // For example: errorMessage.value = "答案已在本地显示，但同步到服务器失败。请检查网络连接。"
-                                // But for now, we keep it silent to not overwrite instant feedback.
+                                console.error(`服务器记录答案失败 (后台)`);
                             } else {
                                 console.log("答案已成功同步到服务器 (后台)。");
-                                // const data = await response.json(); // Process if needed
                             }
                         })
                         .catch(err => {
                             console.error(`提交答案到服务器时发生网络错误 (后台): ${err.message}`);
-                            // Optionally show a non-blocking error
                         });
                         
                     } catch (err) { 
-                        // This catch might not be hit for network errors in a non-awaited fetch.
-                        // The .catch() on the fetch promise is more relevant for background sync.
                         console.error(`准备提交答案到服务器时出错 (后台): ${err.message}`);
                     } 
-                    // finally { isLoading.value = false; } // if we were using it
                 };
                                 
                 const startIncorrectReview = async () => { 
@@ -712,6 +716,7 @@
                         if (data && data.questions && Array.isArray(data.questions)) { 
                             allModeQuestions.value = data.questions; 
                             totalQuestions.value = data.questions.length;
+                            originalTotalQuestions.value = data.questions.length;
                             if (totalQuestions.value > 0) {
                                 currentQuestionIndex.value = 0;
                                 setCurrentQuestionFromIndex();
@@ -729,6 +734,49 @@
                         errorMessage.value = err.message;
                     } 
                     finally { isLoading.value = false; }
+                };
+
+                const deleteCurrentIncorrectQuestion = async () => {
+                    if (!currentQuestion.value || !userId.value) {
+                        errorMessage.value = "无法删除：当前问题或用户ID无效。";
+                        return;
+                    }
+
+                    const questionToDelete = currentQuestion.value;
+                    const indexToDelete = currentQuestionIndex.value;
+
+                    // Optimistically update UI
+                    allModeQuestions.value.splice(indexToDelete, 1);
+                    totalQuestions.value = allModeQuestions.value.length;
+                    
+                    // Move to the next question or end the quiz.
+                    // The index does not need to be incremented because the array has shifted.
+                    setCurrentQuestionFromIndex();
+
+                    // Fire-and-forget request to the backend
+                    try {
+                        const requestBody = {
+                            user_id: userId.value,
+                            original_chapter: questionToDelete.original_chapter,
+                            original_question_number: questionToDelete.original_question_number
+                        };
+                        
+                        fetch(`${API_BASE_URL}/api/incorrect_questions/delete`, {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify(requestBody)
+                        }).then(response => {
+                            if (!response.ok) {
+                                console.error(`后台删除错题失败 (用户: ${userId.value}, 题号: ${questionToDelete.original_question_number})`);
+                            } else {
+                                console.log(`错题 (用户: ${userId.value}, 题号: ${questionToDelete.original_question_number}) 已在后台请求删除。`);
+                            }
+                        }).catch(err => {
+                            console.error(`发送删除错题请求时发生网络错误: ${err.message}`);
+                        });
+                    } catch (err) {
+                        console.error(`准备删除错题请求时出错: ${err.message}`);
+                    }
                 };
 
                 const confirmClearUserData = () => {
@@ -829,13 +877,14 @@
                     isLoading, errorMessage, userIdError, currentView, viewTitle, userId, inputUserId,
                     availableChapters, selectedChapters, selectedOrder,
                     activeMode, modeDisplayName,
-                    allModeQuestions, currentQuestion, totalQuestions, isQuizCompleted, currentQuestionIndex,
+                    allModeQuestions, currentQuestion, totalQuestions, originalTotalQuestions, isQuizCompleted, currentQuestionIndex,
                     selectedAnswers, quizModeState, feedbackMessage, isCurrentAnswerCorrect, quizResults,
                     isInQuestionView, showNextButton,
                     showJumpInput, jumpToQuestionNumberInput,
                     navigateTo, goBackToMenu, selectMode, toggleChapterSelection, startSelectedMode,
                     fetchNextQuestion, submitAnswerForMode, 
                     startIncorrectReview,
+                    deleteCurrentIncorrectQuestion,
                     confirmClearUserData, clearUserData, logoutCurrentUser, 
                     sortedOptions, formatQuestionText, getOptionLabelClass,
                     previousQuestion, toggleJumpInput, jumpToQuestion,

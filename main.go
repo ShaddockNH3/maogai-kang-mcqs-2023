@@ -367,12 +367,11 @@ func InitSessionHandler(ctx context.Context, c *app.RequestContext) {
 		}
 		log.Printf("信息: 新用户 '%s' 首次使用，已创建用户目录: %s", userID, userDir)
 	} else if err != nil {
-        // 其他 os.Stat 错误
-        log.Printf("错误: 检查用户目录 %s 时发生错误: %v", userDir, err)
-        c.JSON(consts.StatusInternalServerError, utils.H{"error": "检查用户数据时出错"})
-        return
-    }
-
+		// 其他 os.Stat 错误
+		log.Printf("错误: 检查用户目录 %s 时发生错误: %v", userDir, err)
+		c.JSON(consts.StatusInternalServerError, utils.H{"error": "检查用户数据时出错"})
+		return
+	}
 
 	session := getOrCreateUserSession(userID) // 获取或创建内存中的会话
 
@@ -383,7 +382,7 @@ func InitSessionHandler(ctx context.Context, c *app.RequestContext) {
 	} else {
 		log.Printf("会话: 用户 '%s' 的会话已从内存中获取或新建。", userID)
 	}
-	
+
 	// 可以在这里预加载一些用户数据到会话中，如果需要的话
 	// 例如: session.SomeData = loadSpecificDataForUser(userID)
 
@@ -675,6 +674,64 @@ func SubmitIncorrectReviewAnswerHandler(ctx context.Context, c *app.RequestConte
 	})
 }
 
+// DeleteIncorrectQuestionRequest 定义了从错题本删除题目的请求结构
+type DeleteIncorrectQuestionRequest struct {
+	UserID                 string `json:"user_id" vd:"required"`
+	OriginalChapter        string `json:"original_chapter" vd:"required"`
+	OriginalQuestionNumber string `json:"original_question_number" vd:"required"`
+}
+
+// DeleteIncorrectQuestionHandler 处理从错题本中删除特定题目的请求
+func DeleteIncorrectQuestionHandler(ctx context.Context, c *app.RequestContext) {
+	var req DeleteIncorrectQuestionRequest
+	if err := c.BindAndValidate(&req); err != nil {
+		// 虽然前端可能不处理此响应，但返回错误状态码对于调试和健壮性很重要
+		c.JSON(consts.StatusBadRequest, utils.H{"error": "无效请求: " + err.Error()})
+		return
+	}
+
+	// 加载用户的错题文件
+	userIncorrect := []UserIncorrectQuestion{}
+	if err := loadUserJSONData(req.UserID, incorrectQuestionsFile, &userIncorrect); err != nil {
+		log.Printf("错误: 用户 %s 删除错题时加载错题本失败: %v", req.UserID, err)
+		c.JSON(consts.StatusInternalServerError, utils.H{"error": "加载用户错题本失败"})
+		return
+	}
+
+	if len(userIncorrect) == 0 {
+		log.Printf("信息: 用户 %s 请求删除错题，但错题本已为空。", req.UserID)
+		c.Status(consts.StatusNoContent) // 任务已完成（无事可做）
+		return
+	}
+
+	var updatedIncorrect []UserIncorrectQuestion
+	var foundAndDeleted bool
+	// 遍历现有错题，只保留那些不匹配待删除项的题目
+	for _, iq := range userIncorrect {
+		if iq.OriginalChapter == req.OriginalChapter && iq.QuestionNumber == req.OriginalQuestionNumber {
+			foundAndDeleted = true
+			// 跳过此题，不将其加入到新列表中，实现删除效果
+			log.Printf("信息: 用户 %s 从错题本中删除题目: 章节 %s, 题号 %s", req.UserID, req.OriginalChapter, req.OriginalQuestionNumber)
+		} else {
+			updatedIncorrect = append(updatedIncorrect, iq)
+		}
+	}
+
+	// 仅当确实删除了题目时才写回文件，避免不必要的IO操作
+	if foundAndDeleted {
+		if err := saveUserJSONData(req.UserID, incorrectQuestionsFile, updatedIncorrect); err != nil {
+			log.Printf("错误: 用户 %s 保存更新后的错题本失败: %v", req.UserID, err)
+			c.JSON(consts.StatusInternalServerError, utils.H{"error": "保存更新后的错题本失败"})
+			return
+		}
+	} else {
+		log.Printf("警告: 用户 %s 请求删除错题 (章节 %s, 题号 %s)，但在错题本中未找到该题。", req.UserID, req.OriginalChapter, req.OriginalQuestionNumber)
+	}
+
+	// 按照要求，成功处理后（无论是否找到题目）不返回任何内容体
+	c.Status(consts.StatusNoContent)
+}
+
 // UserDataClearHandler 处理清除用户数据的请求（错题本和统计数据）。
 func UserDataClearHandler(ctx context.Context, c *app.RequestContext) {
 	var req GetNextQuestionRequest // 仅为了获取 UserID
@@ -696,9 +753,8 @@ func UserDataClearHandler(ctx context.Context, c *app.RequestContext) {
 			log.Printf("信息: 用户 %s 的错题文件 %s 已清理。", userID, incorrectPath)
 		}
 	} else if !os.IsNotExist(err) { // 其他错误
-        log.Printf("错误: 检查错题文件 %s 时发生错误: %v", incorrectPath, err)
-    }
-
+		log.Printf("错误: 检查错题文件 %s 时发生错误: %v", incorrectPath, err)
+	}
 
 	// 清理统计文件
 	statsPath := getUserDataPath(userID, questionStatsFile)
@@ -711,18 +767,17 @@ func UserDataClearHandler(ctx context.Context, c *app.RequestContext) {
 			log.Printf("信息: 用户 %s 的统计文件 %s 已清理。", userID, statsPath)
 		}
 	} else if !os.IsNotExist(err) { // 其他错误
-        log.Printf("错误: 检查统计文件 %s 时发生错误: %v", statsPath, err)
-        c.JSON(consts.StatusInternalServerError, utils.H{"error": "检查用户统计数据时出错"})
-        return
-    }
-
+		log.Printf("错误: 检查统计文件 %s 时发生错误: %v", statsPath, err)
+		c.JSON(consts.StatusInternalServerError, utils.H{"error": "检查用户统计数据时出错"})
+		return
+	}
 
 	// 可选：从内存会话中清除用户会话，如果用户当前有活动会话
 	sessionsMu.Lock()
 	delete(userSessions, userID)
 	sessionsMu.Unlock()
 	log.Printf("信息: 用户 %s 的内存会话（如果存在）已清除。", userID)
-	
+
 	// 也可以考虑删除用户的主目录，但这取决于是否还有其他类型的数据
 	// userDirPath := filepath.Join(userDataBaseDir, userID)
 	// if err := os.RemoveAll(userDirPath); err != nil {
@@ -730,7 +785,6 @@ func UserDataClearHandler(ctx context.Context, c *app.RequestContext) {
 	// } else {
 	//    log.Printf("信息: 用户 %s 的主数据目录 %s 已清理。", userID, userDirPath)
 	// }
-
 
 	c.JSON(consts.StatusOK, utils.H{"message": "用户数据（错题本和统计）已成功清理。"})
 }
@@ -771,6 +825,8 @@ func main() {
 			incorrectGroup.POST("/review/start", IncorrectQuestionsReviewStartHandler)
 			// POST /api/incorrect_questions/review/submit_answer - 提交错题回顾中的答案
 			incorrectGroup.POST("/review/submit_answer", SubmitIncorrectReviewAnswerHandler)
+			// POST /api/incorrect_questions/delete - 从错题本中删除一题
+			incorrectGroup.POST("/delete", DeleteIncorrectQuestionHandler)
 		}
 
 		userGroup := apiGroup.Group("/user") // 用户数据管理
