@@ -216,9 +216,8 @@
                         :disabled="activeMode !== 'incorrectReview' && selectedChapters.length === 0">
                     开始 {{ modeDisplayName }}
                 </button>
-                <button v-if="lastQuizSessionParams && lastQuizSessionParams.mode === 'quizMode'"
-                        @click="continueLastQuiz" class="btn btn-secondary btn-full-width mt-2">
-                    继续上次答题
+                <button v-if="activeMode === 'quizMode' && canContinueQuiz" @click="continueLastQuiz" class="btn btn-info btn-full-width mt-2">
+                    {{ savedQuizState.isCompleted ? '重答上次题目' : '继续上次答题' }}
                 </button>
             </div>
 
@@ -320,7 +319,7 @@
                 const currentQuestion = ref(null); 
                 const currentQuestionIndex = ref(-1); 
                 const totalQuestions = ref(0);
-                const originalTotalQuestions = ref(0); // Store initial count for results summary
+                const originalTotalQuestions = ref(0);
                 const isQuizCompleted = ref(false);
 
                 const selectedAnswers = ref([]); 
@@ -332,7 +331,9 @@
                 const showJumpInput = ref(false);
                 const jumpToQuestionNumberInput = ref(null);
 
-                const lastQuizSessionParams = ref(null);
+                // New state for continuing last quiz
+                const savedQuizState = ref(null);
+                const canContinueQuiz = computed(() => savedQuizState.value && savedQuizState.value.questions && savedQuizState.value.questions.length > 0);
 
                 const isInQuestionView = computed(() => {
                     return ['quickReview', 'quizMode', 'incorrectReview'].includes(currentView.value);
@@ -340,12 +341,35 @@
 
                 const showNextButton = computed(() => {
                     if (!isInQuestionView.value || isQuizCompleted.value) return false;
-                    // In review mode, show next button always if not the last question
                     if (currentView.value === 'quickReview' && currentQuestionIndex.value < totalQuestions.value - 1) return true;
-                    // In quiz/incorrect modes, only show after submitting an answer
                     if ((currentView.value === 'quizMode' || currentView.value === 'incorrectReview') && quizModeState.value === 'showAnswer') return true;
                     return false;
                 });
+
+                const getSavedQuizKey = () => `quizAppLastQuiz_${userId.value}`;
+
+                const loadSavedQuizState = () => {
+                    if (!userId.value) return;
+                    const savedData = localStorage.getItem(getSavedQuizKey());
+                    if (savedData) {
+                        savedQuizState.value = JSON.parse(savedData);
+                    } else {
+                        savedQuizState.value = null;
+                    }
+                };
+
+                const saveCurrentQuizState = () => {
+                    if (!userId.value || activeMode.value !== 'quizMode') return;
+                    const stateToSave = {
+                        questions: allModeQuestions.value,
+                        currentIndex: currentQuestionIndex.value,
+                        results: quizResults.value,
+                        isCompleted: isQuizCompleted.value,
+                        originalTotalQuestions: originalTotalQuestions.value
+                    };
+                    localStorage.setItem(getSavedQuizKey(), JSON.stringify(stateToSave));
+                    savedQuizState.value = stateToSave;
+                };
 
                 const initializeUserSession = async (idToInit) => {
                     if (!idToInit) {
@@ -370,10 +394,7 @@
                         if (data.user_id) {
                             userId.value = data.user_id;
                             localStorage.setItem('quizAppUserId', userId.value);
-                            const savedSession = localStorage.getItem(`quizAppLastSession_${userId.value}`);
-                            if (savedSession) {
-                                lastQuizSessionParams.value = JSON.parse(savedSession);
-                            }
+                            loadSavedQuizState(); // Load quiz state for this user
                             inputUserId.value = ''; 
                             console.log(data.is_new_user ? `新用户 '${userId.value}' 会话已创建。` : `用户 '${userId.value}' 会话已建立。`);
                         } else {
@@ -529,15 +550,8 @@
 
                     if (activeMode.value === 'quickReview' || activeMode.value === 'quizMode') {
                         url = activeMode.value === 'quickReview' ? `${API_BASE_URL}/api/review/start` : `${API_BASE_URL}/api/quiz/start`;
-                        const chapterChoice = selectedChapters.value.includes('all') ? ['all'] : selectedChapters.value.filter(c => c !== 'all' && c !== undefined && c !== null);
-                        requestBody.chapter_choice = chapterChoice;
+                        requestBody.chapter_choice = selectedChapters.value.includes('all') ? ['all'] : selectedChapters.value.filter(c => c !== 'all' && c !== undefined && c !== null);
                         requestBody.order_choice = selectedOrder.value;
-                        
-                        if (activeMode.value === 'quizMode') {
-                            const sessionParams = { mode: activeMode.value, chapters: chapterChoice, order: selectedOrder.value };
-                            lastQuizSessionParams.value = sessionParams;
-                            localStorage.setItem(`quizAppLastSession_${userId.value}`, JSON.stringify(sessionParams));
-                        }
                     } else {
                         errorMessage.value = "未知的模式: " + activeMode.value;
                         isLoading.value = false;
@@ -562,7 +576,8 @@
                             if (totalQuestions.value > 0) {
                                 currentQuestionIndex.value = 0;
                                 setCurrentQuestionFromIndex(); 
-                                isQuizCompleted.value = false; 
+                                isQuizCompleted.value = false;
+                                if (activeMode.value === 'quizMode') saveCurrentQuizState(); // Save new quiz state
                                 navigateTo(activeMode.value); 
                             } else {
                                 errorMessage.value = data.message || "所选范围没有题目。";
@@ -579,69 +594,46 @@
                     }
                 };
 
-                const continueLastQuiz = async () => {
-                    if (!lastQuizSessionParams.value) {
-                        errorMessage.value = "没有找到上次答题的记录。";
+                const continueLastQuiz = () => {
+                    if (!canContinueQuiz.value) {
+                        errorMessage.value = "没有可以继续的答题记录。";
                         return;
                     }
-                    isLoading.value = true;
-                    errorMessage.value = '';
                     resetModeState();
+                    activeMode.value = 'quizMode';
+                    modeDisplayName.value = '答题模式';
+                    
+                    const state = savedQuizState.value;
+                    allModeQuestions.value = state.questions;
+                    totalQuestions.value = state.questions.length;
+                    originalTotalQuestions.value = state.originalTotalQuestions;
 
-                    let url = `${API_BASE_URL}/api/quiz/start`;
-                    let requestBody = {
-                        user_id: userId.value,
-                        chapter_choice: lastQuizSessionParams.value.chapters,
-                        order_choice: lastQuizSessionParams.value.order
-                    };
-
-                    try {
-                        const response = await fetch(url, {
-                            method: 'POST',
-                            headers: { 'Content-Type': 'application/json' },
-                            body: JSON.stringify(requestBody)
-                        });
-                        if (!response.ok) {
-                            const errBody = await response.text();
-                            throw new Error(`继续答题失败: ${response.statusText} (${response.status}) - ${errBody || '(无响应体)'}`);
-                        }
-                        const data = await response.json();
-                        if (data && data.questions && Array.isArray(data.questions)) {
-                            allModeQuestions.value = data.questions;
-                            totalQuestions.value = data.questions.length;
-                            originalTotalQuestions.value = data.questions.length;
-                            if (totalQuestions.value > 0) {
-                                currentQuestionIndex.value = 0;
-                                setCurrentQuestionFromIndex();
-                                isQuizCompleted.value = false;
-                                activeMode.value = 'quizMode';
-                                navigateTo('quizMode');
-                            } else {
-                                errorMessage.value = data.message || "无法加载上次的题目。";
-                                navigateTo('chapterOrderSelection');
-                            }
-                        } else {
-                             errorMessage.value = data.message || "没有获取到题目或响应格式不正确。";
-                             navigateTo('chapterOrderSelection');
-                        }
-                    } catch (err) {
-                        errorMessage.value = err.message;
-                    } finally {
-                        isLoading.value = false;
+                    if (state.isCompleted) { // If last quiz was finished, restart it
+                        currentQuestionIndex.value = 0;
+                        quizResults.value = { total_answered: 0, total_correct: 0 };
+                        isQuizCompleted.value = false;
+                    } else { // Otherwise, continue from where left off
+                        currentQuestionIndex.value = state.currentIndex;
+                        quizResults.value = state.results;
+                        isQuizCompleted.value = state.isCompleted;
                     }
+
+                    setCurrentQuestionFromIndex();
+                    saveCurrentQuizState(); // Re-save state to update isCompleted flag if it was restarted
+                    navigateTo('quizMode');
                 };
 
                 const setCurrentQuestionFromIndex = () => {
                     if (currentQuestionIndex.value >= 0 && currentQuestionIndex.value < allModeQuestions.value.length) {
                         currentQuestion.value = allModeQuestions.value[currentQuestionIndex.value];
-                        // FIXED: Removed the incorrect display_number assignment. Display is now handled by the template.
-                        
                         resetQuizStateForNewQuestion(); 
                         quizModeState.value = 'inProgress'; 
                         isQuizCompleted.value = false;
                     } else if (currentQuestionIndex.value >= allModeQuestions.value.length && allModeQuestions.value.length > 0) {
                         isQuizCompleted.value = true;
                         currentQuestion.value = null; 
+                        if (activeMode.value === 'quizMode') saveCurrentQuizState();
+                        navigateTo('resultsView');
                     } else { 
                         isQuizCompleted.value = true;
                         currentQuestion.value = null;
@@ -654,11 +646,7 @@
                         quizModeState.value = 'inProgress'; 
                         currentQuestionIndex.value--;
                         setCurrentQuestionFromIndex();
-                        // Adjust quiz results if going back
-                        if (activeMode.value === 'quizMode' || activeMode.value === 'incorrectReview') {
-                           // This logic could be complex, for now we will not decrement total_answered to keep it simple.
-                           // User can re-answer but it will not affect the stats for previous questions.
-                        }
+                        if (activeMode.value === 'quizMode') saveCurrentQuizState();
                     }
                 };
 
@@ -673,6 +661,7 @@
                         quizModeState.value = 'inProgress'; 
                         currentQuestionIndex.value = targetNum - 1; 
                         setCurrentQuestionFromIndex();
+                        if (activeMode.value === 'quizMode') saveCurrentQuizState();
                         showJumpInput.value = false; 
                         jumpToQuestionNumberInput.value = null;
                     } else {
@@ -683,12 +672,14 @@
                 const fetchNextQuestion = async () => { 
                     if (isQuizCompleted.value || currentQuestionIndex.value >= totalQuestions.value -1) {
                         isQuizCompleted.value = true;
+                        if(activeMode.value === 'quizMode') saveCurrentQuizState();
                         navigateTo('resultsView');
                         return;
                     }
                     if (currentQuestionIndex.value < totalQuestions.value - 1) {
                         currentQuestionIndex.value++;
                         setCurrentQuestionFromIndex();
+                        if(activeMode.value === 'quizMode') saveCurrentQuizState();
                     }
                 };
 
@@ -704,7 +695,6 @@
                     }
                     errorMessage.value = ''; 
 
-                    // --- Instant Feedback Logic ---
                     const correctAnswerProcessed = (currentQuestion.value && typeof currentQuestion.value.correct_answer === 'string') 
                                                 ? currentQuestion.value.correct_answer.split('').sort().join('') : '';
                     isCurrentAnswerCorrect.value = userAnswerString === correctAnswerProcessed;
@@ -721,16 +711,13 @@
                     } else {
                         isQuizCompleted.value = false; 
                     }
-                    // --- End of Instant Feedback Logic ---
+                    if (activeMode.value === 'quizMode') saveCurrentQuizState();
                     
                     let url = '';
                     if (activeMode.value === 'quizMode') url = `${API_BASE_URL}/api/quiz/submit_answer`;
                     else if (activeMode.value === 'incorrectReview') url = `${API_BASE_URL}/api/incorrect_questions/review/submit_answer`;
-                    else { 
-                        return; 
-                    }
+                    else { return; }
 
-                    // Send to server in the background (fire-and-forget)
                     try {
                         const requestBody = {
                             user_id: userId.value,
@@ -744,19 +731,11 @@
                             body: JSON.stringify(requestBody) 
                         })
                         .then(response => { 
-                            if (!response.ok) { 
-                                console.error(`服务器记录答案失败 (后台)`);
-                            } else {
-                                console.log("答案已成功同步到服务器 (后台)。");
-                            }
+                            if (!response.ok) { console.error(`服务器记录答案失败 (后台)`); } 
+                            else { console.log("答案已成功同步到服务器 (后台)。"); }
                         })
-                        .catch(err => {
-                            console.error(`提交答案到服务器时发生网络错误 (后台): ${err.message}`);
-                        });
-                        
-                    } catch (err) { 
-                        console.error(`准备提交答案到服务器时出错 (后台): ${err.message}`);
-                    } 
+                        .catch(err => { console.error(`提交答案到服务器时发生网络错误 (后台): ${err.message}`); });
+                    } catch (err) { console.error(`准备提交答案到服务器时出错 (后台): ${err.message}`); } 
                 };
                                 
                 const startIncorrectReview = async () => { 
@@ -810,15 +789,11 @@
                     const questionToDelete = currentQuestion.value;
                     const indexToDelete = currentQuestionIndex.value;
 
-                    // Optimistically update UI
                     allModeQuestions.value.splice(indexToDelete, 1);
                     totalQuestions.value = allModeQuestions.value.length;
                     
-                    // Move to the next question or end the quiz.
-                    // The index does not need to be incremented because the array has shifted.
                     setCurrentQuestionFromIndex();
 
-                    // Fire-and-forget request to the backend
                     try {
                         const requestBody = {
                             user_id: userId.value,
@@ -836,12 +811,8 @@
                             } else {
                                 console.log(`错题 (用户: ${userId.value}, 题号: ${questionToDelete.original_question_number}) 已在后台请求删除。`);
                             }
-                        }).catch(err => {
-                            console.error(`发送删除错题请求时发生网络错误: ${err.message}`);
-                        });
-                    } catch (err) {
-                        console.error(`准备删除错题请求时出错: ${err.message}`);
-                    }
+                        }).catch(err => { console.error(`发送删除错题请求时发生网络错误: ${err.message}`); });
+                    } catch (err) { console.error(`准备删除错题请求时出错: ${err.message}`); }
                 };
 
                 const confirmClearUserData = () => {
@@ -864,6 +835,8 @@
                              const errBody = await response.text();
                              throw new Error(`清理用户数据失败: ${response.statusText} (${response.status}) - ${errBody || '(无响应体)'}`);
                         }
+                        localStorage.removeItem(getSavedQuizKey()); // Clear saved quiz state
+                        savedQuizState.value = null;
                         const data = await response.json();
                         alert(data.message || "用户数据已清理。");
                         logoutCurrentUser(false); 
@@ -877,8 +850,9 @@
                     if (confirmLogout && !confirm("确定要退出当前用户并返回登录界面吗？")) {
                         return;
                     }
-                    localStorage.removeItem(`quizAppLastSession_${userId.value}`);
                     localStorage.removeItem('quizAppUserId');
+                    localStorage.removeItem(getSavedQuizKey()); // Clear saved quiz state on logout
+                    savedQuizState.value = null;
                     userId.value = '';
                     inputUserId.value = '';
                     userIdError.value = '';
@@ -947,15 +921,17 @@
                     selectedAnswers, quizModeState, feedbackMessage, isCurrentAnswerCorrect, quizResults,
                     isInQuestionView, showNextButton,
                     showJumpInput, jumpToQuestionNumberInput,
-                    lastQuizSessionParams,
-                    navigateTo, goBackToMenu, selectMode, toggleChapterSelection, startSelectedMode, continueLastQuiz,
+                    navigateTo, goBackToMenu, selectMode, toggleChapterSelection, startSelectedMode,
                     fetchNextQuestion, submitAnswerForMode, 
                     startIncorrectReview,
                     deleteCurrentIncorrectQuestion,
                     confirmClearUserData, clearUserData, logoutCurrentUser, 
                     sortedOptions, formatQuestionText, getOptionLabelClass,
                     previousQuestion, toggleJumpInput, jumpToQuestion,
-                    submitUserId 
+                    submitUserId,
+                    canContinueQuiz,
+                    continueLastQuiz,
+                    savedQuizState
                 };
             }
         }).mount('#app');
