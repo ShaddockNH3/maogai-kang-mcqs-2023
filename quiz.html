@@ -216,6 +216,10 @@
                         :disabled="activeMode !== 'incorrectReview' && selectedChapters.length === 0">
                     开始 {{ modeDisplayName }}
                 </button>
+                <button v-if="lastQuizSessionParams && lastQuizSessionParams.mode === 'quizMode'"
+                        @click="continueLastQuiz" class="btn btn-secondary btn-full-width mt-2">
+                    继续上次答题
+                </button>
             </div>
 
             <div v-if="currentQuestion && isInQuestionView">
@@ -328,6 +332,8 @@
                 const showJumpInput = ref(false);
                 const jumpToQuestionNumberInput = ref(null);
 
+                const lastQuizSessionParams = ref(null);
+
                 const isInQuestionView = computed(() => {
                     return ['quickReview', 'quizMode', 'incorrectReview'].includes(currentView.value);
                 });
@@ -364,6 +370,10 @@
                         if (data.user_id) {
                             userId.value = data.user_id;
                             localStorage.setItem('quizAppUserId', userId.value);
+                            const savedSession = localStorage.getItem(`quizAppLastSession_${userId.value}`);
+                            if (savedSession) {
+                                lastQuizSessionParams.value = JSON.parse(savedSession);
+                            }
                             inputUserId.value = ''; 
                             console.log(data.is_new_user ? `新用户 '${userId.value}' 会话已创建。` : `用户 '${userId.value}' 会话已建立。`);
                         } else {
@@ -519,8 +529,15 @@
 
                     if (activeMode.value === 'quickReview' || activeMode.value === 'quizMode') {
                         url = activeMode.value === 'quickReview' ? `${API_BASE_URL}/api/review/start` : `${API_BASE_URL}/api/quiz/start`;
-                        requestBody.chapter_choice = selectedChapters.value.includes('all') ? ['all'] : selectedChapters.value.filter(c => c !== 'all' && c !== undefined && c !== null);
+                        const chapterChoice = selectedChapters.value.includes('all') ? ['all'] : selectedChapters.value.filter(c => c !== 'all' && c !== undefined && c !== null);
+                        requestBody.chapter_choice = chapterChoice;
                         requestBody.order_choice = selectedOrder.value;
+                        
+                        if (activeMode.value === 'quizMode') {
+                            const sessionParams = { mode: activeMode.value, chapters: chapterChoice, order: selectedOrder.value };
+                            lastQuizSessionParams.value = sessionParams;
+                            localStorage.setItem(`quizAppLastSession_${userId.value}`, JSON.stringify(sessionParams));
+                        }
                     } else {
                         errorMessage.value = "未知的模式: " + activeMode.value;
                         isLoading.value = false;
@@ -553,6 +570,58 @@
                             }
                         } else {
                              errorMessage.value = data.message || "没有获取到题目或响应格式不正确 (期望 'questions' 数组)。";
+                             navigateTo('chapterOrderSelection');
+                        }
+                    } catch (err) {
+                        errorMessage.value = err.message;
+                    } finally {
+                        isLoading.value = false;
+                    }
+                };
+
+                const continueLastQuiz = async () => {
+                    if (!lastQuizSessionParams.value) {
+                        errorMessage.value = "没有找到上次答题的记录。";
+                        return;
+                    }
+                    isLoading.value = true;
+                    errorMessage.value = '';
+                    resetModeState();
+
+                    let url = `${API_BASE_URL}/api/quiz/start`;
+                    let requestBody = {
+                        user_id: userId.value,
+                        chapter_choice: lastQuizSessionParams.value.chapters,
+                        order_choice: lastQuizSessionParams.value.order
+                    };
+
+                    try {
+                        const response = await fetch(url, {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify(requestBody)
+                        });
+                        if (!response.ok) {
+                            const errBody = await response.text();
+                            throw new Error(`继续答题失败: ${response.statusText} (${response.status}) - ${errBody || '(无响应体)'}`);
+                        }
+                        const data = await response.json();
+                        if (data && data.questions && Array.isArray(data.questions)) {
+                            allModeQuestions.value = data.questions;
+                            totalQuestions.value = data.questions.length;
+                            originalTotalQuestions.value = data.questions.length;
+                            if (totalQuestions.value > 0) {
+                                currentQuestionIndex.value = 0;
+                                setCurrentQuestionFromIndex();
+                                isQuizCompleted.value = false;
+                                activeMode.value = 'quizMode';
+                                navigateTo('quizMode');
+                            } else {
+                                errorMessage.value = data.message || "无法加载上次的题目。";
+                                navigateTo('chapterOrderSelection');
+                            }
+                        } else {
+                             errorMessage.value = data.message || "没有获取到题目或响应格式不正确。";
                              navigateTo('chapterOrderSelection');
                         }
                     } catch (err) {
@@ -808,6 +877,7 @@
                     if (confirmLogout && !confirm("确定要退出当前用户并返回登录界面吗？")) {
                         return;
                     }
+                    localStorage.removeItem(`quizAppLastSession_${userId.value}`);
                     localStorage.removeItem('quizAppUserId');
                     userId.value = '';
                     inputUserId.value = '';
@@ -877,7 +947,8 @@
                     selectedAnswers, quizModeState, feedbackMessage, isCurrentAnswerCorrect, quizResults,
                     isInQuestionView, showNextButton,
                     showJumpInput, jumpToQuestionNumberInput,
-                    navigateTo, goBackToMenu, selectMode, toggleChapterSelection, startSelectedMode,
+                    lastQuizSessionParams,
+                    navigateTo, goBackToMenu, selectMode, toggleChapterSelection, startSelectedMode, continueLastQuiz,
                     fetchNextQuestion, submitAnswerForMode, 
                     startIncorrectReview,
                     deleteCurrentIncorrectQuestion,
