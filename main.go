@@ -28,6 +28,7 @@ const (
 	maxChapterIndex        = 8
 	userDataBaseDir        = "user_data"
 	incorrectQuestionsFile = "incorrect_questions.json"
+	deleteIncorrectQuestionsFile = "deleted_incorrect_questions.json"
 	questionStatsFile      = "question_stats.json"
 )
 
@@ -64,6 +65,7 @@ type UserIncorrectQuestion struct {
 	OriginalChapter string            `json:"original_chapter"`
 	UserAnswer      string            `json:"user_answer,omitempty"` // 用户在答错时的答案
 	Timestamp       time.Time         `json:"timestamp"`             // 答错的时间
+	DeletedAt       time.Time         `json:"deleted_at,omitempty"`  // 题目被删除的时间
 }
 
 type UserQuestionStat struct {
@@ -683,53 +685,76 @@ type DeleteIncorrectQuestionRequest struct {
 
 // DeleteIncorrectQuestionHandler 处理从错题本中删除特定题目的请求
 func DeleteIncorrectQuestionHandler(ctx context.Context, c *app.RequestContext) {
-	var req DeleteIncorrectQuestionRequest
-	if err := c.BindAndValidate(&req); err != nil {
-		// 虽然前端可能不处理此响应，但返回错误状态码对于调试和健壮性很重要
-		c.JSON(consts.StatusBadRequest, utils.H{"error": "无效请求: " + err.Error()})
-		return
-	}
+    var req DeleteIncorrectQuestionRequest
+    if err := c.BindAndValidate(&req); err != nil {
+        c.JSON(consts.StatusBadRequest, utils.H{"error": "无效请求: " + err.Error()})
+        return
+    }
 
-	// 加载用户的错题文件
-	userIncorrect := []UserIncorrectQuestion{}
-	if err := loadUserJSONData(req.UserID, incorrectQuestionsFile, &userIncorrect); err != nil {
-		log.Printf("错误: 用户 %s 删除错题时加载错题本失败: %v", req.UserID, err)
-		c.JSON(consts.StatusInternalServerError, utils.H{"error": "加载用户错题本失败"})
-		return
-	}
+    // 加载用户的错题文件
+    userIncorrect := []UserIncorrectQuestion{}
+    if err := loadUserJSONData(req.UserID, incorrectQuestionsFile, &userIncorrect); err != nil {
+        log.Printf("错误: 用户 %s 删除错题时加载错题本失败: %v", req.UserID, err)
+        c.JSON(consts.StatusInternalServerError, utils.H{"error": "加载用户错题本失败"})
+        return
+    }
 
-	if len(userIncorrect) == 0 {
-		log.Printf("信息: 用户 %s 请求删除错题，但错题本已为空。", req.UserID)
-		c.Status(consts.StatusNoContent) // 任务已完成（无事可做）
-		return
-	}
+    if len(userIncorrect) == 0 {
+        log.Printf("信息: 用户 %s 请求删除错题，但错题本已为空。", req.UserID)
+        c.Status(consts.StatusNoContent)
+        return
+    }
 
-	var updatedIncorrect []UserIncorrectQuestion
-	var foundAndDeleted bool
-	// 遍历现有错题，只保留那些不匹配待删除项的题目
-	for _, iq := range userIncorrect {
-		if iq.OriginalChapter == req.OriginalChapter && iq.QuestionNumber == req.OriginalQuestionNumber {
-			foundAndDeleted = true
-			// 跳过此题，不将其加入到新列表中，实现删除效果
-			log.Printf("信息: 用户 %s 从错题本中删除题目: 章节 %s, 题号 %s", req.UserID, req.OriginalChapter, req.OriginalQuestionNumber)
-		} else {
-			updatedIncorrect = append(updatedIncorrect, iq)
-		}
-	}
+    var updatedIncorrect []UserIncorrectQuestion
+    var foundAndDeleted bool
+    var deletedQuestion UserIncorrectQuestion
 
-	// 仅当确实删除了题目时才写回文件，避免不必要的IO操作
-	if foundAndDeleted {
-		if err := saveUserJSONData(req.UserID, incorrectQuestionsFile, updatedIncorrect); err != nil {
-			log.Printf("错误: 用户 %s 保存更新后的错题本失败: %v", req.UserID, err)
-			c.JSON(consts.StatusInternalServerError, utils.H{"error": "保存更新后的错题本失败"})
-			return
-		}
-	} else {
-		log.Printf("警告: 用户 %s 请求删除错题 (章节 %s, 题号 %s)，但在错题本中未找到该题。", req.UserID, req.OriginalChapter, req.OriginalQuestionNumber)
-	}
+    // 遍历现有错题，找出要删除的题目
+    for _, iq := range userIncorrect {
+        if iq.OriginalChapter == req.OriginalChapter && iq.QuestionNumber == req.OriginalQuestionNumber {
+            foundAndDeleted = true
+            deletedQuestion = iq
+            // 保留原始答错时间
+            // 新增删除时间标记
+            deletedQuestion.DeletedAt = time.Now() // 记录删除时间
+            log.Printf("信息: 用户 %s 从错题本中删除题目: 章节 %s, 题号 %s", req.UserID, req.OriginalChapter, req.OriginalQuestionNumber)
+        } else {
+            updatedIncorrect = append(updatedIncorrect, iq)
+        }
+    }
 
-	// 按照要求，成功处理后（无论是否找到题目）不返回任何内容体
-	c.Status(consts.StatusNoContent)
+    // 仅当确实删除了题目时才更新文件
+    if foundAndDeleted {
+        // 保存更新后的错题本
+        if err := saveUserJSONData(req.UserID, incorrectQuestionsFile, updatedIncorrect); err != nil {
+            log.Printf("错误: 用户 %s 保存更新后的错题本失败: %v", req.UserID, err)
+            c.JSON(consts.StatusInternalServerError, utils.H{"error": "保存更新后的错题本失败"})
+            return
+        }
+
+        // 加载已删除错题历史
+        deletedIncorrect := []UserIncorrectQuestion{}
+        if err := loadUserJSONData(req.UserID, deleteIncorrectQuestionsFile, &deletedIncorrect); err != nil {
+            log.Printf("警告: 用户 %s 加载已删除错题历史失败: %v", req.UserID, err)
+            // 继续执行，可能是首次删除，文件不存在
+        }
+
+        // 将新删除的题目添加到历史记录中
+        deletedIncorrect = append(deletedIncorrect, deletedQuestion)
+
+        // 保存更新后的删除历史
+        if err := saveUserJSONData(req.UserID, deleteIncorrectQuestionsFile, deletedIncorrect); err != nil {
+            log.Printf("错误: 用户 %s 保存已删除错题历史失败: %v", req.UserID, err)
+            // 不阻止主流程，因为主要操作（从错题本删除）已成功
+        } else {
+            log.Printf("信息: 用户 %s 的已删除错题已记录到历史文件中，删除时间为: %v", req.UserID, deletedQuestion.DeletedAt)
+        }
+    } else {
+        log.Printf("警告: 用户 %s 请求删除错题 (章节 %s, 题号 %s)，但在错题本中未找到该题。", req.UserID, req.OriginalChapter, req.OriginalQuestionNumber)
+    }
+
+    // 按照要求，成功处理后不返回任何内容体
+    c.Status(consts.StatusNoContent)
 }
 
 // UserDataClearHandler 处理清除用户数据的请求（错题本和统计数据）。
