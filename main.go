@@ -746,7 +746,7 @@ func UserDataClearHandler(ctx context.Context, c *app.RequestContext) {
 	// 清理错题文件
 	incorrectPath := getUserDataPath(userID, incorrectQuestionsFile)
 	if _, err := os.Stat(incorrectPath); err == nil { // 文件存在
-		if err := os.Remove(incorrectPath); err != nil {
+		if err := os.Rename(incorrectPath, incorrectPath + time.Now().Format(".2006_01_02_15_04_05.bak")); err != nil {
 			log.Printf("错误: 用户 %s 清理错题文件 %s 失败: %v", userID, incorrectPath, err)
 			// 即使一个文件清理失败，也尝试清理另一个
 		} else {
@@ -759,7 +759,7 @@ func UserDataClearHandler(ctx context.Context, c *app.RequestContext) {
 	// 清理统计文件
 	statsPath := getUserDataPath(userID, questionStatsFile)
 	if _, err := os.Stat(statsPath); err == nil { // 文件存在
-		if err := os.Remove(statsPath); err != nil {
+		if err := os.Rename(statsPath, statsPath + time.Now().Format(".2006_01_02_15_04_05.bak")); err != nil {
 			log.Printf("错误: 用户 %s 清理统计文件 %s 失败: %v", userID, statsPath, err)
 			c.JSON(consts.StatusInternalServerError, utils.H{"error": "清理用户统计数据时发生部分或全部失败"})
 			return // 如果统计文件清理失败，可能需要报告更严重的错误
