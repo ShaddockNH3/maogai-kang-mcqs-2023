@@ -22,7 +22,7 @@ https://github.com/ShaddockNH3/maogai-kang-mcqs-2023/releases/tag/v1.0.0
 
 将源码解压，并且将执行程序放入与源码相同的文件夹，点击执行程序 。
 
-当你看到终端显示类似 `Server is running on :8899` 的提示时，就说明你的刷题服务。
+当你看到终端显示类似 `Server is running on :8899` 的提示时，就说明你的刷题服务代理正在运行。如果Sever跑在其他端口，请在下一步进行对应的更改。
 
 第三步：
 
