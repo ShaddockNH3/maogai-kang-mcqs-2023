@@ -816,8 +816,11 @@ func UserDataClearHandler(ctx context.Context, c *app.RequestContext) {
 
 // main函数，程序入口
 func main() {
-	// 使用默认配置初始化 Hertz 服务器，监听在 0.0.0.0:8888
-	h := server.Default(server.WithHostPorts("0.0.0.0:8888"))
+	// 使用默认配置初始化 Hertz 服务器，监听在 0.0.0.0:8899
+	h := server.Default(server.WithHostPorts("0.0.0.0:8899"))
+
+	// 提供静态文件服务，路径为当前项目文件夹
+    h.Static("/", "./") // 将根路径映射到当前文件夹
 
 	// API 路由组
 	apiGroup := h.Group("/api")
@@ -861,6 +864,6 @@ func main() {
 		}
 	}
 
-	log.Println("喵喵学习小助手 Go 后端已启动，监听于 http://0.0.0.0:8888")
+	log.Println("喵喵学习小助手 Go 后端已启动，监听于 http://0.0.0.0:8899")
 	h.Spin() // 启动服务器并开始监听请求
 }
