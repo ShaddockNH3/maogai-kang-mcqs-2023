@@ -26,4 +26,4 @@ https://github.com/ShaddockNH3/maogai-kang-mcqs-2023/releases/tag/v1.0.0
 
 第三步：
 
-点击`localhost:8899/quiz.html`，即可运行喵喵学习助手。
+将该网页`localhost:8899/quiz.html`复制进浏览器，即可运行喵喵学习助手。
