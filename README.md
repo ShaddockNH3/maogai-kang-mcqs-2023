@@ -10,8 +10,6 @@
 
 在开始之前，请确保你的电脑电脑系统为`windows`或者`linux`即可，如为`Mac`，请参考开发文档进行部署.
 
-配置不需要看
-
 **2. 启动项目 (Run the Project)**
 
 第一步：
@@ -20,7 +18,7 @@
 
 https://github.com/ShaddockNH3/maogai-kang-mcqs-2023/releases/tag/v1.0.0
 
-只需要下载with-assets的对应执行程序，下载完自动运行即可。
+只需要下载with-assets的对应执行程序，对于windows，是`maogai-kang-mcqs-2023-windows-with-assets.exe`，下载完双击该执行程序运行即可。
 
 第二步：
 
@@ -28,4 +26,4 @@ https://github.com/ShaddockNH3/maogai-kang-mcqs-2023/releases/tag/v1.0.0
 
 http://localhost:8899
 
-复制进浏览器，即可运行喵喵学习助手，用户名随意创建即可。
+复制进浏览器，即可运行喵喵学习助手，用户名随意创建。
