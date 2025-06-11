@@ -8,41 +8,22 @@
 
 **1. 前置要求 (Prerequisites)**
 
-在开始之前，请确保你的电脑上已经安装了：
-
-- `Git`
-- `Go` (版本 >= 1.20)
+在开始之前，请确保你的电脑电脑系统为`windows`或者`linux`即可，如为`Mac`，请参考开发文档进行部署
 
 **2. 启动项目 (Run the Project)**
 
-打开你的终端（命令行工具），然后跟着下面的“咒语”一步一步来念吧~
+第一步：进入该网页：
 
-Bash
+https://github.com/ShaddockNH3/maogai-kang-mcqs-2023/releases/tag/v1.0.0
 
-```
-# 第一步：克隆项目代码到你的电脑上
-git clone "https://github.com/ShaddockNH3/maogai-kang-mcqs-2023/tree/main"
+下载对应电脑版本的执行程序，并且下载源码
 
-# 第二部：启动服务
-go run main.go
-```
+第二步：
 
-当你看到终端显示类似 `Server is running on :8080` 的提示时，就说明你的刷题服务。
+将源码解压，并且将执行程序放入与源码相同的文件夹，点击执行程序 。
 
-前端待补充
-----
+当你看到终端显示类似 `Server is running on :8899` 的提示时，就说明你的刷题服务。
 
-### 📝 更多文档
+第三步：
 
-- 如果你想了解项目的**项目的设计细节**，请查阅develop分支
-- 题库数据来源于**课堂练习**，欢迎各位纠错和贡献。
-
-
----
-### 致谢
-
-丽姐
-
-🦌
-
-gemini
+点击`localhost:8899/quiz.html`，即可运行喵喵学习助手。
