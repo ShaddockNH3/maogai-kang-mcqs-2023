@@ -28,17 +28,7 @@
 
 > **注意**：无需下载Releases页面的Source code。
 
-**第二步：文件校验 (File Integrity Check - 可选)**
-
-为了确保您下载的文件完整且未被篡改，您可以使用以下 SHA256 哈希值进行校验：
-
-  - `maogai-kang-mcqs-2023-windows-with-assets.exe`:
-    ```
-    35b2cf94fd0d4640dd3ab7345c9ed26f908d28aed99029b555b3ed2e31e7b619
-    ```
-    *（在 Windows PowerShell 中，您可以使用 `Get-FileHash <文件路径> -Algorithm SHA256` 命令来查看下载文件的哈希值。）*
-
-**第三步：运行程序 (Run the Program)**
+**第二步：运行程序 (Run the Program)**
 
   - **对于 Windows 用户**:
     直接双击下载的 `.exe` 文件即可启动。
@@ -54,7 +44,7 @@
 
 > **重要提示**：程序启动后会占用一个终端窗口。**请勿关闭此终端窗口**，否则后台服务将会中断。
 
-**第四步：在本机访问应用 (Access on Your Computer)**
+**第三步：在本机访问应用 (Access on Your Computer)**
 
 1.  打开您的网页浏览器（如 Chrome, Edge, Firefox 等）。
 2.  在地址栏输入并访问：`http://localhost:8899`
