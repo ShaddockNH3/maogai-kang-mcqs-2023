@@ -18,14 +18,14 @@
   - **对于 Windows 用户**:
 
       * **推荐**: 点击下方链接直接下载最新版本 (`v1.0.0`)。
-          * [**maogai-kang-mcqs-2023-windows-with-assets.exe**](https://www.google.com/url?sa=E&source=gmail&q=https://github.com/ShaddockNH3/maogai-kang-mcqs-2023/releases/download/v1.0.0/maogai-kang-mcqs-2023-windows-with-assets.exe)
-      * 如果直连下载有问题，您也可以访问项目的 [**Releases 页面**](https://github.com/ShaddockNH3/maogai-kang-mcqs-2023/releases/tag/v1.0.0)，在页面底部的 **Assets** 部分手动下载`maogai-kang-mcqs-2023-windows-with-assets.exe` 文件。
+          * [**maogai-kang-mcqs-2023-windows-with-assets.exe**](https://www.google.com/search?q=https://github.com/ShaddockNH3/maogai-kang-mcqs-2023/releases/download/v1.0.0/maogai-kang-mcqs-2023-windows-with-assets.exe)
+      * 如果直连下载有问题，您也可以访问项目的 [**Releases 页面**](https://github.com/ShaddockNH3/maogai-kang-mcqs-2023/releases/tag/v1.0.0)，在页面底部的 **Assets** 部分手动下载 `maogai-kang-mcqs-2023-windows-with-assets.exe` 文件。
 
   - **对于 Linux 用户**:
 
       * 请访问项目的 [**Releases 页面**](https://github.com/ShaddockNH3/maogai-kang-mcqs-2023/releases/tag/v1.0.0)。
       * 在页面底部的 **Assets** 部分，下载 `maogai-kang-mcqs-2023-linux-with-assets` 文件。
-   
+
 > **注意**：无需下载Releases页面的Source code。
 
 **第二步：运行程序 (Run the Program)**
@@ -51,3 +51,20 @@
 3.  程序启动成功！首次访问时，您可以随意创建一个用户名来开始使用。
 
 > **注意**：程序在启动时会在终端窗口中显示正在监听的端口号。如果显示的端口不是 `8899`，请将浏览器地址中的端口号替换为终端中显示的实际端口号。
+
+#### 📱 移动端访问 (Mobile Access)
+
+您也可以使用手机或其他设备通过局域网访问本应用，只需进行以下设置：
+
+1.  **确保网络连接**: 确保您运行程序的电脑和您的手机连接在 \*\*同一个局域网（Wi-Fi）\*\*下。
+
+2.  **查找电脑的局域网IP地址**:
+
+      * **Windows**: 打开“命令提示符(CMD)”或“PowerShell”，输入 `ipconfig` 命令，然后查找“无线局域网适配器 WLAN”或“以太网适配器”下的 “IPv4 地址”。它通常形如 `192.168.x.x`。
+      * **Linux**: 在终端中输入 `ip addr` 或 `hostname -I` 命令来查找您的局域网IP地址。
+
+3.  **在手机上访问**:
+
+      * 打开手机浏览器，在地址栏输入 `http://<您查到的电脑IP地址>:8899` (请将 `<您查到的电脑IP地址>` 替换为您在第二步中找到的实际IP地址)。
+
+> **防火墙提示**: 如果手机无法访问，请检查您电脑的防火墙设置，确保它允许其他设备访问您电脑的 `8899` 端口。您可能需要为该应用或端口添加入站规则（Inbound Rules）。
