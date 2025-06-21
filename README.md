@@ -28,7 +28,7 @@
 
 > **注意**：无需下载Releases页面的Source code。
 
-**第二步：文件校验 (File Integrity Check - 可选但推荐)**
+**第二步：文件校验 (File Integrity Check - 可选)**
 
 为了确保您下载的文件完整且未被篡改，您可以使用以下 SHA256 哈希值进行校验：
 
