@@ -25,6 +25,8 @@
 
       * 请访问项目的 [**Releases 页面**](https://github.com/ShaddockNH3/maogai-kang-mcqs-2023/releases/tag/v1.0.0)。
       * 在页面底部的 **Assets** 部分，下载 `maogai-kang-mcqs-2023-linux-with-assets` 文件。
+   
+> **注意**：无需下载Releases页面的Source code。
 
 **第二步：运行程序 (Run the Program)**
 
