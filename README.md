@@ -18,7 +18,7 @@
   - **对于 Windows 用户**:
 
       - **推荐**: 点击下方链接直接下载最新版本 (`v1.0.0`)。
-          - [**maogai-kang-mcqs-2023-windows-with-assets.exe**](https://www.google.com/search?q=https://github.com/ShaddockNH3/maogai-kang-mcqs-2023/releases/download/v1.0.0/maogai-kang-mcqs-2023-windows-with-assets.exe)
+          - [**maogai-kang-mcqs-2023-windows-with-assets.exe**](https://github.com/ShaddockNH3/maogai-kang-mcqs-2023/releases/download/v1.0.0/maogai-kang-mcqs-2023-windows-with-assets.exe)
       - 如果直连下载有问题，您也可以访问项目的 [**Releases 页面**](https://github.com/ShaddockNH3/maogai-kang-mcqs-2023/releases/tag/v1.0.0)，在页面底部的 **Assets** 部分手动下载 `maogai-kang-mcqs-2023-windows-with-assets.exe` 文件。
 
   - **对于 Linux 用户**:
