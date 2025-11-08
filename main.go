@@ -820,7 +820,7 @@ func main() {
 	h := server.Default(server.WithHostPorts("0.0.0.0:8899"))
 
 	// 提供静态文件服务，路径为当前项目文件夹
-    h.Static("/", "./") // 将根路径映射到当前文件夹
+    h.Static("/", "./quiz.html") // 将根路径映射到当前文件夹
 
 	// API 路由组
 	apiGroup := h.Group("/api")
