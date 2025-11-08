@@ -1,0 +1,34 @@
+# Go构建产物
+quiz
+quiz.exe
+quiz-*.exe
+quiz-*
+
+# 用户数据
+user_data/
+
+# Go模块缓存
+vendor/
+
+# IDE文件
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS文件
+.DS_Store
+Thumbs.db
+
+# 日志文件
+*.log
+
+# 临时文件
+*.tmp
+*.temp
+
+# 发布目录
+release-*/
+
+# Hertz压缩文件
+*.hertz.gz

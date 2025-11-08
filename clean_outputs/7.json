@@ -1,0 +1,1108 @@
+[
+    {
+        "question_number": "1",
+        "question_type": "单选题",
+        "question_text": "（）是社会主义的自我完善和发展。",
+        "options": {
+            "A": "改革",
+            "B": "开放",
+            "C": "革命",
+            "D": "和谐"
+        },
+        "correct_answer": "A",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "2",
+        "question_type": "单选题",
+        "question_text": "社会主义要强大，体现优越性，关键在（）。",
+        "options": {
+            "A": "和谐",
+            "B": "发展",
+            "C": "稳定",
+            "D": "民主"
+        },
+        "correct_answer": "B",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "3",
+        "question_type": "单选题",
+        "question_text": "（）是我们党站在时代前列，保持先进性的根本体现和根本要求。",
+        "options": {
+            "A": "始终坚持人的全面发展",
+            "B": "始终代表中国先进生产力的发展要求，大力促进先进生产力的发展",
+            "C": "始终代表中国最广大人民的根本利益",
+            "D": "始终代表中国先进文化的前进方向，大力发展社会主义先进文化"
+        },
+        "correct_answer": "B",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "4",
+        "question_type": "单选题",
+        "question_text": "江泽民在党的（）报告中初步勾画了实现第三步战略目标的蓝图。",
+        "options": {
+            "A": "十三大",
+            "B": "十四大",
+            "C": "十六大",
+            "D": "十五大"
+        },
+        "correct_answer": "D",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "5",
+        "question_type": "单选题",
+        "question_text": "江泽民同志指出，没有强大的（），就没有社会主义现代化。",
+        "options": {
+            "A": "农业实力",
+            "B": "军事实力",
+            "C": "经济实力",
+            "D": "科技实力"
+        },
+        "correct_answer": "D",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "6",
+        "question_type": "单选题",
+        "question_text": "“三个代表”重要思想坚持把（）作为出发点和归宿。",
+        "options": {
+            "A": "马克思主义",
+            "B": "实现中华民族伟大复兴",
+            "C": "党的领导",
+            "D": "人民的根本利益"
+        },
+        "correct_answer": "D",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "7",
+        "question_type": "单选题",
+        "question_text": "“三个代表”重要思想坚持把人民的根本利益作为（）。",
+        "options": {
+            "A": "灵魂",
+            "B": "关键",
+            "C": "本质",
+            "D": "出发点和归宿"
+        },
+        "correct_answer": "D",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "8",
+        "question_type": "单选题",
+        "question_text": "贯彻“三个代表”重要思想，关键在坚持（）。",
+        "options": {
+            "A": "执政为民",
+            "B": "执政兴国",
+            "C": "党的领导",
+            "D": "与时俱进"
+        },
+        "correct_answer": "D",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "9",
+        "question_type": "单选题",
+        "question_text": "历史的真正创造者是（）。",
+        "options": {
+            "A": "伟人",
+            "B": "时间",
+            "C": "英雄",
+            "D": "人民"
+        },
+        "correct_answer": "D",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "10",
+        "question_type": "单选题",
+        "question_text": "江泽民强调我们工作价值的最高裁决者是（）。",
+        "options": {
+            "A": "爱国者",
+            "B": "共产党",
+            "C": "公民",
+            "D": "人民"
+        },
+        "correct_answer": "D",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "11",
+        "question_type": "单选题",
+        "question_text": "中国正式加入世界贸易组织是在（）。",
+        "options": {
+            "A": "2000年",
+            "B": "2001年",
+            "C": "2002年",
+            "D": "2003年"
+        },
+        "correct_answer": "B",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "12",
+        "question_type": "单选题",
+        "question_text": "党领导人民治理国家的基本方略是（）。",
+        "options": {
+            "A": "人才强国",
+            "B": "科教兴国",
+            "C": "以德治国",
+            "D": "依法治国"
+        },
+        "correct_answer": "D",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "13",
+        "question_type": "单选题",
+        "question_text": "贯彻“三个代表”重要思想，本质在坚持（）。",
+        "options": {
+            "A": "党的领导",
+            "B": "党的先进性",
+            "C": "执政兴国",
+            "D": "执政为民"
+        },
+        "correct_answer": "D",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "14",
+        "question_type": "单选题",
+        "question_text": "建设社会主义和国家发展进程中，第一资源是（）。",
+        "options": {
+            "A": "人才资源",
+            "B": "社会主义民主",
+            "C": "党的领导",
+            "D": "科学技术"
+        },
+        "correct_answer": "A",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "15",
+        "question_type": "单选题",
+        "question_text": "发展先进文化的重要任务是做好（）。",
+        "options": {
+            "A": "党的建设工作",
+            "B": "思想政治工作",
+            "C": "弘扬民族精神工作",
+            "D": "改革开放工作"
+        },
+        "correct_answer": "B",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "16",
+        "question_type": "单选题",
+        "question_text": "发展先进文化，就是发展中国特色社会主义的文化，就是建设社会主义（）。",
+        "options": {
+            "A": "生态文明",
+            "B": "物质文明",
+            "C": "精神文明",
+            "D": "文化自信"
+        },
+        "correct_answer": "C",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "17",
+        "question_type": "单选题",
+        "question_text": "发展生产力的决定因素是（）。",
+        "options": {
+            "A": "劳动者素质",
+            "B": "科技进步和创新",
+            "C": "经济水平",
+            "D": "教育水平"
+        },
+        "correct_answer": "B",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "18",
+        "question_type": "单选题",
+        "question_text": "生产力中最活跃的因素是（）。",
+        "options": {
+            "A": "文化",
+            "B": "技术",
+            "C": "人",
+            "D": "设备"
+        },
+        "correct_answer": "C",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "19",
+        "question_type": "单选题",
+        "question_text": "确立了党在社会主义初级阶段的基本纲领的会议是（）。",
+        "options": {
+            "A": "十六大",
+            "B": "十五大",
+            "C": "十七大",
+            "D": "十四大"
+        },
+        "correct_answer": "B",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "20",
+        "question_type": "单选题",
+        "question_text": "贯彻“三个代表”重要思想，核心在于（）。",
+        "options": {
+            "A": "坚持党的纯洁性",
+            "B": "坚持党的最终奋斗目标",
+            "C": "坚持党的先进性",
+            "D": "坚持党的政治纪律"
+        },
+        "correct_answer": "C",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "21",
+        "question_type": "单选题",
+        "question_text": "在国际竞争中赢得主动的需要是（）。",
+        "options": {
+            "A": "发展",
+            "B": "创新",
+            "C": "改革",
+            "D": "合作"
+        },
+        "correct_answer": "A",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "22",
+        "question_type": "单选题",
+        "question_text": "人民当家作主和依法治国的根本保证是（）。",
+        "options": {
+            "A": "多党合作",
+            "B": "人民代表大会制度",
+            "C": "党的领导",
+            "D": "法制完备"
+        },
+        "correct_answer": "C",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "23",
+        "question_type": "单选题",
+        "question_text": "中国解决所有问题的关键在于（）。",
+        "options": {
+            "A": "改革开放",
+            "B": "合作共赢",
+            "C": "建立人类命运共同体",
+            "D": "依靠自己的发展"
+        },
+        "correct_answer": "D",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "24",
+        "question_type": "单选题",
+        "question_text": "江泽民高度重视科学技术在推动生产力发展中的重要作用，他指出振兴经济首先要（）。",
+        "options": {
+            "A": "振兴科技",
+            "B": "坚持改革开放",
+            "C": "发展市场经济",
+            "D": "坚持党的领导"
+        },
+        "correct_answer": "A",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "25",
+        "question_type": "单选题",
+        "question_text": "正式把建立社会主义市场经济体制确立为我国经济体制改革的目标的是（）。",
+        "options": {
+            "A": "十四大",
+            "B": "十三大",
+            "C": "十五大",
+            "D": "十六大"
+        },
+        "correct_answer": "A",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "26",
+        "question_type": "单选题",
+        "question_text": "办好中国事情，关键取决于（）。",
+        "options": {
+            "A": "社会主义信念",
+            "B": "坚持解放思想、实事求是、与时俱进",
+            "C": "中国共产党",
+            "D": "共产主义最高理想"
+        },
+        "correct_answer": "C",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "27",
+        "question_type": "单选题",
+        "question_text": "促进先进生产力的发展，就要使生产关系和上层建筑的各个方面不断体现先进生产力的发展要求。下面表述不正确的是（）。",
+        "options": {
+            "A": "不必完善社会主义的生产关系和上层建筑",
+            "B": "必须敏锐把握我国社会生产力的发展趋势",
+            "C": "坚持以经济建设为中心，制定和实施正确的路线方针政策",
+            "D": "不断为生产力的解放和发展打开更广阔的通途"
+        },
+        "correct_answer": "A",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "28",
+        "question_type": "单选题",
+        "question_text": "社会主义民主政治的本质要求是（）。",
+        "options": {
+            "A": "坚持党的领导",
+            "B": "实行改革开放",
+            "C": "依法治国",
+            "D": "人民当家作主"
+        },
+        "correct_answer": "D",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "29",
+        "question_type": "单选题",
+        "question_text": "我们党始终坚持（）的利益高于一切。",
+        "options": {
+            "A": "集体",
+            "B": "人民",
+            "C": "工人阶级",
+            "D": "组织"
+        },
+        "correct_answer": "B",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "30",
+        "question_type": "单选题",
+        "question_text": "我们党一贯坚持的根本组织制度是（）。",
+        "options": {
+            "A": "民主集中制",
+            "B": "人民代表大会制度",
+            "C": "依法治国",
+            "D": "人民政协制度"
+        },
+        "correct_answer": "A",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "31",
+        "question_type": "单选题",
+        "question_text": "推进党的建设伟大工程，重点是加强（）。",
+        "options": {
+            "A": "党的号召力",
+            "B": "党的组织力",
+            "C": "党的执政能力建设",
+            "D": "党的领导力"
+        },
+        "correct_answer": "C",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "32",
+        "question_type": "单选题",
+        "question_text": "《中共中央关于建立社会主义市场经济体制若干问题的决议》是在党的（）通过的。",
+        "options": {
+            "A": "十四届三中全会",
+            "B": "十三届四中全会",
+            "C": "十五大",
+            "D": "十五届五中全会"
+        },
+        "correct_answer": "A",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "33",
+        "question_type": "单选题",
+        "question_text": "社会主义的根本任务是（）。",
+        "options": {
+            "A": "提高人民生活水平",
+            "B": "解放和发展生产力",
+            "C": "与时俱进提高执政能力",
+            "D": "推动历史的进步"
+        },
+        "correct_answer": "B",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "34",
+        "question_type": "单选题",
+        "question_text": "先进生产力的集中体现和主要标志是（）。",
+        "options": {
+            "A": "生产关系",
+            "B": "GDP",
+            "C": "科学家科研水平",
+            "D": "科学技术"
+        },
+        "correct_answer": "D",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "35",
+        "question_type": "单选题",
+        "question_text": "社会主义现代化必须建立在（）的基础之上。",
+        "options": {
+            "A": "先进的生产方式",
+            "B": "发达的生产力",
+            "C": "先进的生产关系",
+            "D": "先进的科学技术"
+        },
+        "correct_answer": "B",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "36",
+        "question_type": "单选题",
+        "question_text": "关于“三个代表”的核心观点，以下说法不正确的是（）。",
+        "options": {
+            "A": "代表中国最广大人民的根本利益",
+            "B": "代表中国先进制度的发展道路",
+            "C": "代表中国先进生产力的发展要求",
+            "D": "代表中国先进文化的发展前进方向"
+        },
+        "correct_answer": "B",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "37",
+        "question_type": "单选题",
+        "question_text": "发展先进文化的重要内容和中心环节是（）。",
+        "options": {
+            "A": "加强美德教育",
+            "B": "加强社会主义思想道德建设",
+            "C": "加强精神文明建设",
+            "D": "弘扬民族精神"
+        },
+        "correct_answer": "B",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "38",
+        "question_type": "单选题",
+        "question_text": "社会主义市场经济的本质要求是（）。",
+        "options": {
+            "A": "发挥市场机制的作用和国家的宏观调控",
+            "B": "坚持发展生产力",
+            "C": "发挥市场的基础性作用",
+            "D": "坚持改革开放"
+        },
+        "correct_answer": "A",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "39",
+        "question_type": "单选题",
+        "question_text": "人类社会实践活动的生动反映的是（）。",
+        "options": {
+            "A": "美学",
+            "B": "文化",
+            "C": "文学",
+            "D": "文艺"
+        },
+        "correct_answer": "D",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "40",
+        "question_type": "单选题",
+        "question_text": "先进生产力的开拓者是（）。",
+        "options": {
+            "A": "知识分子",
+            "B": "企业从业者",
+            "C": "科技行业从业者",
+            "D": "工人"
+        },
+        "correct_answer": "A",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "41",
+        "question_type": "多选题",
+        "question_text": "我们党之所以能获得取之不尽的力量源泉，是因为党（）。",
+        "options": {
+            "A": "一切为了群众",
+            "B": "一切依靠群众",
+            "C": "一切相信群众",
+            "D": "一切服务群众"
+        },
+        "correct_answer": "ABC",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "42",
+        "question_type": "多选题",
+        "question_text": "全面贯彻党的教育方针，就要坚持教育为（）。",
+        "options": {
+            "A": "综合国力竞争服务",
+            "B": "人民服务",
+            "C": "先进文化服务",
+            "D": "社会主义现代化建设服务"
+        },
+        "correct_answer": "BD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "43",
+        "question_type": "多选题",
+        "question_text": "“三个代表”重要思想的集中概括就是，中国共产党必须（）。",
+        "options": {
+            "A": "始终代表中国最广大人民的根本利益",
+            "B": "始终代表中国先进文化的前进方向",
+            "C": "始终代表中国先进生产力的发展要求",
+            "D": "始终代表社会历史发展的潮流"
+        },
+        "correct_answer": "ABC",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "44",
+        "question_type": "多选题",
+        "question_text": "“三个代表”重要思想是我们党的（）。",
+        "options": {
+            "A": "力量之源",
+            "B": "立党之本",
+            "C": "前提保障",
+            "D": "执政之基"
+        },
+        "correct_answer": "ABD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "45",
+        "question_type": "多选题",
+        "question_text": "加强和改进党的作风建设，要坚持（）。",
+        "options": {
+            "A": "解放思想",
+            "B": "本本主义",
+            "C": "享乐主义",
+            "D": "实事求是"
+        },
+        "correct_answer": "AD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "46",
+        "question_type": "多选题",
+        "question_text": "坚持正确的用人导向。按照（）方针建设一支高素质的领导干部队伍。",
+        "options": {
+            "A": "专业化",
+            "B": "年轻化",
+            "C": "革命化",
+            "D": "知识化"
+        },
+        "correct_answer": "ABCD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "47",
+        "question_type": "多选题",
+        "question_text": "“三个代表”重要思想是（）。",
+        "options": {
+            "A": "完整科学的理论体系",
+            "B": "马克思列宁主义、毛泽东思想和邓小平理论的继承和发展",
+            "C": "党和人民的宝贵精神财富",
+            "D": "中国特色社会主义理论体系的重要组成部分"
+        },
+        "correct_answer": "ABCD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "48",
+        "question_type": "多选题",
+        "question_text": "我们党和同一切剥削阶级政党的根本区别是（）。",
+        "options": {
+            "A": "立党为公",
+            "B": "全心全意为人民服务",
+            "C": "执政为民",
+            "D": "反腐败"
+        },
+        "correct_answer": "ABC",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "49",
+        "question_type": "多选题",
+        "question_text": "我们党作为执政党，面临的最根本的课题，是能不能（）。",
+        "options": {
+            "A": "始终代表先进生产力的要求",
+            "B": "始终代表最广大人民的根本利益",
+            "C": "始终代表先进文化的要求",
+            "D": "始终全心全意为人民服务"
+        },
+        "correct_answer": "BD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "50",
+        "question_type": "多选题",
+        "question_text": "推进党的建设新的伟大工程，重点是加强党的执政能力建设，不断提高（）的能力。",
+        "options": {
+            "A": "科学判断形势",
+            "B": "应对复杂局面",
+            "C": "依法执政、总览全局",
+            "D": "驾驭市场经济"
+        },
+        "correct_answer": "ABCD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "51",
+        "question_type": "多选题",
+        "question_text": "发展先进文化，就要大力倡导一切有利于发扬（）的思想和精神。",
+        "options": {
+            "A": "社会主义",
+            "B": "资本主义",
+            "C": "集体主义",
+            "D": "爱国主义"
+        },
+        "correct_answer": "ACD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "52",
+        "question_type": "多选题",
+        "question_text": "发展生产力离不开创新，必须（）。",
+        "options": {
+            "A": "加速科技成果向现实生产力转化",
+            "B": "持续增强科技创新力和竞争力",
+            "C": "加强国家创新体系建设",
+            "D": "大力推进知识创新、科技创新，实现科学技术的跨越式发展"
+        },
+        "correct_answer": "ABCD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "53",
+        "question_type": "多选题",
+        "question_text": "领导干部一定要（）。",
+        "options": {
+            "A": "讲学习",
+            "B": "讲公正",
+            "C": "讲正气",
+            "D": "讲政治"
+        },
+        "correct_answer": "ACD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "54",
+        "question_type": "多选题",
+        "question_text": "江泽民指出，加强文化建设，必须（）。",
+        "options": {
+            "A": "以高尚的精神塑造人",
+            "B": "以优秀的作品鼓舞人",
+            "C": "以科学的理论武装人",
+            "D": "以正确的舆论引导人"
+        },
+        "correct_answer": "ABCD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "55",
+        "question_type": "多选题",
+        "question_text": "从严治党必须全面贯穿到党的思想建设中，还包括哪些方面的建设之中（）。",
+        "options": {
+            "A": "制度",
+            "B": "作风",
+            "C": "组织",
+            "D": "政治"
+        },
+        "correct_answer": "ABCD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "56",
+        "question_type": "多选题",
+        "question_text": "推动我国先进生产力发展和社会全面进步的根本力量是（）。",
+        "options": {
+            "A": "手工业者",
+            "B": "知识分子",
+            "C": "农民",
+            "D": "工人"
+        },
+        "correct_answer": "BCD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "57",
+        "question_type": "多选题",
+        "question_text": "发展社会主义先进文化，就是发展（）的社会主义文化。",
+        "options": {
+            "A": "面向未来",
+            "B": "面向历史",
+            "C": "面向世界",
+            "D": "面向现代化"
+        },
+        "correct_answer": "ACD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "58",
+        "question_type": "多选题",
+        "question_text": "只有大力推进（），才能实现科学技术的跨越式发展。",
+        "options": {
+            "A": "制度创新",
+            "B": "理论创新",
+            "C": "知识创新",
+            "D": "科技创新"
+        },
+        "correct_answer": "CD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "59",
+        "question_type": "多选题",
+        "question_text": "实现科学技术的跨越式发展，要大力推进（）。",
+        "options": {
+            "A": "科技创新",
+            "B": "理论创新",
+            "C": "知识创新",
+            "D": "社会变革"
+        },
+        "correct_answer": "AC",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "60",
+        "question_type": "多选题",
+        "question_text": "我们党始终代表中国先进文化的前进方向。以下表述正确的是（）。",
+        "options": {
+            "A": "发展社会主义先进文化，就是发展面向现代化、面向世界、面向未来的，民族的科学的大众的社会主义文化",
+            "B": "发展社会主义先进文化，就是建设社会主义精神文明",
+            "C": "发展社会主义先进文化，必须弘扬民族精神",
+            "D": "发展社会主义先进文化，必须加强社会主义思想道德建设"
+        },
+        "correct_answer": "ABCD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "61",
+        "question_type": "多选题",
+        "question_text": "建设有中国特色社会主义的文化，就是要培育（）的公民为目标。",
+        "options": {
+            "A": "有文化",
+            "B": "有理想",
+            "C": "有道德",
+            "D": "有纪律"
+        },
+        "correct_answer": "ABCD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "62",
+        "question_type": "多选题",
+        "question_text": "发展生产力的决定因素是（）。",
+        "options": {
+            "A": "科技进步",
+            "B": "智慧",
+            "C": "创新",
+            "D": "勤劳"
+        },
+        "correct_answer": "AC",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "63",
+        "question_type": "多选题",
+        "question_text": "发展先进文化，就要大力倡导一切有利于发扬（）的思想和精神。",
+        "options": {
+            "A": "改革开放",
+            "B": "享乐主义",
+            "C": "资本主义",
+            "D": "现代化建设"
+        },
+        "correct_answer": "AD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "64",
+        "question_type": "多选题",
+        "question_text": "“三个代表”重要思想创造性地回答了（）的问题。",
+        "options": {
+            "A": "怎样建设党",
+            "B": "怎样建设现代化国家",
+            "C": "什么是改革开放",
+            "D": "建设什么样的党"
+        },
+        "correct_answer": "AD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "65",
+        "question_type": "多选题",
+        "question_text": "建设社会主义政治文明涉及（）等方面，是一个系统工程。",
+        "options": {
+            "A": "政治制度",
+            "B": "行政管理",
+            "C": "法制建设",
+            "D": "政治思想"
+        },
+        "correct_answer": "ABCD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "66",
+        "question_type": "多选题",
+        "question_text": "坚持中国共产党的领导，就是要（）。",
+        "options": {
+            "A": "坚持党在建设中国特色社会主义事业中的领导核心地位，发挥党总揽全局、协调各方的作用",
+            "B": "坚持党对国家大政方针和全局工作的政治领导",
+            "C": "坚持党对意识形态领域的领导",
+            "D": "坚持党管干部的原则"
+        },
+        "correct_answer": "ABCD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "67",
+        "question_type": "多选题",
+        "question_text": "讲政治是核心，要做到（）。",
+        "options": {
+            "A": "提高政治敏锐性和政治鉴别力",
+            "B": "树立正确的世界观",
+            "C": "严守政治纪律",
+            "D": "坚持坚定正确的政治方向、政治立场和政治观点"
+        },
+        "correct_answer": "ACD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "68",
+        "question_type": "多选题",
+        "question_text": "依法治国是逐步实现社会主义民主的（）。",
+        "options": {
+            "A": "制度化",
+            "B": "法律化",
+            "C": "程序化",
+            "D": "政治化"
+        },
+        "correct_answer": "AB",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "69",
+        "question_type": "多选题",
+        "question_text": "关于全面建设小康社会，说法正确的是（）。",
+        "options": {
+            "A": "全面建设小康社会是实现现代化建设第三步战略目标必经的承上启下的发展阶段",
+            "B": "全面建设小康社会是完善社会主义市场经济体制的关键阶段",
+            "C": "全面建设小康社会既体现时代精神，又具有中国特色",
+            "D": "全面建设小康社会是扩大对外开放的关键阶段"
+        },
+        "correct_answer": "ABCD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "70",
+        "question_type": "多选题",
+        "question_text": "“三个代表”重要思想的主要内容之一是“建立社会主义市场经济体制”，必须（）。",
+        "options": {
+            "A": "使国家宏观调控对资源配置起基础性作用",
+            "B": "坚持和完善公有制为主体、多种所有制经济共同发展的社会主义基本经济制度",
+            "C": "毫不动摇地鼓励、支持和引导非公有制经济的发展",
+            "D": "毫不动摇巩固和发展公有制经济"
+        },
+        "correct_answer": "BCD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "71",
+        "question_type": "多选题",
+        "question_text": "加强社会主义思想道德建设，要在全社会倡导（）。",
+        "options": {
+            "A": "集体主义",
+            "B": "个人主义",
+            "C": "爱国主义",
+            "D": "享乐主义"
+        },
+        "correct_answer": "AC",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "72",
+        "question_type": "多选题",
+        "question_text": "依法治国，是（）。",
+        "options": {
+            "A": "党领导人民治理国家的基本方略",
+            "B": "发展社会主义市场经济的客观需要",
+            "C": "社会文明进步的重要标志",
+            "D": "国家长治久安的重要保障"
+        },
+        "correct_answer": "ABCD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "73",
+        "question_type": "多选题",
+        "question_text": "中华民族伟大的民族精神包括（）。",
+        "options": {
+            "A": "勤劳勇敢",
+            "B": "爱好和平",
+            "C": "自强不息",
+            "D": "团结统一"
+        },
+        "correct_answer": "ABCD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "74",
+        "question_type": "多选题",
+        "question_text": "教育是（）的基础工程。",
+        "options": {
+            "A": "发展科学技术",
+            "B": "建设物质文明",
+            "C": "发展先进文化",
+            "D": "建设精神文明"
+        },
+        "correct_answer": "BCD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "75",
+        "question_type": "多选题",
+        "question_text": "建设社会主义政治文明，最根本的是要坚持党的领导、人民当家作主和依法治国的有机统一。党的领导、人民当家作主和依法治国三者的关系是（）。",
+        "options": {
+            "A": "人民当家作主是社会主义民主政治的本质要求",
+            "B": "党的领导是人民当家作主和依法治国的基础",
+            "C": "党的领导是人民当家作主和依法治国的根本保证",
+            "D": "依法治国是党领导人民治理国家的基本方略"
+        },
+        "correct_answer": "ACD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "76",
+        "question_type": "多选题",
+        "question_text": "人类社会发展的历史证明，一个民族，物质上不能贫困，精神上也不能贫困，只有物质和精神都富有，才能（）地屹立于世界民族之林。",
+        "options": {
+            "A": "自信",
+            "B": "自由",
+            "C": "自强",
+            "D": "自尊"
+        },
+        "correct_answer": "ACD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "77",
+        "question_type": "多选题",
+        "question_text": "发展先进文化，就是发展面向现代化、面向世界、面向未来的，（）的社会主义文化。",
+        "options": {
+            "A": "全面的",
+            "B": "科学的",
+            "C": "大众的",
+            "D": "民族的"
+        },
+        "correct_answer": "BCD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "78",
+        "question_type": "多选题",
+        "question_text": "推进党的建设新的伟大工程，一定要把（）有机结合起来。",
+        "options": {
+            "A": "组织建设",
+            "B": "政治建设",
+            "C": "思想建设",
+            "D": "作风建设"
+        },
+        "correct_answer": "ACD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "79",
+        "question_type": "多选题",
+        "question_text": "江泽民同志在党的十五大报告中初步勾画了实现第三步战略目标的蓝图。关于第三步战略目标蓝图说法正确的是（）。",
+        "options": {
+            "A": "到21世纪中叶新中国成立一百年时，基本实现现代化，建成富强民主文明和谐的社会主义国家",
+            "B": "到建党一百年时，使国民经济更加发展，各项制度更加完善",
+            "C": "21世纪第一个十年实现国民生产总值比2000年翻一番，使人民的小康生活更加富裕，形成比较完善的社会主义市场经济体制",
+            "D": "到21世纪中叶新中国成立一百年时，基本实现现代化，建成富强民主文明的社会主义国家"
+        },
+        "correct_answer": "BCD",
+        "error_count": 0,
+        "correct_count": 0
+    }
+]

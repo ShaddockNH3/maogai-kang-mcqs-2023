@@ -1,0 +1,1108 @@
+[
+    {
+        "question_number": "1",
+        "question_type": "单选题",
+        "question_text": "过渡时期总路线的主要内容被概括为“一化三改”。“一化”指的是（）。",
+        "options": {
+            "A": "对手工业的社会主义改造",
+            "B": "对农业的社会主义改造",
+            "C": "对资本主义工商业的社会主义改造",
+            "D": "社会主义工业化"
+        },
+        "correct_answer": "D",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "2",
+        "question_type": "单选题",
+        "question_text": "从中华人民共和国成立到社会主义改造基本完成，我国社会的性质是（）。",
+        "options": {
+            "A": "半殖民地社会",
+            "B": "半封建社会",
+            "C": "新民主主义社会",
+            "D": "社会主义社会"
+        },
+        "correct_answer": "C",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "3",
+        "question_type": "单选题",
+        "question_text": "我国对农业的社会主义改造遵循的原则是（）。",
+        "options": {
+            "A": "依靠贫下中农兴办合作社的原则",
+            "B": "稳步前进的原则",
+            "C": "说服教育的原则",
+            "D": "自愿互利、典型示范、国家帮助的原则"
+        },
+        "correct_answer": "D",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "4",
+        "question_type": "单选题",
+        "question_text": "我国对资本主义工商业的改造采取从低级到高级的国家资本主义的过渡形式，其中高级形式的国家资本主义是（）。",
+        "options": {
+            "A": "经销、代销",
+            "B": "委托加工，计划订货",
+            "C": "公私合营",
+            "D": "统购包销"
+        },
+        "correct_answer": "C",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "5",
+        "question_type": "单选题",
+        "question_text": "对（）的社会主义改造，是三大改造中首先进行的。",
+        "options": {
+            "A": "私人企业",
+            "B": "资本主义工商业",
+            "C": "手工业",
+            "D": "农业"
+        },
+        "correct_answer": "D",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "6",
+        "question_type": "单选题",
+        "question_text": "农业社会主义改造中的高级社属于（）。",
+        "options": {
+            "A": "半社会主义性质",
+            "B": "互助合作性质",
+            "C": "社会主义性质",
+            "D": "社会主义萌芽性质"
+        },
+        "correct_answer": "C",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "7",
+        "question_type": "单选题",
+        "question_text": "我国的社会主义改造全面推开是从（）开始的。",
+        "options": {
+            "A": "1952",
+            "B": "1955",
+            "C": "1956",
+            "D": "1953"
+        },
+        "correct_answer": "D",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "8",
+        "question_type": "单选题",
+        "question_text": "社会主义基本制度在中国确立的主要标志是（）。",
+        "options": {
+            "A": "完成了资本主义工商业的社会主义改造",
+            "B": "社会主义改造的基本完成",
+            "C": "国民经济的恢复与调整",
+            "D": "中华人民共和国的成立"
+        },
+        "correct_answer": "B",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "9",
+        "question_type": "单选题",
+        "question_text": "（）的确立是中国历史上最深刻最伟大的社会变革，为当代中国一切发展进步奠定了制度基础。",
+        "options": {
+            "A": "人民民主专政",
+            "B": "社会主义基本制度",
+            "C": "新民主主义国家",
+            "D": "资本主义制度"
+        },
+        "correct_answer": "B",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "10",
+        "question_type": "单选题",
+        "question_text": "我国工业化、现代化建设取得辉煌成就的根本前提条件是（）。",
+        "options": {
+            "A": "社会主义改造的基本完成",
+            "B": "取得了新民主主义革命的胜利",
+            "C": "有马列主义关于社会主义改造理论的指导",
+            "D": "选择了社会主义道路"
+        },
+        "correct_answer": "D",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "11",
+        "question_type": "单选题",
+        "question_text": "（）年底三大改造基本完成。",
+        "options": {
+            "A": "1959年",
+            "B": "1955年",
+            "C": "1956年",
+            "D": "1957年"
+        },
+        "correct_answer": "C",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "12",
+        "question_type": "单选题",
+        "question_text": "（）9月，第一届全国人民代表大会的召开和《中华人民共和国宪法》的制定及颁布施行，成为我国社会主义民主政治建设的里程碑。",
+        "options": {
+            "A": "1960年",
+            "B": "1955年",
+            "C": "1954年",
+            "D": "1956年"
+        },
+        "correct_answer": "C",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "13",
+        "question_type": "单选题",
+        "question_text": "在新民主主义社会中，（）不论在经济上还是在政治上都已经居于领导地位。",
+        "options": {
+            "A": "垄断资本的因素",
+            "B": "资本主义的因素",
+            "C": "公私合营的因素",
+            "D": "社会主义的因素"
+        },
+        "correct_answer": "D",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "14",
+        "question_type": "单选题",
+        "question_text": "我国的根本政治制度是（）。",
+        "options": {
+            "A": "基层群众自治制度",
+            "B": "人民代表大会制度",
+            "C": "中国共产党领导的多党合作和政治协商制度",
+            "D": "民族区域自治制度"
+        },
+        "correct_answer": "B",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "15",
+        "question_type": "单选题",
+        "question_text": "我国农业社会主义改造大体上经历了（）三个发展阶段。",
+        "options": {
+            "A": "互助组、初级社和高级社",
+            "B": "初级形式的国家资本主义、个别行业公私合营、全行业公私合营",
+            "C": "供销小组、供销合作社、生产合作社",
+            "D": "互助组、合作社和高级社"
+        },
+        "correct_answer": "A",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "16",
+        "question_type": "单选题",
+        "question_text": "资本主义工商业的社会主义改造，采取从低级到高级的（）的过渡形式。",
+        "options": {
+            "A": "私人资本主义",
+            "B": "合作社经济",
+            "C": "个体经济",
+            "D": "国家资本主义"
+        },
+        "correct_answer": "D",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "17",
+        "question_type": "单选题",
+        "question_text": "毛泽东在中央政治局会议上正式提出了过渡时期的总路线和总任务时间是（）。",
+        "options": {
+            "A": "1952年6月",
+            "B": "1953年6月",
+            "C": "1951年6月",
+            "D": "1954年7月"
+        },
+        "correct_answer": "B",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "18",
+        "question_type": "单选题",
+        "question_text": "经过“一五期间”的大规模建设，我国以（）为重点的社会主义工业化基础已初步建立。",
+        "options": {
+            "A": "重工业",
+            "B": "第三产业",
+            "C": "农业",
+            "D": "轻工业"
+        },
+        "correct_answer": "A",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "19",
+        "question_type": "单选题",
+        "question_text": "（）明确规定了我国人民民主专政的国体和人民代表大会的政体。",
+        "options": {
+            "A": "《论人民民主专政》",
+            "B": "第一届全国人民代表大会",
+            "C": "《中华人民共和国宪法》",
+            "D": "《论联合政府》"
+        },
+        "correct_answer": "C",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "20",
+        "question_type": "单选题",
+        "question_text": "对手工业的社会主义改造所采取的方法步骤是（）。",
+        "options": {
+            "A": "从供销合作入手，逐步发展到走生产合作的道路",
+            "B": "把个体手工业者组织起来",
+            "C": "发展生产互助小组",
+            "D": "组织供销小组"
+        },
+        "correct_answer": "A",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "21",
+        "question_type": "单选题",
+        "question_text": "新民主主义社会是（）。",
+        "options": {
+            "A": "共产主义社会的初级阶段",
+            "B": "固定不变的社会",
+            "C": "独立的社会形态",
+            "D": "过渡性的社会形态"
+        },
+        "correct_answer": "D",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "22",
+        "question_type": "单选题",
+        "question_text": "我国在对资产阶级工商业实行社会主义改造的过程中，国家向私营企业投资入股，企业生产资料由国家和资本家共同所有，利润分配仍然实行“四马分肥”，国家向企业派出公方代表，与工人、资本家共同管理和改造企业，公方代表居领导地位。这时的企业性质（）。",
+        "options": {
+            "A": "基本上属于社会主义国营性质",
+            "B": "属于社会主义集体经济",
+            "C": "仍然属于私营企业",
+            "D": "属于半社会主义性质"
+        },
+        "correct_answer": "D",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "23",
+        "question_type": "单选题",
+        "question_text": "在我国的过渡性质时期，民族资产阶级与工人阶级的矛盾性质是（）。",
+        "options": {
+            "A": "非对抗性的",
+            "B": "没有矛盾",
+            "C": "既有对抗性一面又有非对抗性的一面",
+            "D": "对抗性的"
+        },
+        "correct_answer": "C",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "24",
+        "question_type": "单选题",
+        "question_text": "经过三年的努力，到（）年我国国民经济得以恢复。",
+        "options": {
+            "A": "1949",
+            "B": "1951",
+            "C": "1953",
+            "D": "1952"
+        },
+        "correct_answer": "D",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "25",
+        "question_type": "单选题",
+        "question_text": "党在过渡时期总路线的主要内容被概括为（）。",
+        "options": {
+            "A": "“两化三改”",
+            "B": "“一化一改”",
+            "C": "“两化一改”",
+            "D": "“一化三改”"
+        },
+        "correct_answer": "D",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "26",
+        "question_type": "单选题",
+        "question_text": "中国共产党根据马克思、恩格斯和列宁关于采用和平方式变革所有制的设想，结合中国的具体情况，提出了对资本主义工商业实行（）的方针。",
+        "options": {
+            "A": "统销包购",
+            "B": "供销合作",
+            "C": "和平赎买",
+            "D": "委托加工"
+        },
+        "correct_answer": "C",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "27",
+        "question_type": "单选题",
+        "question_text": "手工业生产合作社是（）的集体经济组织。",
+        "options": {
+            "A": "半社会主义性质",
+            "B": "社会主义性质",
+            "C": "社会主义萌芽性质",
+            "D": "供销合作性质"
+        },
+        "correct_answer": "B",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "28",
+        "question_type": "单选题",
+        "question_text": "在新民主主义社会中，存在五种经济成分，即国营经济、合作社经济、个体经济、私人资本主义经济、国家资本主义经济。其中，国家资本主义经济是（）。",
+        "options": {
+            "A": "社会主义初级阶段的性质",
+            "B": "完全的社会主义性质",
+            "C": "完全的资本主义性质",
+            "D": "私人资本主义经济向社会主义国营经济过渡的形式"
+        },
+        "correct_answer": "D",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "29",
+        "question_type": "单选题",
+        "question_text": "手工业供销小组具有（）。",
+        "options": {
+            "A": "社会主义萌芽性质",
+            "B": "供销合作性质",
+            "C": "社会主义性质",
+            "D": "半社会主义性质"
+        },
+        "correct_answer": "A",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "30",
+        "question_type": "单选题",
+        "question_text": "1954年通过的《中华人民共和国宪法》规定，我国的国体是（）。",
+        "options": {
+            "A": "无产阶级专政",
+            "B": "人民民主专政",
+            "C": "公民民主专政",
+            "D": "资产阶级专政"
+        },
+        "correct_answer": "B",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "31",
+        "question_type": "单选题",
+        "question_text": "“四马分肥”中的资方红利大体占企业利润的（）。",
+        "options": {
+            "A": "三分之一",
+            "B": "四分之一",
+            "C": "五分之一",
+            "D": "二分之一"
+        },
+        "correct_answer": "B",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "32",
+        "question_type": "单选题",
+        "question_text": "社会主义基本制度以其与社会化大生产的一致性和能够在经济落后条件下尽可能地（），为发展社会生产力开辟了广阔的道路。",
+        "options": {
+            "A": "符合时代的要求",
+            "B": "集中力量办大事的优势",
+            "C": "以人民为中心",
+            "D": "保持先进性"
+        },
+        "correct_answer": "B",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "33",
+        "question_type": "单选题",
+        "question_text": "新中国成立初期，（），建立社会主义性质的国营经济。",
+        "options": {
+            "A": "赎买民族资产阶级的财产",
+            "B": "剥夺地主阶级的财产",
+            "C": "没收帝国主义在华企业",
+            "D": "没收官僚资本"
+        },
+        "correct_answer": "D",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "34",
+        "question_type": "单选题",
+        "question_text": "社会主义改造的历史经验有（）。",
+        "options": {
+            "A": "坚持社会主义工业化建设与社会主义改造同时并举",
+            "B": "符合当时的基本国情，反映了资本主义向社会主义转变的历史必然性",
+            "C": "以实现社会主义农业现代化为最主要目标",
+            "D": "用暴力没收方式变革所有制"
+        },
+        "correct_answer": "A",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "35",
+        "question_type": "单选题",
+        "question_text": "社会主义革命的目的是为了（）。",
+        "options": {
+            "A": "改造生产关系",
+            "B": "解放生产力",
+            "C": "积累社会财富",
+            "D": "推进工业化发展"
+        },
+        "correct_answer": "B",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "36",
+        "question_type": "单选题",
+        "question_text": "下列不是新民主主义社会的五种经济成分的是（）。",
+        "options": {
+            "A": "半社会主义性质的合作社经济",
+            "B": "私人资本主义经济",
+            "C": "垄断经济",
+            "D": "国家资本主义经济"
+        },
+        "correct_answer": "C",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "37",
+        "question_type": "单选题",
+        "question_text": "（），使广大劳动人民真正成为国家的主人。",
+        "options": {
+            "A": "社会主义基本制度的确立",
+            "B": "建立了工农政权",
+            "C": "建立了新中国",
+            "D": "社会主义改造的基本完成"
+        },
+        "correct_answer": "A",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "38",
+        "question_type": "单选题",
+        "question_text": "1951年前后，党内大体形成了（）的共识。",
+        "options": {
+            "A": "向社会主义过渡",
+            "B": "先用三个五年计划的时间搞工业化建设，再向社会主义过渡",
+            "C": "先搞工业化建设",
+            "D": "进行社会主义改造"
+        },
+        "correct_answer": "B",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "39",
+        "question_type": "单选题",
+        "question_text": "1949年党的（），提出了使中国“两个转变”同时并举的思想。",
+        "options": {
+            "A": "七届三中全会",
+            "B": "七届四中全会",
+            "C": "六届六中全会",
+            "D": "七届二中全会"
+        },
+        "correct_answer": "D",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "40",
+        "question_type": "多选题",
+        "question_text": "关于党在过渡时期的总路线的理论依据，下列说法准确的有（）。",
+        "options": {
+            "A": "列宁曾设想通过国家资本主义对资产阶级进行和平赎买",
+            "B": "马克思、恩格斯曾提出从资本主义社会向社会主义社会过渡的问题",
+            "C": "列宁认为过渡时期的根本任务是把剥削阶级的生产资料转化为公有财产",
+            "D": "邓小平对“什么是社会主义，怎样建设社会主义”的探索"
+        },
+        "correct_answer": "ABC",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "41",
+        "question_type": "多选题",
+        "question_text": "过渡时期总路线的“两翼”是指（）。",
+        "options": {
+            "A": "实现对农业的社会主义改造",
+            "B": "巩固人民民主专政",
+            "C": "实现对手工业的社会主义改造",
+            "D": "实现对资本主义工商业的社会主义改造"
+        },
+        "correct_answer": "ACD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "42",
+        "question_type": "多选题",
+        "question_text": "新民主主义社会是（）。",
+        "options": {
+            "A": "由新民主主义向社会主义转变的过渡性社会形态",
+            "B": "属于社会主义体系的逐步过渡到社会主义社会的过渡性质的社会",
+            "C": "独立的社会形态",
+            "D": "既有社会主义因素又有非社会主义因素存在的社会"
+        },
+        "correct_answer": "ABD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "43",
+        "question_type": "多选题",
+        "question_text": "伴随着社会经济制度和社会经济结构的根本变化，我国社会的阶级关系也发生了哪些根本的变化？",
+        "options": {
+            "A": "知识界已经成为一支为社会主义服务的队伍",
+            "B": "民族资产阶级被改造成自食其力的社会主义劳动者",
+            "C": "官僚资产阶级已经在中国内地被消灭",
+            "D": "工人阶级已经成为国家的领导阶级"
+        },
+        "correct_answer": "ABCD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "44",
+        "question_type": "多选题",
+        "question_text": "我国对农业的社会主义改造过程中，经历的发展阶段有（）。",
+        "options": {
+            "A": "互助组",
+            "B": "供销小组",
+            "C": "初级社",
+            "D": "高级社"
+        },
+        "correct_answer": "ACD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "45",
+        "question_type": "多选题",
+        "question_text": "过渡时期总路线是（）。",
+        "options": {
+            "A": "是一条社会主义建设和社会主义改造同时并举的路线",
+            "B": "体现了解放生产力与发展生产力、变革生产关系与发展生产力的有机统一",
+            "C": "其主要内容被概括为“一化三改”",
+            "D": "体现了社会主义工业化和社会主义改造的紧密结合"
+        },
+        "correct_answer": "ABCD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "46",
+        "question_type": "多选题",
+        "question_text": "关于我国第一部宪法颁布施行的说法准确的有（）。",
+        "options": {
+            "A": "为各族人民参与国家政治生活提供了必要条件和保证",
+            "B": "成为我国社会主义民主政治建设的里程碑",
+            "C": "社会主义基本制度的确立",
+            "D": "为逐步健全和完善我国社会主义政治制度奠定了坚实的基础"
+        },
+        "correct_answer": "ABD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "47",
+        "question_type": "多选题",
+        "question_text": "在对资本主义工商业的社会主义改造中，对企业的利润实行“四马分肥”。“四马”指的是什么？",
+        "options": {
+            "A": "资方红利",
+            "B": "企业公积金",
+            "C": "工人福利费",
+            "D": "国家所得税"
+        },
+        "correct_answer": "ABCD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "48",
+        "question_type": "多选题",
+        "question_text": "1956年年底，三大改造的基本完成标志着（）。",
+        "options": {
+            "A": "中国历史上长达数千年的阶级剥削制度的结束",
+            "B": "实现了新民主主义向资本主义的转变",
+            "C": "社会主义基本制度的确立",
+            "D": "我国进入社会主义过渡阶段"
+        },
+        "correct_answer": "AC",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "49",
+        "question_type": "多选题",
+        "question_text": "我国社会主义改造的历史经验有（）。",
+        "options": {
+            "A": "采取积极引导、逐步过渡的方式",
+            "B": "坚持社会主义工业化建设与社会主义改造同时并举",
+            "C": "用暴力没收的方式进行改造",
+            "D": "用和平方法进行改造"
+        },
+        "correct_answer": "ABD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "50",
+        "question_type": "多选题",
+        "question_text": "对农业进行社会主义改造应遵循的原则是（）。",
+        "options": {
+            "A": "稳步前进",
+            "B": "国家帮助",
+            "C": "典型示范",
+            "D": "自愿互利"
+        },
+        "correct_answer": "BCD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "51",
+        "question_type": "多选题",
+        "question_text": "对资本主义工商业进行社会主义改造过程中，国家采取了从低级到高级的国家资本主义的过渡形式。初级形式的国家资本主义是国家对私营工商业实行（）等。",
+        "options": {
+            "A": "经销代销",
+            "B": "委托加工",
+            "C": "统购包销",
+            "D": "计划订货"
+        },
+        "correct_answer": "ABCD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "52",
+        "question_type": "多选题",
+        "question_text": "新民主主义社会时期，民族资产阶级的两面性是既（），又（）。",
+        "options": {
+            "A": "有基于阶级利益相互对立的对抗性的一面",
+            "B": "有剥削工人的一面",
+            "C": "有相互合作、具有共同利益的非对抗性的一面",
+            "D": "有接受工人阶级及其政党领导的一面"
+        },
+        "correct_answer": "BD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "53",
+        "question_type": "多选题",
+        "question_text": "农民既是私有者又是劳动者，对农民不能采取剥夺的办法，只能（）。",
+        "options": {
+            "A": "引导",
+            "B": "批评",
+            "C": "说服",
+            "D": "教育"
+        },
+        "correct_answer": "ACD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "54",
+        "question_type": "多选题",
+        "question_text": "关于过渡时期的总路线，表述正确的是（）。",
+        "options": {
+            "A": "逐步实现国家对手工业的社会主义改造",
+            "B": "逐步实现国家对资本主义工商业的社会主义改造",
+            "C": "逐步实现国家的社会主义工业化",
+            "D": "逐步实现国家对农业的社会主义改造"
+        },
+        "correct_answer": "ABCD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "55",
+        "question_type": "多选题",
+        "question_text": "在手工业的社会主义改造过程中党和政府采取办法有（）。",
+        "options": {
+            "A": "行政命令",
+            "B": "典型示范",
+            "C": "国家帮助",
+            "D": "说服教育"
+        },
+        "correct_answer": "BCD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "56",
+        "question_type": "多选题",
+        "question_text": "1949年党的七届二中全会提出了哪“两个转变”同时并举的思想？",
+        "options": {
+            "A": "稳步地由农业国转变为工业国",
+            "B": "领导阶级转变",
+            "C": "社会性质转变",
+            "D": "由新民主主义国家转变为社会主义国家"
+        },
+        "correct_answer": "AD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "57",
+        "question_type": "多选题",
+        "question_text": "对我国社会主义改造中出现的国家资本主义经济理解正确的是（）。",
+        "options": {
+            "A": "是特殊的资本主义经济",
+            "B": "为了供应人民和国家的需要而存在",
+            "C": "是为了资本家的利润而存在的",
+            "D": "是受工人监督的资本主义经济"
+        },
+        "correct_answer": "ABD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "58",
+        "question_type": "多选题",
+        "question_text": "对资本主义工商业的社会主义改造经历了三个步骤，包括了以下选项中的（）。",
+        "options": {
+            "A": "实行个别企业的公私合营",
+            "B": "实行全行业的公私合营",
+            "C": "统购包销、代购代销",
+            "D": "实行初级形式的国家资本主义"
+        },
+        "correct_answer": "ABD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "59",
+        "question_type": "多选题",
+        "question_text": "毛泽东指出，我国由新民主主义社会逐步过渡到社会主义社会这一过渡历史时期之所以必要，并且需要一个相当长的时间，是由于（）。",
+        "options": {
+            "A": "我国经济和文化的落后，要求一个相当长的时期来创造为保证社会主义完全胜利所必要的经济和文化上的前提",
+            "B": "新中国刚建立不久",
+            "C": "新中国各行各业百废待兴",
+            "D": "我国有极其广大的个体的农业和手工业及在国民经济中占很大一部分比重的资本主义工商业，要求一个相当长的时期来改造它们"
+        },
+        "correct_answer": "AD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "60",
+        "question_type": "多选题",
+        "question_text": "下列属于新民主主义社会主要经济成分的是（）。",
+        "options": {
+            "A": "资本主义经济",
+            "B": "国家资本主义经济",
+            "C": "个体经济",
+            "D": "社会主义经济"
+        },
+        "correct_answer": "ACD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "61",
+        "question_type": "多选题",
+        "question_text": "在我国确立社会主义基本制度具有十分重大的意义，因为社会主义基本制度的确立（）。",
+        "options": {
+            "A": "使占世界人口1/4的东方大国进入了社会主义，这是世界社会主义发展史上又一个历史性的伟大胜利",
+            "B": "是马克思列宁主义关于社会主义革命理论在中国的正确运用和创造性发展的结果",
+            "C": "为当代中国一切发展进步奠定了制度基础",
+            "D": "极大地促进了我国社会生产力的发展"
+        },
+        "correct_answer": "ABCD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "62",
+        "question_type": "多选题",
+        "question_text": "1956年底，我国社会主义基本制度确立，下列说法准确的有（）。",
+        "options": {
+            "A": "由于经济文化比较落后，中国的社会主义还只能是初级阶段的社会主义，或者叫社会主义初级阶段",
+            "B": "标志着新民主主义革命的胜利",
+            "C": "中国可以在没有实现工业化的情况下进入社会主义",
+            "D": "社会主义基本制度的确立正是为了推进中国的工业化、现代化建设"
+        },
+        "correct_answer": "ACD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "63",
+        "question_type": "多选题",
+        "question_text": "以毛泽东为主要代表的中国共产党人从我国农村实际出发，制定并实行了一整套适合中国特点的对农业进行社会主义改造的方针、政策和办法。具体包括（）。",
+        "options": {
+            "A": "采取循序渐进的步骤",
+            "B": "走互助合作道路",
+            "C": "制定正确的阶级政策",
+            "D": "遵循自愿互利、典型示范和国家帮助的原则"
+        },
+        "correct_answer": "ABCD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "64",
+        "question_type": "多选题",
+        "question_text": "我国对农业、手工业和资本主义工商业进行社会主义改造，大致都分为三个步骤。以下选项中，（）具有半社会主义性质。",
+        "options": {
+            "A": "个别企业的公私合营",
+            "B": "初级农业生产合作社",
+            "C": "手工业供销合作社",
+            "D": "手工业生产合作社"
+        },
+        "correct_answer": "ABC",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "65",
+        "question_type": "多选题",
+        "question_text": "手工业的社会主义改造经历了由小到大、由低级到高级的三个步骤是（）。",
+        "options": {
+            "A": "办手工业供销合作社",
+            "B": "办供销合作互助组",
+            "C": "办手工业供销小组",
+            "D": "建立手工业生产合作社"
+        },
+        "correct_answer": "ACD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "66",
+        "question_type": "多选题",
+        "question_text": "毛泽东指出，社会主义改造有利于（）。",
+        "options": {
+            "A": "社会生产力的发展",
+            "B": "巩固新生的人民政权",
+            "C": "生产技术进步",
+            "D": "提高人民生活水平"
+        },
+        "correct_answer": "ABCD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "67",
+        "question_type": "多选题",
+        "question_text": "“一化三改”中，“三改”是指对（）的社会主义改造。",
+        "options": {
+            "A": "资本主义手工业",
+            "B": "资本主义工商业",
+            "C": "手工业",
+            "D": "农业"
+        },
+        "correct_answer": "BCD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "68",
+        "question_type": "多选题",
+        "question_text": "土地改革完成后，我国广大农民的生产积极性大大提高，体现在（）。",
+        "options": {
+            "A": "互助合作的积极性",
+            "B": "反对地主的斗争",
+            "C": "个体经济的积极性",
+            "D": "更加热爱新社会"
+        },
+        "correct_answer": "AC",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "69",
+        "question_type": "多选题",
+        "question_text": "以下哪些是我国的基本政治制度？",
+        "options": {
+            "A": "民族区域自治制度",
+            "B": "科教兴国战略",
+            "C": "中国共产党领导的多党合作和政治协商制度",
+            "D": "人民代表大会制度"
+        },
+        "correct_answer": "AC",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "70",
+        "question_type": "多选题",
+        "question_text": "对资本主义工商业实行和平赎买，有利于（）。",
+        "options": {
+            "A": "发挥民族资产阶级中大多数人的知识、才能、技术专长和管理经验",
+            "B": "发挥私营工商业在国计民生方面的积极作用，促进国民经济发展",
+            "C": "争取和团结民族资产阶级，有利于团结各民主党派和各界爱国民主人士，巩固和发展统一战线",
+            "D": "争取和团结那些原来同资产阶级相联系的知识分子为社会主义建设服务"
+        },
+        "correct_answer": "ABCD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "71",
+        "question_type": "多选题",
+        "question_text": "在我国社会主义改造的历史上，有两个事实是世界历史上各种革命大变动中罕见的（）。",
+        "options": {
+            "A": "在一个几亿人口的大国中比较顺利地实现了如此复杂、困难和深刻的社会变革，不仅没有造成生产力的破坏，反而促进了工农业和整个国民经济的发展",
+            "B": "没有引起巨大的社会动荡，反而极大地加强了人民的团结，而且是在人民普遍拥护的情况下完成的",
+            "C": "对社会主义改造基本完成后公有制经济和非公有制经济共同发展缺乏认识",
+            "D": "当时党对我国社会主义发展阶段问题还没有形成科学的理论"
+        },
+        "correct_answer": "AB",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "72",
+        "question_type": "多选题",
+        "question_text": "我国之所以能够采取赎买的方式对资本主义工商业进行和平改造，原因是（）。",
+        "options": {
+            "A": "中国共产党与民族资产阶级长期保持着统一战线的关系",
+            "B": "我国已经有了以工人阶级为领导、工农联盟为基础的人民民主专政的国家政权，建立了强大的社会主义国营经济并掌握了国家的经济命脉",
+            "C": "当时国家对粮食和工业原料的统购统销，以及资本主义企业中工人群众对资本家的监督等",
+            "D": "民族资产阶级具有两面性"
+        },
+        "correct_answer": "ABCD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "73",
+        "question_type": "多选题",
+        "question_text": "下面的说法中，对新民主主义社会的理解准确的是（）。",
+        "options": {
+            "A": "新民主主义社会是过渡性的社会形态",
+            "B": "非社会主义因素仍有很大比重",
+            "C": "社会主义的因素不论在经济上还是在政治上都已经居于领导地位",
+            "D": "新民主主义社会是属于社会主义体系的"
+        },
+        "correct_answer": "ABCD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "74",
+        "question_type": "多选题",
+        "question_text": "关于社会主义改造理论，以下说法准确的有（）。",
+        "options": {
+            "A": "党在过渡时期总路线的主要内容被概括为“一化三改”",
+            "B": "新民主主义社会是一个过渡性的社会",
+            "C": "社会主义改造的道路是符合中国特点的",
+            "D": "中华人民共和国的成立和社会主义基本制度的确立，是20世纪中国一次划时代的历史巨变"
+        },
+        "correct_answer": "ABCD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "75",
+        "question_type": "多选题",
+        "question_text": "社会主义改造基本完成，标志着什么？",
+        "options": {
+            "A": "中国现代史的开始",
+            "B": "半殖民地社会的结束",
+            "C": "社会主义基本制度的确立",
+            "D": "中国历史上长达数千年的阶级剥削制度的结束"
+        },
+        "correct_answer": "CD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "76",
+        "question_type": "多选题",
+        "question_text": "我国社会主义改造取得了历史性的胜利，但也出现一些偏差和失误，主要是（）。",
+        "options": {
+            "A": "工作方法上过于简单",
+            "B": "受当时历史条件限制而产生的认识上的一些问题",
+            "C": "帝国主义国家在经济上、政治上对我国的封锁",
+            "D": "指导思想上急于求成、不够谨慎"
+        },
+        "correct_answer": "ABD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "77",
+        "question_type": "多选题",
+        "question_text": "随着土地改革的基本完成，哪两个阶级的矛盾逐步成为我国社会的主要矛盾？",
+        "options": {
+            "A": "工人阶级",
+            "B": "农民阶级",
+            "C": "城市小资产阶级",
+            "D": "资产阶级"
+        },
+        "correct_answer": "AD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "78",
+        "question_type": "多选题",
+        "question_text": "在新民主主义社会的阶级构成主要是（）。",
+        "options": {
+            "A": "工人阶级",
+            "B": "民族资产阶级",
+            "C": "农民阶级",
+            "D": "其他小资产阶级"
+        },
+        "correct_answer": "ABCD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "79",
+        "question_type": "多选题",
+        "question_text": "下列关于新民主主义社会中主要经济成分说法正确的是（）。",
+        "options": {
+            "A": "国家资本主义经济是私人资本主义经济向社会主义国营经济过渡的形式",
+            "B": "半社会主义性质的合作社经济是个体经济向社会主义集体经济过渡的形式",
+            "C": "存在着社会主义性质的国营经济、半社会主义性质的合作社经济、农民和手工业者的个体经济、私人资本主义经济和国家资本主义经济五种经济成分",
+            "D": "社会主义经济、个体经济和资本主义经济是新民主主义社会主要的经济成分"
+        },
+        "correct_answer": "ABCD",
+        "error_count": 0,
+        "correct_count": 0
+    }
+]

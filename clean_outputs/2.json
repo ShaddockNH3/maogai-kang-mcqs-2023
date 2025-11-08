@@ -1,0 +1,1108 @@
+[
+    {
+        "question_number": "1",
+        "question_type": "单选题",
+        "question_text": "党带领人民浴血奋战，完成了新民主主义革命，实现了民族独立和（）。",
+        "options": {
+            "A": "社会主义革命胜利",
+            "B": "人民解放",
+            "C": "开启新纪元",
+            "D": "反对帝国主义"
+        },
+        "correct_answer": "B",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "2",
+        "question_type": "单选题",
+        "question_text": "建设新型人民军队的根本原则是（）。",
+        "options": {
+            "A": "坚持党对军队的绝对领导",
+            "B": "官兵一致",
+            "C": "民主建军",
+            "D": "军民一致"
+        },
+        "correct_answer": "A",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "3",
+        "question_type": "单选题",
+        "question_text": "新民主主义革命理论的核心问题是（）。",
+        "options": {
+            "A": "农民问题",
+            "B": "无产阶级领导权",
+            "C": "武装斗争",
+            "D": "党的建设"
+        },
+        "correct_answer": "B",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "4",
+        "question_type": "单选题",
+        "question_text": "党逐步确立毛泽东同志在党中央和红军的领导地位在（）。",
+        "options": {
+            "A": "瓦窑堡会议",
+            "B": "中共三大",
+            "C": "八七会议",
+            "D": "遵义会议"
+        },
+        "correct_answer": "D",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "5",
+        "question_type": "单选题",
+        "question_text": "中国革命的斗争形式只能是（）。",
+        "options": {
+            "A": "统一战线",
+            "B": "建立革命根据地",
+            "C": "农村包围城市",
+            "D": "武装斗争"
+        },
+        "correct_answer": "D",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "6",
+        "question_type": "单选题",
+        "question_text": "中国革命的首要问题是（）。",
+        "options": {
+            "A": "团结群众",
+            "B": "分清敌友",
+            "C": "土地革命",
+            "D": "政权问题"
+        },
+        "correct_answer": "B",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "7",
+        "question_type": "单选题",
+        "question_text": "中国革命分两步走，第一步的任务是（）。",
+        "options": {
+            "A": "社会主义革命",
+            "B": "推翻封建主义",
+            "C": "推翻帝国主义",
+            "D": "新民主主义革命"
+        },
+        "correct_answer": "D",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "8",
+        "question_type": "单选题",
+        "question_text": "帝国主义统治中国的主要社会基础是（）。",
+        "options": {
+            "A": "封建君主",
+            "B": "北洋军阀",
+            "C": "官僚资本主义",
+            "D": "地主阶级"
+        },
+        "correct_answer": "D",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "9",
+        "question_type": "单选题",
+        "question_text": "毛泽东完整地表述了新民主主义革命总路线内容的著作是（）。",
+        "options": {
+            "A": "《新民主主义论》",
+            "B": "《中国革命和中国共产党》",
+            "C": "《在晋绥干部会议上的讲话》",
+            "D": "《中国社会各阶级分析》"
+        },
+        "correct_answer": "C",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "10",
+        "question_type": "单选题",
+        "question_text": "中国革命的可靠同盟者是（）。",
+        "options": {
+            "A": "农民",
+            "B": "城市小资产阶级",
+            "C": "工人",
+            "D": "手工业者"
+        },
+        "correct_answer": "B",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "11",
+        "question_type": "单选题",
+        "question_text": "在统一战线中对进步势力坚持的策略方针是（）。",
+        "options": {
+            "A": "争取",
+            "B": "孤立",
+            "C": "发展",
+            "D": "彻底消灭"
+        },
+        "correct_answer": "C",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "12",
+        "question_type": "单选题",
+        "question_text": "新民主主义革命统一战线的基础是（）。",
+        "options": {
+            "A": "非劳动者联盟",
+            "B": "无产阶级和小资产阶级联盟",
+            "C": "工农联盟",
+            "D": "劳动者与非劳动者联盟"
+        },
+        "correct_answer": "C",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "13",
+        "question_type": "单选题",
+        "question_text": "中国新民主主义革命开端的标志是（）。",
+        "options": {
+            "A": "中国共产党成立",
+            "B": "新文化运动",
+            "C": "辛亥革命",
+            "D": "五四运动"
+        },
+        "correct_answer": "D",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "14",
+        "question_type": "单选题",
+        "question_text": "与新民主主义国体相适应的政体是（）。",
+        "options": {
+            "A": "民主共和制",
+            "B": "君主立宪制",
+            "C": "议会制",
+            "D": "人民代表大会制度"
+        },
+        "correct_answer": "D",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "15",
+        "question_type": "单选题",
+        "question_text": "近代中国社会最主要的矛盾是（）。",
+        "options": {
+            "A": "农民阶级和地主阶级的矛盾",
+            "B": "帝国主义和中华民族的矛盾",
+            "C": "工人阶级和资产阶级的矛盾",
+            "D": "封建主义和人民大众的矛盾"
+        },
+        "correct_answer": "B",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "16",
+        "question_type": "单选题",
+        "question_text": "毛泽东提出“须知政权是由枪杆子中取得的”著名论断是在（）。",
+        "options": {
+            "A": "瓦窑堡会议",
+            "B": "遵义会议",
+            "C": "古田会议",
+            "D": "八七会议"
+        },
+        "correct_answer": "D",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "17",
+        "question_type": "单选题",
+        "question_text": "人民军队的唯一宗旨是（）。",
+        "options": {
+            "A": "坚持党对军队的绝对领导",
+            "B": "民主建军",
+            "C": "坚持正确的战略战术",
+            "D": "全心全意为人民服务"
+        },
+        "correct_answer": "D",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "18",
+        "question_type": "单选题",
+        "question_text": "完整表述新民主主义革命总路线是在（）。",
+        "options": {
+            "A": "抗日战争时期",
+            "B": "国民革命时期",
+            "C": "土地革命战争时期",
+            "D": "解放战争时期"
+        },
+        "correct_answer": "D",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "19",
+        "question_type": "单选题",
+        "question_text": "中国革命的首要对象是（）。",
+        "options": {
+            "A": "北洋军阀",
+            "B": "封建地主",
+            "C": "帝国主义",
+            "D": "官僚资本主义"
+        },
+        "correct_answer": "C",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "20",
+        "question_type": "单选题",
+        "question_text": "新民主主义社会是（）。",
+        "options": {
+            "A": "过渡性的社会形态",
+            "B": "独立的社会形态",
+            "C": "固定不变的社会",
+            "D": "共产主义社会的初级阶段"
+        },
+        "correct_answer": "A",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "21",
+        "question_type": "单选题",
+        "question_text": "新民主主义国家制度的核心内容和基本准则是（）。",
+        "options": {
+            "A": "无产阶级专政",
+            "B": "资产阶级专政",
+            "C": "人民当家作主",
+            "D": "工农联盟"
+        },
+        "correct_answer": "C",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "22",
+        "question_type": "单选题",
+        "question_text": "加强党的组织建设，根本在于（）。",
+        "options": {
+            "A": "人民群众支持",
+            "B": "建立无产阶级思想",
+            "C": "具备优良作风",
+            "D": "贯彻民主集中制"
+        },
+        "correct_answer": "D",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "23",
+        "question_type": "单选题",
+        "question_text": "加强党的建设，必须放在首位的是（）。",
+        "options": {
+            "A": "理论建设",
+            "B": "作风建设",
+            "C": "组织建设",
+            "D": "思想建设"
+        },
+        "correct_answer": "D",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "24",
+        "question_type": "单选题",
+        "question_text": "近代中国的社会性质和主要矛盾决定中国革命仍是（）。",
+        "options": {
+            "A": "社会主义革命",
+            "B": "资产阶级民主革命",
+            "C": "旧民主主义革命",
+            "D": "农民起义"
+        },
+        "correct_answer": "B",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "25",
+        "question_type": "单选题",
+        "question_text": "毛泽东率领队伍创建了井冈山根据地，把武装斗争的主攻方向首先指向了（）。",
+        "options": {
+            "A": "城郊",
+            "B": "工厂",
+            "C": "城市",
+            "D": "农村"
+        },
+        "correct_answer": "D",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "26",
+        "question_type": "单选题",
+        "question_text": "中国革命的主力军是（）。",
+        "options": {
+            "A": "民族资产阶级",
+            "B": "农民",
+            "C": "工人",
+            "D": "城市小资产阶级"
+        },
+        "correct_answer": "B",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "27",
+        "question_type": "单选题",
+        "question_text": "土地革命的主要和直接任务是（）。",
+        "options": {
+            "A": "保护民族工商业",
+            "B": "满足贫雇农群众要求",
+            "C": "废除封建经济形式",
+            "D": "没收官僚资本"
+        },
+        "correct_answer": "B",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "28",
+        "question_type": "单选题",
+        "question_text": "实现领导权的根本保证是（）。",
+        "options": {
+            "A": "坚持独立自主原则",
+            "B": "工农联盟",
+            "C": "无产阶级政党建设",
+            "D": "强大的武装"
+        },
+        "correct_answer": "C",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "29",
+        "question_type": "单选题",
+        "question_text": "毛泽东阐述新民主主义的政治、经济、文化的著作是（）。",
+        "options": {
+            "A": "《中国社会各阶级分析》",
+            "B": "《新民主主义论》",
+            "C": "《论联合政府》",
+            "D": "《在晋绥干部会议上的讲话》"
+        },
+        "correct_answer": "B",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "30",
+        "question_type": "单选题",
+        "question_text": "新民主主义文化是（）。",
+        "options": {
+            "A": "无产阶级领导的人民大众的反帝反封建的文化",
+            "B": "儒家文化",
+            "C": "资本主义文化",
+            "D": "道家文化"
+        },
+        "correct_answer": "A",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "31",
+        "question_type": "单选题",
+        "question_text": "解决中国革命问题的基本前提是（）。",
+        "options": {
+            "A": "学习马克思主义",
+            "B": "推翻帝国主义",
+            "C": "推翻封建主义",
+            "D": "认清中国国情"
+        },
+        "correct_answer": "D",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "32",
+        "question_type": "单选题",
+        "question_text": "近代中国的社会性质是（）",
+        "options": {
+            "A": "封建社会",
+            "B": "资本主义社会",
+            "C": "半殖民地半封建社会",
+            "D": "社会主义社会"
+        },
+        "correct_answer": "C",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "33",
+        "question_type": "单选题",
+        "question_text": "中国革命最基本的动力是（）。",
+        "options": {
+            "A": "城市小资产阶级",
+            "B": "民族资产阶级",
+            "C": "无产阶级",
+            "D": "农民阶级"
+        },
+        "correct_answer": "C",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "34",
+        "question_type": "单选题",
+        "question_text": "中国革命走农村包围城市、武装夺取政权的道路，根本在于处理好（）。",
+        "options": {
+            "A": "工人阶级、农民阶级、民族资产阶级三者之间的关系",
+            "B": "统一战线、武装斗争、党的建设三者之间的关系",
+            "C": "土地革命、武装斗争、农村革命根据地建设三者之间的关系",
+            "D": "进步势力、中间势力、顽固势力三者之间的关系"
+        },
+        "correct_answer": "C",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "35",
+        "question_type": "单选题",
+        "question_text": "在统一战线中对顽固势力坚持的策略方针是（）。",
+        "options": {
+            "A": "争取",
+            "B": "彻底消灭",
+            "C": "发展",
+            "D": "孤立"
+        },
+        "correct_answer": "D",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "36",
+        "question_type": "单选题",
+        "question_text": "为新民主主义革命指明具体奋斗目标的是（）。",
+        "options": {
+            "A": "民主革命纲领",
+            "B": "新民主主义的基本纲领",
+            "C": "共同纲领",
+            "D": "中国共产党纲领"
+        },
+        "correct_answer": "B",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "37",
+        "question_type": "单选题",
+        "question_text": "抗日战争时期的主要矛盾是（）。",
+        "options": {
+            "A": "民族矛盾",
+            "B": "阶级矛盾",
+            "C": "敌我矛盾",
+            "D": "帝国主义间的矛盾"
+        },
+        "correct_answer": "A",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "38",
+        "question_type": "单选题",
+        "question_text": "新民主主义革命的指导思想是（）。",
+        "options": {
+            "A": "三民主义",
+            "B": "毛泽东思想",
+            "C": "马克思列宁主义",
+            "D": "新三民主义"
+        },
+        "correct_answer": "C",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "39",
+        "question_type": "单选题",
+        "question_text": "中国革命的前途是（）。",
+        "options": {
+            "A": "共产主义",
+            "B": "新民主主义",
+            "C": "资本主义",
+            "D": "社会主义"
+        },
+        "correct_answer": "D",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "40",
+        "question_type": "多选题",
+        "question_text": "中国无产阶级自身具有的特点是（）。",
+        "options": {
+            "A": "深受帝国主义、封建主义和官僚资本主义三重压迫",
+            "B": "富于组织性和纪律性",
+            "C": "分布集中，有利于无产阶级队伍的组织和团结",
+            "D": "大部分出身于破产的农民，和农民有着天然的联系"
+        },
+        "correct_answer": "ACD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "41",
+        "question_type": "多选题",
+        "question_text": "新民主主义文化是（）。",
+        "options": {
+            "A": "大众的",
+            "B": "科学的",
+            "C": "民族的",
+            "D": "无产阶级领导的"
+        },
+        "correct_answer": "ABCD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "42",
+        "question_type": "多选题",
+        "question_text": "新民主主义革命与旧民主主义革命相比有其新的内容和特点（）。",
+        "options": {
+            "A": "革命的指导思想是马克思列宁主义",
+            "B": "革命的前途是社会主义而不是资本主义",
+            "C": "中国新民主主义革命处于世界无产阶级社会主义革命的时代，是世界无产阶级社会主义革命的一部分",
+            "D": "革命的领导力量是中国无产阶级及其先锋队一中国共产党"
+        },
+        "correct_answer": "ABCD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "43",
+        "question_type": "多选题",
+        "question_text": "中国共产党在加强自身建设中积累了丰富的经验，归纳起来主要有(）。",
+        "options": {
+            "A": "必须在任何时候都重视党的组织建设",
+            "B": "必须重视党的作风建设",
+            "C": "必须把思想建设始终放在党的建设的首位",
+            "D": "必须联系党的政治路线加强党的建设"
+        },
+        "correct_answer": "ABCD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "44",
+        "question_type": "多选题",
+        "question_text": "毛泽东指出：“全世界多种多样的国家体制按其政权的阶级性质划分，基本不外乎以下几种形式（）。",
+        "options": {
+            "A": "资产阶级专政的共和国",
+            "B": "垄断资产阶级专政的共和国",
+            "C": "无产阶级专政的共和国",
+            "D": "几个革命阶级联合专政的共和国"
+        },
+        "correct_answer": "ACD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "45",
+        "question_type": "多选题",
+        "question_text": "新民主主义革命与社会主义革命性质不同，是因为新民主主义革命（）。",
+        "options": {
+            "A": "在政治上争取和联合民族资产阶级去反对共同的敌人",
+            "B": "仍然属于资产阶级民主主义革命的范畴",
+            "C": "在经济上保护民族工商业",
+            "D": "要建立的是无产阶级领导的各革命阶级的联合专政"
+        },
+        "correct_answer": "ABCD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "46",
+        "question_type": "多选题",
+        "question_text": "中国的民族资产阶级（）。",
+        "options": {
+            "A": "是中国革命的动力之一",
+            "B": "具有一定的反帝反封建的革命性",
+            "C": "中国共产党必须对民族资产阶级实行既联合又斗争的政策",
+            "D": "没有彻底的反帝反封建的勇气，具有妥协性和动摇性"
+        },
+        "correct_answer": "ABCD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "47",
+        "question_type": "多选题",
+        "question_text": "新民主主义革命的法宝是（）。",
+        "options": {
+            "A": "党的建设",
+            "B": "独立自主",
+            "C": "武装斗争",
+            "D": "统一战线"
+        },
+        "correct_answer": "ACD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "48",
+        "question_type": "多选题",
+        "question_text": "党在长期斗争中形成的三大优良作风(）。",
+        "options": {
+            "A": "为人民服务",
+            "B": "理论联系实际",
+            "C": "批评与自我批评",
+            "D": "密切联系群众"
+        },
+        "correct_answer": "BCD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "49",
+        "question_type": "多选题",
+        "question_text": "毛泽东在《在晋绥干部会议上的讲话》中完整地概括了新民主主义革命总路线的内容是（）。",
+        "options": {
+            "A": "反帝国主义、封建主义和官僚资本主义",
+            "B": "无产阶级领导的",
+            "C": "人民大众的",
+            "D": "武装斗争的"
+        },
+        "correct_answer": "ABC",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "50",
+        "question_type": "多选题",
+        "question_text": "新民主主义革命和社会主义革命的关系是（）。",
+        "options": {
+            "A": "社会主义革命是新民主主义革命的必然趋势",
+            "B": "新民主主义革命与社会主义革命的任务相同",
+            "C": "新民主主义革命是社会主义革命的必要准备",
+            "D": "两个革命之间需要有一个资本主义的过渡阶段"
+        },
+        "correct_answer": "AC",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "51",
+        "question_type": "多选题",
+        "question_text": "鸦片战争后，帝国主义的不断入侵，改变了中国社会发展的轨道，使社会性质发生了两个根本性的变化（）。",
+        "options": {
+            "A": "独立的中国逐步沦为半殖民地的国家",
+            "B": "完全沦为殖民地国家",
+            "C": "资本主义发展壮大",
+            "D": "封建的中国逐步变为半封建的中国"
+        },
+        "correct_answer": "AD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "52",
+        "question_type": "多选题",
+        "question_text": "新民主主义革命时期，以国共合作为基础建立的统一战线包括（）。",
+        "options": {
+            "A": "第一次国共合作统一战线",
+            "B": "人民民主统一战线",
+            "C": "工农民主统一战线",
+            "D": "抗日民族统一战线"
+        },
+        "correct_answer": "AD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "53",
+        "question_type": "多选题",
+        "question_text": "新民主主义革命理论的意义有（）。",
+        "options": {
+            "A": "新民主主义革命理论是马克思主义中国化时代化的重要理论成果，开辟了马克思主义中国化时代化的发展道路",
+            "B": "新民主主义革命理论极大地丰富了马克思主义的理论宝库",
+            "C": "新民主主义革命理论是从中国革命的实际出发，不拘泥于已有的结论，运用马克思主义的立场、观点和方法，独立自主地对中国革命实际问题作出的分析和研究，是对中国革命实践经验的概括和总结，是中国共产党集体智慧的结晶",
+            "D": "新民主主义革命理论，揭示了近代中国革命发展的客观规律，解决了中国革命的一系列理论问题，科学地回答了中国革命向何处去的问题，以及中国革命的发展阶段问题"
+        },
+        "correct_answer": "ABCD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "54",
+        "question_type": "多选题",
+        "question_text": "以下关于新民主主义革命道路的阐述正确的是（）。",
+        "options": {
+            "A": "土地革命是中国革命的基本内容",
+            "B": "武装斗争是中国革命的主要形式",
+            "C": "农村革命根据地是中国革命的战略阵地",
+            "D": "土地革命是中国革命的主要形式"
+        },
+        "correct_answer": "ABC",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "55",
+        "question_type": "多选题",
+        "question_text": "五四运动爆发于民族危难之际，五四运动标志着（）。",
+        "options": {
+            "A": "十月革命的爆发",
+            "B": "中国无产阶级成为革命的领导力量登上历史舞台",
+            "C": "马克思列宁主义成为革命的指导思想",
+            "D": "中国革命进入新民主主义革命阶段"
+        },
+        "correct_answer": "BCD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "56",
+        "question_type": "多选题",
+        "question_text": "农民问题是中国革命的基本问题。以下说法正确的有(）。",
+        "options": {
+            "A": "农民是中国革命的主力军",
+            "B": "农民阶级是近代中国最革命最进步的阶级",
+            "C": "新民主主义革命实质上就是中国共产党领导下的农民革命",
+            "D": "中国革命战争实质上就是党领导下的农民战争"
+        },
+        "correct_answer": "ACD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "57",
+        "question_type": "多选题",
+        "question_text": "以下属于旧民主主义革命范畴的是（）。",
+        "options": {
+            "A": "义和团运动",
+            "B": "太平天国运动",
+            "C": "洋务运动",
+            "D": "戊戌变法"
+        },
+        "correct_answer": "ABCD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "58",
+        "question_type": "多选题",
+        "question_text": "近代中国社会的性质和主要矛盾，决定了近代中国革命的根本任务是（）。",
+        "options": {
+            "A": "推翻封建主义的统治",
+            "B": "扫清军阀统治",
+            "C": "推翻官僚资本主义的统治",
+            "D": "推翻帝国主义的统治"
+        },
+        "correct_answer": "ACD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "59",
+        "question_type": "多选题",
+        "question_text": "毛泽东系统地论述了统一战线、武装斗争和党的建设三者之间的关系，他们三者的关系是（）。",
+        "options": {
+            "A": "统一战线和武装斗争是中国革命的两个基本特点和战胜敌人的基本武器",
+            "B": "统一战线是实行武装斗争的统一战线",
+            "C": "党的组织是掌握统一战线和武装斗争实行对敌人冲锋陷阵的英勇战士",
+            "D": "武装斗争是统一战线的中心支柱"
+        },
+        "correct_answer": "ABCD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "60",
+        "question_type": "多选题",
+        "question_text": "新民主主义革命的对象是（）。",
+        "options": {
+            "A": "官僚资本主义",
+            "B": "帝国主义",
+            "C": "民族资产阶级",
+            "D": "封建主义"
+        },
+        "correct_answer": "ABD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "61",
+        "question_type": "多选题",
+        "question_text": "关于近代中国半殖民地半封建社会的主要矛盾，下列说法正确的是（）。",
+        "options": {
+            "A": "帝国主义和中华民族的矛盾",
+            "B": "帝国主义和中华民族的矛盾又是各种矛盾中最主要的矛盾",
+            "C": "资产阶级与农民阶级的矛盾",
+            "D": "封建主义和人民大众的矛盾"
+        },
+        "correct_answer": "ABD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "62",
+        "question_type": "多选题",
+        "question_text": "有关无产阶级掌握新民主主义革命领导权的因素有（）。",
+        "options": {
+            "A": "中国官僚资产阶级的软弱无能",
+            "B": "帝国主义不允许中国民族资产阶级建立独立的资产阶级共和国",
+            "C": "中国无产阶级的强大和革命的彻底性",
+            "D": "中国民族资产阶级不愿意也不能够彻底推翻帝国主义和封建势力"
+        },
+        "correct_answer": "BCD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "63",
+        "question_type": "多选题",
+        "question_text": "中国共产党抗日民族统一战线中的策略总方针是（）。",
+        "options": {
+            "A": "发展进步势力",
+            "B": "孤立顽固势力",
+            "C": "打击反动势力",
+            "D": "争取中间势力"
+        },
+        "correct_answer": "ABD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "64",
+        "question_type": "多选题",
+        "question_text": "中国革命分“两步走”，毛泽东把它们比喻为文章的上篇和下篇，是指（）。",
+        "options": {
+            "A": "农民革命",
+            "B": "旧民主主义革命",
+            "C": "新民主主义革命",
+            "D": "社会主义革命"
+        },
+        "correct_answer": "CD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "65",
+        "question_type": "多选题",
+        "question_text": "从新民主主义革命理论的形成来看，（）。",
+        "options": {
+            "A": "没有两次国共合作的实践，就没有关于统一战线的理论",
+            "B": "没有建立和巩固农村革命根据地的实践，就不会有关于中国革命道路的理论",
+            "C": "没有在领导新民主主义革命历程中，党由小到大、由弱到强的实践，就不会有党的建设的理论",
+            "D": "没有革命战争的实践，就不会有建设人民军队和关于革命战争的理论"
+        },
+        "correct_answer": "ABCD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "66",
+        "question_type": "多选题",
+        "question_text": "中国革命统一战线中的两个联盟是（）。",
+        "options": {
+            "A": "工人阶级和非劳动人民的联盟",
+            "B": "农民阶级、小资产阶级的联盟",
+            "C": "工人阶级同农民阶级、广大知识分子及其他劳动者的联盟",
+            "D": "民族资产阶级和大资产阶级的联盟"
+        },
+        "correct_answer": "AC",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "67",
+        "question_type": "多选题",
+        "question_text": "在新民主主义革命时期，党对民族资产阶级采取既联合又斗争的策略是因为(）。",
+        "options": {
+            "A": "民族资产阶级实力弱小",
+            "B": "民族资产阶级具有动摇性和妥协性",
+            "C": "民族资产阶级实力强大",
+            "D": "民族资产阶级具有一定的革命性"
+        },
+        "correct_answer": "BD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "68",
+        "question_type": "多选题",
+        "question_text": "近代中国社会的阶级结构是“两头小中间大”，那么“两头”是指（）。",
+        "options": {
+            "A": "农民阶级",
+            "B": "地主大资产阶级",
+            "C": "无产阶级",
+            "D": "城市小资产阶级"
+        },
+        "correct_answer": "BC",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "69",
+        "question_type": "多选题",
+        "question_text": "中国新民主主义革命的伟大胜利：其重大意义包括（）。",
+        "options": {
+            "A": "极大地增强了世界上被压迫民族和人民反对帝国主义斗争的信心",
+            "B": "开创了中国历史的新纪元",
+            "C": "增强了世界人民争取和平的力量",
+            "D": "有力鼓舞和推动世界上被压迫民族和人民反抗帝国主义、殖民主义的斗争"
+        },
+        "correct_answer": "ABCD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "70",
+        "question_type": "多选题",
+        "question_text": "新民主主义革命时期，党领导的统一战线，先后经过了（）。",
+        "options": {
+            "A": "工农民主统一战线",
+            "B": "抗日民族统一战线",
+            "C": "第一次国共合作统一战线",
+            "D": "人民民主统一战线"
+        },
+        "correct_answer": "ABCD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "71",
+        "question_type": "多选题",
+        "question_text": "毛泽东在1940年1月的《新民主主义论》中第一次提出了中国新民主主义的经济纲领的主要内容是（）。",
+        "options": {
+            "A": "没收封建地主阶级的土地归农民所有",
+            "B": "平均地权",
+            "C": "没收官僚资产阶级的垄断资本归新民主主义的国家所有",
+            "D": "保护民族工商业"
+        },
+        "correct_answer": "ACD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "72",
+        "question_type": "多选题",
+        "question_text": "在新民主主义革命时期，党建立、巩固和发展统一战线的实践经验包括（）。",
+        "options": {
+            "A": "要建立巩固的工农联盟",
+            "B": "要坚持独立自主的原则",
+            "C": "要正确对待资产阶级，尤其是民族资产阶级",
+            "D": "要采取区别对待的方针"
+        },
+        "correct_answer": "ABCD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "73",
+        "question_type": "多选题",
+        "question_text": "在领导农村革命根据地的斗争实践中，毛泽东相继写下的文章有（）。",
+        "options": {
+            "A": "《中国的红色政权为什么能够存在？》",
+            "B": "《井冈山的斗争》",
+            "C": "《中国社会各阶级的分析》",
+            "D": "《星星之火，可以燎原》"
+        },
+        "correct_answer": "ABD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "74",
+        "question_type": "多选题",
+        "question_text": "新民主主义革命属于（）。",
+        "options": {
+            "A": "无产阶级社会主义革命性质",
+            "B": "世界资产阶级革命范畴",
+            "C": "新式的特殊的资产阶级民主主义革命的范畴",
+            "D": "世界无产阶级社会主义革命的一部分"
+        },
+        "correct_answer": "CD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "75",
+        "question_type": "多选题",
+        "question_text": "党在民主革命时期形成的土地革命路线包括（）。",
+        "options": {
+            "A": "有步骤、有分别地消灭封建剥削制度",
+            "B": "发展农业生产",
+            "C": "依靠贫雇农，团结中农",
+            "D": "对农业进行集体化改造"
+        },
+        "correct_answer": "ABC",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "76",
+        "question_type": "多选题",
+        "question_text": "中国城市小资产阶级是无产阶级的可靠同盟者，城市小资产阶级包括有（）。",
+        "options": {
+            "A": "手工业者",
+            "B": "自由职业者",
+            "C": "小商人",
+            "D": "知识分子"
+        },
+        "correct_answer": "ABCD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "77",
+        "question_type": "多选题",
+        "question_text": "新民主主义的基本纲领包括的内容有（）。",
+        "options": {
+            "A": "新民主主义的文化纲领",
+            "B": "新民主主义的政治纲领",
+            "C": "新民主主义的经济纲领",
+            "D": "新民主主义的社会纲领"
+        },
+        "correct_answer": "ABC",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "78",
+        "question_type": "多选题",
+        "question_text": "新民主主义革命的动力包括（）。",
+        "options": {
+            "A": "农民阶级",
+            "B": "民族资产阶级",
+            "C": "城市小资产阶级",
+            "D": "无产阶级"
+        },
+        "correct_answer": "ABCD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "79",
+        "question_type": "多选题",
+        "question_text": "总结党在新民主主义革命时期开展武装斗争的革命经验，建设人民军队必须（）。",
+        "options": {
+            "A": "坚持在农村建立革命根据地",
+            "B": "要坚持党对军队的绝对领导",
+            "C": "要建设全心全意为人民服务的人民军队",
+            "D": "要坚持正确的战略战术原则"
+        },
+        "correct_answer": "BCD",
+        "error_count": 0,
+        "correct_count": 0
+    }
+]
