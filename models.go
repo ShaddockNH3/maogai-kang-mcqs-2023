@@ -7,10 +7,14 @@ import (
 
 // --- 配置常量 ---
 const (
-	questionSourceDir            = "clean_outputs"
-	maxChapterIndex              = 8
+	maogaiQuestionSourceDir      = "maogai_outputs"
+	xigaiQuestionSourceDir       = "xigai_outputs"
+	maogaiMaxChapterIndex        = 8
+	xigaiMaxChapterIndex         = 0 // 习概只有一个章节
 	userDataBaseDir              = "user_data"
-	incorrectQuestionsFile       = "incorrect_questions.json"
+	incorrectQuestionsFile       = "incorrect_questions.json"        // 默认(毛概)错题文件
+	maogaiIncorrectQuestionsFile = "maogai_incorrect_questions.json" // 毛概错题文件
+	xigaiIncorrectQuestionsFile  = "xigai_incorrect_questions.json"  // 习概错题文件
 	deleteIncorrectQuestionsFile = "deleted_incorrect_questions.json"
 	questionStatsFile            = "question_stats.json"
 )
@@ -70,22 +74,29 @@ type UserSession struct {
 	OriginalIncorrect    []UserIncorrectQuestion // Store the full incorrect questions for retrieval
 	CurrentQuestionIndex int                     // Index for session.CurrentQuestions (e.g., /api/review/next)
 	CurrentMode          string                  // "review", "quiz", "incorrect_review"
+	CurrentCourse        string                  // "maogai" or "xigai" - 当前选择的课程
 	mu                   sync.Mutex              // 保护会话内部数据
 }
 
 // --- 请求结构体 ---
 type InitSessionRequest struct {
-	UserID string `json:"user_id" vd:"required,min=1,max=50"` // UserID是必需的，长度1-50
+	UserID string `json:"user_id" vd:"required,min=1,max=50"` // UserID是必需的,长度1-50
 }
 
 type StartModeRequest struct {
 	UserID        string   `json:"user_id" vd:"required"`
+	Course        string   `json:"course" vd:"required"`         // "maogai" 或 "xigai"
 	ChapterChoice []string `json:"chapter_choice" vd:"required"` // 例如 ["0", "1", "all"]
 	OrderChoice   string   `json:"order_choice" vd:"required"`   // "sequential" 或 "random"
 }
 
 type GetNextQuestionRequest struct {
 	UserID string `json:"user_id" vd:"required"`
+}
+
+type StartIncorrectReviewRequest struct {
+	UserID string `json:"user_id" vd:"required"`
+	Course string `json:"course" vd:"required"`
 }
 
 type SubmitAnswerRequest struct {

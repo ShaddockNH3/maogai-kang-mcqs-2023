@@ -47,15 +47,6 @@
             margin-bottom: 10px;
             padding: 10px 15px;
         }
-        .flex {
-            display: flex;
-        }
-        .flex-1 {
-            flex: 1;
-        }
-        .gap-3 {
-            gap: 0.75rem;
-        }
         .btn-primary { background-color: #4299e1; color: white; }
         .btn-primary:hover { background-color: #2b6cb0; }
         .btn-secondary { background-color: #48bb78; color: white; }
@@ -192,72 +183,15 @@
 
 
             <div v-if="currentView === 'mainMenu'">
-                <!-- 课程选择 -->
-                <div class="mb-6">
-                    <h3 class="text-lg font-semibold text-gray-700 mb-3">📚 选择课程</h3>
-                    <div class="flex gap-3">
-                        <button @click="selectedCourse = 'maogai'" 
-                                :class="selectedCourse === 'maogai' ? 'btn-primary' : 'btn-outline'"
-                                class="btn flex-1">
-                            毛概 (9章)
-                        </button>
-                        <button @click="selectedCourse = 'xigai'" 
-                                :class="selectedCourse === 'xigai' ? 'btn-primary' : 'btn-outline'"
-                                class="btn flex-1">
-                            习概 (100题)
-                        </button>
-                    </div>
-                </div>
-
-                <!-- 模式选择 -->
-                <div class="mb-6">
-                    <h3 class="text-lg font-semibold text-gray-700 mb-3">🎯 选择学习模式</h3>
-                    <button @click="selectMode('quickReview')" class="btn btn-primary btn-full-width">
-                        1. 速刷模式 - 快速浏览题目和答案
-                    </button>
-                    <button @click="selectMode('quizMode')" class="btn btn-secondary btn-full-width">
-                        2. 答题模式 - 认真答题并记录统计
-                    </button>
-                    <button @click="selectMode('incorrectReview')" class="btn btn-warning btn-full-width">
-                        3. 错题回顾 - 复习之前答错的题
-                    </button>
-                </div>
-
-                <!-- 设置按钮 -->
-                <button @click="navigateTo('controlMode')" class="btn btn-danger btn-full-width">
-                    ⚙️ 设置与数据管理
-                </button>
-            </div>
-
-            <div v-if="currentView === 'modeSelection'">
-                <h2 class="text-xl font-semibold mb-4 text-gray-700">选择学习模式</h2>
-                <div class="mb-4">
-                    <p class="text-sm text-gray-600">
-                        <strong>当前课程：</strong>
-                        <span class="inline-block px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-semibold">
-                            {{ selectedCourse === 'maogai' ? '毛概' : '习概' }}
-                        </span>
-                    </p>
-                </div>
-                <p class="text-center text-gray-600 mb-6">请选择您想要的学习模式</p>
-                <button @click="selectMode('quickReview')" class="btn btn-primary btn-full-width">1. 速刷模式 - 快速浏览题目和答案</button>
-                <button @click="selectMode('quizMode')" class="btn btn-secondary btn-full-width">2. 答题模式 - 认真答题并记录统计</button>
-                <button @click="selectMode('incorrectReview')" class="btn btn-warning btn-full-width">3. 错题回顾 - 复习之前答错的题</button>
-                <button @click="navigateTo('mainMenu')" class="btn btn-outline btn-full-width mt-4">
-                    返回课程选择
-                </button>
+                <p class="text-center text-gray-600 mb-6">主人，今天想做些什么呢？</p>
+                <button @click="selectMode('quickReview')" class="btn btn-primary btn-full-width">1. 速刷模式</button>
+                <button @click="selectMode('quizMode')" class="btn btn-secondary btn-full-width">2. 答题模式</button>
+                <button @click="selectMode('incorrectReview')" class="btn btn-warning btn-full-width">3. 错题回顾</button>
+                <button @click="navigateTo('controlMode')" class="btn btn-danger btn-full-width">4. 控制模式</button>
             </div>
 
             <div v-if="currentView === 'chapterOrderSelection'">
                 <h2 class="text-xl font-semibold mb-4 text-gray-700">模式设置：{{ modeDisplayName }}</h2>
-                <div class="mb-4">
-                    <p class="text-sm text-gray-600">
-                        <strong>当前课程：</strong>
-                        <span class="inline-block px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-semibold">
-                            {{ selectedCourse === 'maogai' ? '毛概' : '习概' }}
-                        </span>
-                    </p>
-                </div>
                 <div class="mb-6">
                     <label class="block text-gray-700 text-sm font-bold mb-2">选择章节：</label>
                     <div class="chapter-grid">
@@ -268,7 +202,7 @@
                             {{ chapter.text }}
                         </button>
                     </div>
-                    <p class="text-xs text-gray-500 mt-1">{{ selectedCourse === 'xigai' ? '习概只有一个章节，包含100道精选题' : '提示：选择"全部章节"会自动选中所有章节。再次点击已选章节可取消。' }}</p>
+                    <p class="text-xs text-gray-500 mt-1">提示：选择“全部章节”会自动选中所有章节。再次点击已选章节可取消。</p>
                 </div>
                 <div class="mb-6" v-if="activeMode !== 'incorrectReview'">
                     <label class="block text-gray-700 text-sm font-bold mb-2">题目顺序：</label>
@@ -289,9 +223,6 @@
                 </button>
                 <button v-if="activeMode === 'quizMode' && canContinueQuiz" @click="continueLastQuiz" class="btn btn-info btn-full-width mt-2">
                     {{ savedQuizState.isCompleted ? '重答上次题目' : '继续上次答题' }}
-                </button>
-                <button @click="navigateTo('modeSelection')" class="btn btn-outline btn-full-width mt-2">
-                    返回模式选择
                 </button>
             </div>
 
@@ -383,14 +314,7 @@
                 const inputUserId = ref(''); 
 
                 const API_BASE_URL = ''; 
-                const selectedCourse = ref('maogai'); // 默认选择毛概
-                const availableChapters = computed(() => {
-                    if (selectedCourse.value === 'xigai') {
-                        return [{ value: '0', text: '习概题库' }];
-                    } else {
-                        return [...Array.from({ length: 9 }, (_, i) => ({ value: i.toString(), text: `章节 ${i}` })), { value: 'all', text: '全部章节' }];
-                    }
-                });
+                const availableChapters = ref([...Array.from({ length: 9 }, (_, i) => ({ value: i.toString(), text: `章节 ${i}` })), { value: 'all', text: '全部章节' }]);
                 const selectedChapters = ref([]); 
                 const selectedOrder = ref('sequential'); 
                 const activeMode = ref(''); 
@@ -522,7 +446,6 @@
                 watch(currentView, (newView) => { 
                     switch(newView) {
                         case 'mainMenu': viewTitle.value = '喵喵学习小助手'; break;
-                        case 'modeSelection': viewTitle.value = '选择学习模式'; break;
                         case 'chapterOrderSelection': viewTitle.value = `模式设置 - ${modeDisplayName.value}`; break;
                         case 'quickReview': viewTitle.value = '速刷模式'; break;
                         case 'quizMode': viewTitle.value = '答题模式'; break;
@@ -568,28 +491,14 @@
                     jumpToQuestionNumberInput.value = null;
                 };
                 
-                const selectCourse = (course) => {
-                    selectedCourse.value = course;
-                    selectedChapters.value = []; // 清空之前的章节选择
-                    
-                    // 如果是习概，自动选择第0章
-                    if (course === 'xigai') {
-                        selectedChapters.value = ['0'];
-                    }
-                };
-                
                 const selectMode = (mode) => { 
                     if (!userId.value) {
                         errorMessage.value = "用户ID丢失，请重新输入用户ID或刷新页面。";
                         return;
                     }
-                    
-                    // 如果是习概，自动选择第0章
-                    if (selectedCourse.value === 'xigai' && !selectedChapters.value.includes('0')) {
-                        selectedChapters.value = ['0'];
-                    }
-                    
                     activeMode.value = mode; 
+                    selectedChapters.value = []; 
+                    selectedOrder.value = 'sequential'; 
                     
                     if (mode === 'quickReview') modeDisplayName.value = '速刷模式';
                     else if (mode === 'quizMode') modeDisplayName.value = '答题模式';
@@ -642,10 +551,7 @@
                     resetModeState(); 
 
                     let url = '';
-                    let requestBody = { 
-                        user_id: userId.value,
-                        course: selectedCourse.value
-                    };
+                    let requestBody = { user_id: userId.value };
 
                     if (activeMode.value === 'quickReview' || activeMode.value === 'quizMode') {
                         url = activeMode.value === 'quickReview' ? `${API_BASE_URL}/api/review/start` : `${API_BASE_URL}/api/quiz/start`;
@@ -786,12 +692,7 @@
                     let userAnswerString = '';
                     if (currentQuestion.value?.question_type === '多选题') {
                         userAnswerString = Array.isArray(selectedAnswers.value) ? [...selectedAnswers.value].sort().join('') : '';
-                    } else { 
-                        // 单选题：确保返回字符串而不是数组
-                        userAnswerString = Array.isArray(selectedAnswers.value) 
-                            ? (selectedAnswers.value.length > 0 ? selectedAnswers.value[0] : '') 
-                            : (selectedAnswers.value || '');
-                    }
+                    } else { userAnswerString = selectedAnswers.value || ''; }
 
                     if ((currentQuestion.value?.question_type === '单选题' && !userAnswerString) ||
                         (currentQuestion.value?.question_type === '多选题' && userAnswerString.length === 0)) {
@@ -829,7 +730,6 @@
                             user_answer: userAnswerString,
                             was_correct: isCurrentAnswerCorrect.value 
                         };
-                        console.log('[DEBUG] 提交答案:', JSON.stringify(requestBody, null, 2));
                         fetch(url, { 
                             method: 'POST', 
                             headers: { 'Content-Type': 'application/json' }, 
@@ -855,10 +755,7 @@
                         const response = await fetch(`${API_BASE_URL}/api/incorrect_questions/review/start`, {
                             method: 'POST',
                             headers: { 'Content-Type': 'application/json' },
-                            body: JSON.stringify({ 
-                                user_id: userId.value,
-                                course: selectedCourse.value
-                            })
+                            body: JSON.stringify({ user_id: userId.value })
                         });
                         if (!response.ok) { 
                             const errBody = await response.text();
@@ -1023,13 +920,13 @@
 
                 return {
                     isLoading, errorMessage, userIdError, currentView, viewTitle, userId, inputUserId,
-                    availableChapters, selectedChapters, selectedOrder, selectedCourse,
+                    availableChapters, selectedChapters, selectedOrder,
                     activeMode, modeDisplayName,
                     allModeQuestions, currentQuestion, totalQuestions, originalTotalQuestions, isQuizCompleted, currentQuestionIndex,
                     selectedAnswers, quizModeState, feedbackMessage, isCurrentAnswerCorrect, quizResults,
                     isInQuestionView, showNextButton,
                     showJumpInput, jumpToQuestionNumberInput,
-                    navigateTo, goBackToMenu, selectCourse, selectMode, toggleChapterSelection, startSelectedMode,
+                    navigateTo, goBackToMenu, selectMode, toggleChapterSelection, startSelectedMode,
                     fetchNextQuestion, submitAnswerForMode, 
                     startIncorrectReview,
                     deleteCurrentIncorrectQuestion,

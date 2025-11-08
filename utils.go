@@ -21,16 +21,18 @@ import (
 )
 
 var (
-	allQuestionsByChapter map[string][]Question   // 存储按章节划分的所有题目
-	questionMapByID       map[string]Question     // 通过唯一ID (章节_索引) 快速查找原始题目
-	userSessions          map[string]*UserSession // 内存中的用户会话
-	sessionsMu            sync.RWMutex            // 保护 userSessions 映射
+	maogaiQuestionsByChapter map[string][]Question   // 毛概题目
+	xigaiQuestionsByChapter  map[string][]Question   // 习概题目
+	questionMapByID          map[string]Question     // 通过唯一ID (课程_章节_索引) 快速查找原始题目
+	userSessions             map[string]*UserSession // 内存中的用户会话
+	sessionsMu               sync.RWMutex            // 保护 userSessions 映射
 )
 
 // init 在程序启动时执行初始化操作
 func init() {
 	rand.Seed(time.Now().UnixNano()) // 初始化随机数生成器
-	allQuestionsByChapter = make(map[string][]Question)
+	maogaiQuestionsByChapter = make(map[string][]Question)
+	xigaiQuestionsByChapter = make(map[string][]Question)
 	questionMapByID = make(map[string]Question)
 	userSessions = make(map[string]*UserSession)
 
@@ -44,36 +46,62 @@ func init() {
 // loadAllQuestionsGlobal 从文件加载所有章节的题目到全局变量
 func loadAllQuestionsGlobal() {
 	log.Println("喵~ 正在努力加载全局题库中...")
-	for i := 0; i <= maxChapterIndex; i++ {
+
+	// 加载毛概题库
+	log.Println("加载毛概题库...")
+	for i := 0; i <= maogaiMaxChapterIndex; i++ {
 		chapterKey := strconv.Itoa(i)
-		filePath := filepath.Join(questionSourceDir, chapterKey+".json")
-		fileData, err := ioutil.ReadFile(filePath)
-		if err != nil {
-			log.Printf("喵~ 提示：章节 %s 的题库文件 (%s) 没找到呢，跳过这个章节啦。错误: %v", chapterKey, filePath, err)
-			allQuestionsByChapter[chapterKey] = []Question{} // 即使文件不存在，也初始化为空列表
-			continue
-		}
-
-		var questionsInChapter []Question
-		if err := json.Unmarshal(fileData, &questionsInChapter); err != nil {
-			log.Printf("喵呜！错误：解析章节 %s 的题库文件 (%s) 失败了。错误: %v", chapterKey, filePath, err)
-			allQuestionsByChapter[chapterKey] = []Question{} // 解析失败也初始化为空列表
-			continue
-		}
-
-		for idx := range questionsInChapter {
-			questionsInChapter[idx].OriginalChapterKey = chapterKey
-			questionsInChapter[idx].OriginalIndex = idx
-			// 使用 "章节号_题目在文件中的索引" 作为唯一ID
-			questionID := fmt.Sprintf("%s_%d", chapterKey, idx)
-			questionMapByID[questionID] = questionsInChapter[idx]
-		}
-		allQuestionsByChapter[chapterKey] = questionsInChapter
+		filePath := filepath.Join(maogaiQuestionSourceDir, chapterKey+".json")
+		loadChapterQuestions(filePath, chapterKey, "maogai", maogaiQuestionsByChapter)
 	}
+
+	// 加载习概题库
+	log.Println("加载习概题库...")
+	for i := 0; i <= xigaiMaxChapterIndex; i++ {
+		chapterKey := strconv.Itoa(i)
+		filePath := filepath.Join(xigaiQuestionSourceDir, chapterKey+".json")
+		loadChapterQuestions(filePath, chapterKey, "xigai", xigaiQuestionsByChapter)
+	}
+
 	log.Println("喵~ 全局题库加载完毕！")
 }
 
+// loadChapterQuestions 加载单个章节的题目
+func loadChapterQuestions(filePath, chapterKey, course string, targetMap map[string][]Question) {
+	fileData, err := ioutil.ReadFile(filePath)
+	if err != nil {
+		log.Printf("喵~ 提示：章节 %s (%s) 的题库文件 (%s) 没找到呢,跳过这个章节啦。错误: %v", chapterKey, course, filePath, err)
+		targetMap[chapterKey] = []Question{} // 即使文件不存在,也初始化为空列表
+		return
+	}
+
+	var questionsInChapter []Question
+	if err := json.Unmarshal(fileData, &questionsInChapter); err != nil {
+		log.Printf("喵呜！错误：解析章节 %s (%s) 的题库文件 (%s) 失败了。错误: %v", chapterKey, course, filePath, err)
+		targetMap[chapterKey] = []Question{} // 解析失败也初始化为空列表
+		return
+	}
+
+	for idx := range questionsInChapter {
+		questionsInChapter[idx].OriginalChapterKey = chapterKey
+		questionsInChapter[idx].OriginalIndex = idx
+		// 使用 "课程_章节号_题目在文件中的索引" 作为唯一ID
+		questionID := fmt.Sprintf("%s_%s_%d", course, chapterKey, idx)
+		questionMapByID[questionID] = questionsInChapter[idx]
+	}
+	targetMap[chapterKey] = questionsInChapter
+	log.Printf("加载了 %d 道 %s 第%s章题目", len(questionsInChapter), course, chapterKey)
+}
+
 // --- 用户数据持久化帮助函数 ---
+
+// getIncorrectQuestionsFileName 根据课程返回对应的错题文件名
+func getIncorrectQuestionsFileName(course string) string {
+	if course == "xigai" {
+		return xigaiIncorrectQuestionsFile
+	}
+	return maogaiIncorrectQuestionsFile
+}
 
 // getUserDataPath 获取用户特定数据文件的完整路径
 func getUserDataPath(userID, fileName string) string {
@@ -167,11 +195,23 @@ func getOrCreateUserSession(userID string) *UserSession {
 	return newSession
 }
 
-// _getQuestionsForProcessing 根据章节和顺序选择，从全局题库中筛选和排序题目
-func _getQuestionsForProcessing(chapterChoices []string, orderChoice string) []Question {
+// _getQuestionsForProcessing 根据章节和顺序选择,从全局题库中筛选和排序题目
+func _getQuestionsForProcessing(course string, chapterChoices []string, orderChoice string) []Question {
 	var questionsToProcess []Question
 	var targetChapterKeys []string
 	isSelectAll := false
+
+	// 根据课程选择题库和最大章节索引
+	var questionsByChapter map[string][]Question
+	var maxChapterIdx int
+
+	if course == "xigai" {
+		questionsByChapter = xigaiQuestionsByChapter
+		maxChapterIdx = xigaiMaxChapterIndex
+	} else {
+		questionsByChapter = maogaiQuestionsByChapter
+		maxChapterIdx = maogaiMaxChapterIndex
+	}
 
 	for _, choice := range chapterChoices {
 		if strings.ToLower(choice) == "all" || choice == "9" { // "9" 作为 "all" 的别名兼容旧版或简化输入
@@ -181,7 +221,7 @@ func _getQuestionsForProcessing(chapterChoices []string, orderChoice string) []Q
 	}
 
 	if isSelectAll {
-		for i := 0; i <= maxChapterIndex; i++ { // 加载0到maxChapterIndex的所有章节
+		for i := 0; i <= maxChapterIdx; i++ { // 加载0到maxChapterIdx的所有章节
 			targetChapterKeys = append(targetChapterKeys, strconv.Itoa(i))
 		}
 		// 确保章节键按数字顺序排列
@@ -194,26 +234,26 @@ func _getQuestionsForProcessing(chapterChoices []string, orderChoice string) []Q
 		// 只加载用户选择的特定章节
 		for _, choice := range chapterChoices {
 			if _, err := strconv.Atoi(choice); err == nil { // 确保 choice 是一个有效的数字字符串
-				if _, ok := allQuestionsByChapter[choice]; ok { // 确保章节数据存在
+				if _, ok := questionsByChapter[choice]; ok { // 确保章节数据存在
 					targetChapterKeys = append(targetChapterKeys, choice)
 				} else {
-					log.Printf("警告: 请求的章节 %s 在题库中不存在，已跳过。", choice)
+					log.Printf("警告: 请求的章节 %s (%s) 在题库中不存在,已跳过。", choice, course)
 				}
 			} else {
-				log.Printf("警告: 无效的章节选择 %s，已跳过。", choice)
+				log.Printf("警告: 无效的章节选择 %s,已跳过。", choice)
 			}
 		}
 	}
 
 	for _, chapKey := range targetChapterKeys {
-		chapterQuestions, ok := allQuestionsByChapter[chapKey]
+		chapterQuestions, ok := questionsByChapter[chapKey]
 		if ok {
 			questionsToProcess = append(questionsToProcess, chapterQuestions...)
 		}
 	}
 
 	if len(questionsToProcess) == 0 {
-		return []Question{} // 如果没有选出任何题目，返回空切片
+		return []Question{} // 如果没有选出任何题目,返回空切片
 	}
 
 	// 根据选择的顺序处理题目
@@ -222,7 +262,7 @@ func _getQuestionsForProcessing(chapterChoices []string, orderChoice string) []Q
 			questionsToProcess[i], questionsToProcess[j] = questionsToProcess[j], questionsToProcess[i]
 		})
 	}
-	// 如果是 "sequential" 或 "0" (或任何其他值)，则按原始顺序（章节顺序，章节内题目顺序）
+	// 如果是 "sequential" 或 "0" (或任何其他值),则按原始顺序（章节顺序,章节内题目顺序）
 	return questionsToProcess
 }
 
@@ -230,12 +270,12 @@ func _getQuestionsForProcessing(chapterChoices []string, orderChoice string) []Q
 
 // convertQuestionsToOutput 将原始 Question 结构体列表转换为 QuestionOutput 列表，用于API响应。
 // 始终包含答案。
-func convertQuestionsToOutput(questions []Question, sessionIndexOffset int) []QuestionOutput {
+func convertQuestionsToOutput(questions []Question, sessionIndexOffset int, course string) []QuestionOutput {
 	output := make([]QuestionOutput, len(questions))
 	for i, q := range questions {
 		output[i] = QuestionOutput{
-			QuizQuestionID:         fmt.Sprintf("quiz_%s_%d", q.OriginalChapterKey, q.OriginalIndex), // 唯一ID，格式: quiz_章节_原始索引
-			DisplayNumber:          sessionIndexOffset + i + 1,                                       // 基于最终列表的显示序号 (1-based)
+			QuizQuestionID:         fmt.Sprintf("quiz_%s_%s_%d", course, q.OriginalChapterKey, q.OriginalIndex), // 唯一ID，格式: quiz_课程_章节_原始索引
+			DisplayNumber:          sessionIndexOffset + i + 1,                                                  // 基于最终列表的显示序号 (1-based)
 			OriginalChapter:        q.OriginalChapterKey,
 			OriginalQuestionNumber: q.QuestionNumber,
 			QuestionType:           q.QuestionType,
@@ -249,13 +289,13 @@ func convertQuestionsToOutput(questions []Question, sessionIndexOffset int) []Qu
 
 // convertUserIncorrectToOutput 将用户错题列表 UserIncorrectQuestion 转换为 QuestionOutput 列表。
 // 始终包含答案。
-func convertUserIncorrectToOutput(incorrectQs []UserIncorrectQuestion, sessionIndexOffset int) []QuestionOutput {
+func convertUserIncorrectToOutput(incorrectQs []UserIncorrectQuestion, sessionIndexOffset int, course string) []QuestionOutput {
 	output := make([]QuestionOutput, len(incorrectQs))
 	for i, iq := range incorrectQs {
 		// 为错题生成一个唯一的 QuizQuestionID，可以加上时间戳或随机数以区分同一道题的多次回顾（如果需要）
 		// 这里简化处理，基于原始章节和题号，加上列表索引
 		output[i] = QuestionOutput{
-			QuizQuestionID:         fmt.Sprintf("incorrect_%s_%s_%d", iq.OriginalChapter, iq.QuestionNumber, sessionIndexOffset+i),
+			QuizQuestionID:         fmt.Sprintf("incorrect_%s_%s_%s_%d", course, iq.OriginalChapter, iq.QuestionNumber, sessionIndexOffset+i),
 			DisplayNumber:          sessionIndexOffset + i + 1,
 			OriginalChapter:        iq.OriginalChapter,
 			OriginalQuestionNumber: iq.QuestionNumber,
@@ -329,20 +369,21 @@ func QuickReviewStartHandler(ctx context.Context, c *app.RequestContext) {
 	session.mu.Lock() // 如果要修改会话状态（如 CurrentMode），则加锁
 	defer session.mu.Unlock()
 
-	selectedQuestions := _getQuestionsForProcessing(req.ChapterChoice, req.OrderChoice)
+	selectedQuestions := _getQuestionsForProcessing(req.Course, req.ChapterChoice, req.OrderChoice)
 	if len(selectedQuestions) == 0 {
 		c.JSON(consts.StatusOK, utils.H{"message": "所选范围没有题目。", "total_questions": 0, "questions": []QuestionOutput{}})
 		return
 	}
 
-	outputQuestions := convertQuestionsToOutput(selectedQuestions, 0) // 0 表示从列表开头计数
-	session.CurrentMode = "review"                                    // 设置当前模式
+	outputQuestions := convertQuestionsToOutput(selectedQuestions, 0, req.Course) // 0 表示从列表开头计数
+	session.CurrentMode = "review"                                                // 设置当前模式
+	session.CurrentCourse = req.Course                                            // 设置当前课程
 	// 如果 /api/review/next 仍然用于逐步获取，则需要存储这些问题
 	// 否则，如果前端一次性处理所有问题，这一步可以省略或用于其他目的
 	session.CurrentQuestions = outputQuestions
 	session.CurrentQuestionIndex = 0 // 从第一题开始
 
-	log.Printf("用户 %s 开始速刷模式，章节: %v, 顺序: %s, 返回 %d 题", req.UserID, req.ChapterChoice, req.OrderChoice, len(outputQuestions))
+	log.Printf("用户 %s 开始速刷模式，课程: %s, 章节: %v, 顺序: %s, 返回 %d 题", req.UserID, req.Course, req.ChapterChoice, req.OrderChoice, len(outputQuestions))
 	c.JSON(consts.StatusOK, utils.H{
 		"message":         "速刷模式开始",
 		"total_questions": len(outputQuestions),
@@ -396,20 +437,21 @@ func QuizStartHandler(ctx context.Context, c *app.RequestContext) {
 	session.mu.Lock()
 	defer session.mu.Unlock()
 
-	selectedQuestions := _getQuestionsForProcessing(req.ChapterChoice, req.OrderChoice)
+	selectedQuestions := _getQuestionsForProcessing(req.Course, req.ChapterChoice, req.OrderChoice)
 	if len(selectedQuestions) == 0 {
 		c.JSON(consts.StatusOK, utils.H{"message": "所选范围没有题目。", "total_questions": 0, "questions": []QuestionOutput{}})
 		return
 	}
 
-	outputQuestions := convertQuestionsToOutput(selectedQuestions, 0)
-	session.CurrentMode = "quiz" // 设置模式，用于提交答案时的上下文
+	outputQuestions := convertQuestionsToOutput(selectedQuestions, 0, req.Course)
+	session.CurrentMode = "quiz"       // 设置模式，用于提交答案时的上下文
+	session.CurrentCourse = req.Course // 设置当前课程
 
 	// 如果前端完全管理题目列表和导航，则不在会话中存储 CurrentQuestions 和 CurrentQuestionIndex
 	// session.CurrentQuestions = outputQuestions
 	// session.CurrentQuestionIndex = 0
 
-	log.Printf("用户 %s 开始答题模式，章节: %v, 顺序: %s, 返回 %d 题", req.UserID, req.ChapterChoice, req.OrderChoice, len(outputQuestions))
+	log.Printf("用户 %s 开始答题模式，课程: %s, 章节: %v, 顺序: %s, 返回 %d 题", req.UserID, req.Course, req.ChapterChoice, req.OrderChoice, len(outputQuestions))
 	c.JSON(consts.StatusOK, utils.H{
 		"message":         "答题模式开始",
 		"total_questions": len(outputQuestions),
@@ -422,19 +464,34 @@ func QuizStartHandler(ctx context.Context, c *app.RequestContext) {
 func SubmitAnswerHandler(ctx context.Context, c *app.RequestContext) {
 	var req SubmitAnswerRequest
 	if err := c.BindAndValidate(&req); err != nil {
+		log.Printf("[DEBUG] SubmitAnswerHandler 绑定请求失败: %v", err)
 		c.JSON(consts.StatusBadRequest, utils.H{"error": "无效请求: " + err.Error()})
 		return
 	}
+	log.Printf("[DEBUG] SubmitAnswerHandler 收到请求: UserID=%s, QuizQuestionID=%s, UserAnswer=%s, WasCorrect=%t",
+		req.UserID, req.QuizQuestionID, req.UserAnswer, req.WasCorrect)
 
-	// 从 QuizQuestionID 中解析出原始题目信息 (章节号和原始索引)
-	// QuizQuestionID 格式为 "quiz_章节号_原始索引"
+	// 从用户 session 获取当前课程
+	session := getOrCreateUserSession(req.UserID)
+	session.mu.Lock()
+	currentCourse := session.CurrentCourse
+	session.mu.Unlock()
+
+	if currentCourse == "" {
+		log.Printf("错误: 用户 %s 的 session 中没有课程信息", req.UserID)
+		c.JSON(consts.StatusBadRequest, utils.H{"error": "会话中缺少课程信息"})
+		return
+	}
+
+	// 从 QuizQuestionID 中解析出原始题目信息 (课程、章节号和原始索引)
+	// QuizQuestionID 格式为 "quiz_课程_章节号_原始索引"
 	parts := strings.Split(strings.TrimPrefix(req.QuizQuestionID, "quiz_"), "_")
-	if len(parts) < 2 { // 至少需要章节和索引两部分
+	if len(parts) < 3 { // 至少需要课程、章节和索引三部分
 		log.Printf("错误: 无法从 QuizQuestionID %s 解析原始题目信息 (答题模式)", req.QuizQuestionID)
 		c.JSON(consts.StatusInternalServerError, utils.H{"error": "内部服务器错误，无法解析题目ID (quiz_submit)"})
 		return
 	}
-	originalQuestionIDKey := parts[0] + "_" + parts[1] // 重组为 "章节号_原始索引"
+	originalQuestionIDKey := parts[0] + "_" + parts[1] + "_" + parts[2] // 重组为 "课程_章节号_原始索引"
 	originalQuestion, ok := questionMapByID[originalQuestionIDKey]
 	if !ok {
 		log.Printf("错误: 找不到 QuizQuestionID %s (解析为Key: %s) 对应的原始题目 (答题模式)", req.QuizQuestionID, originalQuestionIDKey)
@@ -463,9 +520,10 @@ func SubmitAnswerHandler(ctx context.Context, c *app.RequestContext) {
 		statEntry.CorrectCount++
 	} else {
 		statEntry.ErrorCount++
-		// 如果答错，则记录到错题本
+		// 如果答错，则记录到课程特定的错题本
+		incorrectFileName := getIncorrectQuestionsFileName(currentCourse)
 		userIncorrect := []UserIncorrectQuestion{}
-		if err := loadUserJSONData(req.UserID, incorrectQuestionsFile, &userIncorrect); err != nil {
+		if err := loadUserJSONData(req.UserID, incorrectFileName, &userIncorrect); err != nil {
 			log.Printf("错误: 用户 %s 加载错题本失败 (答题提交): %v", req.UserID, err)
 			c.JSON(consts.StatusInternalServerError, utils.H{"error": "加载用户错题本失败"})
 			return
@@ -476,7 +534,7 @@ func SubmitAnswerHandler(ctx context.Context, c *app.RequestContext) {
 		for _, iq := range userIncorrect {
 			if iq.QuestionText == originalQuestion.QuestionText && iq.OriginalChapter == originalQuestion.OriginalChapterKey {
 				isDuplicate = true
-				log.Printf("信息: 用户 %s 题目 %s (章节 %s) 已在错题本中，不再重复添加。", req.UserID, originalQuestion.QuestionNumber, originalQuestion.OriginalChapterKey)
+				log.Printf("信息: 用户 %s 题目 %s (章节 %s, 课程 %s) 已在错题本中，不再重复添加。", req.UserID, originalQuestion.QuestionNumber, originalQuestion.OriginalChapterKey, currentCourse)
 				break
 			}
 		}
@@ -491,7 +549,7 @@ func SubmitAnswerHandler(ctx context.Context, c *app.RequestContext) {
 				UserAnswer:      req.UserAnswer, // 记录用户当时的错误答案
 				Timestamp:       time.Now(),
 			})
-			if err := saveUserJSONData(req.UserID, incorrectQuestionsFile, userIncorrect); err != nil {
+			if err := saveUserJSONData(req.UserID, incorrectFileName, userIncorrect); err != nil {
 				log.Printf("错误: 用户 %s 保存错题本失败 (答题提交): %v", req.UserID, err)
 				c.JSON(consts.StatusInternalServerError, utils.H{"error": "保存用户错题本失败"})
 				return
@@ -518,7 +576,7 @@ func SubmitAnswerHandler(ctx context.Context, c *app.RequestContext) {
 // IncorrectQuestionsReviewStartHandler 处理开始错题回顾模式的请求。
 // 返回用户的所有错题及其答案。
 func IncorrectQuestionsReviewStartHandler(ctx context.Context, c *app.RequestContext) {
-	var req GetNextQuestionRequest // 复用 GetNextQuestionRequest 仅为了获取 UserID
+	var req StartIncorrectReviewRequest
 	if err := c.BindAndValidate(&req); err != nil {
 		c.JSON(consts.StatusBadRequest, utils.H{"error": "无效请求: " + err.Error()})
 		return
@@ -527,9 +585,10 @@ func IncorrectQuestionsReviewStartHandler(ctx context.Context, c *app.RequestCon
 	session.mu.Lock()
 	defer session.mu.Unlock()
 
+	incorrectFileName := getIncorrectQuestionsFileName(req.Course)
 	userIncorrectRaw := []UserIncorrectQuestion{}
-	if err := loadUserJSONData(req.UserID, incorrectQuestionsFile, &userIncorrectRaw); err != nil {
-		log.Printf("用户 %s 加载错题本失败 (回顾模式开始): %v", req.UserID, err)
+	if err := loadUserJSONData(req.UserID, incorrectFileName, &userIncorrectRaw); err != nil {
+		log.Printf("用户 %s 加载 %s 课程错题本失败 (回顾模式开始): %v", req.UserID, req.Course, err)
 		c.JSON(consts.StatusInternalServerError, utils.H{"error": "加载用户错题本失败"})
 		return
 	}
@@ -544,8 +603,9 @@ func IncorrectQuestionsReviewStartHandler(ctx context.Context, c *app.RequestCon
 		userIncorrectRaw[i], userIncorrectRaw[j] = userIncorrectRaw[j], userIncorrectRaw[i]
 	})
 
-	outputQuestions := convertUserIncorrectToOutput(userIncorrectRaw, 0) // 转换为API输出格式
+	outputQuestions := convertUserIncorrectToOutput(userIncorrectRaw, 0, req.Course) // 转换为API输出格式
 	session.CurrentMode = "incorrect_review"
+	session.CurrentCourse = req.Course // 设置当前课程
 	// 如果前端需要服务器逐步推送，则存储
 	// session.CurrentQuestions = outputQuestions
 	// session.CurrentQuestionIndex = 0
@@ -589,10 +649,22 @@ func DeleteIncorrectQuestionHandler(ctx context.Context, c *app.RequestContext) 
 		return
 	}
 
-	// 加载用户的错题文件
+	// 从 session 获取当前课程
+	session := getOrCreateUserSession(req.UserID)
+	session.mu.Lock()
+	currentCourse := session.CurrentCourse
+	session.mu.Unlock()
+
+	if currentCourse == "" {
+		log.Printf("警告: 用户 %s 的 session 中没有课程信息，默认使用毛概", req.UserID)
+		currentCourse = "maogai"
+	}
+
+	// 加载课程特定的错题文件
+	incorrectFileName := getIncorrectQuestionsFileName(currentCourse)
 	userIncorrect := []UserIncorrectQuestion{}
-	if err := loadUserJSONData(req.UserID, incorrectQuestionsFile, &userIncorrect); err != nil {
-		log.Printf("错误: 用户 %s 删除错题时加载错题本失败: %v", req.UserID, err)
+	if err := loadUserJSONData(req.UserID, incorrectFileName, &userIncorrect); err != nil {
+		log.Printf("错误: 用户 %s 删除错题时加载 %s 课程错题本失败: %v", req.UserID, currentCourse, err)
 		c.JSON(consts.StatusInternalServerError, utils.H{"error": "加载用户错题本失败"})
 		return
 	}
@@ -623,9 +695,9 @@ func DeleteIncorrectQuestionHandler(ctx context.Context, c *app.RequestContext) 
 
 	// 仅当确实删除了题目时才更新文件
 	if foundAndDeleted {
-		// 保存更新后的错题本
-		if err := saveUserJSONData(req.UserID, incorrectQuestionsFile, updatedIncorrect); err != nil {
-			log.Printf("错误: 用户 %s 保存更新后的错题本失败: %v", req.UserID, err)
+		// 保存更新后的课程特定错题本
+		if err := saveUserJSONData(req.UserID, incorrectFileName, updatedIncorrect); err != nil {
+			log.Printf("错误: 用户 %s 保存更新后的 %s 课程错题本失败: %v", req.UserID, currentCourse, err)
 			c.JSON(consts.StatusInternalServerError, utils.H{"error": "保存更新后的错题本失败"})
 			return
 		}
@@ -666,17 +738,28 @@ func UserDataClearHandler(ctx context.Context, c *app.RequestContext) {
 	userID := req.UserID
 	log.Printf("用户 %s 请求清理其数据...", userID)
 
-	// 清理错题文件
-	incorrectPath := getUserDataPath(userID, incorrectQuestionsFile)
-	if _, err := os.Stat(incorrectPath); err == nil { // 文件存在
-		if err := os.Rename(incorrectPath, incorrectPath+time.Now().Format(".2006_01_02_15_04_05.bak")); err != nil {
-			log.Printf("错误: 用户 %s 清理错题文件 %s 失败: %v", userID, incorrectPath, err)
-			// 即使一个文件清理失败，也尝试清理另一个
+	// 清理毛概错题文件
+	maogaiIncorrectPath := getUserDataPath(userID, maogaiIncorrectQuestionsFile)
+	if _, err := os.Stat(maogaiIncorrectPath); err == nil { // 文件存在
+		if err := os.Rename(maogaiIncorrectPath, maogaiIncorrectPath+time.Now().Format(".2006_01_02_15_04_05.bak")); err != nil {
+			log.Printf("错误: 用户 %s 清理毛概错题文件 %s 失败: %v", userID, maogaiIncorrectPath, err)
 		} else {
-			log.Printf("信息: 用户 %s 的错题文件 %s 已清理。", userID, incorrectPath)
+			log.Printf("信息: 用户 %s 的毛概错题文件 %s 已清理。", userID, maogaiIncorrectPath)
 		}
-	} else if !os.IsNotExist(err) { // 其他错误
-		log.Printf("错误: 检查错题文件 %s 时发生错误: %v", incorrectPath, err)
+	} else if !os.IsNotExist(err) {
+		log.Printf("错误: 检查毛概错题文件 %s 时发生错误: %v", maogaiIncorrectPath, err)
+	}
+
+	// 清理习概错题文件
+	xigaiIncorrectPath := getUserDataPath(userID, xigaiIncorrectQuestionsFile)
+	if _, err := os.Stat(xigaiIncorrectPath); err == nil { // 文件存在
+		if err := os.Rename(xigaiIncorrectPath, xigaiIncorrectPath+time.Now().Format(".2006_01_02_15_04_05.bak")); err != nil {
+			log.Printf("错误: 用户 %s 清理习概错题文件 %s 失败: %v", userID, xigaiIncorrectPath, err)
+		} else {
+			log.Printf("信息: 用户 %s 的习概错题文件 %s 已清理。", userID, xigaiIncorrectPath)
+		}
+	} else if !os.IsNotExist(err) {
+		log.Printf("错误: 检查习概错题文件 %s 时发生错误: %v", xigaiIncorrectPath, err)
 	}
 
 	// 清理统计文件
