@@ -29,6 +29,7 @@ Thumbs.db
 
 # 发布目录
 release-*/
+release/
 
 # Hertz压缩文件
 *.hertz.gz
