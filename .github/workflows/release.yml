@@ -41,6 +41,7 @@ jobs:
         go-version: '1.21'
 
     - name: Build
+      shell: bash
       run: |
         GOOS=${{ matrix.goos }} GOARCH=${{ matrix.goarch }} go build -o ${{ matrix.output }} .
 
