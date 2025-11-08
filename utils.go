@@ -43,7 +43,7 @@ func init() {
 	loadAllQuestionsGlobal() // 加载所有题目到内存
 }
 
-// loadAllQuestionsGlobal 从文件加载所有章节的题目到全局变量
+// loadAllQuestionsGlobal 从嵌入文件系统加载所有章节的题目到全局变量
 func loadAllQuestionsGlobal() {
 	log.Println("喵~ 正在努力加载全局题库中...")
 
@@ -51,7 +51,8 @@ func loadAllQuestionsGlobal() {
 	log.Println("加载毛概题库...")
 	for i := 0; i <= maogaiMaxChapterIndex; i++ {
 		chapterKey := strconv.Itoa(i)
-		filePath := filepath.Join(maogaiQuestionSourceDir, chapterKey+".json")
+		// 嵌入文件系统使用正斜杠，不使用filepath.Join
+		filePath := maogaiQuestionSourceDir + "/" + chapterKey + ".json"
 		loadChapterQuestions(filePath, chapterKey, "maogai", maogaiQuestionsByChapter)
 	}
 
@@ -59,7 +60,8 @@ func loadAllQuestionsGlobal() {
 	log.Println("加载习概题库...")
 	for i := 0; i <= xigaiMaxChapterIndex; i++ {
 		chapterKey := strconv.Itoa(i)
-		filePath := filepath.Join(xigaiQuestionSourceDir, chapterKey+".json")
+		// 嵌入文件系统使用正斜杠，不使用filepath.Join
+		filePath := xigaiQuestionSourceDir + "/" + chapterKey + ".json"
 		loadChapterQuestions(filePath, chapterKey, "xigai", xigaiQuestionsByChapter)
 	}
 
@@ -68,7 +70,7 @@ func loadAllQuestionsGlobal() {
 
 // loadChapterQuestions 加载单个章节的题目
 func loadChapterQuestions(filePath, chapterKey, course string, targetMap map[string][]Question) {
-	fileData, err := ioutil.ReadFile(filePath)
+	fileData, err := embeddedFS.ReadFile(filePath)
 	if err != nil {
 		log.Printf("喵~ 提示：章节 %s (%s) 的题库文件 (%s) 没找到呢,跳过这个章节啦。错误: %v", chapterKey, course, filePath, err)
 		targetMap[chapterKey] = []Question{} // 即使文件不存在,也初始化为空列表

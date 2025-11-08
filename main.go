@@ -13,7 +13,7 @@ import (
 	"github.com/cloudwego/hertz/pkg/app/server"
 )
 
-//go:embed maogai_outputs/* quiz.html
+//go:embed clean_outputs/* quiz.html
 var embeddedFS embed.FS
 
 // openBrowser 在服务器启动后打开浏览器

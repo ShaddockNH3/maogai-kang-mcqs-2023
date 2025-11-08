@@ -7,8 +7,8 @@ import (
 
 // --- 配置常量 ---
 const (
-	maogaiQuestionSourceDir      = "maogai_outputs"
-	xigaiQuestionSourceDir       = "xigai_outputs"
+	maogaiQuestionSourceDir      = "clean_outputs/maogai_outputs"
+	xigaiQuestionSourceDir       = "clean_outputs/xigai_outputs"
 	maogaiMaxChapterIndex        = 8
 	xigaiMaxChapterIndex         = 0 // 习概只有一个章节
 	userDataBaseDir              = "user_data"

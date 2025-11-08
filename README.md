@@ -19,14 +19,13 @@
 从 [Releases](https://github.com/ShaddockNH3/maogai-kang-mcqs-2023/releases) 下载对应平台的可执行文件：
 
 - Windows: `maogai-kang-mcqs-windows-amd64.exe`
-- macOS: `maogai-kang-mcqs-darwin-amd64`
 - Linux: `maogai-kang-mcqs-linux-amd64`
 
 下载后双击运行，会自动在浏览器中打开学习界面。
 
-### 本地部署
+## 其他方式
 
-### 公网部署
+如果你熟悉开发，可以克隆仓库自行编译运行。具体操作不再赘述。
 
 ## 题库说明
 
