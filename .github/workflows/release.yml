@@ -1,7 +1,9 @@
 name: Release
 
 on:
-  push:
+  pull_request:
+    branches:
+      - main
     tags:
       - 'v*.*.*'
 
