@@ -16,10 +16,10 @@
 
 ### 直接下载使用（推荐）
 
-从 [Releases](https://github.com/ShaddockNH3/maogai-kang-mcqs-2023/releases) 下载对应平台的可执行文件：
+从 [Releases](https://github.com/ShaddockNH3/Meow-Politics-Helper/releases) 下载对应平台的可执行文件：
 
-- Windows: `maogai-kang-mcqs-windows-amd64.exe`
-- Linux: `maogai-kang-mcqs-linux-amd64`
+- Windows: `Meow-Politics-Helper-windows-amd64.exe`
+- Linux: `Meow-Politics-Helper-linux-amd64`
 
 下载后双击运行，会自动在浏览器中打开学习界面。
 
@@ -48,8 +48,8 @@
 
 ## 📞 联系方式
 
-- 项目地址: https://github.com/ShaddockNH3/maogai-kang-mcqs-2023
-- 问题反馈: [GitHub Issues](https://github.com/ShaddockNH3/maogai-kang-mcqs-2023/issues)
+- 项目地址: https://github.com/ShaddockNH3/Meow-Politics-Helper
+- 问题反馈: [GitHub Issues](https://github.com/ShaddockNH3/Meow-Politics-Helper/issues)
 
 ---
 
