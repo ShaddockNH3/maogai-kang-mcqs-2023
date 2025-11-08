@@ -1,153 +1,236 @@
-### `maogai-kang-mcqs-2023`
+# 喵喵学习小助手
 
-这是一个为了帮助同学们高效复习“毛概”选择题而制作的刷题库项目。
+一个基于Go和Vue.js的现代化学习辅助工具，支持多种答题模式和错题管理。
 
-### 🚀 快速开始 (Quick Start)
+## ✨ 特性
 
-以下步骤将指导您如何快速下载并运行本项目的预编译版本。
+- 🐱 萌化的界面设计和交互体验
+- 📚 支持多种答题模式（速刷、正式答题、错题回顾）
+- 📊 详细的答题统计和进度跟踪
+- 💾 本地数据持久化，支持用户数据管理
+- 🌐 现代化的Web界面，支持响应式设计
+- 🚀 跨平台支持（Windows、Linux、macOS）
 
-#### 1\. 前置要求 (Prerequisites)
+## 🚀 快速开始
 
-  - 本项目的预编译版本原生支持 **Windows** 和 **Linux** 操作系统。
-  - **macOS 用户**：此快速启动方法不直接支持 macOS。请参考相关开发文档进行源码编译部署，或在虚拟机中运行。
+### 环境要求
 
-#### 2\. 启动项目 (Launch the Project)
+- Go 1.21 或更高版本
+- 现代浏览器（支持ES6+）
 
-**第一步：下载预编译程序 (Download the Executable)**
+### 安装和运行
 
-  - **对于 Windows 用户**:
+1. **克隆项目**
+   ```bash
+   git clone https://github.com/maogai/maogai.git
+   cd maogai
+   ```
 
-      - **推荐**: 点击下方链接直接下载最新版本 (`v1.0.0`)。
-          - [**maogai-kang-mcqs-2023-windows-with-assets.exe**](https://github.com/ShaddockNH3/maogai-kang-mcqs-2023/releases/download/v1.0.0/maogai-kang-mcqs-2023-windows-with-assets.exe)
-      - 如果直连下载有问题，您也可以访问项目的 [**Releases 页面**](https://github.com/ShaddockNH3/maogai-kang-mcqs-2023/releases/tag/v1.0.0)，在页面底部的 **Assets** 部分手动下载 `maogai-kang-mcqs-2023-windows-with-assets.exe` 文件。
+2. **运行应用**
+   ```bash
+   # 使用Go直接运行
+   go run .
 
-  - **对于 Linux 用户**:
+   # 或者使用Makefile
+   make run
+   ```
 
-      - 请访问项目的 [**Releases 页面**](https://github.com/ShaddockNH3/maogai-kang-mcqs-2023/releases/tag/v1.0.0)。
-      - 在页面底部的 **Assets** 部分，下载 `maogai-kang-mcqs-2023-linux-with-assets` 文件。
+3. **打开浏览器**
 
-> **注意**：无需下载Releases页面的Source code。
+   应用启动后会自动打开浏览器访问 `http://localhost:8899`
 
-**第二步：运行程序 (Run the Program)**
+## 🏗️ 构建
 
-  - **对于 Windows 用户**:
-    直接双击下载的 `.exe` 文件即可启动。
+### 使用构建脚本
 
-  - **对于 Linux 用户**:
-    首先需要为文件添加执行权限，然后在终端中运行它：
+项目提供了便捷的构建脚本（推荐）：
 
-    ```bash
-    # 假设文件已下载到当前目录
-    chmod +x ./maogai-kang-mcqs-2023-linux-with-assets
-    ./maogai-kang-mcqs-2023-linux-with-assets
-    ```
+```bash
+# 查看所有可用命令
+./build.sh help
 
-> **重要提示**：程序启动后会占用一个终端窗口。**请勿关闭此终端窗口**，否则后台服务将会中断。
+# 构建当前平台版本
+./build.sh build
 
-**第三步：在本机访问应用 (Access on Your Computer)**
+# 构建所有平台版本
+./build.sh build-all
 
-1.  打开您的网页浏览器（如 Chrome, Edge, Firefox 等）。
-2.  在地址栏输入并访问：`http://localhost:8899`
-3.  程序启动成功！首次访问时，您可以随意创建一个用户名来开始使用。
+# 构建特定平台版本
+./build.sh build-linux      # Linux AMD64
+./build.sh build-windows    # Windows AMD64
+./build.sh build-macos-amd64  # macOS Intel
+./build.sh build-macos-arm64  # macOS Apple Silicon
 
-> **请注意**: `localhost` 指的是“本机”，因此该地址**只能在运行程序的这台电脑上访问**。如需在手机等其他设备上访问，请参考下面的“本地网络访问”部分。
+# 清理构建产物
+./build.sh clean
 
-> **请注意**：如果端口号不为8899，则更改为对应的接口号进行访问
+# 运行测试
+./build.sh test
+```
 
------
+### 使用Makefile（需要安装make）
 
-### 📱 本地网络访问 (Local Network Access)
+```bash
+# 构建当前平台版本
+make build
 
-如果您想使用手机或其他设备（如平板）来刷题，只需进行以下设置：
+# 构建所有平台版本
+make build-all
 
-1.  **确保网络连接**: 确保您运行程序的电脑和您的手机连接在 \*\*同一个局域网（Wi-Fi）\*\*下。
+# 其他命令查看帮助
+make help
+```
 
-2.  **查找电脑的局域网IP地址**:
+### 手动构建
 
-      - **Windows**: 打开“命令提示符(CMD)”或“PowerShell”，输入 `ipconfig` 命令，然后查找“无线局域网适配器 WLAN”或“以太网适配器”下的 “IPv4 地址”。它通常形如 `192.168.x.x`。
-      - **Linux**: 在终端中输入 `ip addr` 或 `hostname -I` 命令来查找您的局域网IP地址。
+```bash
+# Linux AMD64
+GOOS=linux GOARCH=amd64 go build -o quiz-linux-amd64 .
 
-3.  **在手机上访问**:
+# Windows AMD64
+GOOS=windows GOARCH=amd64 go build -o quiz-windows-amd64.exe .
 
-      - 打开手机浏览器，在地址栏输入 `http://<您查到的电脑IP地址>:8899` (请将 `<您查到的电脑IP地址>` 替换为您在第二步中找到的实际IP地址)。
+# macOS AMD64 (Intel)
+GOOS=darwin GOARCH=amd64 go build -o quiz-darwin-amd64 .
 
-> **防火墙提示**: 如果手机无法访问，请检查您电脑的防火墙设置，确保它允许其他设备访问您电脑的 `8899` 端口。您可能需要为该应用或端口添加入站规则（Inbound Rules）。
+# macOS ARM64 (Apple Silicon)
+GOOS=darwin GOARCH=arm64 go build -o quiz-darwin-arm64 .
+```
 
------
+## 📦 发布
 
-### 🌐 公网服务器部署 (进阶)
+### 自动发布（GitHub Actions）
 
-如果您希望将此应用部署到云服务器上，让任何人都可以通过互联网访问，可以参考以下高级步骤。
+当推送版本标签时，GitHub Actions会自动构建所有平台的版本并创建Release：
 
-**额外要求**:
+1. **创建版本标签**
+   ```bash
+   git tag v1.0.0
+   git push origin v1.0.0
+   ```
 
-  * 您需要拥有一台具有**公网 IP 地址**的云服务器 (VPS)，并已安装好 Linux 操作系统（如 Ubuntu, CentOS 等）。
-  * 您已通过 `scp` 或其他方式将 **Linux 版本的可执行文件** 上传到服务器。
+2. **自动构建和发布**
 
-**部署步骤**:
+   GitHub Actions会自动：
+   - 为Linux、Windows、macOS构建可执行文件
+   - 创建GitHub Release
+   - 上传所有构建产物
 
-1.  **添加执行权限**:
-    通过 SSH 连接到您的服务器，并为程序添加执行权限。
+### 本地发布
 
-    ```bash
-    chmod +x ./maogai-kang-mcqs-2023-linux-with-assets
-    ```
+使用发布脚本来构建所有平台版本：
 
-2.  **配置防火墙**:
-    为了让外部用户能够访问应用，您需要开放应用所使用的端口（默认为 `8899`）。
+```bash
+# 构建并打包所有平台版本
+./release.sh v1.0.0
 
-      * **对于使用 UFW 的系统 (如 Ubuntu)**:
-        ```bash
-        sudo ufw allow 8899/tcp
-        sudo ufw reload
-        ```
-      * **对于使用 firewalld 的系统 (如 CentOS)**:
-        ```bash
-        sudo firewall-cmd --zone=public --add-port=8899/tcp --permanent
-        sudo firewall-cmd --reload
-        ```
+# 这会创建 release-v1.0.0/ 目录，包含：
+# - quiz-linux-amd64
+# - quiz-windows-amd64.exe
+# - quiz-darwin-amd64
+# - quiz-darwin-arm64
+# - checksums.sha256
+```
 
-    > **云服务商提醒**: 除了服务器本身的防火墙，大部分云服务商（如阿里云、腾讯云、AWS）还有一层\*\*安全组（Security Group）\*\*防火墙。请确保您也在服务商的管理控制台中放行了 `8899` 端口的入站流量。
+### 手动发布
 
-3.  **测试运行与访问**:
+如果需要手动创建发布：
 
-      * 先直接运行程序，检查它是否能正常启动：`./maogai-kang-mcqs-2023-linux-with-assets`
-      * 此时，您应该可以在浏览器中通过 `http://<你的服务器公网IP>:8899` 访问您的应用了。确认可以访问后，在SSH终端按 `Ctrl + C` 停止它，准备下一步。
+1. **构建所有平台版本**
+   ```bash
+   ./build.sh build-all
+   ```
 
-4.  **设置为后台服务 (推荐)**:
-    为了让应用在您关闭 SSH 连接后依然能持续运行，并能开机自启，推荐使用 `systemd` 将其创建为一个服务。
+2. **创建压缩包**（可选）
+   ```bash
+   # Linux
+   tar -czf quiz-linux-amd64.tar.gz quiz-linux-amd64
 
-    a.  创建一个 `systemd` 服务文件：`sudo nano /etc/systemd/system/maogai.service`
+   # Windows
+   zip quiz-windows-amd64.zip quiz-windows-amd64.exe
 
-    b.  将以下内容粘贴到文件中。**请务必修改 `User`、`WorkingDirectory` 和 `ExecStart` 中的路径为您自己的实际情况**。
-    \`\`\`ini
-    [Unit]
-    Description=Maogai Kang MCQs Service
-    After=network.target
+   # macOS
+   zip quiz-darwin-amd64.zip quiz-darwin-amd64
+   zip quiz-darwin-arm64.zip quiz-darwin-arm64
+   ```
 
-    ````
-    [Service]
-    Type=simple
-    # 推荐使用一个非 root 用户运行，例如 'ubuntu' 或您自己的用户名
-    User=your_username  
-    # 程序所在的目录
-    WorkingDirectory=/path/to/your/app/directory 
-    # 程序的完整路径
-    ExecStart=/path/to/your/app/directory/maogai-kang-mcqs-2023-linux-with-assets
-    Restart=on-failure
-    RestartSec=5s
+3. **上传到GitHub Release**
 
-    [Install]
-    WantedBy=multi-user.target
-    ```
-    ````
+## 📁 项目结构
 
-    c.  保存并关闭文件后，运行以下命令来启用并启动服务：
-    ` bash sudo systemctl daemon-reload  # 重新加载 systemd 配置 sudo systemctl enable maogai    # 设置开机自启 sudo systemctl start maogai     # 立即启动服务  `
+```
+maogai/
+├── .github/
+│   └── workflows/
+│       └── release.yml          # GitHub Actions 发布工作流
+├── clean_outputs/               # 题库数据文件
+├── user_data/                   # 用户数据存储目录（运行时生成）
+├── .gitignore                   # Git忽略文件
+├── build.sh                     # 构建脚本（推荐）
+├── Makefile                     # 构建脚本（需要make）
+├── release.sh                   # 发布脚本
+├── go.mod                       # Go模块文件
+├── go.sum                       # Go依赖校验文件
+├── main.go                      # 应用程序入口
+├── models.go                    # 数据结构定义
+├── utils.go                     # 工具函数和API处理器
+├── quiz.html                    # 前端界面
+└── README.md                    # 项目说明
+```
 
-    d.  您可以使用 `sudo systemctl status maogai` 来查看服务的运行状态。
+## 🎯 使用说明
 
-**后续优化 (可选)**:
+### 首次使用
 
-  * **域名解析**: 将您的域名指向服务器的公网 IP 地址。
-  * **配置反向代理**: 使用 Nginx 或 Caddy 等 Web 服务器作为反向代理。这可以让您通过域名直接访问（无需端口号），并且能方便地配置 HTTPS 加密，让访问更安全。
+1. 启动应用后，在浏览器中输入用户ID
+2. 系统会自动创建用户账户并初始化数据
+
+### 答题模式
+
+- **速刷模式**：快速浏览题目，查看答案
+- **答题模式**：正式答题，记录成绩和错题
+- **错题回顾**：专项练习错题，提高弱项
+
+### 数据管理
+
+- 用户数据保存在 `user_data/` 目录下
+- 支持数据清理和用户切换
+- 错题本支持删除和历史记录
+
+## 🛠️ 开发
+
+### 运行测试
+
+```bash
+make test
+```
+
+### 开发模式
+
+```bash
+# 热重载开发
+go run .
+```
+
+## 📄 许可证
+
+本项目采用 MIT 许可证 - 查看 [LICENSE](LICENSE) 文件了解详情
+
+## 🤝 贡献
+
+欢迎提交 Issue 和 Pull Request！
+
+1. Fork 本项目
+2. 创建特性分支 (`git checkout -b feature/AmazingFeature`)
+3. 提交更改 (`git commit -m 'Add some AmazingFeature'`)
+4. 推送到分支 (`git push origin feature/AmazingFeature`)
+5. 创建 Pull Request
+
+## 📞 联系方式
+
+- 项目地址: https://github.com/maogai/maogai
+- 问题反馈: [GitHub Issues](https://github.com/maogai/maogai/issues)
+
+---
+
+**🎉 祝学习愉快！**

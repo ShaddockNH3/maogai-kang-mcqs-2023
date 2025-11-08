@@ -144,7 +144,12 @@
         <div v-if="!userId && !isLoading" class="userid-input-container">
             <div class="userid-input-box">
                 <h1 class="text-2xl font-bold text-center text-gray-700 mb-2">喵喵学习小助手</h1>
-                <p class="text-center text-gray-500 mb-6">请输入您的用户ID登录或创建新账户：</p>
+                <p class="text-center text-gray-500 mb-2">请输入您的用户ID登录或创建新账户：</p>
+                <p class="text-center text-sm text-gray-400 mb-6">
+                    <a href="https://github.com/ShaddockNH3/maogai-kang-mcqs-2023" target="_blank" class="text-blue-500 hover:text-blue-700 underline">
+                        📖 查看项目源码 (GitHub)
+                    </a>
+                </p>
                 <input type="text" v-model="inputUserId" @keyup.enter="submitUserId" placeholder="用户ID (例如：catLover123)" class="w-full px-4 py-2 border border-gray-300 rounded-md mb-4 focus:ring-blue-500 focus:border-blue-500">
                 <button @click="submitUserId" class="btn btn-primary btn-full-width">确定</button>
                 <p v-if="userIdError" class="text-red-500 text-sm mt-2 text-center">{{ userIdError }}</p>
