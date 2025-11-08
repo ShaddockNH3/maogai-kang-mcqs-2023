@@ -2,6 +2,7 @@ package main
 
 import (
 	"context"
+	"embed"
 	"log"
 	"os/exec"
 	"runtime"
@@ -11,6 +12,9 @@ import (
 	"github.com/cloudwego/hertz/pkg/app"
 	"github.com/cloudwego/hertz/pkg/app/server"
 )
+
+//go:embed clean_outputs/* quiz.html
+var embeddedFS embed.FS
 
 // openBrowser 在服务器启动后打开浏览器
 func openBrowser(url string) {
@@ -56,12 +60,14 @@ func main() {
 	// 使用默认配置初始化 Hertz 服务器，监听在 0.0.0.0:8899
 	h := server.Default(server.WithHostPorts("0.0.0.0:8899"))
 
-	// 提供静态文件服务，路径为当前项目文件夹
-	h.Static("/", "./") // 将根路径映射到当前文件夹
-
-	// 根路径重定向到quiz.html
+	// 提供静态文件服务，使用嵌入的文件系统
 	h.GET("/", func(ctx context.Context, c *app.RequestContext) {
-		c.File("./quiz.html")
+		data, err := embeddedFS.ReadFile("quiz.html")
+		if err != nil {
+			c.String(404, "File not found")
+			return
+		}
+		c.Data(200, "text/html", data)
 	})
 
 	// API 路由组

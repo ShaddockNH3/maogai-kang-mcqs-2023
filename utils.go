@@ -47,7 +47,7 @@ func loadAllQuestionsGlobal() {
 	for i := 0; i <= maxChapterIndex; i++ {
 		chapterKey := strconv.Itoa(i)
 		filePath := filepath.Join(questionSourceDir, chapterKey+".json")
-		fileData, err := ioutil.ReadFile(filePath)
+		fileData, err := embeddedFS.ReadFile(filePath)
 		if err != nil {
 			log.Printf("喵~ 提示：章节 %s 的题库文件 (%s) 没找到呢，跳过这个章节啦。错误: %v", chapterKey, filePath, err)
 			allQuestionsByChapter[chapterKey] = []Question{} // 即使文件不存在，也初始化为空列表
