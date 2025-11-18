@@ -1,0 +1,212 @@
+[
+    {
+        "question_number": "1",
+        "question_type": "单选题",
+        "question_text": "（  ）是马克思主义的本质属性和鲜明品格。",
+        "options": {
+            "A": "真实性",
+            "B": "民主性",
+            "C": "人民性",
+            "D": "平等性"
+        },
+        "correct_answer": "C",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "2",
+        "question_type": "单选题",
+        "question_text": "（  ）是新时代坚持和发展中国特色社会主义的根本立场，是贯穿党治国理政全部活动的一条红线。",
+        "options": {
+            "A": "把马克思主义基本原理与中国实际相结合",
+            "B": "坚持以人民为中心",
+            "C": "坚持和发展中国特色社会主义",
+            "D": "“五位一体”总体布局"
+        },
+        "correct_answer": "B",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "3",
+        "question_type": "单选题",
+        "question_text": "人民在一个国家的地位是由这个国家的（  ）决定的。",
+        "options": {
+            "A": "政权性质",
+            "B": "社会制度",
+            "C": "政治制度",
+            "D": "政党组织"
+        },
+        "correct_answer": "A",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "4",
+        "question_type": "单选题",
+        "question_text": "（  ）是中国共产党的根本政治立场，是我们党区别于其他政党的显著标志。",
+        "options": {
+            "A": "民主立场",
+            "B": "党的领导",
+            "C": "人民立场",
+            "D": "依法治国"
+        },
+        "correct_answer": "C",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "5",
+        "question_type": "单选题",
+        "question_text": "（  ）是党的工作的最高裁决者和最终评判者。",
+        "options": {
+            "A": "实践",
+            "B": "人民",
+            "C": "国务院",
+            "D": "党中央"
+        },
+        "correct_answer": "B",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "6",
+        "question_type": "单选题",
+        "question_text": "（  ）是贯彻群众路线的有效途径。",
+        "options": {
+            "A": "以人民为中心",
+            "B": "调查研究",
+            "C": "把人民对美好生活的向往作为奋斗目标",
+            "D": "构建新发展格局"
+        },
+        "correct_answer": "B",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "7",
+        "question_type": "单选题",
+        "question_text": "（  ）路线是党的生命线和根本工作路线，是党永葆青春活力和战斗力的重要法家宝。",
+        "options": {
+            "A": "人民",
+            "B": "民主",
+            "C": "群众",
+            "D": "政绩"
+        },
+        "correct_answer": "C",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "8",
+        "question_type": "单选题",
+        "question_text": "党的奋斗目标是（  ）",
+        "options": {
+            "A": "人民对美好生活的向往",
+            "B": "依靠人民创造历史伟业",
+            "C": "坚持和贯彻党的群众路线",
+            "D": "推动全体人民共同富裕"
+        },
+        "correct_answer": "A",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "9",
+        "question_type": "单选题",
+        "question_text": "坚持以人民为中心的发展思想，真正做到发展成果由人民共享，就必须落实到（  ）",
+        "options": {
+            "A": "依靠人民创造历史伟业",
+            "B": "为人民造福",
+            "C": "坚持和贯彻党的群众路线",
+            "D": "推动全体人民共同富裕"
+        },
+        "correct_answer": "D",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "10",
+        "question_type": "单选题",
+        "question_text": "扎实推进共同富裕，要构建初次分配、再分配、三次分配协调配套的基础性制度安排，推动形成（  ）分配结构。",
+        "options": {
+            "A": "金字塔型",
+            "B": "多边型",
+            "C": "倒金字塔型",
+            "D": "橄榄型"
+        },
+        "correct_answer": "D",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "11",
+        "question_type": "多选题",
+        "question_text": "人民是历史的创造者。以下论述正确的有（  ）",
+        "options": {
+            "A": "人民群众是社会物质财富的创造者。",
+            "B": "人民群众是社会精神财富的创造者。",
+            "C": "人民群众是社会变革的主要力量。",
+            "D": "人民群众在创造历史中起决定性作用。"
+        },
+        "correct_answer": "ABCD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "12",
+        "question_type": "多选题",
+        "question_text": "党依靠人民创造历史伟业，就要做到（  ）。",
+        "options": {
+            "A": "尊重人民主体地位",
+            "B": "尊重人民首创精神",
+            "C": "激发人民群众的创新创造活力",
+            "D": "总结、概括人民群众在实践中形成的新鲜经验"
+        },
+        "correct_answer": "ABCD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "13",
+        "question_type": "多选题",
+        "question_text": "以人民为中心的发展思想，不是高高在上的宣传口号，绝对不能只停留在口头上，要全方位贯穿于经济社会发展的各个环节，体现在人民群众（  ）的扎实提升上。",
+        "options": {
+            "A": "使命感",
+            "B": "获得感",
+            "C": "幸福感",
+            "D": "安全感"
+        },
+        "correct_answer": "BCD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "14",
+        "question_type": "多选题",
+        "question_text": "以下哪些领域体现了人民对美好生活的向往？（  ）",
+        "options": {
+            "A": "幼有所育",
+            "B": "劳有所有",
+            "C": "病有所医",
+            "D": "住有所居"
+        },
+        "correct_answer": "ABCD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "15",
+        "question_type": "多选题",
+        "question_text": "以下有关共同富裕的论述，正确的有（  ）",
+        "options": {
+            "A": "共同富衯要让人民群众的物质生活和精神生活都富裕。",
+            "B": "共同富裕要追求所有人同时富裕，所有地区同时达到一个富裕水准。",
+            "C": "共同富裕要处理好先富和共富的关系，允许一部分人先富起来，积极推动先富带动后富。",
+            "D": "实现共同富裕是一个长期的历史过程。"
+        },
+        "correct_answer": "ACD",
+        "error_count": 0,
+        "correct_count": 0
+    }
+]

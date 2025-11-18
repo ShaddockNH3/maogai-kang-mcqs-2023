@@ -1,0 +1,226 @@
+[
+    {
+        "question_number": "1",
+        "question_type": "单选题",
+        "question_text": "改革开放是坚持和发展中国特色社会主义的（  ）。",
+        "options": {
+            "A": "基本方略",
+            "B": "必由之路",
+            "C": "制度保障",
+            "D": "发展目标"
+        },
+        "correct_answer": "B",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "2",
+        "question_type": "单选题",
+        "question_text": "新时代全面深化改革开放的总目标是（  ）。",
+        "options": {
+            "A": "建立社会主义市场经济体制",
+            "B": "实现共同富裕",
+            "C": "完善和发展中国特色社会主义制度，推进国家治理体系和治理能力现代化",
+            "D": "建设社会主义现代化强国"
+        },
+        "correct_answer": "C",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "3",
+        "question_type": "单选题",
+        "question_text": "全面深化改革的出发点和落脚点是（  ）。",
+        "options": {
+            "A": "增强国家综合国力",
+            "B": "实现经济高质量发展",
+            "C": "更好地实现和维护人民利益，让老百姓过上好日子",
+            "D": "推动科技进步"
+        },
+        "correct_answer": "C",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "4",
+        "question_type": "单选题",
+        "question_text": "下列哪一项不是“三个进一步解放”的内容？（  ）",
+        "options": {
+            "A": "解放思想",
+            "B": "解放生产力",
+            "C": "解放社会活力",
+            "D": "解放生产关系"
+        },
+        "correct_answer": "D",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "5",
+        "question_type": "单选题",
+        "question_text": "新时代改革开放最鲜明的特点是（  ）。",
+        "options": {
+            "A": "摸着石头过河",
+            "B": "局部试点、逐步推广",
+            "C": "全面性、系统性、整体性",
+            "D": "以经济建设为中心"
+        },
+        "correct_answer": "C",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "6",
+        "question_type": "单选题",
+        "question_text": "下列哪项是新时代全面深化改革开放的重要方法论？（  ）",
+        "options": {
+            "A": "摸着石头过河",
+            "B": "摸着石头过河与顶层设计相结合",
+            "C": "完全依靠基层探索",
+            "D": "以政治体制改革为中心"
+        },
+        "correct_answer": "B",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "7",
+        "question_type": "单选题",
+        "question_text": "加入（  ）标志着我国对外开放进入了一个新的阶段。",
+        "options": {
+            "A": "亚太经合组织",
+            "B": "世界贸易组织",
+            "C": "联合国",
+            "D": "金砖国家合作机制"
+        },
+        "correct_answer": "B",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "8",
+        "question_type": "单选题",
+        "question_text": "全面深化改革的“六个紧紧围绕”中，不包括以下哪一项？（  ）",
+        "options": {
+            "A": "紧紧围绕市场在资源配置中起决定性作用",
+            "B": "紧紧围绕更好保障和改善民生",
+            "C": "紧紧围绕建设美丽中国",
+            "D": "紧紧围绕提高党的执政能力"
+        },
+        "correct_answer": "C",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "9",
+        "question_type": "单选题",
+        "question_text": "推进国家治理体系和治理能力现代化，关键在于（  ）。",
+        "options": {
+            "A": "增强政府权威",
+            "B": "完善制度体系",
+            "C": "提高科技水平",
+            "D": "扩大对外开放"
+        },
+        "correct_answer": "B",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "10",
+        "question_type": "单选题",
+        "question_text": "下列哪项最能体现新时代改革开放的价值取向？（  ）",
+        "options": {
+            "A": "增强国家竞争力",
+            "B": "实现经济总量翻番",
+            "C": "实现人民对美好生活的向往",
+            "D": "提高国际影响力"
+        },
+        "correct_answer": "C",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "11",
+        "question_type": "多选题",
+        "question_text": "下列哪些属于新时代全面深化改革开放必须坚持的“三个进一步解放”？",
+        "options": {
+            "A": "解放思想",
+            "B": "解放生产力",
+            "C": "解放社会活力",
+            "D": "解放生产关系"
+        },
+        "correct_answer": "ABC",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "12",
+        "question_type": "多选题",
+        "question_text": "党的十八届三中全会提出的全面深化改革的总目标包括哪些内容？",
+        "options": {
+            "A": "完善和发展中国特色社会主义制度",
+            "B": "推进国家治理体系现代化",
+            "C": "推进治理能力现代化",
+            "D": "建立社会主义市场经济体制"
+        },
+        "correct_answer": "ABC",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "13",
+        "question_type": "多选题",
+        "question_text": "新时代全面深化改革开放强调哪些方法论原则？",
+        "options": {
+            "A": "摸着石头过河",
+            "B": "顶层设计",
+            "C": "局部试点",
+            "D": "摸着石头过河与顶层设计相结合"
+        },
+        "correct_answer": "ABD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "14",
+        "question_type": "多选题",
+        "question_text": "下列哪些属于新时代改革开放的重要历史节点？",
+        "options": {
+            "A": "党的十一届三中全会",
+            "B": "加入世界贸易组织",
+            "C": "党的十八大",
+            "D": "党的十八届三中全会"
+        },
+        "correct_answer": "ABD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "15",
+        "question_type": "多选题",
+        "question_text": "新时代改革开放的价值取向包括哪些方面？",
+        "options": {
+            "A": "以人民为中心",
+            "B": "实现人民对美好生活的向往",
+            "C": "增强国家综合国力",
+            "D": "维护社会公平正义"
+        },
+        "correct_answer": "ABD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "16",
+        "question_type": "多选题",
+        "question_text": "下列哪些属于新时代改革开放必须处理好的重大关系？",
+        "options": {
+            "A": "改革与发展的关系",
+            "B": "改革与稳定的关系",
+            "C": "改革与法治的关系",
+            "D": "政府与市场的关系"
+        },
+        "correct_answer": "ABCD",
+        "error_count": 0,
+        "correct_count": 0
+    }
+]

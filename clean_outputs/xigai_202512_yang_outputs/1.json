@@ -1,0 +1,184 @@
+[
+    {
+        "question_number": "1",
+        "question_type": "单选题",
+        "question_text": "习近平总书记在党的十九大报告中指出，中国特色社会主义进入新时代，我国社会主要矛盾（  ）。",
+        "options": {
+            "A": "已经转化为人民日益增长的美好生活需要和不平衡不充分的发展之间的矛盾",
+            "B": "仍然是无产阶级同资产阶级之间的矛盾",
+            "C": "官僚资本同民族资本之间的矛盾",
+            "D": "是人民日益增长的物质文化需要同落后的社会生产之间的矛盾。"
+        },
+        "correct_answer": "A",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "2",
+        "question_type": "单选题",
+        "question_text": "中国特色社会主义新时代是我国发展（  ）",
+        "options": {
+            "A": "新的历史纪元",
+            "B": "重大历史转折",
+            "C": "新的时间阶段",
+            "D": "新的历史方位"
+        },
+        "correct_answer": "D",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "3",
+        "question_type": "单选题",
+        "question_text": "中国共产党为什么能，中国特色社会主义为什么好，归根到底是（  ）。",
+        "options": {
+            "A": "马克思主义行，是中国化时代化的马克思主义行",
+            "B": "中国共产党能",
+            "C": "中国特色社会主义好",
+            "D": "靠坚持四项基本原则，不犯错误"
+        },
+        "correct_answer": "A",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "4",
+        "question_type": "单选题",
+        "question_text": "（  ）是党和人民历经千辛万苦、付出巨大代价取得的根本成就，是实现中华民族伟大复兴的必由之路。",
+        "options": {
+            "A": "改革开放",
+            "B": "中国特色社会主义",
+            "C": "社会主义现代化",
+            "D": "中国式现代化"
+        },
+        "correct_answer": "B",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "5",
+        "question_type": "单选题",
+        "question_text": "（  ）是更基础、更广泛、更深厚的自信，是一个国家、一个民族发展中最基本、最深沉、最持久的力量",
+        "options": {
+            "A": "道路自信",
+            "B": "理论自信",
+            "C": "制度自信",
+            "D": "文化自信"
+        },
+        "correct_answer": "D",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "6",
+        "question_type": "单选题",
+        "question_text": "中国共产党人用自己的实践、奋斗和精神，不断揭示着（  ）的必然趋势，不断展现着社会主义制度的优越性和共产主义的光明前景。",
+        "options": {
+            "A": "不同社会制度选择",
+            "B": "人类社会发展",
+            "C": "人类文明进步",
+            "D": "世界和平发展"
+        },
+        "correct_answer": "B",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "7",
+        "question_type": "单选题",
+        "question_text": "我国社会主义还处在（  ），我们还面临很多没有弄清楚的问题和待解的难题，对许多重大问题的认识和处理都还处在不断深化的过程之中，这一点也不容置疑。",
+        "options": {
+            "A": "初级阶段",
+            "B": "高级阶段",
+            "C": "发展阶段",
+            "D": "困难阶段"
+        },
+        "correct_answer": "A",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "8",
+        "question_type": "单选题",
+        "question_text": "要把握新的伟大斗争的历史特点，（  ），增强斗争本领，凝聚起全党全国各族人民的意志和力量，全力战胜一切可以预见和难以预见的风险挑战。",
+        "options": {
+            "A": "坚持人民至上",
+            "B": "发扬斗争精神",
+            "C": "坚持马克思主义",
+            "D": "坚守初心使命"
+        },
+        "correct_answer": "B",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "9",
+        "question_type": "单选题",
+        "question_text": "党的十八大后，党面临的主要任务是，实现（  ），开启实现第二个百年奋斗目标新征程，朝着实现中华民族伟大复兴的宏伟目标继续前进。",
+        "options": {
+            "A": "脱贫攻坚任务的胜利",
+            "B": "中国特色社会主义进入新时代",
+            "C": "第一个百年奋斗目标",
+            "D": "社会主义现代化"
+        },
+        "correct_answer": "C",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "10",
+        "question_type": "多选题",
+        "question_text": "以习近平同志为核心的党中央统揽（  ），推进中国特色社会主义事业总体布局和战略布局",
+        "options": {
+            "A": "伟大斗争",
+            "B": "伟大工程",
+            "C": "伟大事业",
+            "D": "伟大梦想"
+        },
+        "correct_answer": "ABCD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "11",
+        "question_type": "多选题",
+        "question_text": "中国特色社会主义进入新时代的判断，是（  ）。",
+        "options": {
+            "A": "基于我国发展进入新阶段的伟大成就",
+            "B": "基于社会主要矛盾发生新变化",
+            "C": "基于党的新的奋斗目标",
+            "D": "基于我国面临新的国际环境。"
+        },
+        "correct_answer": "ABCD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "12",
+        "question_type": "多选题",
+        "question_text": "党的十九大概括中国特色社会主义进入新时代的重大意义,这就是：",
+        "options": {
+            "A": "意味着中华民族迎来了从站起来、富起来到强起来的伟大飞跃，迎来了中华民族伟大复兴的光明前景。",
+            "B": "意味着科学社会主义在中国焕发出强大生机活力，在世界上高高举起了中国特色社会主义伟大旗帜",
+            "C": "意味着中国特色社会主义道路、理论、制度、文化不断发展，拓展了发展中国家实现现代化的途径",
+            "D": "意味着中国即将建成社会主义现代化强国，全体人民过上共同富裕的生活。"
+        },
+        "correct_answer": "ABC",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "13",
+        "question_type": "多选题",
+        "question_text": "新时代我们党面临的重大课题有（  ）",
+        "options": {
+            "A": "如何把握当今世界和当代中国的发展大势",
+            "B": "如何应对外部环境变化带来的风险挑战",
+            "C": "如何破解国内改革发展稳定面临的新矛盾新问题",
+            "D": "如何更好地坚持和发展中国特色社会主义"
+        },
+        "correct_answer": "ABCD",
+        "error_count": 0,
+        "correct_count": 0
+    }
+]

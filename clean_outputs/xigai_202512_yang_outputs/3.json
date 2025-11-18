@@ -1,0 +1,226 @@
+[
+    {
+        "question_number": "1",
+        "question_type": "单选题",
+        "question_text": "（  ）是党的领导的最高原则，是党保持团结统一和强大战斗力的关键所在。",
+        "options": {
+            "A": "民主集中制",
+            "B": "党中央集中统一领导",
+            "C": "群众路线",
+            "D": "实事求是"
+        },
+        "correct_answer": "B",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "2",
+        "question_type": "单选题",
+        "question_text": "中国共产党是以（  ）为根本组织原则和领导制度。",
+        "options": {
+            "A": "群众路线",
+            "B": "民主集中制",
+            "C": "党章",
+            "D": "政治纪律"
+        },
+        "correct_answer": "B",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "3",
+        "question_type": "单选题",
+        "question_text": "中国共产党的性质决定了党的宗旨是（  ）。",
+        "options": {
+            "A": "立党为公、执政为民",
+            "B": "以人为本、执政为民",
+            "C": "全心全意为人民服务",
+            "D": "为实现共产主义而奋斗"
+        },
+        "correct_answer": "C",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "4",
+        "question_type": "单选题",
+        "question_text": "（  ）是我国的根本领导制度，居于统领地位。",
+        "options": {
+            "A": "党的组织原则",
+            "B": "党的政治原则",
+            "C": "党的领导制度",
+            "D": "党的性质宗旨"
+        },
+        "correct_answer": "C",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "5",
+        "question_type": "单选题",
+        "question_text": "历史和现实证明，（  ）就没有中国特色社会主义的产生与发展。",
+        "options": {
+            "A": "没有中国共产党的指导",
+            "B": "没有中国共产党的组织",
+            "C": "没有中国共产党的领导",
+            "D": "没有中国共产党的监督"
+        },
+        "correct_answer": "C",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "6",
+        "question_type": "单选题",
+        "question_text": "《中国共产党章程》明确规定,中国共产党是中国工人阶级的先锋队,同时是（  ）。",
+        "options": {
+            "A": "中国人民的先锋队",
+            "B": "中华民族的先锋队",
+            "C": "中国人民和中华民族的先锋队",
+            "D": "中国新阶层的先锋队"
+        },
+        "correct_answer": "C",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "7",
+        "question_type": "单选题",
+        "question_text": "（  ）是中国特色社会主义最本质的特征。",
+        "options": {
+            "A": "以经济建设为中心",
+            "B": "以人为本",
+            "C": "“五位一体”总体布局",
+            "D": "中国共产党的领导"
+        },
+        "correct_answer": "D",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "8",
+        "question_type": "单选题",
+        "question_text": "面对新时代新挑战新要求，（  ）就是战胜艰难险阻，不断取得胜利的制胜法宝。",
+        "options": {
+            "A": "改进完善党的领导",
+            "B": "坚持和加强党的全面领导",
+            "C": "全面推进党的改革",
+            "D": "增加党员人数"
+        },
+        "correct_answer": "B",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "9",
+        "question_type": "单选题",
+        "question_text": "中国共产党的领导是中国特色社会主义最本质的特征，这是（  ）以来习近平总书记提出的一个重要论断。",
+        "options": {
+            "A": "党的十八大",
+            "B": "党的十五大",
+            "C": "党的十九大",
+            "D": "党的十七大"
+        },
+        "correct_answer": "A",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "10",
+        "question_type": "多选题",
+        "question_text": "党是最高政治领导力量，这是由我国（  ）和（  ）所决定的。",
+        "options": {
+            "A": "国家性质",
+            "B": "国体政体",
+            "C": "经济基础",
+            "D": "经济制度"
+        },
+        "correct_answer": "AB",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "11",
+        "question_type": "多选题",
+        "question_text": "坚持和完善党的领导，是（  ）。",
+        "options": {
+            "A": "党和国家的根本所在、命脉所在",
+            "B": "全国各族人民的利益所在、幸福所在",
+            "C": "中国特色社会主义最本质的特征",
+            "D": "中国特色社会主义制度的最大优势"
+        },
+        "correct_answer": "ABCD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "12",
+        "question_type": "多选题",
+        "question_text": "坚持和加强党的全面领导，使党的（  ）显著增强.",
+        "options": {
+            "A": "政治领导力",
+            "B": "思想引领力",
+            "C": "群众组织力",
+            "D": "社会号召力"
+        },
+        "correct_answer": "ABCD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "13",
+        "question_type": "多选题",
+        "question_text": "中国特色社会主义之所以是社会主义，究其根本就在于（  ）。",
+        "options": {
+            "A": "坚持科学社会主义基本原则",
+            "B": "坚持中国共产党的领导",
+            "C": "坚持按劳分配",
+            "D": "坚持社会主义市场经济体制"
+        },
+        "correct_answer": "AB",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "14",
+        "question_type": "多选题",
+        "question_text": "健全党的全面领导制度，必须（  ）。",
+        "options": {
+            "A": "必须完善党在各种组织中发挥领导作用的制度",
+            "B": "必须完善党协调各方的机制",
+            "C": "必须完善党领导各项事业的具体制度",
+            "D": "必须完善人民代表大会制度"
+        },
+        "correct_answer": "ABC",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "15",
+        "question_type": "多选题",
+        "question_text": "确保党始终总揽全局、协调各方，必须增强（  ）,自觉维护党中央权威和集中统一领导，自觉在思想上政治上行动上同党中央保持高度一致。",
+        "options": {
+            "A": "政治意识",
+            "B": "大局意识",
+            "C": "核心意识",
+            "D": "看齐意识"
+        },
+        "correct_answer": "ABCD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "16",
+        "question_type": "多选题",
+        "question_text": "党章规定的民主集中制要求（  ）。",
+        "options": {
+            "A": "党员个人服从党的组织",
+            "B": "少数服从多数",
+            "C": "下级组织服从上级组织",
+            "D": "全党各个组织和全体党员服从党的全国代表大会和中央委员会"
+        },
+        "correct_answer": "ABCD",
+        "error_count": 0,
+        "correct_count": 0
+    }
+]

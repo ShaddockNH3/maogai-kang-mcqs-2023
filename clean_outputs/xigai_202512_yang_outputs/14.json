@@ -1,0 +1,212 @@
+[
+    {
+        "question_number": "1",
+        "question_type": "单选题",
+        "question_text": "巩固国防和强大人民军队是新时代坚持和发展中国特色社会主义、实现中华民族伟大复兴的（   ）。",
+        "options": {
+            "A": "根本支撑",
+            "B": "战略支撑",
+            "C": "基本支柱",
+            "D": "战略支柱"
+        },
+        "correct_answer": "B",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "2",
+        "question_type": "单选题",
+        "question_text": "2025年全国两会上，习近平总书记三次下团组，其中就有解放军和武警部队代表团。关于国防和军队建设，总书记很关心的是（    ）。",
+        "options": {
+            "A": "新质生产力",
+            "B": "新型战斗力",
+            "C": "新质战斗力",
+            "D": "新质止战力"
+        },
+        "correct_answer": "C",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "3",
+        "question_type": "单选题",
+        "question_text": "1927年9月29日至10月3日，毛泽东在江西省永新县三湾村，领导了举世闻名的“三湾改编”，确立了“党指挥枪”“支部建在连上”“官兵平等”的治军方略。这体现了强军目标的哪一个原则（    ）。",
+        "options": {
+            "A": "听党指挥",
+            "B": "能打胜仗",
+            "C": "作风优良",
+            "D": "召之即来，来之能战，战之必胜"
+        },
+        "correct_answer": "A",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "4",
+        "question_type": "单选题",
+        "question_text": "实践证明，（    ）是人民军队建设的首要，是人民军队的命脉所在。",
+        "options": {
+            "A": "听党指挥",
+            "B": "能打胜仗",
+            "C": "作风优良",
+            "D": "召之即来，来之能战，战之必胜"
+        },
+        "correct_answer": "A",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "5",
+        "question_type": "单选题",
+        "question_text": "能打胜仗是强军目标的（    ）。",
+        "options": {
+            "A": "根本",
+            "B": "关键",
+            "C": "核心",
+            "D": "基础"
+        },
+        "correct_answer": "C",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "6",
+        "question_type": "单选题",
+        "question_text": "坚持党对人民军队绝对领导的根本制度和根本实现形式是（    ）。",
+        "options": {
+            "A": "中国特色社会主义强军道路",
+            "B": "中央军委负责制",
+            "C": "军首长负责制",
+            "D": "军委主席负责制"
+        },
+        "correct_answer": "D",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "7",
+        "question_type": "单选题",
+        "question_text": "下列哪项是人民军队的立军之本？（    ）",
+        "options": {
+            "A": "人才强军",
+            "B": "依法治军",
+            "C": "改革强军",
+            "D": "政治建军"
+        },
+        "correct_answer": "D",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "8",
+        "question_type": "单选题",
+        "question_text": "对军队而言，必须牢固树立的唯一的根本的标准是（    ）？",
+        "options": {
+            "A": "听党指挥",
+            "B": "战斗力",
+            "C": "政治力",
+            "D": "执行力"
+        },
+        "correct_answer": "B",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "9",
+        "question_type": "单选题",
+        "question_text": "下列哪项是我们党建军治军的基本方式？（    ）",
+        "options": {
+            "A": "人才强军",
+            "B": "依法治军",
+            "C": "改革强军",
+            "D": "政治建军"
+        },
+        "correct_answer": "B",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "10",
+        "question_type": "单选题",
+        "question_text": "实现富国和强军相统一的重要政治保障是什么？（    ）",
+        "options": {
+            "A": "军政军民团结",
+            "B": "加强对人民的国防教育",
+            "C": "加强党对军队的领导",
+            "D": "加强军队的文化建设"
+        },
+        "correct_answer": "A",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "11",
+        "question_type": "多选题",
+        "question_text": "下列哪些选项是属于习近平强军思想中“十一个明确”的内容？（   ）",
+        "options": {
+            "A": "明确强国必须强军",
+            "B": "明确党在新时代的强军目标",
+            "C": "明确军队是要准备打仗的",
+            "D": "明确科技是核心战斗力"
+        },
+        "correct_answer": "ABCD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "12",
+        "question_type": "多选题",
+        "question_text": "新时代人民军队使命任务包括（   ）",
+        "options": {
+            "A": "为巩固中国共产党领导和我国社会主义制度提供战略支撑",
+            "B": "为捍卫国家主权、统一、领土完整提供战略支撑",
+            "C": "为维护我国海外利益提供战略支撑",
+            "D": "为促进世界和平与发展提供战略支撑"
+        },
+        "correct_answer": "ABCD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "13",
+        "question_type": "多选题",
+        "question_text": "党在新时代的强军目标的科学内涵包括（   ）",
+        "options": {
+            "A": "听党指挥",
+            "B": "能打胜仗",
+            "C": "作风优良",
+            "D": "召之即来，来之能战，战之必胜"
+        },
+        "correct_answer": "ABC",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "14",
+        "question_type": "多选题",
+        "question_text": "党的十九大提出了全面推进国防和军队现代化“新三步走”的战略安排是（   ）。",
+        "options": {
+            "A": "2027年：基本实现国防和军队现代化",
+            "B": "2027年：实现建军一百年奋斗目标",
+            "C": "2035年：基本实现国防和军队现代化",
+            "D": "本世纪中叶：把人民军队全面建成世界一流军队"
+        },
+        "correct_answer": "BCD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "15",
+        "question_type": "多选题",
+        "question_text": "加快推进国防和军队现代化，具体可以从以下几个方面着手（   ）？",
+        "options": {
+            "A": "坚持党对人民军队的绝对领导",
+            "B": "坚持政治建军、改革强军、科技强军、人才强军、依法治军",
+            "C": "全面加强练兵备战",
+            "D": "巩固提高一体化国家战略体系和能力"
+        },
+        "correct_answer": "ABCD",
+        "error_count": 0,
+        "correct_count": 0
+    }
+]

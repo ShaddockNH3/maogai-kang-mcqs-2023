@@ -1,0 +1,198 @@
+[
+    {
+        "question_number": "1",
+        "question_type": "单选题",
+        "question_text": "“人民民主是一种全过程的民主”的首次提出时间是（  ）",
+        "options": {
+            "A": "2012",
+            "B": "2018",
+            "C": "2019",
+            "D": "2022"
+        },
+        "correct_answer": "C",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "2",
+        "question_type": "单选题",
+        "question_text": "“人民民主是一种全过程的民主”的首次提出地点是（  ）",
+        "options": {
+            "A": "上海",
+            "B": "北京",
+            "C": "福州",
+            "D": "深圳"
+        },
+        "correct_answer": "A",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "3",
+        "question_type": "单选题",
+        "question_text": "全过程人民民主是社会主义民主政治的本质属性。以下说法错误的是（  ）",
+        "options": {
+            "A": "全过程人民民主是最广泛、最真实、最管用的民主",
+            "B": "全过程人民民主是全链条、全方位、全覆盖的民主",
+            "C": "全过程人民民主实现了人民当家作主",
+            "D": "全过程人民民主仅是选举民主"
+        },
+        "correct_answer": "D",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "4",
+        "question_type": "单选题",
+        "question_text": "以下不属于健全人民当家作主的制度保障是（  ）",
+        "options": {
+            "A": "人民当家作主制度保障",
+            "B": "协商民主",
+            "C": "基层民主",
+            "D": "议会制"
+        },
+        "correct_answer": "D",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "5",
+        "question_type": "单选题",
+        "question_text": "（  ）是社会主义民主政治的本质属性。",
+        "options": {
+            "A": "全过程人民民主",
+            "B": "人民",
+            "C": "中国共产党",
+            "D": "社会主义制度"
+        },
+        "correct_answer": "A",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "6",
+        "question_type": "单选题",
+        "question_text": "要坚定不移地走（  ），不断健全人民当家作主制度体系，把人民当家作主体现到国家政治生活和社会生活各个方面。",
+        "options": {
+            "A": "中国特色社会主义经济发展道路",
+            "B": "中国特色社会主义政治发展道路",
+            "C": "中国特色社会主义道路",
+            "D": "中国特色社会主义文化发展道路"
+        },
+        "correct_answer": "B",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "7",
+        "question_type": "单选题",
+        "question_text": "我国的根本政治制度是（  ）。",
+        "options": {
+            "A": "人民代表大会制度",
+            "B": "中国共产党领导的多党合作和政治协商制度",
+            "C": "民族区域自治制度",
+            "D": "基层群众自治制度"
+        },
+        "correct_answer": "A",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "8",
+        "question_type": "单选题",
+        "question_text": "以下关于“民主”的阐述正确的是（  ）",
+        "options": {
+            "A": "民主的道路有且只有一条",
+            "B": "民主只有最好，没有更好",
+            "C": "人类对民主的探索和实践永无止境",
+            "D": "“历史终结论”成立"
+        },
+        "correct_answer": "C",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "9",
+        "question_type": "单选题",
+        "question_text": "（  ）是中国共产党夺取革命、建设和改革事业胜利的重要法宝，也是实现中华民族伟大复兴的重要法宝。",
+        "options": {
+            "A": "统一战线",
+            "B": "中国共产党的领导",
+            "C": "人民至上",
+            "D": "斗争"
+        },
+        "correct_answer": "A",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "10",
+        "question_type": "多选题",
+        "question_text": "人民代表大会制度是（  ）有机统一的根本政治制度安排。",
+        "options": {
+            "A": "坚持党的领导",
+            "B": "人民当家作主",
+            "C": "国家治理现代化",
+            "D": "依法治国"
+        },
+        "correct_answer": "ABD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "11",
+        "question_type": "多选题",
+        "question_text": "以下是中国共产党领导的基本政治制度的是（  ）",
+        "options": {
+            "A": "多党合作和政治协商制度",
+            "B": "民族区域自治制度",
+            "C": "基层群众自治制度",
+            "D": "人民代表大会制度"
+        },
+        "correct_answer": "ABC",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "12",
+        "question_type": "多选题",
+        "question_text": "以下属于新时代党的统一战线工作范畴的有（  ）",
+        "options": {
+            "A": "民主党派成员",
+            "B": "无党派人士",
+            "C": "新的社会阶层人士",
+            "D": "出国和归国留学人员"
+        },
+        "correct_answer": "ABCD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "13",
+        "question_type": "多选题",
+        "question_text": "全面发展协商民主，要不断完善协商民主体系，丰富协商民主方式。以下属于协商民主方式的是？（  ）",
+        "options": {
+            "A": "政党协商",
+            "B": "政府协商",
+            "C": "政协协商",
+            "D": "基层协商"
+        },
+        "correct_answer": "ABCD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "14",
+        "question_type": "多选题",
+        "question_text": "加强和促进海内外中华儿女大团结，要辩证把握好哪些关系？",
+        "options": {
+            "A": "把握好固守圆心和扩大共识的关系",
+            "B": "把握好潜绩和显绩的关系",
+            "C": "把握好原则性和灵活性的关系",
+            "D": "把握好团结和斗争的关系"
+        },
+        "correct_answer": "ABCD",
+        "error_count": 0,
+        "correct_count": 0
+    }
+]

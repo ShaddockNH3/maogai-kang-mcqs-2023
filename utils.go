@@ -21,18 +21,20 @@ import (
 )
 
 var (
-	maogaiQuestionsByChapter map[string][]Question   // 毛概题目
-	xigaiQuestionsByChapter  map[string][]Question   // 习概题目
-	questionMapByID          map[string]Question     // 通过唯一ID (课程_章节_索引) 快速查找原始题目
-	userSessions             map[string]*UserSession // 内存中的用户会话
-	sessionsMu               sync.RWMutex            // 保护 userSessions 映射
+	maogaiQuestionsByChapter    map[string][]Question   // 毛概题目
+	xigaiLiQuestionsByChapter   map[string][]Question   // 习概（李老师）题目
+	xigaiYangQuestionsByChapter map[string][]Question   // 习概（杨老师）题目
+	questionMapByID             map[string]Question     // 通过唯一ID (课程_章节_索引) 快速查找原始题目
+	userSessions                map[string]*UserSession // 内存中的用户会话
+	sessionsMu                  sync.RWMutex            // 保护 userSessions 映射
 )
 
 // init 在程序启动时执行初始化操作
 func init() {
 	rand.Seed(time.Now().UnixNano()) // 初始化随机数生成器
 	maogaiQuestionsByChapter = make(map[string][]Question)
-	xigaiQuestionsByChapter = make(map[string][]Question)
+	xigaiLiQuestionsByChapter = make(map[string][]Question)
+	xigaiYangQuestionsByChapter = make(map[string][]Question)
 	questionMapByID = make(map[string]Question)
 	userSessions = make(map[string]*UserSession)
 
@@ -58,11 +60,17 @@ func loadAllQuestionsGlobal() {
 
 	// 加载习概题库
 	log.Println("加载习概题库...")
-	for i := 0; i <= xigaiMaxChapterIndex; i++ {
+	// 李老师的习概题库（通常只有一个章节）
+	for i := 0; i <= xigaiLiMaxChapterIndex; i++ {
 		chapterKey := strconv.Itoa(i)
-		// 嵌入文件系统使用正斜杠，不使用filepath.Join
-		filePath := xigaiQuestionSourceDir + "/" + chapterKey + ".json"
-		loadChapterQuestions(filePath, chapterKey, "xigai", xigaiQuestionsByChapter)
+		filePath := xigaiLiQuestionSourceDir + "/" + chapterKey + ".json"
+		loadChapterQuestions(filePath, chapterKey, "xigai_li", xigaiLiQuestionsByChapter)
+	}
+	// 杨老师的习概题库（导论 + 多章节）
+	for i := 0; i <= xigaiYangMaxChapterIndex; i++ {
+		chapterKey := strconv.Itoa(i)
+		filePath := xigaiYangQuestionSourceDir + "/" + chapterKey + ".json"
+		loadChapterQuestions(filePath, chapterKey, "xigai_yang", xigaiYangQuestionsByChapter)
 	}
 
 	log.Println("喵~ 全局题库加载完毕！")
@@ -99,10 +107,19 @@ func loadChapterQuestions(filePath, chapterKey, course string, targetMap map[str
 
 // getIncorrectQuestionsFileName 根据课程返回对应的错题文件名
 func getIncorrectQuestionsFileName(course string) string {
-	if course == "xigai" {
-		return xigaiIncorrectQuestionsFile
+	// 为每个课程返回专用的错题文件名。"xigai_li" 与 "xigai_yang" 使用各自文件。
+	switch course {
+	case "xigai_li":
+		return xigaiLiIncorrectQuestionsFile
+	case "xigai_yang":
+		return xigaiYangIncorrectQuestionsFile
+	default:
+		// 兼容老数据：如果传入的 course 以 "xigai" 开头但不是上面两种明确的变体，回退到旧的统一文件名
+		if strings.HasPrefix(course, "xigai") {
+			return xigaiIncorrectQuestionsFile
+		}
+		return maogaiIncorrectQuestionsFile
 	}
-	return maogaiIncorrectQuestionsFile
 }
 
 // getUserDataPath 获取用户特定数据文件的完整路径
@@ -207,10 +224,18 @@ func _getQuestionsForProcessing(course string, chapterChoices []string, orderCho
 	var questionsByChapter map[string][]Question
 	var maxChapterIdx int
 
-	if course == "xigai" {
-		questionsByChapter = xigaiQuestionsByChapter
-		maxChapterIdx = xigaiMaxChapterIndex
-	} else {
+	switch course {
+	case "maogai":
+		questionsByChapter = maogaiQuestionsByChapter
+		maxChapterIdx = maogaiMaxChapterIndex
+	case "xigai_li":
+		questionsByChapter = xigaiLiQuestionsByChapter
+		maxChapterIdx = xigaiLiMaxChapterIndex
+	case "xigai_yang":
+		questionsByChapter = xigaiYangQuestionsByChapter
+		maxChapterIdx = xigaiYangMaxChapterIndex
+	default:
+		// 默认回退为毛概
 		questionsByChapter = maogaiQuestionsByChapter
 		maxChapterIdx = maogaiMaxChapterIndex
 	}
@@ -486,14 +511,19 @@ func SubmitAnswerHandler(ctx context.Context, c *app.RequestContext) {
 	}
 
 	// 从 QuizQuestionID 中解析出原始题目信息 (课程、章节号和原始索引)
-	// QuizQuestionID 格式为 "quiz_课程_章节号_原始索引"
-	parts := strings.Split(strings.TrimPrefix(req.QuizQuestionID, "quiz_"), "_")
+	// QuizQuestionID 格式为 "quiz_<course>_<chapter>_<index>"，其中 course 可能包含下划线（例如 xigai_li）
+	raw := strings.TrimPrefix(req.QuizQuestionID, "quiz_")
+	parts := strings.Split(raw, "_")
 	if len(parts) < 3 { // 至少需要课程、章节和索引三部分
 		log.Printf("错误: 无法从 QuizQuestionID %s 解析原始题目信息 (答题模式)", req.QuizQuestionID)
 		c.JSON(consts.StatusInternalServerError, utils.H{"error": "内部服务器错误，无法解析题目ID (quiz_submit)"})
 		return
 	}
-	originalQuestionIDKey := parts[0] + "_" + parts[1] + "_" + parts[2] // 重组为 "课程_章节号_原始索引"
+	// course 可能有多个下划线段，章节是倒数第二段，索引是最后一段
+	coursePart := strings.Join(parts[:len(parts)-2], "_")
+	chapterPart := parts[len(parts)-2]
+	indexPart := parts[len(parts)-1]
+	originalQuestionIDKey := fmt.Sprintf("%s_%s_%s", coursePart, chapterPart, indexPart) // 重组为 "course_chapter_index"
 	originalQuestion, ok := questionMapByID[originalQuestionIDKey]
 	if !ok {
 		log.Printf("错误: 找不到 QuizQuestionID %s (解析为Key: %s) 对应的原始题目 (答题模式)", req.QuizQuestionID, originalQuestionIDKey)
@@ -752,16 +782,19 @@ func UserDataClearHandler(ctx context.Context, c *app.RequestContext) {
 		log.Printf("错误: 检查毛概错题文件 %s 时发生错误: %v", maogaiIncorrectPath, err)
 	}
 
-	// 清理习概错题文件
-	xigaiIncorrectPath := getUserDataPath(userID, xigaiIncorrectQuestionsFile)
-	if _, err := os.Stat(xigaiIncorrectPath); err == nil { // 文件存在
-		if err := os.Rename(xigaiIncorrectPath, xigaiIncorrectPath+time.Now().Format(".2006_01_02_15_04_05.bak")); err != nil {
-			log.Printf("错误: 用户 %s 清理习概错题文件 %s 失败: %v", userID, xigaiIncorrectPath, err)
-		} else {
-			log.Printf("信息: 用户 %s 的习概错题文件 %s 已清理。", userID, xigaiIncorrectPath)
+	// 清理习概相关的错题文件（支持李老师和杨老师的独立错题簿，同时兼容旧的统一文件）
+	xigaiFiles := []string{xigaiLiIncorrectQuestionsFile, xigaiYangIncorrectQuestionsFile, xigaiIncorrectQuestionsFile}
+	for _, fname := range xigaiFiles {
+		path := getUserDataPath(userID, fname)
+		if _, err := os.Stat(path); err == nil { // 文件存在
+			if err := os.Rename(path, path+time.Now().Format(".2006_01_02_15_04_05.bak")); err != nil {
+				log.Printf("错误: 用户 %s 清理习概错题文件 %s 失败: %v", userID, path, err)
+			} else {
+				log.Printf("信息: 用户 %s 的习概错题文件 %s 已清理。", userID, path)
+			}
+		} else if !os.IsNotExist(err) {
+			log.Printf("错误: 检查习概错题文件 %s 时发生错误: %v", path, err)
 		}
-	} else if !os.IsNotExist(err) {
-		log.Printf("错误: 检查习概错题文件 %s 时发生错误: %v", xigaiIncorrectPath, err)
 	}
 
 	// 清理统计文件

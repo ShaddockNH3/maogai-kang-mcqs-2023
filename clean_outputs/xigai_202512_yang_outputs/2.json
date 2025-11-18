@@ -1,0 +1,213 @@
+[
+    {
+        "question_number": "1",
+        "question_type": "单选题",
+        "question_text": "一百年来，中国共产党团结带领中国人民进行的一切奋斗、一切牺牲、一切创造，归结起来就是一个主题（  ）。",
+        "options": {
+            "A": "建立新中国",
+            "B": "追求共同富裕",
+            "C": "实现中华民族伟大复兴",
+            "D": "实现人民对美好生活的向往"
+        },
+        "correct_answer": "C",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "2",
+        "question_type": "单选题",
+        "question_text": "（  ），是近代以来中国人民的共同梦想，是中国共产党矢志不渝的奋斗目标。",
+        "options": {
+            "A": "社会主义现代化建设",
+            "B": "中国特色社会主义",
+            "C": "国家富强民族振兴",
+            "D": "实现中华民族伟大复兴"
+        },
+        "correct_answer": "D",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "3",
+        "question_type": "单选题",
+        "question_text": "（  ），习近平总书记在庆祝中国共产党成立100周年大会上庄严宣告：“经过全党全国各族人民持续奋斗，我们实现了第一个百年奋斗目标。”",
+        "options": {
+            "A": "2018年7月1日",
+            "B": "2019年7月1日",
+            "C": "2021年7月1日",
+            "D": "2022年7月1日"
+        },
+        "correct_answer": "C",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "4",
+        "question_type": "单选题",
+        "question_text": "（  ），标志着第一个百年奋斗目标胜利实现，国家更富强、人民更幸福、社会更稳定、环境更优美，人民获得感幸福感安全感显著提升，中华民族实现了从大幅落后于时代到大踏步赶上时代的新跨越。",
+        "options": {
+            "A": "打赢脱贫攻坚战",
+            "B": "成为世界第二大经济体",
+            "C": "中国特色社会主义进入新时代",
+            "D": "如期全面建成小康社会"
+        },
+        "correct_answer": "D",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "5",
+        "question_type": "单选题",
+        "question_text": "摆脱贫困一直是困扰全球发展和治理的突出难题，我国提前（  ）实现联合国2030年可持续发展议程减贫目标。",
+        "options": {
+            "A": "10年",
+            "B": "15年",
+            "C": "20年",
+            "D": "25年"
+        },
+        "correct_answer": "A",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "6",
+        "question_type": "单选题",
+        "question_text": "（  ）把我国建成富强民主文明和谐美丽的社会主义现代化强国。",
+        "options": {
+            "A": "从2020年到2035年",
+            "B": "从2020年到2045年",
+            "C": "从2035年到2050年",
+            "D": "从2035年到本世纪中叶"
+        },
+        "correct_answer": "D",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "7",
+        "question_type": "单选题",
+        "question_text": "（  ）决定中国式现代化的根本性质……",
+        "options": {
+            "A": "党的领导",
+            "B": "人民当家作主",
+            "C": "依法治国",
+            "D": "中国特色社会主义"
+        },
+        "correct_answer": "A",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "8",
+        "question_type": "单选题",
+        "question_text": "（  ）是推进现代化最坚实的根基、最深厚的力量。",
+        "options": {
+            "A": "文化",
+            "B": "中国共产党的领导",
+            "C": "人民",
+            "D": "中华文明"
+        },
+        "correct_answer": "C",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "9",
+        "question_type": "单选题",
+        "question_text": "（  ）是中华民族精神之魂，是我们立党立国的重要原则。",
+        "options": {
+            "A": "文化自信",
+            "B": "人民至上",
+            "C": "社会主义制度",
+            "D": "独立自主"
+        },
+        "correct_answer": "D",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "10",
+        "question_type": "单选题",
+        "question_text": "习近平总书记指出:“一定要认清，中国最大的国情就是（  ）。什么是中国特色?这就是中国特色。”",
+        "options": {
+            "A": "人口14亿",
+            "B": "中国共产党的领导",
+            "C": "人均GD",
+            "P": "世界第二",
+            "D": "吃饭是个山大的问题"
+        },
+        "correct_answer": "B",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "11",
+        "question_type": "多选题",
+        "question_text": "中国梦的科学内涵是（  ）",
+        "options": {
+            "A": "国家富强",
+            "B": "社会和谐",
+            "C": "民族振兴",
+            "D": "人民幸福"
+        },
+        "correct_answer": "ACD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "12",
+        "question_type": "多选题",
+        "question_text": "党的二十大指出，新时代新征程中国共产党的中心任务，就是（  ）。",
+        "options": {
+            "A": "团结带领全国各族人民全面建成社会主义现代化强国",
+            "B": "实现第二个百年奋斗目标",
+            "C": "以中国式现代化全面推进中华民族伟大复兴。",
+            "D": "贯彻新发展理念，促进高质量发展"
+        },
+        "correct_answer": "ABC",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "13",
+        "question_type": "多选题",
+        "question_text": "全面建成小康社会的重大意义是（  ）。",
+        "options": {
+            "A": "意味着中华民族实现千百年来的夙愿",
+            "B": "表明我国发展和人民生活水平跃上新的大台阶",
+            "C": "表明我国已经实现了由高速发展向高质量发展转变",
+            "D": "是实现中华民族伟大复兴征程中的关键一步"
+        },
+        "correct_answer": "ABD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "14",
+        "question_type": "多选题",
+        "question_text": "中国式现代化（  ）。",
+        "options": {
+            "A": "深深植根于中华优秀传统文化",
+            "B": "体现科学社会主义的先进本质",
+            "C": "借鉴吸收一切人类优秀文明成果",
+            "D": "代表人类文明进步的发展方向"
+        },
+        "correct_answer": "ABCD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "15",
+        "question_type": "多选题",
+        "question_text": "推进中国式现代化需要牢牢把握的重大原则是（  ）。",
+        "options": {
+            "A": "坚持和加强党的全面领导",
+            "B": "坚持中国特色社会主义道路",
+            "C": "坚持以人民为中心的发展思想",
+            "D": "坚持深化改革开放"
+        },
+        "correct_answer": "ABCD",
+        "error_count": 0,
+        "correct_count": 0
+    }
+]

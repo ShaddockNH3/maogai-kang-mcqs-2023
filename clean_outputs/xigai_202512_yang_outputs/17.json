@@ -1,0 +1,212 @@
+[
+    {
+        "question_number": "1",
+        "question_type": "单选题",
+        "question_text": "（  ）是党永葆生机活力、走好新的赶考之路的必由之路，是新时代党的建设的鲜明主题。",
+        "options": {
+            "A": "全面从严治党",
+            "B": "自我革命",
+            "C": "为人民服务",
+            "D": "不忘初心、牢记使命"
+        },
+        "correct_answer": "A",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "2",
+        "question_type": "单选题",
+        "question_text": "必须坚持以（  ）态度反腐惩恶不动摇，更加有力遏制增量，更加有效清除存量。",
+        "options": {
+            "A": "压倒性",
+            "B": "零容忍",
+            "C": "依法严惩",
+            "D": "廉政教育"
+        },
+        "correct_answer": "B",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "3",
+        "question_type": "单选题",
+        "question_text": "（  ）是跳出历史周期率的第二个答案。",
+        "options": {
+            "A": "全面从严治党",
+            "B": "让人民来监督政府",
+            "C": "党的自我革命",
+            "D": "反腐败"
+        },
+        "correct_answer": "C",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "4",
+        "question_type": "单选题",
+        "question_text": "全面建设社会主义现代化国家、全面推进中华民族伟大复兴，关键在（  ）",
+        "options": {
+            "A": "人民",
+            "B": "政府",
+            "C": "党员",
+            "D": "党"
+        },
+        "correct_answer": "D",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "5",
+        "question_type": "单选题",
+        "question_text": "坚持党要管党、全面从严治党，以党的（ ）为统领。",
+        "options": {
+            "A": "政治建设",
+            "B": "思想建设",
+            "C": "组织建设",
+            "D": "作风建设"
+        },
+        "correct_answer": "A",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "6",
+        "question_type": "单选题",
+        "question_text": "党的十九大强调，党的（  ）是党的根本性建设，要摆在首位。",
+        "options": {
+            "A": "政治建设",
+            "B": "思想建设",
+            "C": "组织建设",
+            "D": "作风建设"
+        },
+        "correct_answer": "A",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "7",
+        "question_type": "单选题",
+        "question_text": "经过不懈努力，党找到了（  ）这一跳出治乱兴衰历史周期率的第二个答案，确保党永远不变质、不变色、不变味。",
+        "options": {
+            "A": "新发展理念",
+            "B": "自我革命",
+            "C": "自我完善",
+            "D": "总体国家安全观"
+        },
+        "correct_answer": "B",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "8",
+        "question_type": "单选题",
+        "question_text": "（  ）是我们党区别于其他政党的显著标志",
+        "options": {
+            "A": "勇于自我革命",
+            "B": "勇于创新",
+            "C": "勇于挑战",
+            "D": "勇于突破"
+        },
+        "correct_answer": "A",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "9",
+        "question_type": "单选题",
+        "question_text": "（  ）是党永葆生机活力、走好新的赶考之路的必由之路。",
+        "options": {
+            "A": "勇于自我革命",
+            "B": "开拓创新",
+            "C": "与时俱进",
+            "D": "全面从严治党"
+        },
+        "correct_answer": "D",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "10",
+        "question_type": "单选题",
+        "question_text": "党的二十大报告指出，要坚持不懈用（  ）凝心铸魂，全面加强党的思想建设，加强理想信念教育，引导全党牢记党的宗旨，自觉做共产主义远大理想和中国特色社会主义共同理想的坚定信仰者和忠实实践者。",
+        "options": {
+            "A": "马克思主义理论",
+            "B": "中国特色社会主义理论体系",
+            "C": "习近平新时代中国特色社会主义思想",
+            "D": "毛泽东思想"
+        },
+        "correct_answer": "C",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "11",
+        "question_type": "单选题",
+        "question_text": "坚持和加强党的全面领导，坚持党要管党、全面从严治党，以（  ）为主线。",
+        "options": {
+            "A": "加强党的长期执政能力建设、先进性和纯洁性建设",
+            "B": "党的政治建设",
+            "C": "坚定理想信念宗旨",
+            "D": "调动全党积极性、主动性、创造性"
+        },
+        "correct_answer": "A",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "12",
+        "question_type": "多选题",
+        "question_text": "全面从严治党，核心是（  ），基础在（  ），关键在严，要害在治。",
+        "options": {
+            "A": "加强党的领导",
+            "B": "全面",
+            "C": "党的自身建设",
+            "D": "整体"
+        },
+        "correct_answer": "AB",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "13",
+        "question_type": "多选题",
+        "question_text": "勇于自我革命就要同一切影响党的先进性、弱化党的纯洁性的问题作坚决斗争，实现（  ）。",
+        "options": {
+            "A": "自我净化",
+            "B": "自我完善",
+            "C": "自我革新",
+            "D": "自我提高"
+        },
+        "correct_answer": "ABCD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "14",
+        "question_type": "多选题",
+        "question_text": "以习近平同志为核心的党中央统揽（  ），以刀刃向内的自我革命精神深入推进全面从严治党，推动中国特色社会主义事业展现出更为广阔的发展前景,党在革命性锻造中更加坚强有力。",
+        "options": {
+            "A": "伟大斗争",
+            "B": "伟大工程",
+            "C": "伟大事业",
+            "D": "伟大梦想"
+        },
+        "correct_answer": "ABCD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "15",
+        "question_type": "多选题",
+        "question_text": "（  ）是党对领导干部提出的政治要求。",
+        "options": {
+            "A": "忠诚",
+            "B": "干净",
+            "C": "担当",
+            "D": "务实"
+        },
+        "correct_answer": "ABC",
+        "error_count": 0,
+        "correct_count": 0
+    }
+]

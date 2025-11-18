@@ -1,0 +1,212 @@
+[
+    {
+        "question_number": "1",
+        "question_type": "单选题",
+        "question_text": "（  ）着眼中国特色社会主义事业长远发展，把习近平新时代中国特色社会主义思想，确立为党必须长期坚持的指导思想。并庄严地写入党章，实现了党的指导思想的与时俱进。",
+        "options": {
+            "A": "2007年，党的十七大",
+            "B": "2012年，党的十八大",
+            "C": "2017年，党的十九大",
+            "D": "2022年，党的二十大"
+        },
+        "correct_answer": "C",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "2",
+        "question_type": "单选题",
+        "question_text": "党的二十大提出了（  ）。",
+        "options": {
+            "A": "“六个必须坚持”",
+            "B": "“十个明确”",
+            "C": "“十四个坚持”",
+            "D": "“十三个方面成就”"
+        },
+        "correct_answer": "A",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "3",
+        "question_type": "单选题",
+        "question_text": "世界百年未有之大变局正在加速演变。（  ）仍然是时代主题，但是不稳定不确定性更加突出。",
+        "options": {
+            "A": "发展与共享",
+            "B": "和平与融合",
+            "C": "和平与发展",
+            "D": "开放与包容"
+        },
+        "correct_answer": "C",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "4",
+        "question_type": "单选题",
+        "question_text": "中国特色社会主义的战略布局是（  ）",
+        "options": {
+            "A": "“十个明确”",
+            "B": "“十四个坚持”",
+            "C": "“四个全面”",
+            "D": "“五位一体”"
+        },
+        "correct_answer": "C",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "5",
+        "question_type": "单选题",
+        "question_text": "党的（  ）以来，中国特色社会主义进入新时代",
+        "options": {
+            "A": "党的十七大以来",
+            "B": "党的十八大以来",
+            "C": "党的十九大以来",
+            "D": "党的二十大以来"
+        },
+        "correct_answer": "B",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "6",
+        "question_type": "单选题",
+        "question_text": "2018年3月，（  ）通过的宪法修正案，郑重地把习近平新时代中国特色社会主义思想载入宪法",
+        "options": {
+            "A": "十三届全国人大一次会议",
+            "B": "十三届全国人大二次会议",
+            "C": "十四届全国人大一次会议",
+            "D": "十三届全国人大三次会议"
+        },
+        "correct_answer": "A",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "7",
+        "question_type": "单选题",
+        "question_text": "（  ）指出，党确立习近平同志党中央的核心、全党的核心地位，确立习近平新时代中国特色社会主义思想的指导地位。",
+        "options": {
+            "A": "党的十八届五中全会",
+            "B": "党的十八届六中全会",
+            "C": "党的十九届五中全会",
+            "D": "党的十九届六中全会"
+        },
+        "correct_answer": "D",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "8",
+        "question_type": "单选题",
+        "question_text": "（  ）是新时代党和国家事业取得历史性成就、发生历史性变革的决定性因素，是党和人民应对一切不确定性的最大确定性、最大底气、最大保证。",
+        "options": {
+            "A": "“两个确立”",
+            "B": "“四个自信”",
+            "C": "“两个维护”",
+            "D": "“三个务必”"
+        },
+        "correct_answer": "A",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "9",
+        "question_type": "单选题",
+        "question_text": "（  ）是近代以来中国人民的共同梦想，是中国共产党矢志不渝的奋斗目标。",
+        "options": {
+            "A": "推动中国与世界携手并进",
+            "B": "实现中华民族伟大复兴",
+            "C": "科技、教育、人才同步发展",
+            "D": "跨越中等收入陷阱"
+        },
+        "correct_answer": "B",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "10",
+        "question_type": "单选题",
+        "question_text": "党的十八大以来，以习近平同志为核心的党中央团结带领全党全国各族人民，坚持以（  ）全面推进中华民族伟大复兴……",
+        "options": {
+            "A": "中国特色社会主义",
+            "B": "党的创新理论",
+            "C": "实现共同富裕",
+            "D": "中国式现代化"
+        },
+        "correct_answer": "D",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "11",
+        "question_type": "多选题",
+        "question_text": "习近平新时代中国特色社会主义思想从理论和实践的结合上，科学回答了（  ）等重大时代课题。",
+        "options": {
+            "A": "新时代坚持和发展什么样的中国特色社会主义、怎样坚持和发展中国特色社会主义。",
+            "B": "建设什么样的社会主义现代化强国、怎样建设社会主义现代化强国。",
+            "C": "建设什么样的长期执政的马克思主义政党、怎样建设长期执政的马克思主义政党",
+            "D": "建设什么美好的世界、怎样建设美好世界"
+        },
+        "correct_answer": "ABC",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "12",
+        "question_type": "多选题",
+        "question_text": "中国特色社会主义建设事业的总体布局包括经济建设和（  ）",
+        "options": {
+            "A": "政治建设",
+            "B": "文化建设",
+            "C": "社会建设",
+            "D": "生态建设"
+        },
+        "correct_answer": "ABCD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "13",
+        "question_type": "多选题",
+        "question_text": "（  ）共同构成了习近平新时代中国特色社会主义思想的科学体系。",
+        "options": {
+            "A": "“十个明确”",
+            "B": "“十四个坚持”",
+            "C": "“十三个方面成就”",
+            "D": "“六个必须坚持”"
+        },
+        "correct_answer": "ABCD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "14",
+        "question_type": "多选题",
+        "question_text": "习近平新时代中国特色社会主义思想是当代中国马克思主义、二十一世纪马克思主义，是（  ）的时代精华，实现了马克思主义中国化新的飞跃。",
+        "options": {
+            "A": "中华文化",
+            "B": "中华品格",
+            "C": "中国精神",
+            "D": "中国力量"
+        },
+        "correct_answer": "AC",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "15",
+        "question_type": "多选题",
+        "question_text": "中国特色社会主义事业总体布局是“五位一体”、战略布局是“四个全面”，强调坚定（  ）。",
+        "options": {
+            "A": "道路自信",
+            "B": "理论自信",
+            "C": "制度自信",
+            "D": "文化自信"
+        },
+        "correct_answer": "ABCD",
+        "error_count": 0,
+        "correct_count": 0
+    }
+]

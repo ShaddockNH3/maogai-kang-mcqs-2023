@@ -1,0 +1,212 @@
+[
+    {
+        "question_number": "1",
+        "question_type": "单选题",
+        "question_text": "（  ）是治国理政的重要方式",
+        "options": {
+            "A": "法治",
+            "B": "国家治理",
+            "C": "民主",
+            "D": "公正"
+        },
+        "correct_answer": "A",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "2",
+        "question_type": "单选题",
+        "question_text": "习近平法治思想主要集中体现为（  ）",
+        "options": {
+            "A": "“十二个坚持”",
+            "B": "“十一个坚持”",
+            "C": "“十三个坚持”",
+            "D": "“十五个坚持”"
+        },
+        "correct_answer": "B",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "3",
+        "question_type": "单选题",
+        "question_text": "以下哪个会议通过了《中共中央关于全面推进依法治国若干重大问题的决定》，规划了全面依法治国的总蓝图、路线图、施工图。",
+        "options": {
+            "A": "党的十八届四中全会",
+            "B": "党的十八届三中全会",
+            "C": "党的十九届四中全会",
+            "D": "党的十一届三中全会"
+        },
+        "correct_answer": "A",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "4",
+        "question_type": "单选题",
+        "question_text": "中国特色社会主义法治道路的核心要义不包括（  ）",
+        "options": {
+            "A": "坚持党的领导",
+            "B": "坚持中国特色社会主义制度",
+            "C": "贯彻中国特色社会主义法治理论",
+            "D": "坚持公正司法"
+        },
+        "correct_answer": "D",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "5",
+        "question_type": "单选题",
+        "question_text": "（  ）是中国特色社会主义法治最根本的保证。",
+        "options": {
+            "A": "中国共产党的领导",
+            "B": "人民民主",
+            "C": "依法治国",
+            "D": "统一战线"
+        },
+        "correct_answer": "A",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "6",
+        "question_type": "单选题",
+        "question_text": "全面依法治国最广泛、最深厚的基础是（  ）",
+        "options": {
+            "A": "人民",
+            "B": "中国共产党",
+            "C": "法律",
+            "D": "宪法"
+        },
+        "correct_answer": "A",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "7",
+        "question_type": "单选题",
+        "question_text": "（  ）是社会主义法律的基本属性",
+        "options": {
+            "A": "法制",
+            "B": "司法",
+            "C": "人民",
+            "D": "平等"
+        },
+        "correct_answer": "D",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "8",
+        "question_type": "单选题",
+        "question_text": "中国特色社会主义法律体系的根本大法是（  ）",
+        "options": {
+            "A": "宪法",
+            "B": "民法",
+            "C": "刑法",
+            "D": "党内法规制度"
+        },
+        "correct_answer": "A",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "9",
+        "question_type": "单选题",
+        "question_text": "（  ）关系是政治和法治关系的集中反映，是全面依法治国的一个根本问题。",
+        "options": {
+            "A": "党和民",
+            "B": "党和法",
+            "C": "中国共产党和其他民主党派",
+            "D": "党和经济"
+        },
+        "correct_answer": "B",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "10",
+        "question_type": "单选题",
+        "question_text": "（  ）是内心的法律",
+        "options": {
+            "A": "道德",
+            "B": "民主",
+            "C": "诚信",
+            "D": "爱国"
+        },
+        "correct_answer": "A",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "11",
+        "question_type": "多选题",
+        "question_text": "中国特色社会主义法治道路的核心要义是（  ）",
+        "options": {
+            "A": "坚持党的领导",
+            "B": "坚持中国特色社会主义制度",
+            "C": "贯彻中国特色社会主义法治理论",
+            "D": "坚持人民至上"
+        },
+        "correct_answer": "ABC",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "12",
+        "question_type": "多选题",
+        "question_text": "坚持和拓展中国特色社会主义法治道路是一个深入探索和不断实践的过程，必须毫不动摇地坚持从中国实际出发。从中国实际出发，就是要突出法治的（  ）。",
+        "options": {
+            "A": "中国特色",
+            "B": "时代特色",
+            "C": "民族特色",
+            "D": "实践特色"
+        },
+        "correct_answer": "ABD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "13",
+        "question_type": "多选题",
+        "question_text": "坚持和拓展中国特色社会主义法治道路是一个深入探索和不断实践的过程，必须毫不动摇地坚持中国共产党的领导。要把（  ）统一起来，把党总揽全局、协调各方同人大、政协、政府、监察机关、审判机关、检察机关依法依章程履行职能、开展工作统一起来，把党领导人民制定和实施宪法法律同党坚持在宪法法律范围内活动统一起来。",
+        "options": {
+            "A": "依法治国",
+            "B": "依法执政",
+            "C": "依法执法",
+            "D": "依法行政"
+        },
+        "correct_answer": "ABD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "14",
+        "question_type": "多选题",
+        "question_text": "中国特色社会主义法治体系包括以下哪些？（  ）",
+        "options": {
+            "A": "法律规范体系",
+            "B": "法治实施体系",
+            "C": "法治监督体系",
+            "D": "法治保障体系"
+        },
+        "correct_answer": "ABCD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "15",
+        "question_type": "多选题",
+        "question_text": "加快建设法治中国，必须围绕保障和促进社会公平正义，坚持依法治国、依法执政、依法行政共同推进，坚持（  ）一体建设，全面推进国家各方面工作法治化。",
+        "options": {
+            "A": "法治国家",
+            "B": "法治人民",
+            "C": "法治政府",
+            "D": "法治社会"
+        },
+        "correct_answer": "ACD",
+        "error_count": 0,
+        "correct_count": 0
+    }
+]

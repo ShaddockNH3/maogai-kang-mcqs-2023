@@ -1,0 +1,212 @@
+[
+    {
+        "question_number": "1",
+        "question_type": "单选题",
+        "question_text": "实施科教兴国战略，要把（  ）摆在优先发展的战略地位。",
+        "options": {
+            "A": "技术",
+            "B": "教育",
+            "C": "人才",
+            "D": "科技"
+        },
+        "correct_answer": "B",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "2",
+        "question_type": "单选题",
+        "question_text": "（  ）在国家发展全局中居于核心位置。",
+        "options": {
+            "A": "教育",
+            "B": "科技",
+            "C": "发展",
+            "D": "创新"
+        },
+        "correct_answer": "D",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "3",
+        "question_type": "单选题",
+        "question_text": "（  ）是推动党和国家各项事业发展的重要先手棋。",
+        "options": {
+            "A": "军事优先发展",
+            "B": "经济优先发展",
+            "C": "社会优先发展",
+            "D": "教育优先发展"
+        },
+        "correct_answer": "D",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "4",
+        "question_type": "单选题",
+        "question_text": "（  ）是国之大计、党之大计，是功在当代、利在千秋的德政工程。",
+        "options": {
+            "A": "科技",
+            "B": "教育",
+            "C": "人才",
+            "D": "创新"
+        },
+        "correct_answer": "B",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "5",
+        "question_type": "单选题",
+        "question_text": "坚持（  ）对教育工作的全面领导是办好教育的根本保证。",
+        "options": {
+            "A": "党",
+            "B": "教育机构",
+            "C": "社会",
+            "D": "学校"
+        },
+        "correct_answer": "A",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "6",
+        "question_type": "单选题",
+        "question_text": "育人的根本在于（  ）。",
+        "options": {
+            "A": "修身",
+            "B": "齐家",
+            "C": "立德",
+            "D": "发展"
+        },
+        "correct_answer": "C",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "7",
+        "question_type": "单选题",
+        "question_text": "教育无论发展到什么程度，第一位的是（  ），引导学生树立正确的世界观、人生观、价值观，全面发展、学有所长，培养出党和国家需要、对社会有用的人。",
+        "options": {
+            "A": "铸魂育人",
+            "B": "以文化人",
+            "C": "立德树人",
+            "D": "培根铸魂"
+        },
+        "correct_answer": "C",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "8",
+        "question_type": "单选题",
+        "question_text": "（  ）是落实立德树人根本任务的关键课程，要坚持不懈传播马克思主义科学理论，用党的创新理论武装学生，不断提高学生思想水平、政治觉悟、道德品质。",
+        "options": {
+            "A": "思想政治理论课",
+            "B": "育人工程课",
+            "C": "专业课",
+            "D": "社会实践课"
+        },
+        "correct_answer": "A",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "9",
+        "question_type": "单选题",
+        "question_text": "（  ）是发展教育的根本尺度。",
+        "options": {
+            "A": "社会需要",
+            "B": "国家需要",
+            "C": "人民满意",
+            "D": "岗位满意"
+        },
+        "correct_answer": "C",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "10",
+        "question_type": "单选题",
+        "question_text": "（  ）是国家强盛之基、安全之要。",
+        "options": {
+            "A": "科技自立自强",
+            "B": "社会进步发展",
+            "C": "教育强国战略",
+            "D": "人才强国战略"
+        },
+        "correct_answer": "A",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "11",
+        "question_type": "多选题",
+        "question_text": "现代化强国，必定是（  ）。",
+        "options": {
+            "A": "教育强国",
+            "B": "科技强国",
+            "C": "人才强国",
+            "D": "经济强国"
+        },
+        "correct_answer": "ABC",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "12",
+        "question_type": "多选题",
+        "question_text": "实施（  ），是增强综合国力、满足人民群众美好生活需要的必然要求",
+        "options": {
+            "A": "科教兴国战略",
+            "B": "金融强国战略",
+            "C": "人才强国战略",
+            "D": "创新驱动发展战略"
+        },
+        "correct_answer": "ACD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "13",
+        "question_type": "多选题",
+        "question_text": "要在全社会树立科学的（  ），加快扭转教育功利化倾向，形成健康的教育环境和生态。",
+        "options": {
+            "A": "价值观",
+            "B": "人才观",
+            "C": "成才观",
+            "D": "教育观"
+        },
+        "correct_answer": "BCD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "14",
+        "question_type": "多选题",
+        "question_text": "自主创新，就是从增强国家创新能力出发，加强（  ），确保国家拥有自主可控的科技创新能力。",
+        "options": {
+            "A": "原始创新",
+            "B": "集成创新",
+            "C": "多元创新",
+            "D": "开放创新"
+        },
+        "correct_answer": "ABD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "15",
+        "question_type": "多选题",
+        "question_text": "全面建设社会主义现代化国家，必须坚持党管人才原则，（  ），培养造就大批德才兼备的高素质人才，聚天下英才而用之，推动我国由人才大国迈向人才强国。",
+        "options": {
+            "A": "尊重劳动",
+            "B": "尊重知识",
+            "C": "尊重人才",
+            "D": "尊重创造"
+        },
+        "correct_answer": "ABCD",
+        "error_count": 0,
+        "correct_count": 0
+    }
+]

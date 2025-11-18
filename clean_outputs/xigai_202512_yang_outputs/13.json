@@ -1,0 +1,212 @@
+[
+    {
+        "question_number": "1",
+        "question_type": "单选题",
+        "question_text": "总体国家安全观的关键是（  ）。",
+        "options": {
+            "A": "“国家”",
+            "B": "“安全”",
+            "C": "“总体”",
+            "D": "意识形态"
+        },
+        "correct_answer": "C",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "2",
+        "question_type": "单选题",
+        "question_text": "（  ）是关乎国家发展稳定和社会长治久安的重大战略问题。",
+        "options": {
+            "A": "国家安全",
+            "B": "经济安全",
+            "C": "政治安全",
+            "D": "社会安全"
+        },
+        "correct_answer": "A",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "3",
+        "question_type": "单选题",
+        "question_text": "（  ）是民族复兴的根基，社会稳定是国家强盛的前提。",
+        "options": {
+            "A": "经济安全",
+            "B": "文化安全",
+            "C": "政治安全",
+            "D": "国家安全"
+        },
+        "correct_answer": "D",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "4",
+        "question_type": "单选题",
+        "question_text": "总体国家安全观以（  ）为宗旨，坚持把保护（）放在最重要的位置。",
+        "options": {
+            "A": "人民安全",
+            "B": "经济安全",
+            "C": "政治安全",
+            "D": "社会安全"
+        },
+        "correct_answer": "A",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "5",
+        "question_type": "单选题",
+        "question_text": "总体国家安全观以（  ）为根本，坚持把（）放在首要位置。",
+        "options": {
+            "A": "人民安全",
+            "B": "经济安全",
+            "C": "政治安全",
+            "D": "社会安全"
+        },
+        "correct_answer": "C",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "6",
+        "question_type": "单选题",
+        "question_text": "总体国家安全观以（  ）为基础。",
+        "options": {
+            "A": "人民安全",
+            "B": "经济安全",
+            "C": "政治安全",
+            "D": "社会安全"
+        },
+        "correct_answer": "B",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "7",
+        "question_type": "单选题",
+        "question_text": "（  ）是应对国家安全形势新变化新趋势的战略选择，是全面贯彻落实总体国家安全观的重大举措。",
+        "options": {
+            "A": "构建新发展格局",
+            "B": "统筹稳定和发展",
+            "C": "构建新安全格局",
+            "D": "建设强大人民军队"
+        },
+        "correct_answer": "C",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "8",
+        "question_type": "单选题",
+        "question_text": "构建统筹各领域安全的新安全格局，必须把维护（  ）作为应对各领域安全风险挑战的首要任务。",
+        "options": {
+            "A": "文化安全",
+            "B": "经济安全",
+            "C": "政治安全",
+            "D": "社会安全"
+        },
+        "correct_answer": "C",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "9",
+        "question_type": "单选题",
+        "question_text": "（）是做好党和国家各项工作的根本保证，是我国政治稳定、经济发展、民族团结、社会稳定的根本点。",
+        "options": {
+            "A": "实事求是",
+            "B": "党的领导",
+            "C": "群众路线",
+            "D": "解放思想"
+        },
+        "correct_answer": "B",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "10",
+        "question_type": "单选题",
+        "question_text": "维护意识形态安全，就是要毫不动摇坚持和巩固（）在意识形态领域的指导地位，不断巩固全党全国人民团结奋斗的共同思想基础。",
+        "options": {
+            "A": "共产主义",
+            "B": "集体主义",
+            "C": "自由主义",
+            "D": "马克思主义"
+        },
+        "correct_answer": "D",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "11",
+        "question_type": "多选题",
+        "question_text": "国土安全是立国之基，维护国土安全，要（  ）。",
+        "options": {
+            "A": "提升维护国土安全能力，加强边防、海防、空防建设",
+            "B": "坚决反对一切分裂祖国的活动",
+            "C": "深入打击恐怖主义、分裂主义、极端主义“三股势力”",
+            "D": "坚决防范“藏独”“东突”，坚决粉碎任何“台独”分裂图谋"
+        },
+        "correct_answer": "ABCD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "12",
+        "question_type": "多选题",
+        "question_text": "推动创新发展、协调发展、绿色发展、开放发展、共享发展，前提都是（  ）。",
+        "options": {
+            "A": "国家安全",
+            "B": "社会稳定",
+            "C": "人民幸福",
+            "D": "民族复兴"
+        },
+        "correct_answer": "AB",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "13",
+        "question_type": "多选题",
+        "question_text": "经济安全是国家安全的基础，维护经济安全，要（  ）。",
+        "options": {
+            "A": "保证基本经济制度安全，维护社会主义市场经济秩序，保障关系国民经济命脉的重要行业和关键领域安全。",
+            "B": "加快建设现代化经济体系，提升产业链供应链韧性和安全水平。",
+            "C": "加强金融、地方债务风险防控，守住不发生系统性风险的底线。",
+            "D": "全方位夯实粮食安全根基，牢牢守住18亿亩耕地红线。"
+        },
+        "correct_answer": "ABCD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "14",
+        "question_type": "多选题",
+        "question_text": "国家安全能力建设具有（  ）的意义。",
+        "options": {
+            "A": "复杂性",
+            "B": "基础性",
+            "C": "根本性",
+            "D": "长期性"
+        },
+        "correct_answer": "BCD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "15",
+        "question_type": "多选题",
+        "question_text": "关于政治安全、人民安全和国家利益至上之间的关系，以下说法正确的是（  ）。",
+        "options": {
+            "A": "政治安全是维护人民安全和国家利益的根本保证。",
+            "B": "人民安全居于中心地位，国家安全归根到底是保障人民利益。",
+            "C": "政治安全与人民安全、国家利益至上是相互对立的。",
+            "D": "国家利益至上是实现政治安全和人民安全的要求和原则。"
+        },
+        "correct_answer": "ABD",
+        "error_count": 0,
+        "correct_count": 0
+    }
+]

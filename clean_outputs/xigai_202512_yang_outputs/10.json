@@ -1,0 +1,212 @@
+[
+    {
+        "question_number": "1",
+        "question_type": "单选题",
+        "question_text": "一、单项选择题（共10题） 1.  习近平总书记指出，一个没有精神力量的民族难以自立自强，一项没有（ ）的事业难以持续长久。",
+        "options": {
+            "A": "物质支撑",
+            "B": "文化支撑",
+            "C": "制度支撑",
+            "D": "经济支撑"
+        },
+        "correct_answer": "B",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "2",
+        "question_type": "单选题",
+        "question_text": "建设社会主义文化强国，推动社会主义文化繁荣兴盛，关键在于坚定（ ）。",
+        "options": {
+            "A": "道路自信",
+            "B": "理论自信",
+            "C": "制度自信",
+            "D": "文化自信"
+        },
+        "correct_answer": "D",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "3",
+        "question_type": "单选题",
+        "question_text": "习近平总书记强调，（ ）是更基础、更广泛、更深厚的自信，是一个国家、一个民族发展中最基本、最深沉、最持久的力量。",
+        "options": {
+            "A": "道路自信",
+            "B": "文化自信",
+            "C": "理论自信",
+            "D": "制度自信"
+        },
+        "correct_answer": "B",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "4",
+        "question_type": "单选题",
+        "question_text": "建设具有强大凝聚力和引领力的社会主义意识形态，必须坚持（ ）在意识形态领域指导地位的根本制度。",
+        "options": {
+            "A": "中华优秀传统文化",
+            "B": "马克思主义",
+            "C": "社会主义核心价值观",
+            "D": "习近平新时代中国特色社会主义思想"
+        },
+        "correct_answer": "B",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "5",
+        "question_type": "单选题",
+        "question_text": "社会主义核心价值观在国家层面的价值目标是（ ）。",
+        "options": {
+            "A": "爱国、敬业、诚信、友善",
+            "B": "自由、平等、公正、法治",
+            "C": "富强、民主、文明、和谐",
+            "D": "改革、发展、稳定、和谐"
+        },
+        "correct_answer": "C",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "6",
+        "question_type": "单选题",
+        "question_text": "以（ ）为源头的中国共产党人精神谱系，是中华民族的宝贵精神财富。",
+        "options": {
+            "A": "井冈山精神",
+            "B": "伟大建党精神",
+            "C": "延安精神",
+            "D": "改革开放精神"
+        },
+        "correct_answer": "B",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "7",
+        "question_type": "单选题",
+        "question_text": "推动中华优秀传统文化（ ），就是要按照时代特点和要求，对其内涵和表现形式加以改造，赋予新的时代内涵和现代表达形式。",
+        "options": {
+            "A": "创新性发展",
+            "B": "创造性转化",
+            "C": "系统性继承",
+            "D": "全面性复兴"
+        },
+        "correct_answer": "B",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "8",
+        "question_type": "单选题",
+        "question_text": "习近平总书记指出，意识形态工作是为国家立心、为（ ）的工作。",
+        "options": {
+            "A": "民族立魂",
+            "B": "人民立信",
+            "C": "社会立规",
+            "D": "时代立标"
+        },
+        "correct_answer": "A",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "9",
+        "question_type": "单选题",
+        "question_text": "繁荣发展社会主义先进文化的重要方针是坚持（  ）。",
+        "options": {
+            "A": "为人民服务、为社会主义服务",
+            "B": "百花齐放、百家争鸣",
+            "C": "创造性转化、创新性发展",
+            "D": "社会效益首位、社会经济效益统一"
+        },
+        "correct_answer": "B",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "10",
+        "question_type": "单选题",
+        "question_text": "提高国家文化软实力和中华文化影响力，根本在于传播理念，以我为主，以理服人，（ ）。",
+        "options": {
+            "A": "以势压人",
+            "B": "以情动人",
+            "C": "以利诱人",
+            "D": "以法育人"
+        },
+        "correct_answer": "B",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "11",
+        "question_type": "多选题",
+        "question_text": "建设社会主义文化强国，必须坚持中国特色社会主义文化发展道路，发展（ ）的社会主义文化。",
+        "options": {
+            "A": "面向现代化",
+            "B": "面向世界",
+            "C": "面向未来",
+            "D": "民族的科学的大众的"
+        },
+        "correct_answer": "ABCD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "12",
+        "question_type": "多选题",
+        "question_text": "习近平总书记指出，要坚守中华文化立场，传承发展中华优秀传统文化。以下关于推动中华优秀传统文化发展的表述，正确的是（ ）。",
+        "options": {
+            "A": "创造性转化",
+            "B": "创新性发展",
+            "C": "全面复古继承",
+            "D": "吸收外来文化"
+        },
+        "correct_answer": "A",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "13",
+        "question_type": "多选题",
+        "question_text": "中华文明具有的突出特性包括（ ）。",
+        "options": {
+            "A": "连续性、创新性",
+            "B": "统一性、包容性",
+            "C": "和平性",
+            "D": "扩张性、排他性"
+        },
+        "correct_answer": "ABC",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "14",
+        "question_type": "多选题",
+        "question_text": "新的时代条件下，党的新闻舆论工作的职责和使命包括（ ）。",
+        "options": {
+            "A": "高举旗帜、引领导向",
+            "B": "围绕中心、服务大局",
+            "C": "团结人民、鼓舞士气",
+            "D": "澄清谬误、明辨是非"
+        },
+        "correct_answer": "ABCD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "15",
+        "question_type": "多选题",
+        "question_text": "提高全社会文明程度，需要（ ）。",
+        "options": {
+            "A": "广泛开展理想信念教育",
+            "B": "实施公民道德建设工程",
+            "C": "培育时代新风新貌",
+            "D": "只注重物质文明建设"
+        },
+        "correct_answer": "ABC",
+        "error_count": 0,
+        "correct_count": 0
+    }
+]

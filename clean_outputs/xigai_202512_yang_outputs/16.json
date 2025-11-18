@@ -1,0 +1,212 @@
+[
+    {
+        "question_number": "1",
+        "question_type": "单选题",
+        "question_text": "共建（  ）是对中国与世界实现开放共赢路径的顶层设计，是推动构建人类命运共同体的实践平台。",
+        "options": {
+            "A": "“金砖国家”",
+            "B": "“新兴国家经济体”",
+            "C": "“联合国发展战略”",
+            "D": "“一带一路”"
+        },
+        "correct_answer": "D",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "2",
+        "question_type": "单选题",
+        "question_text": "坚持以（  ）为原则推动“一带一路”建设。",
+        "options": {
+            "A": "中华民族伟大复兴",
+            "B": "维护世界和平、促进共同发展",
+            "C": "共商共建共享",
+            "D": "维护党中央权威"
+        },
+        "correct_answer": "C",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "3",
+        "question_type": "单选题",
+        "question_text": "构建人类命运共同体思想，核心是“建设持久和平、普遍安全、共同繁荣、（  ）的世界”。",
+        "options": {
+            "A": "开放包容、合作共赢",
+            "B": "清洁美丽、合作共赢",
+            "C": "合作共赢、持续发展",
+            "D": "开放包容、清洁美丽"
+        },
+        "correct_answer": "D",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "4",
+        "question_type": "单选题",
+        "question_text": "中国始终坚持（  ）的外交政策宗旨。",
+        "options": {
+            "A": "建设“一带一路”",
+            "B": "积极参与全球治理",
+            "C": "维护世界和平、促进共同发展",
+            "D": "构建人类命运共同体"
+        },
+        "correct_answer": "C",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "5",
+        "question_type": "单选题",
+        "question_text": "中国政府倡议，共建“一带一路”恪守联合国宪章的宗旨和原则，……打造政治互信、经济融合、文化包容的利益共同体、命运共同体、（  ）",
+        "options": {
+            "A": "责任共同体",
+            "B": "发展共同体",
+            "C": "理念共同体",
+            "D": "经济共同体"
+        },
+        "correct_answer": "A",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "6",
+        "question_type": "单选题",
+        "question_text": "坚持走（  ）道路，推动建设新型国际关系。",
+        "options": {
+            "A": "共同发展",
+            "B": "和平发展",
+            "C": "合作共赢",
+            "D": "相互尊重"
+        },
+        "correct_answer": "B",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "7",
+        "question_type": "单选题",
+        "question_text": "中国特色大国外交，坚持以（  ）为底线维护国家主权、安全、发展利益。",
+        "options": {
+            "A": "深化外交布局",
+            "B": "公平正义",
+            "C": "国家核心利益",
+            "D": "维护世界和平、促进共同发展"
+        },
+        "correct_answer": "C",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "8",
+        "question_type": "单选题",
+        "question_text": "中国独立自主的和平外交政策，就是把（  ）放在第一位。",
+        "options": {
+            "A": "我国人民的利益",
+            "B": "世界人民的利益",
+            "C": "国家主权和安全",
+            "D": "事情的是非曲直"
+        },
+        "correct_answer": "C",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "9",
+        "question_type": "单选题",
+        "question_text": "坚持以（  ）为使命推进中国特色大国外交。",
+        "options": {
+            "A": "实现中华民族伟大复兴",
+            "B": "共商共建共享",
+            "C": "维护世界和平、促进共同发展",
+            "D": "维护党中央权威"
+        },
+        "correct_answer": "A",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "10",
+        "question_type": "单选题",
+        "question_text": "习近平主席在联合国日内瓦总部发表《共同构建人类命运共同体》的主旨演讲，提出世界怎么了、我们怎么办?这是整个世界都在思考的问题。中国方案是:（  ）",
+        "options": {
+            "A": "构建人类命运共同体",
+            "B": "共商共建共享",
+            "C": "和平共处",
+            "D": "建设“一带一路”"
+        },
+        "correct_answer": "A",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "11",
+        "question_type": "多选题",
+        "question_text": "中国特色大国外交建立在正确的（  ）基础之上。",
+        "options": {
+            "A": "正义观",
+            "B": "历史观",
+            "C": "大局观",
+            "D": "角色观"
+        },
+        "correct_answer": "BCD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "12",
+        "question_type": "多选题",
+        "question_text": "推进大国协调合作，构建（  ）的大国关系格局，这是中国对外关系的重要内容。",
+        "options": {
+            "A": "和平共处",
+            "B": "总体稳定",
+            "C": "均衡发展",
+            "D": "亲诚惠容"
+        },
+        "correct_answer": "ABC",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "13",
+        "question_type": "多选题",
+        "question_text": "坚持（  ）周边外交方针，深化同周边国家友好互信和利益融合。",
+        "options": {
+            "A": "和平共处",
+            "B": "亲诚惠容",
+            "C": "与邻为善、与邻为伴",
+            "D": "均衡发展"
+        },
+        "correct_answer": "BC",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "14",
+        "question_type": "多选题",
+        "question_text": "秉持（ ），加强同发展中国家团结合作。",
+        "options": {
+            "A": "独立自主",
+            "B": "真实亲诚理念",
+            "C": "正确义利观",
+            "D": "亲诚惠容"
+        },
+        "correct_answer": "BC",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "15",
+        "question_type": "多选题",
+        "question_text": "秉持（ ）理念，构建新型政党关系。",
+        "options": {
+            "A": "独立自主",
+            "B": "求同存异",
+            "C": "相互尊重",
+            "D": "互学互鉴"
+        },
+        "correct_answer": "BCD",
+        "error_count": 0,
+        "correct_count": 0
+    }
+]

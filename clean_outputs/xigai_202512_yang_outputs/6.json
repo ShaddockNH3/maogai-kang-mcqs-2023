@@ -1,0 +1,212 @@
+[
+    {
+        "question_number": "1",
+        "question_type": "单选题",
+        "question_text": "（  ）是新时代我国经济社会发展的鲜明主题，是全面建设社会主义现代化国家的首要任务。",
+        "options": {
+            "A": "高质量发展",
+            "B": "法治中国建设",
+            "C": "改革开放",
+            "D": "共同富裕"
+        },
+        "correct_answer": "A",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "2",
+        "question_type": "单选题",
+        "question_text": "（  ）是解决我国一切问题的基础和关键。",
+        "options": {
+            "A": "发展",
+            "B": "全面深化改革",
+            "C": "依法治国",
+            "D": "党的领导"
+        },
+        "correct_answer": "A",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "3",
+        "question_type": "单选题",
+        "question_text": "我国经济已由高速增长阶段转向（  ）。",
+        "options": {
+            "A": "快速发展阶段",
+            "B": "稳步发展阶段",
+            "C": "高水平发展阶段",
+            "D": "高质量发展阶段"
+        },
+        "correct_answer": "D",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "4",
+        "question_type": "单选题",
+        "question_text": "（  ）是新时代我国发展壮大的必由之路。",
+        "options": {
+            "A": "贯彻新发展理念",
+            "B": "供给侧结构性改革",
+            "C": "立足新发展阶段",
+            "D": "构建新发展格局"
+        },
+        "correct_answer": "A",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "5",
+        "question_type": "单选题",
+        "question_text": "（  ）是引领发展的第一动力。",
+        "options": {
+            "A": "改革",
+            "B": "发展",
+            "C": "创新",
+            "D": "稳定"
+        },
+        "correct_answer": "C",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "6",
+        "question_type": "单选题",
+        "question_text": "（  ）是非公有制经济的主要经济组织形式，是推进中国式现代化的生力军，是高质量发展的重要基础",
+        "options": {
+            "A": "混合所有制经济",
+            "B": "国营经济",
+            "C": "外资经济",
+            "D": "民营经济"
+        },
+        "correct_answer": "D",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "7",
+        "question_type": "单选题",
+        "question_text": "（  ）是党和国家治理经济的重要方式，体现了中国特色社会主义制度的独特优势。",
+        "options": {
+            "A": "市场",
+            "B": "宏观调控",
+            "C": "经济改革",
+            "D": "对外开放"
+        },
+        "correct_answer": "B",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "8",
+        "question_type": "单选题",
+        "question_text": "（  ）是把握未来发展主动权的先手棋，不是被迫之举和权宜之计。",
+        "options": {
+            "A": "立足新发展阶段",
+            "B": "贯彻新发展理念",
+            "C": "构建新发展格局",
+            "D": "实现新时代发展"
+        },
+        "correct_answer": "C",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "9",
+        "question_type": "单选题",
+        "question_text": "（  ）是我国发展的战略目标，是推动高质量发展、全面提高经济整体竞争力的必然要求。",
+        "options": {
+            "A": "坚持中国特色社会主义经济",
+            "B": "全面深化改革",
+            "C": "供给侧结构性改革",
+            "D": "建设现代化经济体系"
+        },
+        "correct_answer": "D",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "10",
+        "question_type": "单选题",
+        "question_text": "（  ）是社会主义现代化强国的根基。",
+        "options": {
+            "A": "数字经济",
+            "B": "实体经济",
+            "C": "农业强国",
+            "D": "现代化农业"
+        },
+        "correct_answer": "C",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "11",
+        "question_type": "多选题",
+        "question_text": "针对国际金融危机后世界经济低迷、我国经济下行压力加大，提出我国经济发展正处在（  ）“三期叠加”阶段，进入了新常态。",
+        "options": {
+            "A": "增长速度换挡期",
+            "B": "结构调整阵痛期",
+            "C": "前期刺激政策消化期",
+            "D": "发展攻坚筹备期"
+        },
+        "correct_answer": "ABC",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "12",
+        "question_type": "多选题",
+        "question_text": "非公有制经济包括（  ）以及混合所有制经济中的非国有成分和非集体成分。",
+        "options": {
+            "A": "个体经济",
+            "B": "私营经济",
+            "C": "港澳台投资经济",
+            "D": "外商投资经济"
+        },
+        "correct_answer": "ABCD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "13",
+        "question_type": "多选题",
+        "question_text": "从我国生产力与生产关系的实际出发，我们确立了（  ）的分配制度，形成了我国的基本分配制度。",
+        "options": {
+            "A": "按劳分配为主体",
+            "B": "按需分配为主体",
+            "C": "多种分配方式并存",
+            "D": "多劳多得的分配方式并存"
+        },
+        "correct_answer": "AC",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "14",
+        "question_type": "多选题",
+        "question_text": "坚持和完善基本分配制度，要努力推动（  ）。",
+        "options": {
+            "A": "居民收入增长和经济增长同步",
+            "B": "居民收入增长和劳动生产率提高同步",
+            "C": "劳动报酬提高和经济增长同步",
+            "D": "劳动报酬提高和劳动生产率提高同步"
+        },
+        "correct_answer": "AD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "15",
+        "question_type": "多选题",
+        "question_text": "构建高水平社会主义市场经济体制，关键是要处理好（  ）的关系。",
+        "options": {
+            "A": "改革",
+            "B": "发展",
+            "C": "政府",
+            "D": "市场"
+        },
+        "correct_answer": "CD",
+        "error_count": 0,
+        "correct_count": 0
+    }
+]

@@ -7,16 +7,20 @@ import (
 
 // --- 配置常量 ---
 const (
-	maogaiQuestionSourceDir      = "clean_outputs/maogai_outputs"
-	xigaiQuestionSourceDir       = "clean_outputs/xigai_outputs"
-	maogaiMaxChapterIndex        = 8
-	xigaiMaxChapterIndex         = 0 // 习概只有一个章节
-	userDataBaseDir              = "user_data"
-	incorrectQuestionsFile       = "incorrect_questions.json"        // 默认(毛概)错题文件
-	maogaiIncorrectQuestionsFile = "maogai_incorrect_questions.json" // 毛概错题文件
-	xigaiIncorrectQuestionsFile  = "xigai_incorrect_questions.json"  // 习概错题文件
-	deleteIncorrectQuestionsFile = "deleted_incorrect_questions.json"
-	questionStatsFile            = "question_stats.json"
+	maogaiQuestionSourceDir         = "clean_outputs/maogao_202506_kang_outputs"
+	xigaiLiQuestionSourceDir        = "clean_outputs/xigai_202412_li_outputs"
+	xigaiYangQuestionSourceDir      = "clean_outputs/xigai_202512_yang_outputs"
+	maogaiMaxChapterIndex           = 8
+	xigaiLiMaxChapterIndex          = 0  // 李老师的习概只有一个章节
+	xigaiYangMaxChapterIndex        = 17 // 杨老师的习概包含导论(0) + 17章
+	userDataBaseDir                 = "user_data"
+	incorrectQuestionsFile          = "incorrect_questions.json"            // 默认(毛概)错题文件
+	maogaiIncorrectQuestionsFile    = "maogai_incorrect_questions.json"     // 毛概错题文件
+	xigaiIncorrectQuestionsFile     = "xigai_incorrect_questions.json"      // 兼容老版本的习概错题文件（保留以向后兼容）
+	xigaiLiIncorrectQuestionsFile   = "xigai_li_incorrect_questions.json"   // 习概 李老师 错题文件
+	xigaiYangIncorrectQuestionsFile = "xigai_yang_incorrect_questions.json" // 习概 杨老师 错题文件
+	deleteIncorrectQuestionsFile    = "deleted_incorrect_questions.json"
+	questionStatsFile               = "question_stats.json"
 )
 
 // --- 数据结构定义 ---
@@ -74,7 +78,7 @@ type UserSession struct {
 	OriginalIncorrect    []UserIncorrectQuestion // Store the full incorrect questions for retrieval
 	CurrentQuestionIndex int                     // Index for session.CurrentQuestions (e.g., /api/review/next)
 	CurrentMode          string                  // "review", "quiz", "incorrect_review"
-	CurrentCourse        string                  // "maogai" or "xigai" - 当前选择的课程
+	CurrentCourse        string                  // "maogai", "xigai_li" 或 "xigai_yang" - 当前选择的课程
 	mu                   sync.Mutex              // 保护会话内部数据
 }
 
@@ -85,7 +89,7 @@ type InitSessionRequest struct {
 
 type StartModeRequest struct {
 	UserID        string   `json:"user_id" vd:"required"`
-	Course        string   `json:"course" vd:"required"`         // "maogai" 或 "xigai"
+	Course        string   `json:"course" vd:"required"`         // "maogai", "xigai_li" 或 "xigai_yang"
 	ChapterChoice []string `json:"chapter_choice" vd:"required"` // 例如 ["0", "1", "all"]
 	OrderChoice   string   `json:"order_choice" vd:"required"`   // "sequential" 或 "random"
 }

@@ -1,0 +1,212 @@
+[
+    {
+        "question_number": "1",
+        "question_type": "单选题",
+        "question_text": "“一国两制”是我国的一项基本国策，其主要作用是（   ）。",
+        "options": {
+            "A": "党领导人民建设社会主义的一项重要制度",
+            "B": "党领导人民实现祖国和平统一的一项重要制度",
+            "C": "党领导人民进行涉外工作的一项重要制度",
+            "D": "党领导人民进行国防建设的一项重要制度"
+        },
+        "correct_answer": "B",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "2",
+        "question_type": "单选题",
+        "question_text": "香港回归祖国的时间是（    ）。",
+        "options": {
+            "A": "1997年8月1日",
+            "B": "1999年7月1日",
+            "C": "1997年7月1日",
+            "D": "1999年12月20日"
+        },
+        "correct_answer": "C",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "3",
+        "question_type": "单选题",
+        "question_text": "网红歌曲《2035去台湾》，说的是解决台湾问题实现祖国完全统一是中华民族走向伟大复兴的（    ）。",
+        "options": {
+            "A": "历史必然",
+            "B": "组成部分",
+            "C": "阶段性要求",
+            "D": "必然要求"
+        },
+        "correct_answer": "A",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "4",
+        "question_type": "单选题",
+        "question_text": "“一国两制”的概念内涵中，“一国”和“两制”之间的关系是怎样的？（    ）",
+        "options": {
+            "A": "“一国”是实行“两制”的前提和基础",
+            "B": "“一国”和“两制”是具有同等法理意义的提法",
+            "C": "“一国”是实行“两制”的基本要求",
+            "D": "实行“两制”是“一国”的具体体现"
+        },
+        "correct_answer": "A",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "5",
+        "question_type": "单选题",
+        "question_text": "坚持中央全面管治权与保障特别行政区高度自治权，两者之间的关系是怎样的（    ）。",
+        "options": {
+            "A": "矛盾的",
+            "B": "辩证的",
+            "C": "统一的",
+            "D": "包络的"
+        },
+        "correct_answer": "C",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "6",
+        "question_type": "单选题",
+        "question_text": "下列哪一项不属于坚持和完善“一国两制”制度体系的内容（    ）。",
+        "options": {
+            "A": "加强依法治理相关制度和机制建设",
+            "B": "健全中央行使全面管治权的制度",
+            "C": "落实爱国者治理提供制度保障",
+            "D": "健全港人澳人行使全面管治权的制度"
+        },
+        "correct_answer": "D",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "7",
+        "question_type": "单选题",
+        "question_text": "对香港和澳门来说，在新时代，如何才能获得更好地发展？（    ）",
+        "options": {
+            "A": "坚持“港人治港”、“澳人治澳”",
+            "B": "不断推进法治建设",
+            "C": "深化改革开放",
+            "D": "要积极融入国家发展大局"
+        },
+        "correct_answer": "D",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "8",
+        "question_type": "单选题",
+        "question_text": "台湾的前途命运只有唯一的一条出路是（    ）？",
+        "options": {
+            "A": "发展经济",
+            "B": "国家统一",
+            "C": "文化繁荣",
+            "D": "社会稳定"
+        },
+        "correct_answer": "B",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "9",
+        "question_type": "单选题",
+        "question_text": "坚决贯彻新时代党解决台湾问题的总体方略，统一的根本保证是（    ）",
+        "options": {
+            "A": "坚持在祖国大陆发展进步基础上解决台湾问题",
+            "B": "坚持党中央对对台工作的集中统一领导",
+            "C": "坚持“和平统一、一国两制”基本方针",
+            "D": "坚持反对外部势力干涉"
+        },
+        "correct_answer": "B",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "10",
+        "question_type": "单选题",
+        "question_text": "“和平统一、一国两制”方针是实现两岸统一的（    ）",
+        "options": {
+            "A": "最佳方式",
+            "B": "一般选项",
+            "C": "可能方式",
+            "D": "多种方式之一"
+        },
+        "correct_answer": "A",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "11",
+        "question_type": "多选题",
+        "question_text": "“一国两制”是中国特色社会主义的伟大创举主要体现在（   ）。",
+        "options": {
+            "A": "“一国两制”是中国特色社会主义制度创新的重要成果",
+            "B": "“一国两制”是中国共产党领导人民实现祖国和平统一的伟大构想",
+            "C": "“一国两制”为国际社会解决类似问题提供了新思路新方案",
+            "D": "“一国两制”是历史的必然选择"
+        },
+        "correct_answer": "ABC",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "12",
+        "question_type": "多选题",
+        "question_text": "贯彻“一国两制”方针要坚持两点是（    ）。",
+        "options": {
+            "A": "灵活掌握，具体问题具体分析",
+            "B": "坚定不移，确保不会变、不动摇",
+            "C": "全面准确，确保不走样、不变形",
+            "D": "统筹推进，确保各个部分统一进程"
+        },
+        "correct_answer": "BC",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "13",
+        "question_type": "多选题",
+        "question_text": "“港人治港”是有界线和标准的，具体体现在（   ）",
+        "options": {
+            "A": "必须由以爱国者为主体的港人来治理香港",
+            "B": "要尊重自己的民族",
+            "C": "要诚心诚意拥护祖国恢复行使对香港的主权",
+            "D": "不损害香港的繁荣和稳定"
+        },
+        "correct_answer": "ABCD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "14",
+        "question_type": "多选题",
+        "question_text": "中央贯彻落实“一国两制”有三个不会变，分别是指（   ）。",
+        "options": {
+            "A": "支持香港和澳门的法律制度体系不会变",
+            "B": "严格按照基本法办事的方针不会变",
+            "C": "支持行政长官和特别行政区政府依法施政、履行职责的决心不会变",
+            "D": "支持香港、澳门两个特别行政区发展经济、改善民生、推进民主、促进和谐的政策也不会变"
+        },
+        "correct_answer": "BCD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "15",
+        "question_type": "多选题",
+        "question_text": "2024年4月10日，习近平总书记在北京接见了马英九一行，并就推进国家统一进程发表了重要讲话。下面哪些选项是坚持贯彻新时代党解决台湾问题的总体方略的内容（   ）？",
+        "options": {
+            "A": "坚持党中央对对台工作的集中统一领导",
+            "B": "坚持在中华民族伟大复兴进程中推进祖国统一",
+            "C": "坚持在祖国大陆发展进步基础上解决台湾问题",
+            "D": "坚持“和平统一、一国两制”基本方针"
+        },
+        "correct_answer": "ABCD",
+        "error_count": 0,
+        "correct_count": 0
+    }
+]

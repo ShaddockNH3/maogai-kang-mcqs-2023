@@ -188,6 +188,10 @@
             <h1 v-if="!isInQuestionView || currentView === 'mainMenu'" class="main-title">
                 {{ currentView === 'mainMenu' ? '喵喵学习小助手' : viewTitle }}
                  <span v-if="currentView === 'mainMenu' && userId" class="block text-xs text-gray-500 font-normal mt-1">当前用户: {{ userId }}</span>
+                 <!-- 在主标题下显示项目链接（仅在主菜单视图显示） -->
+                 <p v-if="currentView === 'mainMenu'" class="text-center text-sm text-gray-400 mt-2">
+                     <a href="https://github.com/ShaddockNH3/Meow-Politics-Helper" target="_blank" class="text-blue-500 hover:text-blue-700 underline">📖 查看项目源码 (GitHub)</a>
+                 </p>
             </h1>
 
 
@@ -199,12 +203,17 @@
                         <button @click="selectedCourse = 'maogai'" 
                                 :class="selectedCourse === 'maogai' ? 'btn-primary' : 'btn-outline'"
                                 class="btn flex-1">
-                            毛概 (9章)
+                            2025上毛概康老师
                         </button>
-                        <button @click="selectedCourse = 'xigai'" 
-                                :class="selectedCourse === 'xigai' ? 'btn-primary' : 'btn-outline'"
+                        <button @click="selectedCourse = 'xigai_li'" 
+                                :class="selectedCourse === 'xigai_li' ? 'btn-primary' : 'btn-outline'"
                                 class="btn flex-1">
-                            习概 (100题)
+                            2024下习概李老师
+                        </button>
+                        <button @click="selectedCourse = 'xigai_yang'" 
+                                :class="selectedCourse === 'xigai_yang' ? 'btn-primary' : 'btn-outline'"
+                                class="btn flex-1">
+                            2025下习概杨老师
                         </button>
                     </div>
                 </div>
@@ -268,7 +277,7 @@
                             {{ chapter.text }}
                         </button>
                     </div>
-                    <p class="text-xs text-gray-500 mt-1">{{ selectedCourse === 'xigai' ? '习概只有一个章节，包含100道精选题' : '提示：选择"全部章节"会自动选中所有章节。再次点击已选章节可取消。' }}</p>
+                    <p class="text-xs text-gray-500 mt-1">{{ selectedCourse === 'xigai_li' ? '期末复习' : '提示：选择"全部章节"会自动选中所有章节。再次点击已选章节可取消。' }}</p>
                 </div>
                 <div class="mb-6" v-if="activeMode !== 'incorrectReview'">
                     <label class="block text-gray-700 text-sm font-bold mb-2">题目顺序：</label>
@@ -385,8 +394,14 @@
                 const API_BASE_URL = ''; 
                 const selectedCourse = ref('maogai'); // 默认选择毛概
                 const availableChapters = computed(() => {
-                    if (selectedCourse.value === 'xigai') {
-                        return [{ value: '0', text: '习概题库' }];
+                    // 支持三种 course key: 'maogai', 'xigai_li'(李老师 单章), 'xigai_yang'(杨老师 多章)
+                    if (selectedCourse.value === 'xigai_li') {
+                        return [{ value: '0', text: '期末复习' }];
+                    } else if (selectedCourse.value === 'xigai_yang') {
+                        // 杨老师题库：章节 0..17
+                        const chapters = [...Array.from({ length: 18 }, (_, i) => ({ value: i.toString(), text: `章节 ${i}` }))];
+                        chapters.push({ value: 'all', text: '全部章节' });
+                        return chapters;
                     } else {
                         return [...Array.from({ length: 9 }, (_, i) => ({ value: i.toString(), text: `章节 ${i}` })), { value: 'all', text: '全部章节' }];
                     }
@@ -572,8 +587,8 @@
                     selectedCourse.value = course;
                     selectedChapters.value = []; // 清空之前的章节选择
                     
-                    // 如果是习概，自动选择第0章
-                    if (course === 'xigai') {
+                    // 如果是习概（任意 xigai 变体），自动选择第0章
+                    if (course === 'xigai_li' || course === 'xigai_yang') {
                         selectedChapters.value = ['0'];
                     }
                 };
@@ -584,8 +599,8 @@
                         return;
                     }
                     
-                    // 如果是习概，自动选择第0章
-                    if (selectedCourse.value === 'xigai' && !selectedChapters.value.includes('0')) {
+                    // 如果是习概（任意 xigai 变体），自动选择第0章
+                    if ((selectedCourse.value === 'xigai_li' || selectedCourse.value === 'xigai_yang') && !selectedChapters.value.includes('0')) {
                         selectedChapters.value = ['0'];
                     }
                     

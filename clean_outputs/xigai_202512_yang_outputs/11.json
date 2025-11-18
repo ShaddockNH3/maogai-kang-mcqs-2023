@@ -1,0 +1,212 @@
+[
+    {
+        "question_number": "1",
+        "question_type": "单选题",
+        "question_text": "习近平总书记指出，让人民生活幸福是（ ）。",
+        "options": {
+            "A": "发展之要",
+            "B": "“国之大者”",
+            "C": "执政之基",
+            "D": "力量之源"
+        },
+        "correct_answer": "B",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "2",
+        "question_type": "单选题",
+        "question_text": "（ ）是最大的民生工程、民心工程、根基工程。",
+        "options": {
+            "A": "教育",
+            "B": "就业",
+            "C": "医疗",
+            "D": "社保"
+        },
+        "correct_answer": "B",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "3",
+        "question_type": "单选题",
+        "question_text": "习近平总书记指出，（ ）是保障和改善民生、维护社会公平、增进人民福祉的基本制度保障，是治国安邦的大问题。",
+        "options": {
+            "A": "社会保障体系",
+            "B": "收入分配制度",
+            "C": "社会治理体系",
+            "D": "公共安全体系"
+        },
+        "correct_answer": "A",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "4",
+        "question_type": "单选题",
+        "question_text": "保障和改善民生的重要方针是坚持（ ）。",
+        "options": {
+            "A": "效率优先、兼顾公平",
+            "B": "尽力而为、量力而行",
+            "C": "政府主导、市场补充",
+            "D": "平均主义、同步富裕"
+        },
+        "correct_answer": "B",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "5",
+        "question_type": "单选题",
+        "question_text": "党的十八大以来，我国历史性地解决了（ ）问题。",
+        "options": {
+            "A": "相对贫困",
+            "B": "城乡差距",
+            "C": "绝对贫困",
+            "D": "区域差距"
+        },
+        "correct_answer": "C",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "6",
+        "question_type": "单选题",
+        "question_text": "促进共同富裕的基础性制度是（ ）。",
+        "options": {
+            "A": "就业制度",
+            "B": "社会保障制度",
+            "C": "分配制度",
+            "D": "医疗卫生制度"
+        },
+        "correct_answer": "C",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "7",
+        "question_type": "单选题",
+        "question_text": "我们党提出从“社会管理”到“社会治理”，体现了党对社会运行和社会治理规律认识的深化。这一转变首次提出于（ ）。",
+        "options": {
+            "A": "党的十七大",
+            "B": "党的十八大",
+            "C": "党的十八届三中全会",
+            "D": "党的十九大"
+        },
+        "correct_answer": "C",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "8",
+        "question_type": "单选题",
+        "question_text": "社会治理的重心必须向（ ）下移。",
+        "options": {
+            "A": "基层",
+            "B": "中央",
+            "C": "省市",
+            "D": "网络"
+        },
+        "correct_answer": "A",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "9",
+        "question_type": "单选题",
+        "question_text": "人民健康是（  ）的重要标志。",
+        "options": {
+            "A": "社会文明进步",
+            "B": "民族昌盛和国家富强",
+            "C": "社会主义现代化",
+            "D": "以上都是"
+        },
+        "correct_answer": "D",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "10",
+        "question_type": "单选题",
+        "question_text": "要坚持和发展新时代（ ），完善正确处理新形势下人民内部矛盾机制。",
+        "options": {
+            "A": "“枫桥经验”“浦江经验”",
+            "B": "“小岗经验”",
+            "C": "“华西村经验”",
+            "D": "“蛇口经验”"
+        },
+        "correct_answer": "A",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "11",
+        "question_type": "多选题",
+        "question_text": "在发展中保障和改善民生，应正确处理好的关系有（ ）。",
+        "options": {
+            "A": "坚守底线与突出重点",
+            "B": "完善制度与引导预期",
+            "C": "政府主导与市场决定",
+            "D": "尽力而为与量力而行"
+        },
+        "correct_answer": "ABD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "12",
+        "question_type": "多选题",
+        "question_text": "健全多层次社会保障体系，要求其具有（ ）的特征。",
+        "options": {
+            "A": "覆盖全民",
+            "B": "统筹城乡",
+            "C": "公平统一",
+            "D": "安全规范、可持续"
+        },
+        "correct_answer": "ABCD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "13",
+        "question_type": "多选题",
+        "question_text": "提高人民生活品质的主要着力点包括（ ）。",
+        "options": {
+            "A": "完善分配制度",
+            "B": "实施就业优先战略",
+            "C": "健全社会保障体系",
+            "D": "推进健康中国建设"
+        },
+        "correct_answer": "ABCD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "14",
+        "question_type": "多选题",
+        "question_text": "新时代加强和创新社会治理的要求包括（ ）。",
+        "options": {
+            "A": "系统治理",
+            "B": "依法治理",
+            "C": "综合治理",
+            "D": "源头治理"
+        },
+        "correct_answer": "ABCD",
+        "error_count": 0,
+        "correct_count": 0
+    },
+    {
+        "question_number": "15",
+        "question_type": "多选题",
+        "question_text": "完善社会治理体系，需要打造的社会治理格局是（ ）。",
+        "options": {
+            "A": "共建",
+            "B": "共治",
+            "C": "共享",
+            "D": "共管"
+        },
+        "correct_answer": "ABC",
+        "error_count": 0,
+        "correct_count": 0
+    }
+]
